@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Common\Car;
+namespace App\Http\Controllers\Admin\Common\Car;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Common\Car\CarBrandRequest;
@@ -40,7 +40,7 @@ class CarBrandController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(CarBrandRequest $request)
     {
         $this->service->store($request->validated());
 

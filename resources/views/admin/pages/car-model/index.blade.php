@@ -1,6 +1,12 @@
 @extends('admin.layouts.app')
 
-@push('title', __('Avtomobil Markaları'))
+@push('title', $title)
+
+@push('breadcrumb')
+    <li class="breadcrumb-item">
+        <a href="{{ route('admin.car-brand.model.index', $carBrand->getAttribute('id')) }}">{{ $carBrand->getAttribute('name') }}</a>
+    </li>
+@endpush
 
 @push('css')
 
@@ -12,18 +18,18 @@
 
 @push('page-right')
     <div class="d-flex justify-content-end mb-2">
-        <a href="{{ route('admin.car-brand.create') }}" class="btn btn-icon btn-success header-button-top float-right me-2">
+        <a href="{{ route('admin.car-brand.model.create', $carBrand->getAttribute('id')) }}" class="btn btn-icon btn-success header-button-top float-right me-2">
             <span class="btn-inner--icon me-2">
                 <i class="fas fa-plus"></i>
             </span>
-            <span class="btn-inner--text">{{ __('Marka ekle') }}</span>
+            <span class="btn-inner--text">{{ __('Model ekle') }}</span>
         </a>
     </div>
 @endpush
 @section('content')
     <div class="card">
         <div class="card-header bg-white border-bottom">
-            <h5 class="card-title mb-0">@lang('Avtomobil markaları')</h5>
+            <h5 class="card-title mb-0">{{ $title }}</h5>
         </div>
         <div class="table-responsive">
             <table class="table table-hover mb-0">
@@ -51,9 +57,8 @@
                             {{ $item->getAttribute('created_at') }}
                         </td>
                         <td class="d-flex justify-content-center align-items-center">
-                            @include('admin.common.table.btn-link',['route' => route('admin.car-brand.model.index', $item->getAttribute('id')), 'icon' => 'fas fa-car', 'class' => 'warning me-1'])
-                            @include('admin.common.table.btn-link',['route' => route('admin.car-brand.edit', $item->getAttribute('id'))])
-                            @include('admin.common.table.btn-alert', [ 'route' => route('admin.car-brand.destroy', $item->getAttribute('id')) ])
+                            @include('admin.common.table.btn-link',['route' => route('admin.car-brand.model.edit', [$item->getAttribute('car_brand_id'), $item->getAttribute('id')])])
+                            @include('admin.common.table.btn-alert', [ 'route' => route('admin.car-brand.model.destroy',  [$item->getAttribute('car_brand_id'), $item->getAttribute('id')]) ])
                         </td>
                     </tr>
                 @endforeach

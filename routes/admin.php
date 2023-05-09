@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Admin\Common\Car\CarBrandController;
+use App\Http\Controllers\Admin\Common\Car\CarModelController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Common\Car\CarBrandController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,6 @@ Route::group([
         Route::get('', DashboardController::class)->name('dashboard');
 
         Route::resource('car-brand', CarBrandController::class);
+        Route::resource('car-brand.model', CarModelController::class);
     });
 });

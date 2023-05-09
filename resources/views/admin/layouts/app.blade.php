@@ -49,6 +49,7 @@
                                     <li class="breadcrumb-item">
                                         <a href="{{ route('admin.dashboard') }}">@lang('Dashboard')</a>
                                     </li>
+                                    @stack('breadcrumb')
                                     <li class="breadcrumb-item active" aria-current="page">@stack('title', 'Page')</li>
                                 </ol>
                             @endif
