@@ -20,7 +20,7 @@ Route::group([
             Route::post('login', 'store');
 
             Route::post('logout', 'destroy')
-                ->middleware('auth')
+                ->middleware('auth:admin')
                 ->withoutMiddleware('guest')
                 ->name('logout');
         });
