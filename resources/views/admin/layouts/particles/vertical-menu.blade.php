@@ -10,9 +10,9 @@
                     </a>
                 </li>
                 <li class="menu-title">Content</li>
-                <li class="{{ \App\Helpers\Helper::menuActive('admin.car-brand.*', 'admin.car-model.*') }}">
+                <li class="{{ \App\Helpers\Helper::menuActive('admin.car-brand.*', 'admin.car-brand.model.*') }}">
                     <a href="{{ route('admin.car-brand.index') }}" class="waves-effect">
-                        <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">2</span>
+                        <i class="ti-car"></i>
                         <span>@lang('Avtomobil markaları')</span>
                     </a>
                 </li>
