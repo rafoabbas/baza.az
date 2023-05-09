@@ -44,10 +44,10 @@
                     <div class="row align-items-center">
                         <div class="col-md-8">
                             <h6 class="page-title">@stack('title', 'Page')</h6>
-                            @if(! request()->routeIs('dashboard'))
+                            @if(! request()->routeIs('admin.dashboard'))
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item">
-                                        <a href="{{ route('dashboard') }}">@lang('Dashboard')</a>
+                                        <a href="{{ route('admin.dashboard') }}">@lang('Dashboard')</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">@stack('title', 'Page')</li>
                                 </ol>

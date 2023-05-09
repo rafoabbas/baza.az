@@ -2,7 +2,6 @@
 
 namespace Database\Seeders\Guard;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class AdminTableSeeder extends Seeder
@@ -12,10 +11,14 @@ class AdminTableSeeder extends Seeder
      */
     public function run(): void
     {
+        if (\App\Models\Guard\Admin::query()->count()) {
+            return;
+        }
+
         \App\Models\Guard\Admin::factory()->create([
             'username' => 'admin',
             'name' => 'Test User',
-            'email' => 'admin@admin.test',
+            'email' => 'admin@baza.test',
         ]);
     }
 }

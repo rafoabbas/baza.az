@@ -4,7 +4,7 @@
             <!-- LOGO -->
             <div class="navbar-brand-box">
 
-                <a href="{{ route('dashboard') }}" class="logo logo-light d-block" >
+                <a href="{{ route('admin.dashboard') }}" class="logo logo-light d-block" >
                     <span class="logo-sm">
                         <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
                     </span>
@@ -56,12 +56,12 @@
                     <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline font-size-17 align-middle me-1"></i> @lang('Api')</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger"
-                       href="{{ route('logout') }}"
+                       href="{{ route('admin.logout') }}"
                        onclick="event.preventDefault();document.getElementById('logout-form').submit();"
                     >
                         <i class="bx bx-power-off font-size-17 align-middle me-1 text-danger"></i> @lang('Çıkış')
                     </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
                 </div>

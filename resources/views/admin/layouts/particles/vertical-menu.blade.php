@@ -4,30 +4,29 @@
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title">Main</li>
                 <li>
-                    <a href="{{ route('dashboard') }}" class="waves-effect">
+                    <a href="{{ route('admin.dashboard') }}" class="waves-effect">
                         <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">2</span>
                         <span>@lang('Dashboard')</span>
                     </a>
                 </li>
+                <li class="menu-title">Content</li>
+                <li class="{{ \App\Helpers\Helper::menu_active('admin.car-brand.*', 'admin.car-model.*') }}">
+                    <a href="{{ route('admin.car-brand.index') }}" class="waves-effect">
+                        <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">2</span>
+                        <span>@lang('Avtomobil markaları')</span>
+                    </a>
+                </li>
 
-                <li class="menu-title">@lang('Sms işlemleri')</li>
+                <li class="menu-title">@lang('Content')</li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ti-archive"></i>
                         <span> Authentication </span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="pages-login.html">Login 1</a></li>
-                        <li><a href="pages-login-2.html">Login 2</a></li>
-                        <li><a href="pages-register.html">Register 1</a></li>
-                        <li><a href="pages-register-2.html">Register 2</a></li>
-                        <li><a href="pages-recoverpw.html">Recover Password 1</a></li>
-                        <li><a href="pages-recoverpw-2.html">Recover Password 2</a></li>
-                        <li><a href="pages-lock-screen.html">Lock Screen 1</a></li>
-                        <li><a href="pages-lock-screen-2.html">Lock Screen 2</a></li>
+                        <li><a href="#">@lang('Avtomobil markaları')</a></li>
                     </ul>
                 </li>
-
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

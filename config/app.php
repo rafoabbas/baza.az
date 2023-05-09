@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Facade;
 return [
 
     'assets' => [
-        'version' => '0.0.1' . time()
+        'version' => '0.0.1' . time(),
     ],
 
     /*
@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool)env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +96,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'az',
 
     /*
     |--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'az',
 
     /*
     |--------------------------------------------------------------------------
@@ -122,7 +122,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'az_AZ',
 
     /*
     |--------------------------------------------------------------------------
@@ -199,7 +199,8 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Akaunting\Setting\Provider::class,
+        Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -208,7 +209,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        App\Providers\MacrosServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
     ],
 
     /*

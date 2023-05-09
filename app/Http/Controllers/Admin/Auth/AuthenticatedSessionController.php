@@ -23,11 +23,10 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return to_route('dashboard')->withToast([
+        return to_route('admin.dashboard')->withToast([
             'message' => 'Welcome back, ' . Auth::guard('admin')->user()->getAttribute('name'),
         ]);
     }
-
 
     public function destroy(Request $request): RedirectResponse
     {
