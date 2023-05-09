@@ -28,9 +28,9 @@ class Upload extends Model
     protected function url(): Attribute
     {
         return Attribute::make(
-            get: fn ($value) => config('app.url')
-                .DIRECTORY_SEPARATOR.'storage'
-                .DIRECTORY_SEPARATOR.$this->path
+            get: fn($value) => config('app.url')
+                . DIRECTORY_SEPARATOR . 'storage'
+                . DIRECTORY_SEPARATOR . $this->path
         );
     }
 }
