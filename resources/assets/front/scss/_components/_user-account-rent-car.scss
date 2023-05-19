@@ -1,0 +1,93 @@
+.user-account-busines-claster__rent-car-conteiner{
+	border-top: 1px solid #eef2f7;
+}
+.ads-box-user__rent-car{
+	.ads-box-user__prise-line{
+		justify-content: flex-end;
+	}
+	.ads_image{
+		height: 200px;
+	}
+	.rent-car__day__line{
+		a{
+			font-size: 12px;
+		}
+	}
+	.rent-car__dayprise__line{
+		a{
+			font-size: 12px;
+		}
+	}
+	.rent-car__day{
+		h5{
+			font-size: 14px;
+		}
+	}
+	.rent-car__dayprise{
+		h5{
+			font-size: 14px;
+		}
+	}
+	.ads-box-user__viev p{
+		font-size: 14px;
+	}
+}
+.rent-car__baners{
+	width: 100%;
+	margin-bottom: 20px;
+
+	img{
+		width: 100%;
+		display: block;
+	}
+}
+
+.information-about-company__info-box{
+	width: 100%;
+	span{
+		font-size: 16px;
+        color: $iconcolor;
+        margin-bottom: 5px;
+        width: 100%;
+        display: block;
+	}
+	p{
+		font-size: 16px;
+        color: $titlecolor;
+        width: 100%;
+	}
+	ul{
+		margin-top: 5px;
+		li{
+			margin-bottom: 5px;
+			font-size: 16px;
+			color: $titlecolor;
+
+			a{
+				color: $titlecolor
+			}
+		}
+
+	}
+}
+.information-about-company__info-line{
+	margin-bottom: 20px;
+}
+.information-about-company__info-line-V2{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	.information-about-company__info-box{
+		width: 50%;
+	}
+}
+.information-about-company__info-claster{
+	width: 400px ;
+}
+.qurient-link{
+	color: $titlecolor;
+	font-size: 16px;
+	margin-bottom: 5px;
+	text-decoration: underline;
+	width: 100%;
+}

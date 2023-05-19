@@ -1,0 +1,47 @@
+.catalog-rent-cars{
+	aside{
+		margin-top: 0;
+	}
+	.catalog__header-val{
+		align-items:flex-end;
+	}
+	.catalog__del-filtr-visyal{
+		align-items:flex-end;
+		.sorting-conteiner__element{
+			width: auto;
+		}
+		.bt_del{
+			padding: 12px 10px;
+		}
+	}
+	.filtr-select__element{
+		margin-bottom: 0;
+		margin-top: 10px;
+	}
+}
+.ads-rent-car-conteiner{
+	.rent-car-box{
+		width: calc(50% - 20px);
+	}
+}
+@media only screen and (max-width: 950px){
+.catalog-rent-cars{
+	.catalog__ads-body{
+		margin-top: 20px;
+	}
+}
+}
+@media only screen and (max-width: 550px){
+.catalog__ads-body .ads-rent-car-conteiner{
+	.rent-car-box{
+		width: calc(100% - 10px);
+	}
+}
+.catalog-rent-cars{
+	.catalog-filtr__mobile-controls{
+		.btn2{
+			width: 100%;
+		}
+	}
+}
+}

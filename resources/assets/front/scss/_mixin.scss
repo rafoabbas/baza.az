@@ -1,0 +1,23 @@
+@mixin btn1 {
+  padding: 14px 30px;
+  font-size: 16px;
+  display: inline-block;
+  background: #fff;
+  font-weight: 500;
+  color: $activcolor;
+  border:solid 1px $activcolor;
+  border-radius: 3px;
+  transition: all ease 0.3s;
+}
+
+@mixin btn2{
+	background: #fff;
+	border-radius: 3px;
+	padding: 14px 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border:solid 1px $iconcolor;
+	cursor: pointer;
+	transition: all ease 0.3s;
+}

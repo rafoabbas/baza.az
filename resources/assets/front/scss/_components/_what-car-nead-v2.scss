@@ -1,0 +1,193 @@
+.what-car-nead-v2{
+	padding: 70px 0;
+}
+.what-car-nead-v2__conteiner{
+	padding-top: 30px;
+}
+.what-car-nead-v2__nav{
+	display: flex;
+	width: calc(100% + 26px);
+	margin-left: -13px;
+
+	li{
+		width: calc(20% - 26px);
+		margin: 0 13px;
+		text-align: center;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		border: 1px solid #EEF2F7;
+		padding: 14px;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 500;
+		color: $titlecolor;
+		transition: all ease 0.3s;
+	}
+	.activ-tab-nead-car{
+		background: $activcolor;
+		color: #fff;
+	}
+
+}
+.what-car-nead-v2__tab-conteiner{
+	width: 100%;
+	border: 1px solid #EEF2F7;
+	margin-top: -1px;
+	border-radius: 3px;
+	padding: 40px 50px;
+	position: relative;
+
+	&:before{
+		position:absolute;
+		width: 260px;
+		height: 110px;
+		background: url("/assets/front/img/_src/tab.png")no-repeat;
+		background-size: cover;
+		background-position: center;
+		content: "";
+		right: 20px;
+		bottom: 20px;
+		z-index: 2;
+	}
+
+	ul{
+		column-count: 3;
+		width: 600px;
+
+		li{
+			font-size: 16px;
+			margin-bottom: 10px;
+			color: #0D417B;
+			font-weight: 500;
+
+			a{
+				color: #0D417B;
+			}
+
+			span{
+				color: $iconcolor;
+				font-weight: normal;
+			}
+		}
+	}
+}
+.what-car-nead-v2__tab-element{
+	display: none;
+	position: relative;
+	z-index: 1;
+}
+.activ-tab-element{
+	display: block;
+}
+.what-car-nead-v2__conteiner-mobile{
+	display: none;
+}
+@media only screen and (max-width: 1270px){
+	.what-car-nead-v2{
+		padding: 30px 0;
+		padding-bottom: 60px;
+	}
+	.what-car-nead-v2__conteiner{
+		padding-top: 30px;
+	}
+	.what-car-nead-v2__nav li{
+		padding: 14px 5px;
+		font-size: 16px;
+	}
+}
+@media only screen and (max-width: 1000px){
+.what-car-nead-v2__tab-conteiner:before{
+	width: 0;
+	height: 0;
+	opacity: 0;
+	z-index: -100;
+}
+}
+@media only screen and (max-width: 850px){
+.what-car-nead-v2__tab-conteiner{
+	padding: 30px 20px;
+}
+.what-car-nead-v2__tab-conteiner{
+	ul{
+		width: 100%;
+	}
+}
+}
+@media only screen and (max-width: 800px){
+.what-car-nead-v2__conteiner{
+	display: none;
+}
+.what-car-nead-v2__conteiner-mobile{
+	display: block;
+	padding-top: 30px;
+}
+.what-car-nead-v2__tab-element-acordeon{
+	width: 100%;
+	border: 1px solid #EEF2F7;
+	background: #fff;
+}
+.tab-element-acordeon__header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 14px;
+	position: relative;
+	z-index: 10;
+	transition: all ease 0.3s;
+
+	h5{
+		font-size: 18px;
+		color: $titlecolor;
+		font-weight: 500;
+	}
+}
+.tab-element-acordeon__open-icon{
+	width: 15px;
+	transition: all ease 0.3s;
+
+	svg{
+		width: 100%;
+		display: block;
+		transition: all ease 0.3s;
+	}
+}
+.tab-element-acordeon__body{
+	padding: 20px 14px;
+	background: #F6F9FE;
+	display: none;
+	position: relative;
+	z-index: 1;
+
+	ul{
+		li{
+			font-size: 16px;
+			margin: 5px 0;
+			color: #0D417B;
+			font-weight: 500;
+
+			a{
+				color: #0D417B;
+			}
+
+			span{
+				color: $iconcolor;
+				font-weight: normal;
+			}
+		}
+	}
+}
+.tab-acordeon-activ{
+	background: #EBF5FF;
+    box-shadow: 0px 3px 6px rgba(13, 65, 123, 0.14);
+
+    .tab-element-acordeon__open-icon{
+    	transform: rotate(180deg);
+
+    	svg{
+    		path{
+    			fill: $activcolor;
+    		}
+    	}
+    }
+}
+}

@@ -1,0 +1,114 @@
+.conditions-rent-cars{
+	width: 630px;
+}
+.conditions-rent-cars__line{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.conditions-rent-cars__val-conteiner-V2{
+	width: 250px;
+	display: flex;
+	justify-content: space-between;
+
+	.filtr-element__input{
+		width: 143px;
+	}
+	.filtr-element__select{
+		width: 88px;
+	}
+}
+.conditions-rent-cars__val-conteiner-V1{
+	width: 250px;
+}
+.conditions-rent-cars__title{
+	width: calc(100% - 250px);
+	padding-right: 20px;
+	font-size: 16px;
+}
+.rent-car-price-list{
+	margin-top: 15px;
+	padding-top: 15px;
+	border-top: 1px solid #EEF2F7;
+}
+.ent-car-price-list__table{
+	margin-top: 15px;
+}
+.table-prise-rent{
+	width: 500px;
+	margin-bottom: 15px;
+}
+.table-prise-rent__line{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	position: relative;
+}
+.table-prise-rent__element-V1{
+	width: 250px;
+	display: flex;
+	justify-content: space-between;
+}
+.table-prise-rent__element-V2{
+	width: 110px;
+
+	input{
+		width: 100%;
+		font-size: 16px;
+		padding: 10px;
+		border-radius: 3px;
+		background: #F6F9FE;
+		border: none;
+	}
+}
+.table-prise-rent__line_header{
+	font-size: 16px;
+	font-weight: 500;
+	.table-prise-rent__element-V2{
+		display: flex;
+		align-items: center;
+
+		select{
+			border: none;
+			font-size: 16px;
+			margin-left: 10px;
+			font-weight: 500;
+		}
+	}
+}
+.table-prise-rent__val-box{
+	width: calc(50% - 17px);
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border-radius: 3px;
+	background: #F6F9FE;
+
+	p{
+		width: 26px;
+		font-size: 16px;
+		color: $iconcolor;
+	}
+
+	input{
+		width: calc(100% - 26px);
+		padding-left: 15px;
+		font-size: 16px;
+		border: none;
+		background: none;
+	}
+}
+.del-price-rent-car{
+	position: absolute;
+	right: -40px;
+	display: none;
+}
+.new-rent-car-element{
+	.del-price-rent-car{
+		display: block;
+	}
+}

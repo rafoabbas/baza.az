@@ -1,5 +1,5 @@
 {
     "/assets/js/custom.js": "/assets/js/custom.js",
-    "/assets/css/app.css": "/assets/css/app.css",
-    "/assets/css/bootstrap.css": "/assets/css/bootstrap.css"
+    "/assets/front/css/main.css": "/assets/front/css/main.css",
+    "/assets/css/app.css": "/assets/css/app.css"
 }

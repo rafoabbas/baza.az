@@ -1,0 +1,92 @@
+.conteiner-add-number__title{
+	font-size: 16px;
+	color: $titlecolor;
+	margin-bottom: 20px;
+}
+.conteiner-add-number__line{
+	display: flex;
+
+	.catalog__filtr__filtr-element{
+		width: auto;
+		margin-right: 20px;
+		width: 200px;
+	}
+}
+.filtr-element__select_input{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background: #EEF2F7;
+
+	.full-select{
+		width: 35%;
+
+	}
+
+	input{
+		width: 65%;
+		border: none;
+		background: none;
+		padding:5px 11px;
+		border-right: solid 1px $iconcolor;
+	}
+}
+.select-num{
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+.select-num__conteiner{
+	width: calc(100% + 20px);
+	margin-left: -10px;
+	display: flex;
+	flex-wrap: wrap;
+	cursor: pointer;
+}
+.select-num__box{
+	width: calc(33.333% - 20px);
+	margin: 0 10px;
+	margin-bottom: 20px;
+	border: 1px solid #EEF2F7;
+	background: #fff;
+	height: 226px;
+	padding: 20px;
+
+	img{
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+}
+.select-num__box_activ{
+	border: 1px solid $bluecolor;
+}
+.select-type-num{
+	padding-bottom: 40px;
+}
+.select-type-num__conteiner{
+	width: 576px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 50px;
+	padding-top: 10px;
+
+	.checkbox{
+		width: 250px;
+		margin-bottom: 20px;
+
+		.catalog-page__filtr-element-subtitle{
+			color: $iconcolor;
+		}
+	}
+}
+.select-type-num__bt-line{
+	.btn1{
+		display: inline-block;
+		margin-right: 65px;
+	}
+}
+.nam-input{
+	width: 100%;
+}

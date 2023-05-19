@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>верстка по макету</title>
+	<link rel="stylesheet" type="text/css" href="css/advantages-popup-style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+	<meta name="description" content="">
+
+	
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+    a{
+      text-decoration:none;
+    }
+    p{
+      font-size: 16px;
+    }
+    li{
+      list-style-type: none;
+    }
+    button{
+      cursor: pointer;
+      outline:0 none !important;
+    }
+    input{
+      outline:0 none !important;
+      -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    select{
+      cursor: pointer;
+      outline:0 none !important;
+    }
+    textarea{
+      outline:0 none !important;
+    }
+
+    header{
+      width: 100%;
+      height: 90px;
+      background: #333;
+    }
+    main{
+      height: 900px;
+      background: #ccc;
+    }
+    footer{
+      height: 200px;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+
+
+<header>
+  
+</header>
+<main>
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eligendi provident eveniet, ut hic vero praesentium ipsa! Iste ex vero laboriosam, tempora adipisci sequi assumenda maiores necessitatibus totam aperiam illum.
+  Ex, et cum! Natus eaque modi labore animi ex molestiae omnis iure quia sequi cum at, eligendi aspernatur reprehenderit pariatur accusamus minus quod iste fugiat consequatur, eveniet. Hic inventore, quis!
+  Optio, facilis tempora architecto. Neque laudantium dolorem rem quam sapiente dolor quas sit explicabo delectus dolore maiores maxime, ullam ab labore. Libero quaerat excepturi aut natus, nemo tenetur, vero rem.
+  Porro illum totam quod cum excepturi aliquid nam enim, autem tempora modi hic error repudiandae, sunt, sint sit voluptates debitis laudantium deleniti voluptate quaerat numquam impedit! Illum ducimus fuga tenetur.
+  Praesentium necessitatibus est impedit aspernatur autem porro eligendi hic saepe, eius voluptate labore aperiam eveniet quia asperiores modi quae quisquam rem reiciendis amet natus explicabo. Explicabo eius voluptatem adipisci placeat!
+  Ab, explicabo! Eaque nihil, repudiandae nisi sunt ea maiores, consectetur, vitae laborum a nam debitis aspernatur ex magni! Sapiente similique deserunt ullam, architecto saepe corrupti alias harum obcaecati consectetur excepturi?
+  Deserunt blanditiis quisquam ipsa consequatur ullam laboriosam est, architecto voluptate, recusandae vero voluptatibus expedita quaerat nemo quia iure molestiae voluptas, fuga praesentium tempora eligendi! Nemo soluta exercitationem id aliquid eum.
+  At corporis repellendus atque saepe quis odio, porro quam expedita quo. Dignissimos pariatur qui est nemo deleniti, harum at accusamus soluta labore explicabo, dolores saepe doloremque ad totam, consequatur nihil.
+  Quidem eaque nemo porro pariatur mollitia ratione eos quod explicabo quis doloremque nobis assumenda voluptate eum dolorum eveniet, culpa, saepe voluptatibus doloribus laborum laboriosam omnis quaerat cupiditate perferendis, quasi. Totam!
+  Porro quasi asperiores, blanditiis esse! Perferendis, earum ipsam iure dignissimos dolor laudantium eum voluptate iste modi, accusantium molestiae quidem, cum? Quaerat maxime doloremque totam, harum repellat! Animi natus sit culpa?</p>
+  <button class="open_advantages-popup" data-advantages-open="popupInformation">Open popup1</button>
+
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut voluptatibus blanditiis qui sapiente ad quia, repudiandae beatae cumque vero sint accusamus quas enim inventore dolorem iusto dolorum eum impedit nemo.
+  <button class="open_advantages-popup" data-advantages-open="popupform">Open popup1</button>
+</main>
+<footer></footer>
+
+
+
+<div class="advantages-popap" id="popupInformation">
+  <h1 class="title_popapp">Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+</div>
+
+<div class="advantages-popap" id="popupform">
+  <h1 class="title_popapp">Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+  <form action="">
+    <input type="text" placeholder="name">
+    <input type="submit" value="Send message">
+  </form>
+  <p class="open_advantages-popup" data-advantages-open="restartpasword">Востановить пароль</p>
+</div>
+
+<div class="advantages-popap" id="restartpasword">
+  <h1 class="title_popapp">restart password</h1>
+  <input type="text" placeholder="введите новый пароль">
+</div>
+   
+
+
+	 <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script src="js/advantages-popup-scripts.js"></script>
+</body>
+</html>

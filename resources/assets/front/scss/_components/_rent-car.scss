@@ -1,0 +1,203 @@
+.rent-car{
+	padding: 70px 0;
+}
+.rent-car__search-conteiner{
+	margin-top: 40px;
+	background: $bgcolor1;
+	padding: 40px 55px;
+	display: flex;
+	justify-content: space-between;
+
+	.btn2{
+		width: calc(25% - 10px);
+		padding: 10px;
+	}
+}
+.rent-car__search-select{
+	width: calc(25% - 10px);
+}
+.rent-car__car-conteiner{
+	width: calc(100% + 20px);
+	margin-left: -10px;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 30px;
+}
+.rent-car-box{
+	width: calc(33.333% - 20px);
+	margin: 0 10px;
+	margin-bottom: 40px;
+
+	.ads_image{
+		height: 280px;
+	}
+
+	.ads-box__tegs-line{
+		width: 100%;
+		padding-top: 12px;
+	}
+	.ads-box__info{
+		padding: 10px 20px;
+	}
+}
+.ads-box__location{
+	display: flex;
+	align-items: center;
+	padding-top: 5px;
+	margin-bottom: 12px;
+
+	span{
+		width: 16px;
+		display: block;
+		font-size: 0;
+		margin: 0;
+
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+
+	p{
+		font-size: 16px;
+		margin-left: 8px;
+	}
+}
+.rent-car__day{
+	margin-top: 12px;
+	display: flex;
+	border-top: solid 1px #EEF2F7;
+	padding: 5px 0;
+	align-items: center;
+	justify-content: space-between;
+
+	h5{
+		font-size:18px;
+		font-weight: 500;
+		width: 80px;
+	}
+}
+.rent-car__day__line{
+	width: calc(100% - 80px);
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+
+
+	a{
+		display: block;
+		font-size: 16px;
+		color: $textcolor;
+		transition: all ease 0.3s;
+
+	    &:hover{
+	    	color: $activcolor;
+	    	transition: all ease 0.3s;
+	    }
+	}
+
+}
+
+
+.rent-car__dayprise{
+	display: flex;
+	padding: 5px 0;
+	align-items: center;
+	justify-content: space-between;
+
+	h5{
+		font-size:18px;
+		font-weight: 500;
+		width: 80px;
+	}
+}
+.rent-car__dayprise__line{
+	width: calc(100% - 80px);
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+
+
+	a{
+		display: block;
+		font-size: 14px;
+		font-weight: 500;
+		color: $textcolor;
+		padding: 1px 4px;
+		border-radius: 9px;
+		background: $bgcolor1;
+		transition: all ease 0.3s;
+
+		&:hover{
+	    	background: $activcolor;
+	    	color: #fff;
+	    	transition: all ease 0.3s;
+	    }
+	}
+
+
+}
+
+@media only screen and (max-width: 1270px){
+	.rent-car{
+		padding: 30px 0;
+	}
+	.rent-car__search-conteiner{
+		margin-top: 30px;
+		padding: 20px;
+	}
+	.rent-car__car-conteiner{
+		padding-top: 30px;
+	}
+}
+@media only screen and (max-width: 1100px){
+.rent-car-box .ads_image{
+	height: 220px;
+}
+}
+@media only screen and (max-width: 1050px){
+.rent-car__day__line a{
+	font-size: 12px;
+}
+.rent-car__dayprise__line a{
+	font-size: 12px;
+}
+.rent-car__day h5{
+	font-size: 14px;
+}
+.rent-car__dayprise h5{
+	font-size: 14px;
+}
+}
+@media only screen and (max-width: 900px){
+.rent-car-box{
+	margin-bottom: 20px;
+	width: calc(50% - 20px);
+}
+}
+@media only screen and (max-width: 600px){
+.rent-car-box {
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+}
+.rent-car__search-conteiner{
+	flex-wrap: wrap;
+}
+.rent-car__search-select{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.rent-car__search-conteiner {
+	.btn2{
+		width: 100%;
+	}
+}
+.ads-box__location p{
+	font-size: 14px;
+}
+}
+@media only screen and (max-width: 450px){
+.rent-car-box .ads_image{
+	height: 215px;
+}
+}
