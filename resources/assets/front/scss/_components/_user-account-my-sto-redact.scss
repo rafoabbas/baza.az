@@ -1,0 +1,38 @@
+.brands_redact__list-brands{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 20px;
+
+	.checkbox{
+		width: 20%;
+		padding-right: 20px;
+		margin-bottom: 10px;
+	}
+}
+.acordeon-conteiner__brends_redact{
+	max-width: 100%;
+	width: 100%;
+}
+.services-container_redact{
+	display: block;
+	width: 100%;
+	padding-right: 90px;
+
+	.cart-main-info__title{
+		font-size: 22px;
+		color: $textcolor;
+		font-weight: 500;
+	}
+	.acordeon-conteiner__box-title{
+		padding: 14px;
+	}
+	.acordeon-conteiner__box{
+		border: 1px solid #EEF2F7;
+		margin-bottom: 5px;
+	}
+	.acordeon-conteiner__box__nam-element{
+		left: -30px;
+		top: 18px;
+	}
+}

@@ -1,0 +1,31 @@
+.controls-box-ads_redact-user-profile{
+	width: 100%;
+	margin-top: 15px;
+}
+.acordeon-conteiner__main-photo-claster{
+	padding-bottom: 30px;
+}
+.acordeon-conteiner__other-photo-conteiner{
+	padding-bottom: 30px;
+	.photo-conteiner-add__other-photo-conteiner{
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-left: -10px;
+	}
+}
+.activ-acordeon{
+	.acordeon-element__claster{
+		display: block;
+	}
+}
+.acordeon-conteiner__logo-conteiner{
+	margin-bottom: 30px;
+}
+.acordeon-conteiner__logo-image{
+	width: 180px;
+
+	img{
+		width: 100%;
+		display: block;
+	}
+}

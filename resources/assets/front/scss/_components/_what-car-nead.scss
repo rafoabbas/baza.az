@@ -1,0 +1,89 @@
+.what-nead-car{
+	padding: 0px 0;
+}
+.what-nead-car__conteiner{
+	margin-top: 60px;
+	padding: 20px 180px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: $bgcolor1;
+}
+.what-nead-car__element{
+	display: block;
+	width: 270px;
+	padding: 14px;
+	background: #fff;
+	border: 1px solid #EEF2F7;
+    border-radius: 3px;
+    margin: 20px 0;
+    text-align: center;
+    transition: all ease 0.3s;
+
+    &:hover{
+    	box-shadow: 0px 10px 30px rgba(46, 107, 146, 0.12);
+    	transition: all ease 0.3s;
+
+    	h5{
+    		color: $activcolor;
+    		transition: all ease 0.3s;
+    	}
+
+    	p{
+    		color: $activcolor;
+    		transition: all ease 0.3s;
+    	}
+    }
+
+    h5{
+    	font-size: 20px;
+    	font-weight: 500;
+    	color: $titlecolor;
+    	transition: all ease 0.3s;
+    }
+
+    p{
+    	font-size: 14px;
+    	margin-top: 3px;
+    	transition: all ease 0.3s;
+    }
+}
+@media only screen and (max-width: 1270px){
+    .what-nead-car{
+        padding: 40px 0;
+    }
+    .what-nead-car__conteiner{
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 950px){
+    .what-nead-car__conteiner{
+        padding: 20px 100px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .what-nead-car__conteiner{
+        padding: 20px 30px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .what-nead-car__conteiner{
+        padding: 20px 0px;
+        margin-top: 0;
+    }
+    .what-nead-car__element{
+        width: 100%;
+        margin: 5px 0;
+        box-shadow: 0px 4px 12px rgba(59, 59, 72, 0.12);
+    }
+    .what-nead-car__element h5{
+        font-size: 18px;
+    }
+    .what-nead-car__element{
+        padding: 10px;
+    }
+    .what-nead-car{
+        background: $bgcolor1;
+        margin-top: 30px;
+    }
+}

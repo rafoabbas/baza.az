@@ -1,0 +1,113 @@
+.singl-number__ads-conteiner{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.sing-numbers-section__image-car-conteiner{
+	width: 100%;
+}
+.sing-numbers-section__img-box{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+.sing-numbers-section__nam-image{
+	position: absolute;
+	z-index: 10;
+	width: 304px;
+	border-radius: 10px;
+	img{
+		width: 100%;
+	}
+}
+.sing-numbers-section__img-carV1{
+	max-width: 845px;
+
+	.sing-numbers-section__nam-image{
+		bottom: 22%;
+	}
+}
+
+.sing-numbers-section__img-carV2{
+	max-width: 622px;
+
+	.sing-numbers-section__nam-image{
+		bottom: 28%;
+	}
+}
+
+.sing-numbers-section__img-carV3{
+	max-width: 660px;
+
+	.sing-numbers-section__nam-image{
+		bottom: 28%;
+	}
+}
+.nam-value{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	padding: 5px 10px;
+	border: solid 1px #444;
+}
+.am-value__nm{
+	font-size: 50px;
+	font-family: Barlow,sans-serif;
+	font-weight: 500;
+}
+.ads-namber-box__image-num{
+	.select-namber-conteiner__logo-country{
+		width: 15px;
+	}
+	.select-namber-conteiner__slug-country{
+		font-size: 11px;
+	}
+	.am-value__nm{
+		font-size: 26px;
+		color: #333;
+	}
+	.nam-value{
+		width: 100%;
+		position: relative;
+		border-radius: 5px;
+	}
+	.select-namber-conteiner__drop{
+		width: 4px;
+		height: 3px;
+		color: #333;
+	}
+	.select-namber-conteiner__slug-country{
+		color: #333;
+	}
+}
+@media only screen and (max-width: 950px){
+	.sing-numbers-section__nam-image{
+		width: 31%;
+	}
+}
+
+@media only screen and (max-width: 500px){
+.sing-numbers-section{
+	.cart-main-info__description{
+		margin: 0;
+		&:before{
+			width: 0;
+			height: 0;
+			opacity: 0;
+		}
+		&:after{
+			width: 0;
+			height: 0;
+			opacity: 0;
+		}
+	}
+	.rent-car-info-text{
+		padding-bottom: 20px;
+	}
+}
+}

@@ -1,0 +1,42 @@
+.singl-auto-store__cataloc-ads-cars{
+	padding-top: 80px;
+	.general-titleV2{
+		b{
+			color: $iconcolor;
+			font-weight: 500;
+		}
+	}
+	.ads-body__conteiner{
+		padding-top: 0;
+	}
+	.line-reload{
+		padding-top: 10px;
+	}
+}
+@media only screen and (max-width: 850px){
+.singl-auto-store{
+	.ads-body__conteiner .ads-box {
+    width: calc(50% - 20px);
+}
+    .singl-auto-store__cataloc-ads-cars{
+    	order: 7;
+    	padding-bottom: 40px;
+    	padding-top: 40px;
+    }
+    .cart-main-info__body-info .cart-main-info__map-conteiner{
+    	order: 8;
+    }
+    .cart-main-info__body-info .description-sto-conteiner{
+    	order: 6;
+    }
+    .cart-main-info__body-info .advantages-conteiner{
+    	background: #fff;
+    	margin-top: 0;
+    	padding-top: 40px;
+    	padding-bottom: 0;
+    }
+}
+.singl-auto-store__cataloc-ads-cars{
+	padding-top: 40px;
+}
+}

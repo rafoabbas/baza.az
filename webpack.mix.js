@@ -11,7 +11,8 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.sass('resources/assets/scss/app.scss', 'assets/css')
-    .sass('resources/assets/scss/bootstrap.scss', 'assets/css')
-    .js('resources/assets/js/custom.js', 'assets/js')
+mix.sass('resources/assets/admin/scss/app.scss', 'assets/css')
+    .sass('resources/assets/front/scss/main.scss', 'assets/front/css')
+    // .sass('resources/assets/scss/bootstrap.scss', 'assets/css')
+    .js('resources/assets/admin/js/custom.js', 'assets/js')
     .sourceMaps();

@@ -1,0 +1,22 @@
+.buy-moto{
+	padding: 70px 0;
+}
+.buy-moto__filtr-conteiner{
+	padding-top: 60px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+@media only screen and (max-width: 1270px){
+.buy-moto{
+	padding: 30px 0;
+}	
+}
+@media only screen and (max-width: 600px){
+.buy-moto{
+	padding: 30px 0;
+}
+.buy-moto__filtr-conteiner{
+	padding-top: 30px;
+}	
+}

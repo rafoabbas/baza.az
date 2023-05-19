@@ -1,0 +1,33 @@
+.services-container__element{
+	margin-bottom: 15px;
+}
+.services-container__element-header{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+
+	span{
+		width: 25px;
+		display: block;
+
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+
+	h5{
+		font-size: 22px;
+		font-weight: 500;
+		margin-left: 20px;
+	}
+}
+.services-container_-element-body{
+	padding-left: 45px;
+
+	.acordeon-conteiner__link-conteiner{
+		li{
+			margin-bottom: 10px;
+		}
+	}
+}

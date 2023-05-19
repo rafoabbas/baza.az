@@ -1,0 +1,46 @@
+.search-conteiner{
+	width: 500px;
+	display: flex;
+	justify-content: flex-end;
+
+	.btn2{
+		width: 124px;
+		text-align: center;
+		padding: 10px;
+	}
+	.input-box{
+		width: calc(100% - 124px);
+	}
+}
+.catalog_filtr-select-auto-store{
+	width: calc(100% - 500px);
+	padding-right: 30px;
+}
+.input-box{
+	input{
+		background: #FFFFFF;
+		border: 1px solid #EEF2F7;
+		border-radius: 3px;
+		padding: 10px 20px;
+		font-size: 16px;
+		width: 100%;
+
+		&::placeholder{
+			color: $iconcolor;
+		}
+	}
+}
+@media only screen and (max-width: 950px){
+.catalog-auto-service-shop{
+	.catalog__filtr{
+		display: block;
+	}
+	.catalog__header-val{
+		flex-wrap: wrap;
+	}
+	.catalog_filtr-select-auto-store{
+		width: 100%;
+		padding-bottom: 20px;
+	}
+}
+}

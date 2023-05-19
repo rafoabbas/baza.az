@@ -1,0 +1,271 @@
+.cart-main-info__conteiner{
+	position: relative;
+}
+.cart-main-info__body-info_account{
+	min-height: 700px;
+}
+.ads-sitebar_user-account{
+
+
+	.catalog__filt-baner-conteiner{
+		padding-top: 0;
+		margin-top: 0;
+	}
+}
+.aside__cabinet{
+	position: absolute;
+	top:40px;
+	transition: all ease 0.3s;
+
+	.catalog__filt-baner-conteiner{
+		padding-top: 0;
+		margin-top: 0;
+	}
+}
+.ads-sitebar_user-account_fixed-nav-bar{
+	position: fixed;
+	top: 30px;
+}
+.user-main-info{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.user-main-info__info-conteiner{
+	width: 325px;
+	margin-right: 35px;
+}
+.balans-ads{
+	width: 250px;
+	padding:20px 30px;
+	border-radius: 3px;
+	background: $bgcolor1;
+}
+.balans-ads__title{
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.balans-ads__list{
+	li{
+		margin-bottom: 5px;
+		p{
+			font-size: 16px;
+
+			b{
+				font-size: 22px;
+				font-weight: 500;
+			}
+		}
+	}
+}
+.balans-ads__btn-box{
+	padding-top: 20px;
+	.btn1{
+		width: 100%;
+		text-align: center;
+		padding: 12px;
+		margin-top: 20px;
+	}
+}
+.input-user-box{
+	display: flex;
+	align-items:center;
+	background: $bgcolor1;
+	border-radius: 2px;
+	padding: 14px 10px;
+
+	p{
+		font-size: 16px;
+		color: $iconcolor;
+	}
+
+	input{
+		font-size: 22px;
+		color: $textcolor;
+		border: none;
+		background: none;
+		width: auto;
+		padding-left: 15px;
+	}
+}
+.user-main-info__input-user-box{
+	margin-bottom: 30px;
+}
+.user-main-info__inp-info{
+	.input-form-conteiner__title{
+		color: $iconcolor;
+	}
+}
+.user-main-info__checbox-conteiner{
+	margin-top: -11px;
+	margin-bottom: 25px;
+}
+.control-bt-conteiner__box{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	cursor: pointer;
+
+	&:hover{
+		.control-bt-conteiner__title{
+			color: $bluecolor;
+			transition: all ease 0.3s;
+		}
+		svg{
+			path{
+				fill: $bluecolor;
+				transition: all ease 0.3s;
+			}
+		}
+	}
+}
+.control-bt-conteiner__icon{
+	width: 24px;
+
+	svg{
+		width: 100%;
+		display: block;
+		path{
+			transition: all ease 0.3s;
+		}
+	}
+}
+.control-bt-conteiner__title{
+	font-size: 16px;
+	font-weight: 500;
+	color: $iconcolor;
+	padding-left: 10px;
+	transition: all ease 0.3s;
+}
+.user-account-ads{
+	padding: 30px 0;
+}
+.user-account-ads__title{
+	font-size: 28px;
+	font-weight: 500;
+	margin-bottom: 40px;
+}
+.ads-body__conteiner{
+	padding-top: 0;
+}
+.ads-box-user__line-data{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	.ads-box__date{
+		padding: 0;
+		b{
+			font-weight: normal;
+			color: $iconcolor;
+		}
+	}
+}
+.ads-box-user__prise-line{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.ads-box-user__viev{
+	display: flex;
+	align-items: center;
+	padding-bottom: 4px;
+
+	svg{
+		width: 24px;
+		margin-right: 10px;
+		display: block;
+	}
+
+	p{
+		font-size: 16px;
+		color: $textcolor;
+	}
+}
+.ads-box-user__controls-conteiner{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.controls-box-ads{
+	display: flex;
+	width: 45%;
+	align-items: center;
+	margin-top: 6px;
+	cursor: pointer;
+
+	p{
+		padding-left: 6px;
+		font-size: 14px;
+		font-weight: 500;
+		color: $bluecolor;
+	}
+}
+.controls-box-ads__icon{
+	width: 16px;
+
+	img{
+		width: 100%;
+		display: block;
+	}
+}
+.controls-box-ads_remove-style{
+	p{
+		color: $iconcolor;
+	}
+}
+.ads-box-user__add-ads{
+	background: url("/assets/front/img/_src/caradd.jpg")no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 400px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ads-box-user__add-ads-conteiner{
+	width: 140px;
+	text-align: center;
+
+	svg{
+		margin: 0 auto;
+	}
+
+	p{
+		font-size: 16px;
+		font-weight: 500;
+		color: $iconcolor;
+	}
+}
+.ads-box-user{
+	min-height: 400px;
+
+	.ads-namber-box__image-num{
+		padding: 45px 5px;
+		display: block;
+	}
+}
+
+.save-info{
+	width: 100%;
+	margin-top: 25px;
+}
+.load-more-ads{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+.user-account-content{
+	width: 100%;
+	padding-right: 0;
+	.ads-body__conteiner{
+		.ads-box{
+			width: calc(25% - 20px);
+		}
+	}
+}

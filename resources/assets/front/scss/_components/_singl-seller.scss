@@ -1,0 +1,33 @@
+.singl-seller-section__cataloc-ads-cars{
+	padding-bottom: 80px;
+	.general-titleV2{
+		b{
+			font-weight: 500;
+		    color: $iconcolor;
+		}
+	}
+	.ads-body__conteiner{
+		padding-top: 0;
+	}
+}
+@media only screen and (max-width: 950px){
+	.singl-seller-section__cataloc-ads-cars{
+		padding-bottom: 40px;
+	}
+}
+@media only screen and (max-width: 850px){
+	.singl-seller-section__cataloc-ads-cars{
+		padding-bottom: 40px;
+		.ads-box {
+		    width: calc(50% - 20px);
+		}
+	}
+}
+@media only screen and (max-width: 450px){
+	.singl-seller-section__cataloc-ads-cars{
+		.ads-box {
+		    width: calc(50% - 10px);
+		    margin: 0 5px;
+		}
+	}
+}

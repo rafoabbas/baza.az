@@ -1,0 +1,162 @@
+.catalog-sto-section{
+	padding-top: 40px;
+	padding-bottom: 80px;
+}
+.catalog-sto-section__conteiner{
+	display: flex;
+	justify-content: space-between;
+	align-items:flex-start;
+	flex-wrap: wrap;
+}
+.catalog-sto-section__main-claster{
+	width: calc(100% - 305px);
+	padding-right: 20px;
+
+	.rent-car__search-conteiner{
+		padding: 30px;
+	}
+}
+.sto-acordeon-title{
+	margin-top: 60px;
+}
+.catalog-sto-section__acordeon-conteiner{
+	margin-top: 0;
+
+	.cart-main-info__title{
+		font-size: 22px;
+	}
+
+	.acordeon-conteiner__box__nam-element{
+		top: 28px;
+		svg{
+			width: 24px;
+		}
+	}
+	.acordeon-conteiner__claster{
+		padding-bottom: 10px;
+	}
+}
+.acordeon-conteiner__link-conteiner{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+
+	li{
+		font-size: 16px;
+		margin-bottom: 15px;
+		color: $iconcolor;
+		width: 50%;
+		padding-right: 20px;
+
+		a{
+			color: $iconcolor;
+			transition: all ease 0.3s;
+
+			&:hover{
+				color: $bluecolor;
+				transition: all ease 0.3s;
+			}
+		}
+	}
+}
+.list-sto-conteiner__box{
+	padding-top: 60px;
+
+	ul{
+		 display: flex;
+		 flex-wrap: wrap;
+		 width: calc(100% + 20px);
+		 margin-left: -10px;
+
+		 li{
+		 	width: calc(33.333% - 20px);
+		 	margin: 0 10px;
+		 	display: flex;
+		 	justify-content: space-between;
+		 	align-items:center;
+		 	padding: 4px 0;
+		 	border-bottom: 1px solid #EEF2F7;
+
+		 	a{
+		 		color: $iconcolor;
+		 		font-size: 16px;
+		 		transition: all ease 0.3s;
+
+		 		&:hover{
+		 			color: $activcolor;
+		 			transition: all ease 0.3s;
+		 		}
+		 	}
+
+		 	span{
+		 		font-size: 16px;
+		 	}
+		 }
+	}
+}
+.list-sto-conteiner__title{
+	font-size: 28px;
+	padding-bottom: 10px;
+	font-weight: 500;
+}
+
+@media only screen and (max-width: 1100px){
+.catalog-sto-section__main-claster{
+	width: 100%;
+	padding-right: 0;
+}
+}
+@media only screen and (max-width: 850px){
+.catalog-sto-section__main-claster .rent-car__search-conteiner{
+	margin-top: 20px;
+	padding: 20px;
+}
+.sto-acordeon-title{
+	margin-top: 30px;
+}
+.list-sto-conteiner__box{
+	padding-top: 30px;
+}
+.catalog-sto-section{
+	padding-bottom: 20px;
+}
+.list-sto-conteiner__title{
+	font-size: 22px;
+}
+}
+@media only screen and (max-width: 650px){
+.catalog-sto-section__acordeon-conteiner .acordeon-conteiner__box__nam-element{
+	top: 15px;
+}
+.acordeon-conteiner__link-conteiner{
+	padding-left: 30px;
+
+	li{
+		width: 100%;
+	}
+}
+.list-sto-conteiner__box{
+	ul{
+		margin-left: 0;
+		width: 100%;
+		li{
+			width: 100%;
+			margin-left: 0;
+		    margin-right: 0;
+		}
+	}
+}
+.catalog-sto-section__main-claster .rent-car__search-conteiner{
+	width: calc(100% + 40px);
+	margin-left: -20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.catalog-sto-section{
+	.general-title{
+		text-align: left;
+	}
+}
+}
