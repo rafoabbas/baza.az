@@ -186,8 +186,8 @@
                                 </div>
                                 <div class="select-namber-conteiner__drop"></div>
                                 <div class="select-number-conteiner__digits select-number-conteiner__digits-alphabetic">
-                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-1">
-                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-2">
+                                    <input class="number-filter-input" type="text" placeholder="H" maxlength="1" id="number-filter-digit-1">
+                                    <input class="number-filter-input" type="text" placeholder="H" maxlength="1" id="number-filter-digit-2">
                                 </div>
 {{--                                <div class="select-namber-conteiner__select-box">--}}
 {{--                                    <select name="" id="">--}}
@@ -210,9 +210,9 @@
 {{--                                </div>--}}
 
                                 <div class="select-number-conteiner__digits">
-                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-3">
-                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-4">
-                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-5">
+                                    <input class="number-filter-input" type="text" placeholder="0" maxlength="1" id="number-filter-digit-3">
+                                    <input class="number-filter-input" type="text" placeholder="0" maxlength="1" id="number-filter-digit-4">
+                                    <input class="number-filter-input" type="text" placeholder="0" maxlength="1" id="number-filter-digit-5">
                                 </div>
                             </div>
                             <div class="btn2 btn-search-number">
