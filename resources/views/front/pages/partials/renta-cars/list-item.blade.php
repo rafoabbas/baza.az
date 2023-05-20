@@ -1,4 +1,5 @@
 <div class="ads-box rent-car-box">
+    <a href="{{ $route ?? route('renta-car.show') }}" class="overlay"></a>
     <div class="ads_image">
         <div class="ads_image_dop-info">
             <div class="dop-info__element dop_busines">бизнес</div>
@@ -6,9 +7,7 @@
         <img src="{{ asset('assets/front/img/_src/car3.jpg') }}" alt="">
     </div>
     <div class="ads-box__info">
-        <h3 class="ads-box__title">
-            <a href="{{ $route ?? route('renta-car.show') }}">Ford Focus Sport Plus Ford Focus Sport</a>
-        </h3>
+        <h3 class="ads-box__title">Ford Focus Sport Plus Ford Focus Sport</h3>
         <div class="ads-box__location">
             <span>
                 <img src="{{ asset('assets/front/img/_src/location.svg') }}" alt="">

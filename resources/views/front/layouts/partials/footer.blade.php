@@ -46,7 +46,6 @@
     <div class="footer__bottom">
         <div class="general-conteiner">
             <p>Company © 2021 All rights reserved</p>
-            <a href="https://dwm.com.ua/">Developed by DWM</a>
         </div>
     </div>
 </footer>

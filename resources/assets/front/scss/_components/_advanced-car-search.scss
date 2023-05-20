@@ -101,63 +101,55 @@
 
 
 .activ-acordeon{
-		.services-container_redact{
-			.acordeon-conteiner__box{
-				
-				.acordeon-conteiner__box-title{
-					.acordeon-conteiner__open-icon{
-						span{
-							background: $iconcolor;
-							transition: all ease 0.3s;
-						}
-						.ac-icV2{
-							transform: rotate(90deg);
-						}
-					}
-				}
-				.acordeon-conteiner__box__nam-element{
-					svg{
-						path{
-							fill: $iconcolor;
-						}
-					}
-				}
-			}
-		}
-}
+    .services-container_redact{
+        .acordeon-conteiner__box{
 
+            .acordeon-conteiner__box-title{
+                .acordeon-conteiner__open-icon{
+                    span{
+                        background: $iconcolor;
+                        transition: all ease 0.3s;
+                    }
+                    .ac-icV2{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+            .acordeon-conteiner__box__nam-element{
+                svg{
+                    path{
+                        fill: $iconcolor;
+                    }
+                }
+            }
+        }
+    }
+}
 
 .activ-acordeon{
-		.services-container_redact{
-			.activ-acordeon{
-				.acordeon-conteiner__box-title{
-					.acordeon-conteiner__open-icon{
-						span{
-							background: $activcolor;
-							transition: all ease 0.3s;
-						}
-						.ac-icV2{
-							transform: rotate(0deg);
-						}
-					}
-				}
-				.acordeon-conteiner__box__nam-element{
-					svg{
-						path{
-							fill: $bluecolor;
-						}
-					}
-				}
-			}
-		}
+    .services-container_redact{
+        .activ-acordeon{
+            .acordeon-conteiner__box-title{
+                .acordeon-conteiner__open-icon{
+                    span{
+                        background: $activcolor;
+                        transition: all ease 0.3s;
+                    }
+                    .ac-icV2{
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+            .acordeon-conteiner__box__nam-element{
+                svg{
+                    path{
+                        fill: $bluecolor;
+                    }
+                }
+            }
+        }
+    }
 }
-
-
-
-	
-
-
-	
 
 .acordeon-conteiner__box__nam-element{
 	position: absolute;
@@ -461,9 +453,17 @@
 }
 .setings-search__btn-row{
 	margin-top: 20px;
-
+    display: flex;
+    justify-content: flex-end;
 	.btn2{
 		width: 265px;
+        background: $activcolor;
+        p {
+            color: #fff;
+        }
+        svg path {
+            fill: #fff;
+        }
 	}
 }
 

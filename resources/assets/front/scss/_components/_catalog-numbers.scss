@@ -15,17 +15,19 @@
     flex: 1;
     height: 100%;
     max-height: 100%;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
     input {
         text-align: center;
-        width: 71px;
-        height: 67px;
+        width: 35px;
+        height: 60px;
         line-height: 67px;
         max-height: 100%;
         font-size: 44px;
         color: #05182E;
         border: 1px solid #EEF2F7;
-        padding: 10px 6px;
-        letter-spacing: -0.1em;
+        padding: 5px 0px;
         //&::placeholder {
         //    color: #05182E;
         //}
@@ -52,29 +54,45 @@
 .select-namber-conteiner__select-claster{
 	display: flex;
 	align-items: center;
-	padding: 4px 10px;
-	border: 1px solid $iconcolor;
-	border-radius: 3px;
+	padding: 4px 8px;
+	border: 1.6px solid $titlecolor;
+	border-radius: 5px;
 }
 
 .select-namber-conteiner__num-country{
 	margin-right: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 .select-namber-conteiner__logo-country{
 	width: 25px;
-	margin-bottom: 7px;
 	img{
 		width: 100%;
-		border-radius: 1px;
 	}
 }
 .select-namber-conteiner__slug-country{
 	background: #FFFFFF;
-	border-radius: 1px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-	padding: 0 2px;
-	font-size: 18px;
+	padding: 3px;
+	font-size: 22px;
+    line-height: 20px;
 	font-weight: 500;
+    border: .2px solid $iconcolor;
+    border-radius: 3px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        border: .1px solid $iconcolor;
+        border-radius: 2px;
+    }
+
 }
 .select-namber-conteiner__select-box{
 	select{
@@ -83,26 +101,31 @@
 		-ms-appearance: none;
 		appearance: none;
 		background: url('/assets/front/img/_src/select-ar.png') no-repeat right center;
-		background-size: 16px 16px;
+		background-size: 20px 20px;
 		outline: 0;
 		font-size: 54px;
         font-family: 'Barlow', sans-serif;
         font-weight: 500;
         color: $titlecolor;
-        padding-right: 17px;
+        padding-right: 15px;
         border-radius: 3px;
         border: solid 1px #EEF2F7;
 
+        display: inherit;
+        border: none;
+        //background: none;
+        //padding-right: 0;
         option{
             font-size: 28px;
+
         }
 	}
 }
 .select-namber-conteiner__drop{
-	width: 8px;
+	width: 10px;
 	height: 5px;
 	border-radius: 1px;
-	margin: 0 5px;
+	margin: 0 3px;
 	background: $titlecolor;
 }
 .ads-namber-conteiner{
@@ -137,19 +160,28 @@
         }
         .sing-numbers-section__nam-image {
             width: 200px;
-            bottom: 21%;
+            bottom: 20%;
+            border-radius: 6px;
             .select-namber-conteiner__num-country {
                 margin-right: 5px;
                 .select-namber-conteiner__logo-country {
-                    width: 22px;
-                    margin-bottom: 5px;
+                    width: 16px;
                 }
                 .select-namber-conteiner__slug-country {
-                    font-size: 14px;
+                    font-size: 11px;
+                    line-height: 10px;
                 }
             }
+            .select-namber-conteiner__drop {
+                margin: 0;
+                width: 8px;
+                height: 4px;
+            }
             .am-value__nm {
-                font-size: 28px;
+                display: inline;
+                font-size: 35px;
+                line-height: 36px;
+                color: $titlecolor;
             }
         }
     }
