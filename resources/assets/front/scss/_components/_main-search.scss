@@ -11,15 +11,15 @@ main{
 	}
 }
 .main-search__search-conteiner{
-	width: calc(100% - 600px);
-    //flex: calc((100% - 30px) / 2);
+	//width: calc(100% - 600px);
+    flex: calc((100% - 65px) / 2);
 	background: $bgcolor1;
 	padding: 20px 15px;
-    padding-right: 70px;
+    padding-right: 50px;
 }
 .main-search__image{
-    //flex: calc((100% - 65px) / 2);
-	width: 600px;
+    flex: calc((100% - 65px) / 2);
+	//width: 600px;
 }
 .main-search__type-car-conteiner{
 	width: 100%;
@@ -406,6 +406,13 @@ main{
 	.btn2{
 	    padding: 12px 10px;
 	    margin-bottom: 15px;
+    }
+}
+
+.main-search__radio-element{
+    width: 100%;
+    label {
+        line-height: 46.5px;
     }
 }
 

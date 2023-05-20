@@ -901,6 +901,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                <label for="advance_filter__result__show-more" class="filter-result__show-more">
+                                    <p>Show more</p>
+                                    <p>Show less</p>
+                                </label>
+                                <input type="checkbox" name="advance_filter__result__show-more" id="advance_filter__result__show-more">
                             </div>
                             <div class="ads-body__header">
                                 <button class="bt_del">
@@ -945,86 +950,86 @@
             </div>
         </div>
     </section>
-    <section class="fixed-staps fixed-bottom-site-bar">
-        <div class="general-conteiner">
-            <div class="setings-search__select-value">
-                <div class="setings-search__what-you-search">
-                    <p class="what-you-search__title">Вы ищите:</p>
-                    <div class="catalog__filtr-select">
-                        <div class="filtr-select__element">
-                            <p>Минивен</p>
-                            <div class="filtr-select__delete">
-                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="filtr-select__element">
-                            <p>Ford</p>
-                            <div class="filtr-select__delete">
-                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="filtr-select__element">
-                            <p>Mersedes benz</p>
-                            <div class="filtr-select__delete">
-                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="filtr-select__element">
-                            <p>Vito</p>
-                            <div class="filtr-select__delete">
-                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="filtr-select__element">
-                            <p>от 2012 г.</p>
-                            <div class="filtr-select__delete">
-                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="filtr-select__element">
-                            <p>Газ/бензин</p>
-                            <div class="filtr-select__delete">
-                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="filtr-select__element">
-                            <p>Полный привод</p>
-                            <div class="filtr-select__delete">
-                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ads-body__header">
-                    <button class="bt_del">
-                        <p>Сбросить все фильтры</p>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 4H3.33333H14" stroke="#0D417B" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M5.33398 4.00016V2.66683C5.33398 2.31321 5.47446 1.97407 5.72451 1.72402C5.97456 1.47397 6.3137 1.3335 6.66732 1.3335H9.33398C9.68761 1.3335 10.0267 1.47397 10.2768 1.72402C10.5268 1.97407 10.6673 2.31321 10.6673 2.66683V4.00016M12.6673 4.00016V13.3335C12.6673 13.6871 12.5268 14.0263 12.2768 14.2763C12.0267 14.5264 11.6876 14.6668 11.334 14.6668H4.66732C4.3137 14.6668 3.97456 14.5264 3.72451 14.2763C3.47446 14.0263 3.33398 13.6871 3.33398 13.3335V4.00016H12.6673Z" stroke="#0D417B" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6.66602 7.3335V11.3335" stroke="#0D417B" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9.33398 7.3335V11.3335" stroke="#0D417B" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="ads-body__sorting-conteiner">
-                        <div class="sorting-conteiner__element sorting-conteiner_nam-ads">
-                            <p>Показать по:</p>
-                            <select name="" id="">
-                                <option value="">36 авто на странице</option>
-                                <option value="">26 авто на странице</option>
-                            </select>
-                        </div>
-                        <div class="sorting-conteiner__element sorting-conteiner__date">
-                            <p>Сортировка по:</p>
-                            <select name="" id="">
-                                <option value="">дате добавления</option>
-                                <option value="">дате изменения</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="fixed-staps fixed-bottom-site-bar">--}}
+{{--        <div class="general-conteiner">--}}
+{{--            <div class="setings-search__select-value">--}}
+{{--                <div class="setings-search__what-you-search">--}}
+{{--                    <p class="what-you-search__title">Вы ищите:</p>--}}
+{{--                    <div class="catalog__filtr-select">--}}
+{{--                        <div class="filtr-select__element">--}}
+{{--                            <p>Минивен</p>--}}
+{{--                            <div class="filtr-select__delete">--}}
+{{--                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="filtr-select__element">--}}
+{{--                            <p>Ford</p>--}}
+{{--                            <div class="filtr-select__delete">--}}
+{{--                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="filtr-select__element">--}}
+{{--                            <p>Mersedes benz</p>--}}
+{{--                            <div class="filtr-select__delete">--}}
+{{--                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="filtr-select__element">--}}
+{{--                            <p>Vito</p>--}}
+{{--                            <div class="filtr-select__delete">--}}
+{{--                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="filtr-select__element">--}}
+{{--                            <p>от 2012 г.</p>--}}
+{{--                            <div class="filtr-select__delete">--}}
+{{--                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="filtr-select__element">--}}
+{{--                            <p>Газ/бензин</p>--}}
+{{--                            <div class="filtr-select__delete">--}}
+{{--                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="filtr-select__element">--}}
+{{--                            <p>Полный привод</p>--}}
+{{--                            <div class="filtr-select__delete">--}}
+{{--                                <img src="{{ asset('assets/front/img/_src/close.png') }}" alt="">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="ads-body__header">--}}
+{{--                    <button class="bt_del">--}}
+{{--                        <p>Сбросить все фильтры</p>--}}
+{{--                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                            <path d="M2 4H3.33333H14" stroke="#0D417B" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                            <path d="M5.33398 4.00016V2.66683C5.33398 2.31321 5.47446 1.97407 5.72451 1.72402C5.97456 1.47397 6.3137 1.3335 6.66732 1.3335H9.33398C9.68761 1.3335 10.0267 1.47397 10.2768 1.72402C10.5268 1.97407 10.6673 2.31321 10.6673 2.66683V4.00016M12.6673 4.00016V13.3335C12.6673 13.6871 12.5268 14.0263 12.2768 14.2763C12.0267 14.5264 11.6876 14.6668 11.334 14.6668H4.66732C4.3137 14.6668 3.97456 14.5264 3.72451 14.2763C3.47446 14.0263 3.33398 13.6871 3.33398 13.3335V4.00016H12.6673Z" stroke="#0D417B" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                            <path d="M6.66602 7.3335V11.3335" stroke="#0D417B" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                            <path d="M9.33398 7.3335V11.3335" stroke="#0D417B" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                        </svg>--}}
+{{--                    </button>--}}
+{{--                    <div class="ads-body__sorting-conteiner">--}}
+{{--                        <div class="sorting-conteiner__element sorting-conteiner_nam-ads">--}}
+{{--                            <p>Показать по:</p>--}}
+{{--                            <select name="" id="">--}}
+{{--                                <option value="">36 авто на странице</option>--}}
+{{--                                <option value="">26 авто на странице</option>--}}
+{{--                            </select>--}}
+{{--                        </div>--}}
+{{--                        <div class="sorting-conteiner__element sorting-conteiner__date">--}}
+{{--                            <p>Сортировка по:</p>--}}
+{{--                            <select name="" id="">--}}
+{{--                                <option value="">дате добавления</option>--}}
+{{--                                <option value="">дате изменения</option>--}}
+{{--                            </select>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 @endsection
 
 @push('scripts')

@@ -106,11 +106,11 @@
                     </div>
                 </form>
             </div>
-            <div class="main-search__image" style="background-image:url({{asset('assets/front/img/_src/main_baner.jpg')}}); background-repeat: no-repeat; background-size:cover; background-position:center;">
+            <a href="#" target="_blank" class="main-search__image" style="background-image:url({{asset('assets/front/img/_src/main_baner.jpg')}}); background-repeat: no-repeat; background-size:cover; background-position:center;">
+            </a>
+            <div class="main-search__baner">
+                <img src="{{ asset('assets/front/img/_src/baner3.jpg') }}" alt="">
             </div>
-{{--            <div class="main-search__baner">--}}
-{{--                <img src="{{ asset('assets/front/img/_src/baner3.jpg') }}" alt="">--}}
-{{--            </div>--}}
         </div>
     </section>
     @php($items = collect([0,1,2,3,4,5,6,7]))
@@ -187,7 +187,6 @@
     <section class="partners">
         <div class="general-conteiner">
             <h2 class="general-title">Партнерство</h2>
-
             <div class="partners__conteiner">
                 <div class="partners__claster">
                     <h3 class="partners__title">Частным лицам</h3>

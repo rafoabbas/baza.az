@@ -3,7 +3,14 @@
 @section('content')
     <section class="cart-main-info single-sto singl-auto-store">
         <div class="general-conteiner">
-            <h2 class="cart-main-info__title">Автосалон Mercedes-Benz Baku</h2>
+            <h2 class="cart-main-info__title">
+                <div class="showroom-box__verified">
+                    <div class="showroom-box__verified__anons">
+                        <p>Verified Salon</p>
+                    </div>
+                    <svg height="2500" width="2500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g fill="none" fill-rule="evenodd"><path d="M256 472.153L176.892 512l-41.725-81.129-86.275-16.654 11.596-91.422L0 256l60.488-66.795-11.596-91.422 86.275-16.654L176.892 0 256 39.847 335.108 0l41.725 81.129 86.275 16.654-11.596 91.422L512 256l-60.488 66.795 11.596 91.422-86.275 16.654L335.108 512z" fill="#4285f4"/><path d="M211.824 284.5L171 243.678l-36 36 40.824 40.824-.063.062 36 36 .063-.062.062.062 36-36-.062-.062L376.324 192l-36-36z" fill="#fff"/></g></svg>
+                </div>
+                Автосалон Mercedes-Benz Baku</h2>
             <div class="catalog_bread-crumbs">
                 <a href="">Главная</a>
                 <a href="">/ Все автосалоны</a>
@@ -21,9 +28,17 @@
                 <div class="cart-main-info__body-info">
                     <div class="cart-main-info__description-conteiner">
                         <div class="cart-main-info__description-conteiner__logo">
-                            <img src="{{ asset('assets/front/img/_src/lx.png') }}" alt="">
+                            <img src="{{ asset('assets/front/img/_src/mercedes-logo.png') }}" alt="">
                         </div>
                         <div class="cart-main-info__description-conteiner__text">
+                            <h3 class="cart-main-info__description-conteiner__text__title">
+                                <img src="{{ asset('assets/front/img/_src/star.png') }}" alt="">
+                                The best or nothing
+                            </h3>
+                            <span class="cart-main-info__description-conteiner__text__seen">
+                                <img src="{{ asset('assets/front/img/_src/views.png') }}" alt="">
+                                654 890
+                            </span>
                             <p>Автосалон Mercedes-Benz Baku - официальный дилер Mercedes-Benz в Азербайджане. Мы предлагаем полный спектр услуг по продаже и обслуживанию автомобилей Mercedes-Benz. В нашем автосалоне представлены новые автомобили Mercedes-Benz, а также автомобили с пробегом. В нашем автосалоне Вы можете приобрести автомобиль Mercedes-Benz по выгодным ценам, а также воспользоваться услугами по обслуживанию и ремонту автомобилей Mercedes-Benz.</p>
                         </div>
                     </div>
@@ -253,7 +268,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cart-main-info__map-conteiner">
+                    <div class="description-sto-conteiner ">
+                        <h2 class="general-titleV2">Auto Salon address in map</h2>
                         <div id="map3"></div>
                     </div>
                 </div>
@@ -280,6 +296,10 @@
                         <ul class="cart-main-info__link-website">
                             <li><a href="avto.com">avto.com</a></li>
                         </ul>
+                        <span class="cart-main-info__description-conteiner__text__seen">
+                            <img src="{{ asset('assets/front/img/_src/views.png') }}" alt="">
+                            654 890
+                        </span>
                         <div class="cart-main-info__sotial-conteiner">
                             <a href="">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

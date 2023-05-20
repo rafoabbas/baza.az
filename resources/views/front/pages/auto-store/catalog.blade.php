@@ -122,8 +122,9 @@
                         </div>
                     </div>
                     <div class="ads-body__conteiner ads-rent-car-conteiner">
-                        @foreach([0,1,2,3,4,5] as $item)
+                        @foreach([0,1,2,3,4,5,6,7,8,9] as $item)
                         <div class="ads-box rent-car-box auto-store-box">
+                            <a href="{{ route('auto-store.show') }}" class="overlay"></a>
                             <div class="ads_image">
                                 <div class="ads_image_dop-info">
                                     <!-- <div class="dop-info__element dop_busines">бизнес</div> -->
@@ -132,9 +133,7 @@
                             </div>
                             <div class="ads-box__info">
                                 <div class="auto-store__title">
-                                    <h3 class="ads-box__title">
-                                        <a href="{{ route('auto-store.show') }}">ТОП Запчасти Запчасти Запчасти 2</a>
-                                    </h3>
+                                    <h3 class="ads-box__title">ТОП Запчасти Запчасти Запчасти 2</h3>
                                     <div class="ads-box__location">
                                         <span>
                                             <img src="{{ asset('assets/front/img/_src/location.svg') }}" alt="">

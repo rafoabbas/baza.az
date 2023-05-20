@@ -267,6 +267,7 @@
                         </div>
                     </div>
                     <div class="sing-sto-slider">
+                        <h2 class="general-titleV2">Galery</h2>
                         <div class="sing-sto-slider__big-slider">
                             <div class="sing-sto-slider__element">
                                 <img src="{{ asset('assets/front/img/_src/sl1.jpg') }}" alt="">
@@ -303,6 +304,7 @@
                         </div>
                     </div>
                     <div class="cart-main-info__map-conteiner">
+                        <h2 class="general-titleV2">Cto address Map</h2>
                         <div id="map3"></div>
                     </div>
                 </div>

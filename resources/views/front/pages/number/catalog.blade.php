@@ -185,8 +185,9 @@
                                     </select>
                                 </div>
                                 <div class="select-namber-conteiner__drop"></div>
-                                <div class="select-number-conteiner__digits">
-                                    <input type="text" placeholder="AA" maxlength="2">
+                                <div class="select-number-conteiner__digits select-number-conteiner__digits-alphabetic">
+                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-1">
+                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-2">
                                 </div>
 {{--                                <div class="select-namber-conteiner__select-box">--}}
 {{--                                    <select name="" id="">--}}
@@ -208,8 +209,10 @@
 {{--                                    </select>--}}
 {{--                                </div>--}}
 
-                                <div class="select-number-conteiner__digits select-number-conteiner__digits__number">
-                                    <input type="text" placeholder="000" maxlength="3">
+                                <div class="select-number-conteiner__digits">
+                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-3">
+                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-4">
+                                    <input class="number-filter-input" type="text" placeholder="*" maxlength="1" id="number-filter-digit-5">
                                 </div>
                             </div>
                             <div class="btn2 btn-search-number">
@@ -352,4 +355,95 @@
 @endsection
 
 @push('scripts')
+    <script>
+
+        // Number Filter
+        const input = document.querySelectorAll(".number-filter-input");
+        const inputField = document.querySelector(".select-number-conteiner__digits");
+        const submitButton = document.getElementById("number-submit");
+        let inputCount = 0,
+            finalInput = "";
+
+        const numberFilterSubmit = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            let searchParams = '';
+            input.forEach((item) => {
+                searchParams += `${item.getAttribute('data-name')}=${item.value}`;
+            })
+            console.log({searchParams});
+        }
+
+        //Update input
+        const updateInputConfig = (element, disabledStatus) => {
+            // element.disabled = disabledStatus;
+            if (!disabledStatus) {
+                element.focus();
+            } else {
+                element.blur();
+            }
+        };
+
+        input.forEach((element) => {
+            element.addEventListener("keyup", (e) => {
+                let isAlphabetic = e.target.closest(".select-number-conteiner__digits-alphabetic");
+                let regex = !isAlphabetic ? /[a-zA-Z]/g : /[0-9]/g;
+                e.target.value = e.target.value.replace(regex, "");
+                let { value } = e.target;
+
+                if (value.length == 1) {
+                    updateInputConfig(e.target, true);
+                    if (inputCount <= 6 && e.key != "Backspace") {
+                        finalInput += value;
+                        if (inputCount < 6) {
+                            updateInputConfig(e.target.nextElementSibling, false);
+                        }
+                    }
+                    inputCount += 1;
+                } else if (value.length == 0 && e.key == "Backspace") {
+                    finalInput = finalInput.substring(0, finalInput.length - 1);
+                    if (inputCount == 0) {
+                        updateInputConfig(e.target, false);
+                        return false;
+                    }
+                    updateInputConfig(e.target, true);
+                    e.target.previousElementSibling.value = "";
+                    updateInputConfig(e.target.previousElementSibling, false);
+                    inputCount -= 1;
+                } else if (value.length > 1) {
+                    e.target.value = value.split("")[0];
+                }
+                submitButton.classList.add("hide");
+            });
+        });
+
+        window.addEventListener("keyup", (e) => {
+            if (inputCount > 6) {
+                submitButton.classList.remove("hide");
+                submitButton.classList.add("show");
+                if (e.key == "Backspace") {
+                    finalInput = finalInput.substring(0, finalInput.length - 1);
+                    updateInputConfig(inputField.lastElementChild, false);
+                    inputField.lastElementChild.value = "";
+                    inputCount -= 1;
+                    submitButton.classList.add("hide");
+                }
+            }
+        });
+
+        //Start
+        const startInput = () => {
+            inputCount = 0;
+            finalInput = "";
+
+            input.forEach((element) => {
+                element.value = "";
+            });
+
+            updateInputConfig(inputField.firstElementChild, false);
+        };
+
+        window.onload = startInput();
+    </script>
 @endpush

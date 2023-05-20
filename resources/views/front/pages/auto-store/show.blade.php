@@ -206,6 +206,7 @@
                         </div>
                     </div>
                     <div class="cart-main-info__slider-auto-store slider-auto-store">
+                        <h2 class="general-titleV2">Galery</h2>
                         <div class="slider-auto-store__slider">
                             <div class="slider-auto-store__element-slider">
                                 <img src="{{ asset('assets/front/img/_src/serv-img.jpg') }}" alt="">
@@ -256,6 +257,7 @@
                         </div>
                     </div>
                     <div class="cart-main-info__map-conteiner cart-main-info__map-conteiner_auto-store">
+                        <h2 class="general-titleV2">Address Map</h2>
                         <div id="map3"></div>
                     </div>
                 </div>

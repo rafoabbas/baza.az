@@ -1,4 +1,5 @@
 <div class="ads-box">
+    <a class="overlay" target="_blank" href="{{ $route ?? route('cart') }}"></a>
     <div class="ads_image">
         <div class="ads_image_dop-info">
             <div class="dop-info__element dop_store">автосалон</div>
@@ -8,9 +9,7 @@
         <img src="{{ asset('assets/front/img/_src/car1.jpg') }}" alt="">
     </div>
     <div class="ads-box__info">
-        <h3 class="ads-box__title">
-            <a href="{{ $route ?? route('cart') }}">Ford Focus Sport Plus Ford Focus Sport</a>
-        </h3>
+        <h3 class="ads-box__title">Ford Focus Sport Plus Ford Focus Sport</h3>
         <p class="ads-box__date">08.02.2021, 16:58</p>
         <div class="ads-box__tegs-conteiner">
             <div class="ads-box__tegs-line">
