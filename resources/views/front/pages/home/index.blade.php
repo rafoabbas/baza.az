@@ -106,10 +106,10 @@
                     </div>
                 </form>
             </div>
-            <a href="#" target="_blank" class="main-search__image" style="background-image:url({{asset('assets/front/img/_src/main_baner.jpg')}}); background-repeat: no-repeat; background-size:cover; background-position:center;">
+            <a href="#" target="_blank" class="main-search__image" style="background-image:url({{asset('assets/front/img/_src/banner1.jpeg')}}); background-repeat: no-repeat; background-size:cover; background-position:center;">
             </a>
             <div class="main-search__baner">
-                <img src="{{ asset('assets/front/img/_src/baner3.jpg') }}" alt="">
+                <img src="{{ asset('assets/front/img/_src/middle-banner.jpeg') }}" alt="">
             </div>
         </div>
     </section>

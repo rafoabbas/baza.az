@@ -12,13 +12,14 @@ main{
 }
 .main-search__search-conteiner{
 	//width: calc(100% - 600px);
-    flex: calc((100% - 65px) / 2);
+    flex: calc((100% - 50px) / 2);
 	background: $bgcolor1;
 	padding: 20px 15px;
-    padding-right: 50px;
+    //padding-right: 50px;
+    margin-right: 20px;
 }
 .main-search__image{
-    flex: calc((100% - 65px) / 2);
+    flex: calc((100% - 50px) / 2);
 	//width: 600px;
 }
 .main-search__type-car-conteiner{
