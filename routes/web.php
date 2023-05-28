@@ -17,6 +17,62 @@ Route::get('/', function () {
     return view('front.pages.home.index');
 });
 
+Route::get('/profile', function () {
+    return view('front.pages.profile.index');
+})->name('profile');
+
+Route::get('/profile-business', function () {
+    return view('front.pages.profile.business.index');
+})->name('profile.business');
+
+Route::group(['prefix' => 'profile-business', 'as' => 'profile.business.'], function () {
+    Route::get('/', function () {
+        return view('front.pages.profile.business.index');
+    })->name('index');
+
+    Route::group(['prefix' => 'autosalon', 'as' => 'autosalon.'], function () {
+        Route::get('/', function () {
+            return view('front.pages.profile.business.pages.autosalon.index');
+        })->name('index');
+        Route::get('/redakte', function () {
+            return view('front.pages.profile.business.pages.autosalon.edit');
+        })->name('edit');
+        Route::get('/autos', function () {
+            return view('front.pages.profile.business.pages.autosalon.autos');
+        })->name('autos');
+        Route::get('/add-auto', function () {
+            return view('front.pages.profile.business.pages.autosalon.add-auto');
+        })->name('add-auto');
+    });
+    Route::group(['prefix' => 'autoservice', 'as' => 'autoservice.'], function () {
+        Route::get('/', function () {
+            return view('front.pages.profile.business.pages.autoservice.index');
+        })->name('index');
+        Route::get('/redakte', function () {
+            return view('front.pages.profile.business.pages.autoservice.edit');
+        })->name('edit');
+    });
+    Route::group(['prefix' => 'autostore', 'as' => 'autostore.'], function () {
+        Route::get('/', function () {
+            return view('front.pages.profile.business.pages.autostore.index');
+        })->name('index');
+        Route::get('/redakte', function () {
+            return view('front.pages.profile.business.pages.autostore.edit');
+        })->name('edit');
+    });
+    Route::group(['prefix' => 'rentacar', 'as' => 'rentacar.'], function () {
+        Route::get('/', function () {
+            return view('front.pages.profile.business.pages.rentacar.index');
+        })->name('index');
+        Route::get('/redakte', function () {
+            return view('front.pages.profile.business.pages.rentacar.edit');
+        })->name('edit');
+        Route::get('/add-auto', function () {
+            return view('front.pages.profile.business.pages.rentacar.add-auto');
+        })->name('add-auto');
+    });
+});
+
 Route::get('/advanced-search', function () {
     return view('front.pages.search.advance');
 })->name('advanced-search');
