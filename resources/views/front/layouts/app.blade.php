@@ -62,7 +62,7 @@
 
                 <div class="galery-conteiner__element-slide">
                     <div class="galery-conteiner__element-slide-wrapper">
-                        <div class="ads-box__play play-triger" data-videolink="">
+                        <div class="card-box__play play-triger" data-videolink="">
                             <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">
                         </div>
                         <img src="{{ asset('assets/front/img/_src/carslider.jpg') }}" alt="">
@@ -88,202 +88,202 @@
         </div>
     </div>
     @stack('scripts')
-    <script src="{{ asset('assets/front/js/scripts.min.js?v=' . config('app.assets.version', 'v0.0.1')) }}{{uniqid()}}"></script>
+{{--    <script src="{{ asset('assets/front/js/scripts.min.js?v=' . config('app.assets.version', 'v0.0.1')) }}{{uniqid()}}"></script>--}}
     @stack('script')
-    <script>
-        function initMap(){
+{{--    <script>--}}
+{{--        function initMap(){--}}
 
-            var map = new google.maps.Map(document.getElementById('map3'), {
-                center: {lat:50.470709,lng:30.406405},
-                zoom: 13.5,
-                panControl:false,
-                zoomControl:true,
-                mapTypeControl:false,
-                scaleControl:false,
-                streetViewControl:false,
-                overviewMapControl:false,
-                rotateControl:false,
-            });
-            var styles = [
-                {
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#f5f5f5"
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#616161"
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.text.stroke",
-                    "stylers": [
-                        {
-                            "color": "#f5f5f5"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#bdbdbd"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#eeeeee"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#757575"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#e5e5e5"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#9e9e9e"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.arterial",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#757575"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#dadada"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#616161"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.local",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#9e9e9e"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit.line",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#e5e5e5"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit.station",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#eeeeee"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#c9c9c9"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#9e9e9e"
-                        }
-                    ]
-                }
-            ]
+{{--            var map = new google.maps.Map(document.getElementById('map3'), {--}}
+{{--                center: {lat:50.470709,lng:30.406405},--}}
+{{--                zoom: 13.5,--}}
+{{--                panControl:false,--}}
+{{--                zoomControl:true,--}}
+{{--                mapTypeControl:false,--}}
+{{--                scaleControl:false,--}}
+{{--                streetViewControl:false,--}}
+{{--                overviewMapControl:false,--}}
+{{--                rotateControl:false,--}}
+{{--            });--}}
+{{--            var styles = [--}}
+{{--                {--}}
+{{--                    "elementType": "geometry",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#f5f5f5"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "elementType": "labels.icon",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "visibility": "off"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "elementType": "labels.text.fill",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#616161"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "elementType": "labels.text.stroke",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#f5f5f5"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "administrative.land_parcel",--}}
+{{--                    "elementType": "labels.text.fill",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#bdbdbd"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "poi",--}}
+{{--                    "elementType": "geometry",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#eeeeee"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "poi",--}}
+{{--                    "elementType": "labels.text.fill",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#757575"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "poi.park",--}}
+{{--                    "elementType": "geometry",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#e5e5e5"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "poi.park",--}}
+{{--                    "elementType": "labels.text.fill",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#9e9e9e"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "road",--}}
+{{--                    "elementType": "geometry",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#ffffff"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "road.arterial",--}}
+{{--                    "elementType": "labels.text.fill",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#757575"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "road.highway",--}}
+{{--                    "elementType": "geometry",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#dadada"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "road.highway",--}}
+{{--                    "elementType": "labels.text.fill",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#616161"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "road.local",--}}
+{{--                    "elementType": "labels.text.fill",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#9e9e9e"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "transit.line",--}}
+{{--                    "elementType": "geometry",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#e5e5e5"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "transit.station",--}}
+{{--                    "elementType": "geometry",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#eeeeee"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "water",--}}
+{{--                    "elementType": "geometry",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#c9c9c9"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "featureType": "water",--}}
+{{--                    "elementType": "labels.text.fill",--}}
+{{--                    "stylers": [--}}
+{{--                        {--}}
+{{--                            "color": "#9e9e9e"--}}
+{{--                        }--}}
+{{--                    ]--}}
+{{--                }--}}
+{{--            ]--}}
 
-            var marker = new google.maps.Marker({
-                map: map,
-                position: {lat:50.470709,lng:30.406405},
-                title: 'Our office:',
-                icon: {
-                    url: "img/_src/marker.png",
-                    scaledSize: new google.maps.Size(40, 40)
-                }
-            });
-            marker.addListener("click",function(){
-                info.open(map, marker );
-            });
-            map.setOptions({styles: styles});
-        }
+{{--            var marker = new google.maps.Marker({--}}
+{{--                map: map,--}}
+{{--                position: {lat:50.470709,lng:30.406405},--}}
+{{--                title: 'Our office:',--}}
+{{--                icon: {--}}
+{{--                    url: "img/_src/marker.png",--}}
+{{--                    scaledSize: new google.maps.Size(40, 40)--}}
+{{--                }--}}
+{{--            });--}}
+{{--            marker.addListener("click",function(){--}}
+{{--                info.open(map, marker );--}}
+{{--            });--}}
+{{--            map.setOptions({styles: styles});--}}
+{{--        }--}}
 
 
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvt_XnVi4vJyFx1LhfRK_tm-5F3IPhOj0&callback=initMap"
-            async defer></script>
+{{--    </script>--}}
+{{--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvt_XnVi4vJyFx1LhfRK_tm-5F3IPhOj0&callback=initMap"--}}
+{{--            async defer></script>--}}
 </body>
 </html>
 

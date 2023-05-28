@@ -27,7 +27,7 @@ $(document).ready(function() {
 		scrollPrev = scrolled;
 	});
 
-	//header lang, money select 
+	//header lang, money select
 	$('.header__select-list span').on('click',function(){
 		$(this).closest('.header__select-list').find('ul').slideToggle(200);
 	});
@@ -46,7 +46,7 @@ $(document).ready(function() {
 		let searchElement = $('.list-car-search__search-line input');
 		let listItemSearchElement = $('.list-car-search__decision-list li');
 
-		//open / close 
+		//open / close
 		searchElement.on('click', function(){
 			$(this).closest('.list-car-search').find('.list-car-search__decision').slideDown(300);
 		});
@@ -84,7 +84,7 @@ $(document).ready(function() {
         	let loyCaseValue = inpValue.toLowerCase();
         	let navSearchElements = loyCaseValue.length;
         	let currienList = thisSearch.closest('.list-car-search').find('.list-car-search__decision-list li');
-            
+
             $.each(currienList, function(index, val) {
             	let valyeThisListElement = $(this).text().toLowerCase();
 
@@ -100,14 +100,14 @@ $(document).ready(function() {
             	}
             	else{
             		$(this).removeClass('hideResoultSearch');
-            	} 	
+            	}
             });
         }
 
         function selectValue(currentElementList){
         	let valueTextInfo = currentElementList.text();
         	let inputSearchValue = currentElementList .closest('.list-car-search').find('.list-car-search__search-line input');
-        	
+
         	inputSearchValue.val(valueTextInfo);
         }
 
@@ -115,7 +115,7 @@ $(document).ready(function() {
 			searchElement.closest('.list-car-search').find('.list-car-search__decision').slideUp(300); // скрываем его
 		}
 	})
-	
+
 	//___________________________________________________
 
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
 	    });
 	};
 	$(".input-main__prise-inp input").ForceNumericOnly();
- 
+
 
 	//tab search main
 	$('.main-search__type-car-element').on('click',function(){
@@ -211,7 +211,7 @@ $(document).ready(function() {
 	});
 
 	//cart add like
-	$('.ads-box__add-icon').on('click',function(){
+	$('.card-box__add-icon').on('click',function(){
 		let thisElement = $(this);
 		if(thisElement.hasClass('actlike')){
 			thisElement.removeClass('actlike');
@@ -248,11 +248,11 @@ $(document).ready(function() {
 	$('.visyal_btn ').on('click', function(){
 		if($(this).hasClass('list-ads')){
 		  $('.ads-body__conteiner').addClass('ads-body__conteiner__list-visyal');
-		  $('.ads-body__wraper-ads').addClass('ads-body__wraper-ads_list')	
+		  $('.ads-body__wraper-ads').addClass('ads-body__wraper-ads_list')
 		}
 		if($(this).hasClass('grid-ads')){
 		  $('.ads-body__conteiner').removeClass('ads-body__conteiner__list-visyal');
-		  $('.ads-body__wraper-ads').removeClass('ads-body__wraper-ads_list')		
+		  $('.ads-body__wraper-ads').removeClass('ads-body__wraper-ads_list')
 		}
 		if (!$(this).hasClass('activ-visyal-controller')) {
 			$('.visyal_btn').removeClass('activ-visyal-controller');
@@ -278,10 +278,10 @@ $(document).ready(function() {
 	  speed: 1000,
 	  adaptiveHeight: true,
 	  slidesToScroll: 1,
-	  dots: false,                                                                                                                                                                                                               
+	  dots: false,
 	  slidesToShow: 1,
 	  asNavFor: '.cart-main-info__smal-slider , .galery-conteiner__slider',
-	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>', 
+	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  nextArrow: '<div class="ar_slier next-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  responsive: [
 	    {
@@ -290,7 +290,7 @@ $(document).ready(function() {
 	        slidesToShow: 1,
 	      }
 	    },
-	  ]  
+	  ]
 	});
 
 	$('.cart-main-info__smal-slider').slick({
@@ -298,7 +298,7 @@ $(document).ready(function() {
 	  speed: 1000,
 	  adaptiveHeight: true,
 	  slidesToScroll: 1,
-	  dots: false,                                                                                                                                                                                                               
+	  dots: false,
 	  slidesToShow: 3,
 	  vertical: true,
       verticalSwiping: true,
@@ -312,7 +312,7 @@ $(document).ready(function() {
 	        slidesToShow: 1,
 	      }
 	    },
-	  ]  
+	  ]
 	});
 
 	$('.galery-conteiner__slider').slick({
@@ -320,10 +320,10 @@ $(document).ready(function() {
 	  speed: 1000,
 	  adaptiveHeight: false,
 	  slidesToScroll: 1,
-	  dots: false,                                                                                                                                                                                                               
+	  dots: false,
 	  slidesToShow: 1,
 	  asNavFor: '.cart-main-info__big-slider , .cart-main-info__smal-slider',
-	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>', 
+	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  nextArrow: '<div class="ar_slier next-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  responsive: [
 	    {
@@ -332,7 +332,7 @@ $(document).ready(function() {
 	        slidesToShow: 1,
 	      }
 	    },
-	  ]  
+	  ]
 	});
 
 	//cart page cars slider video download
@@ -352,7 +352,7 @@ $(document).ready(function() {
         $('.galery-conteiner__element-slide-wrapper iframe').attr('src', '')
     	$('.galery-conteiner__element-slide-wrapper').removeClass('activVideoGaleru');
 	})
-    
+
 
 
 
@@ -362,9 +362,9 @@ $(document).ready(function() {
 	  speed: 1000,
 	  adaptiveHeight: true,
 	  slidesToScroll: 1,
-	  dots: false,                                                                                                                                                                                                               
+	  dots: false,
 	  slidesToShow: 1,
-	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>', 
+	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  nextArrow: '<div class="ar_slier next-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  responsive: [
 	    {
@@ -373,11 +373,11 @@ $(document).ready(function() {
 	        slidesToShow: 1,
 	      }
 	    },
-	  ]  
+	  ]
 	});
 
 
-	
+
 
 	//single sto baner slider
 	$('.single-sto__baner-slider').slick({
@@ -385,9 +385,9 @@ $(document).ready(function() {
 	  speed: 1000,
 	  adaptiveHeight: true,
 	  slidesToScroll: 1,
-	  dots: false,                                                                                                                                                                                                               
+	  dots: false,
 	  slidesToShow: 1,
-	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>', 
+	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  nextArrow: '<div class="ar_slier next-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  responsive: [
 	    {
@@ -396,7 +396,7 @@ $(document).ready(function() {
 	        slidesToShow: 1,
 	      }
 	    },
-	  ]  
+	  ]
 	});
 
 
@@ -406,10 +406,10 @@ $(document).ready(function() {
 	  speed: 1000,
 	  adaptiveHeight: true,
 	  slidesToScroll: 1,
-	  dots: false,                                                                                                                                                                                                               
+	  dots: false,
 	  slidesToShow: 1,
 	  asNavFor: '.sing-sto-slider__spall-slider',
-	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>', 
+	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  nextArrow: '<div class="ar_slier next-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  responsive: [
 	    {
@@ -418,7 +418,7 @@ $(document).ready(function() {
 	        slidesToShow: 1,
 	      }
 	    },
-	  ]  
+	  ]
 	});
 
 	$('.sing-sto-slider__spall-slider').slick({
@@ -426,12 +426,12 @@ $(document).ready(function() {
 	  speed: 1000,
 	  adaptiveHeight: true,
 	  slidesToScroll: 1,
-	  dots: false,                                                                                                                                                                                                               
+	  dots: false,
 	  slidesToShow: 4,
       focusOnSelect: true,
       arrows : false,
 	  asNavFor: '.sing-sto-slider__big-slider',
- 
+
 	});
 
 
@@ -441,9 +441,9 @@ $(document).ready(function() {
 	  speed: 1000,
 	  adaptiveHeight: true,
 	  slidesToScroll: 1,
-	  dots: false,                                                                                                                                                                                                               
+	  dots: false,
 	  slidesToShow: 1,
-	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>', 
+	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  nextArrow: '<div class="ar_slier next-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  responsive: [
 	    {
@@ -452,7 +452,7 @@ $(document).ready(function() {
 	        slidesToShow: 1,
 	      }
 	    },
-	  ]  
+	  ]
 	});
 
 
@@ -462,9 +462,9 @@ $(document).ready(function() {
 	  speed: 1000,
 	  adaptiveHeight: true,
 	  slidesToScroll: 1,
-	  dots: false,                                                                                                                                                                                                               
+	  dots: false,
 	  slidesToShow: 1,
-	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>', 
+	  prevArrow: '<div class="ar_slier prev-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  nextArrow: '<div class="ar_slier next-ar_slide"><img src="img/_src/ar_slider.png" alt=""></div>',
 	  responsive: [
 	    {
@@ -473,7 +473,7 @@ $(document).ready(function() {
 	        slidesToShow: 1,
 	      }
 	    },
-	  ]  
+	  ]
 	});
 
 	//partnership fixed nav
@@ -489,7 +489,7 @@ $(document).ready(function() {
 	$('.input-form-conteiner__change-viev-pass').on('click', function(){
 		let inpPass = $(this).closest('.input-form-conteiner__claster_pass').find('.input-form-conteiner__input');
 		let inpPassType = $(this).closest('.input-form-conteiner__claster_pass').find('.input-form-conteiner__input').attr('type');
-		
+
 		if(inpPassType == "password"){
 			inpPass.attr({type:"text"});
 		}
@@ -523,20 +523,20 @@ $(document).ready(function() {
 			srcImg = reader.result;
 			$(thisinput).closest('.add-new-image-main').append(newImageElement);
 			$(thisinput).closest('.add-new-image-main').find('.file-image-add__element img').attr('src', srcImg);
-			$(thisinput).closest('.add-new-image-main').find('.ads-box-user__add-ads').css({
+			$(thisinput).closest('.add-new-image-main').find('.card-box-user__add-ads').css({
 				'display':'none'
 			});
 
 			$(thisinput).closest('.add-new-image-main').find('.file-image-add__remove-image').on('click',function(){
 				$(thisinput).closest('.add-new-image-main').find('.file-image-add').remove();
-				$(thisinput).closest('.add-new-image-main').find('.ads-box-user__add-ads').css({
+				$(thisinput).closest('.add-new-image-main').find('.card-box-user__add-ads').css({
 					'display':'flex'
 				});
 			});
 		}
 	}
     $('.file-image-add__remove-image').on('click',function(){
-    	$(this).closest('.add-new-image-main').find('.ads-box-user__add-ads').css({
+    	$(this).closest('.add-new-image-main').find('.card-box-user__add-ads').css({
 			'display':'flex'
 		});
     	$(this).closest('.file-image-add').remove();
@@ -561,8 +561,8 @@ $(document).ready(function() {
 				if(thisImageAttrStatus == ""){
 					$(this).find('.other-box__image img').attr('src', srcImg)
 				}
-			 
-			 
+
+
 			});
 
 
@@ -621,18 +621,18 @@ $(document).ready(function() {
 		$('.video-element__play').css({'display':'block'})
 	}
 
-	//add video input 
+	//add video input
 	$('.add-video-input').on('change',function(){
 		let urlVideo = $(this).val();
-		muteAllVideo();	
+		muteAllVideo();
 		if(urlVideo !== ""){
 			$('.photo-conteiner-add__video-player').find('iframe').attr('data-src', 'https://www.youtube.com/embed/'+urlVideo);
 			$('.photo-conteiner-add__video-player').addClass('photo-conteiner-add__video-player_active');
-			videoPrewievs(urlVideo);			
+			videoPrewievs(urlVideo);
 		}
 		else{
 			$('.photo-conteiner-add__video-player').removeClass('photo-conteiner-add__video-player_active');
-			muteAllVideo();			
+			muteAllVideo();
 		}
 	});
 
@@ -756,7 +756,7 @@ $(document).ready(function() {
 	// 			$('[data-done-progres="other"]').removeClass('staps-line-car-add__staps-box_active')
 	// 		}
 
-			
+
 	// 		allProgresValue = mainDone + photoVideoDone + descriptionCondition + safetyComfort + multimedia + other;
  //            progresBar(allProgresValue);
 	// 	});
@@ -784,13 +784,13 @@ $(document).ready(function() {
 	// 	}
 
 	// });
-    
+
 
     //fixed bottom scroll bar ____________________________________________________
-    
-	// $(window).scroll(function() { 
+
+	// $(window).scroll(function() {
 	//     var theTop = $(document).scrollTop();
-	//     bottomSiteBar(theTop);	
+	//     bottomSiteBar(theTop);
 	// });
 
 	// tracing offset top for bottom site bar
@@ -812,7 +812,7 @@ $(document).ready(function() {
 	    	staticBar.removeClass('show-static-bar');
 	    }
 	}
-    
+
 
 
 
@@ -856,7 +856,7 @@ $(document).ready(function() {
 	    	$(this).closest('.new-rent-car-element').remove();
 	    });
     });
-    
+
     //user account redact sto: select all brands
     $('.brands-redact__all-brands input').on('change',function(){
     	let statusChecked = $(this).prop("checked");
@@ -901,15 +901,15 @@ $(document).ready(function() {
 	    	}
 
 
-	    	
+
     	}
     })
-   
+
     //_______________________________________________________________
 
 
 
 
-   
+
 });
 

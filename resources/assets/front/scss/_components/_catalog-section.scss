@@ -243,7 +243,7 @@
 	flex-wrap: wrap;
 	padding-top: 40px;
 
-	.ads-box{
+	.card-box{
 		width: calc(33% - 20px);
 		margin-left: 10px;
 		margin-right: 10px;
@@ -251,7 +251,7 @@
 }
 .ads-body__wraper-ads{
 	.ads-body__conteiner{
-		.ads-box{
+		.card-box{
 			width: calc(25% - 20px);
 			margin-left: 10px;
 			margin-right: 10px;
@@ -326,29 +326,29 @@
 		width: 310px;
 		height: 100%;
 	}
-	.ads-box__info{
+	.card-box__info{
 		width: calc(100% - 310px);
 		padding: 10px;
 		padding-left: 30px;
 		position: relative;
 	}
-	.ads-box__description{
+	.card-box__description{
 		display: block;
 		padding-top: 13px;
 		padding-right: 100px;
 	}
-	.ads-box__tegs-conteiner{
+	.card-box__tegs-conteiner{
 		padding-right: 100px;
 	}
-	.ads-box__tegs-image{
+	.card-box__tegs-image{
 		position: absolute;
 		right: 10px;
 		top: 10px;
 	}
-	.ads-box__title{
+	.card-box__title{
 		padding-right: 100px;
 	}
-	.ads-box__prise_other-money{
+	.card-box__prise_other-money{
 		display: inline-block;
 	}
 	.money-conteiner{
@@ -612,7 +612,7 @@
 	.ads-body__conteiner{
 		width: calc(100% - 305px);
 
-		.ads-box{
+		.card-box{
 			width: 100%;
 			margin-bottom: 30px;
 			display: flex;
@@ -631,19 +631,19 @@
 
 
 @media only screen and (max-width: 1200px){
-	.catalog__ads-body .ads-body__conteiner .ads-box {
+	.catalog__ads-body .ads-body__conteiner .card-box {
     width: calc(50% - 20px);
 }
-.ads-body__conteiner__list-visyal .ads-box{
+.ads-body__conteiner__list-visyal .card-box{
 	width: 100%;
 }
-.ads-body__conteiner__list-visyal .ads-box__tegs-conteiner{
+.ads-body__conteiner__list-visyal .card-box__tegs-conteiner{
 	padding-right: 0;;
 }
-.ads-body__conteiner__list-visyal .ads-box__description{
+.ads-body__conteiner__list-visyal .card-box__description{
 	padding-right: 0;
 }
-.ads-body__conteiner__list-visyal .ads-box__title{
+.ads-body__conteiner__list-visyal .card-box__title{
 	padding-right: 70px;
 }
 }
@@ -766,7 +766,7 @@
 		margin-left: -5px;
 		padding-top: 20px;
 
-		.ads-box{
+		.card-box{
 			width: calc(50% - 10px);
 			margin-left: 5px;
 			margin-right: 5px;

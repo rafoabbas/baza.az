@@ -59,19 +59,19 @@
                     {{--                        <div class="cart-main-info__big-slider-conteiner">--}}
                     {{--                            <div class="cart-main-info__big-slider">--}}
                     {{--                                <div class="cart-main-info__big-slider__element">--}}
-                    {{--                                    <div class="ads-box__play" data-videolink="">--}}
+                    {{--                                    <div class="card-box__play" data-videolink="">--}}
                     {{--                                        <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">--}}
                     {{--                                    </div>--}}
                     {{--                                    <img src="{{ asset('assets/front/img/_src/autostore2.jpg') }}" alt="">--}}
                     {{--                                </div>--}}
                     {{--                                <div class="cart-main-info__big-slider__element">--}}
-                    {{--                                    <div class="ads-box__play" data-videolink="">--}}
+                    {{--                                    <div class="card-box__play" data-videolink="">--}}
                     {{--                                        <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">--}}
                     {{--                                    </div>--}}
                     {{--                                    <img src="{{ asset('assets/front/img/_src/carslider.jpg') }}" alt="">--}}
                     {{--                                </div>--}}
                     {{--                                <div class="cart-main-info__big-slider__element">--}}
-                    {{--                                    <div class="ads-box__play" data-videolink="">--}}
+                    {{--                                    <div class="card-box__play" data-videolink="">--}}
                     {{--                                        <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">--}}
                     {{--                                    </div>--}}
                     {{--                                    <img src="{{ asset('assets/front/img/_src/carslider.jpg') }}" alt="">--}}
@@ -81,25 +81,25 @@
                     {{--                        <div class="cart-main-info__smal-slider-conteiner">--}}
                     {{--                            <div class="cart-main-info__smal-slider">--}}
                     {{--                                <div class="cart-main-info__smal-slider__element">--}}
-                    {{--                                    <div class="ads-box__play" data-videolink="">--}}
+                    {{--                                    <div class="card-box__play" data-videolink="">--}}
                     {{--                                        <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">--}}
                     {{--                                    </div>--}}
                     {{--                                    <img src="{{ asset('assets/front/img/_src/autostore2.jpg') }}" alt="">--}}
                     {{--                                </div>--}}
                     {{--                                <div class="cart-main-info__smal-slider__element">--}}
-                    {{--                                    <div class="ads-box__play" data-videolink="">--}}
+                    {{--                                    <div class="card-box__play" data-videolink="">--}}
                     {{--                                        <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">--}}
                     {{--                                    </div>--}}
                     {{--                                    <img src="{{ asset('assets/front/img/_src/carslider.jpg') }}" alt="">--}}
                     {{--                                </div>--}}
                     {{--                                <div class="cart-main-info__smal-slider__element">--}}
-                    {{--                                    <div class="ads-box__play" data-videolink="">--}}
+                    {{--                                    <div class="card-box__play" data-videolink="">--}}
                     {{--                                        <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">--}}
                     {{--                                    </div>--}}
                     {{--                                    <img src="{{ asset('assets/front/img/_src/carslider.jpg') }}" alt="">--}}
                     {{--                                </div>--}}
                     {{--                                <div class="cart-main-info__smal-slider__element">--}}
-                    {{--                                    <div class="ads-box__play" data-videolink="">--}}
+                    {{--                                    <div class="card-box__play" data-videolink="">--}}
                     {{--                                        <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">--}}
                     {{--                                    </div>--}}
                     {{--                                    <img src="{{ asset('assets/front/img/_src/carslider.jpg') }}" alt="">--}}
@@ -186,57 +186,57 @@
                         <h2 class="general-titleV2">@lang('front.Avtosalonlar') <b>(15 шт)</b></h2>
                         <div class="ads-body__conteiner">
                             @foreach([0,1,2,3,4,5] as $item)
-                                <div class="ads-box">
+                                <div class="card-box">
                                     <div class="ads_image">
                                         <div class="ads_image_dop-info">
                                             <div class="dop-info__element dop_store">автосалон</div>
                                             <div class="dop-info__element dop_vip">новый</div>
                                             <div class="dop-info__element dop_new">VIP</div>
                                         </div>
-                                        <div class="ads-box__play" data-videolink="">
+                                        <div class="card-box__play" data-videolink="">
                                             <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">
                                         </div>
                                         <img src="{{ asset('assets/front/img/_src/car4.jpg') }}" alt="">
                                     </div>
-                                    <div class="ads-box__info">
-                                        <h3 class="ads-box__title">
+                                    <div class="card-box__info">
+                                        <h3 class="card-box__title">
                                         <span class="garant">
                                             <img src="{{ asset('assets/front/img/_src/garant.png') }}" alt="">
                                         </span>
                                             <a href="{{ route('cart') }}">Ford Focus Sport Plus Ford Focus Sport</a>
                                         </h3>
-                                        <p class="ads-box__date">08.02.2021, 16:58</p>
-                                        <div class="ads-box__tegs-conteiner">
-                                            <div class="ads-box__tegs-line">
-                                                <span class="ads-box__tegs-element">2014 г.</span>
-                                                <span class="ads-box__tegs-element">100 000 км</span>
-                                                <span class="ads-box__tegs-element">г. Баку</span>
-                                                <span class="ads-box__tegs-element">Механика</span>
-                                                <span class="ads-box__tegs-element">Бензин, 2.0 л</span>
+                                        <p class="card-box__date">08.02.2021, 16:58</p>
+                                        <div class="card-box__tegs-conteiner">
+                                            <div class="card-box__tegs-line">
+                                                <span class="card-box__tegs-element">2014 г.</span>
+                                                <span class="card-box__tegs-element">100 000 км</span>
+                                                <span class="card-box__tegs-element">г. Баку</span>
+                                                <span class="card-box__tegs-element">Механика</span>
+                                                <span class="card-box__tegs-element">Бензин, 2.0 л</span>
                                             </div>
-                                            <div class="ads-box__tegs-image">
-                                                <div class="ads-box__tegs-img-element">
+                                            <div class="card-box__tegs-image">
+                                                <div class="card-box__tegs-img-element">
                                                     <img src="{{ asset('assets/front/img/_src/sale.svg') }}" alt="">
                                                 </div>
-                                                <div class="ads-box__tegs-img-element">
+                                                <div class="card-box__tegs-img-element">
                                                     <img src="{{ asset('assets/front/img/_src/trade.svg') }}" alt="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="ads-box__description">
+                                        <div class="card-box__description">
                                             Автомобиль после тест-драйва. 3008 2.0 HDi AT (150 л.с.) Allure 2020 год.
                                             Шикарная комплектация! Дизельный, проверенный временем двигатель! Отличный
                                             обзор, удобная посадка, невероятная управляемость ...
                                         </div>
-                                        <div class="ads-box__prise-line">
+                                        <div class="card-box__prise-line">
                                             <div class="money-conteiner">
-                                                <span class="ads-box__prise">8900$</span>
-                                                <span class="ads-box__prise_other-money">6500 € </span>
-                                                <span class="ads-box__prise_other-money">78500 azn </span>
+                                                <span class="card-box__prise">8900$</span>
+                                                <span class="card-box__prise_other-money">6500 € </span>
+                                                <span class="card-box__prise_other-money">78500 azn </span>
                                             </div>
-                                            <p class="ads-box__date">08.02.2021, 16:58</p>
-                                            <div class="ads-box__add-icon__conteiner">
-                                                <div class="ads-box__add-icon">
+                                            <p class="card-box__date">08.02.2021, 16:58</p>
+                                            <div class="card-box__add-icon__conteiner">
+                                                <div class="card-box__add-icon">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
                                                         <path
@@ -247,7 +247,7 @@
                                                             fill="#768A9E"></path>
                                                     </svg>
                                                 </div>
-                                                <div class="ads-box__add-icon">
+                                                <div class="card-box__add-icon">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
                                                         <path

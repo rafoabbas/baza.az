@@ -18,14 +18,14 @@
 @media only screen and (max-width: 850px){
 	.singl-seller-section__cataloc-ads-cars{
 		padding-bottom: 40px;
-		.ads-box {
+		.card-box {
 		    width: calc(50% - 20px);
 		}
 	}
 }
 @media only screen and (max-width: 450px){
 	.singl-seller-section__cataloc-ads-cars{
-		.ads-box {
+		.card-box {
 		    width: calc(50% - 10px);
 		    margin: 0 5px;
 		}

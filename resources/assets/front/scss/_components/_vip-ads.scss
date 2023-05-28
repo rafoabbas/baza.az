@@ -9,7 +9,7 @@
 	margin-left: -10px;
 	padding-top: 20px;
 }
-.ads-box{
+.card-box{
 	width: calc(25% - 20px);
 	margin: 0 10px;
 	margin-bottom: 20px;
@@ -30,15 +30,15 @@
 		box-shadow: 0 10px 30px rgba(46, 107, 146, 0.12);
 		transition: all ease 0.3s;
 
-		.ads-box__title{
+		.card-box__title{
 			a{
 				color: $activcolor;
 			}
 		}
-		.ads-box__prise{
+		.card-box__prise{
 			color: $activcolor;
 		}
-		.ads-box__tegs-img-element{
+		.card-box__tegs-img-element{
 			svg{
 				path{
 					//fill: $activcolor;
@@ -92,10 +92,10 @@
 .dop_busines{
 	background: #FF9E1B;
 }
-.ads-box__info{
+.card-box__info{
 	padding: 10px;
 }
-.ads-box__title{
+.card-box__title{
 	font-size: 20px;
 	font-weight: 500;
 
@@ -111,30 +111,30 @@
 		transition: all ease 0.3s;
 	}
 }
-.ads-box__date{
+.card-box__date{
 	padding-top: 5px;
 	padding-bottom: 20px;
 	font-size: 12px;
 	color: #324153;
 }
-.ads-box__tegs-conteiner{
+.card-box__tegs-conteiner{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 	width: 100%;
 }
-.ads-box__tegs-line{
+.card-box__tegs-line{
 	width: calc(100% - 50px);
 	display: flex;
 	flex-wrap: wrap;
 }
-.ads-box__tegs-image{
+.card-box__tegs-image{
 	width: 50px;
 	margin-bottom: 8px;
 	display: flex;
 	justify-content: space-between;
 }
-.ads-box__tegs-img-element{
+.card-box__tegs-img-element{
 	width: 23px;
 	position: relative;
     z-index: 5;
@@ -152,12 +152,12 @@
 	}
 
 	&:hover{
-		.ads-box__anons{
+		.card-box__anons{
 			display: block;
 		}
 	}
 }
-.ads-box__anons{
+.card-box__anons{
 	position: absolute;
 	width: 120px;
 	background: $activcolor;
@@ -195,7 +195,7 @@
 		}
 	}
 }
-.ads-box__tegs-element{
+.card-box__tegs-element{
 	margin: 0;
 	padding: 4px 10px;
 	border-radius: 100px;
@@ -205,7 +205,7 @@
 	font-size: 14px;
 }
 
-.ads-box__prise-line{
+.card-box__prise-line{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -213,18 +213,18 @@
 	width: 100%;
 	padding-top: 12px;
 
-	.ads-box__date{
+	.card-box__date{
 		display: none;
 	}
 }
-.ads-box__prise{
+.card-box__prise{
 	font-size: 30px;
 	font-weight: 500;
 }
-.ads-box__add-icon__conteiner{
+.card-box__add-icon__conteiner{
 	display: flex;
 }
-.ads-box__add-icon{
+.card-box__add-icon{
     display: block;
 	width: 24px;
 	margin-left: 10px;
@@ -248,18 +248,18 @@
 		display: block;
 	}
 }
-.ads-box__prise_other-money{
+.card-box__prise_other-money{
 	display: none;
 	font-size: 18px;
 	font-weight: 500;
 	color: $iconcolor;
 }
-.ads-box__description{
+.card-box__description{
 	font-size: 12px;
 	color: #324153;
 	display: none;
 }
-.ads-box__play{
+.card-box__play{
 	position: absolute;
 	width: 24px;
 	right: 10px;
@@ -285,15 +285,15 @@
 	}
 }
 @media only screen and (max-width: 1150px){
-.ads-box {
+.card-box {
     width: calc(33.3333% - 20px);
 }
-.ads-box__prise{
+.card-box__prise{
 	font-size: 20px;
 }
 }
 @media only screen and (max-width: 850px){
-.ads-box {
+.card-box {
     width: calc(50% - 20px);
 }
 .ads_image{
@@ -304,20 +304,20 @@
 .ads_image{
 	height: 160px;
 }
-.ads-box__title{
+.card-box__title{
 	font-size: 16px;
 }
-.ads-box__date{
+.card-box__date{
 	font-size: 10px;
 	padding-bottom: 10px;
 }
-.ads-box__tegs-image{
+.card-box__tegs-image{
 	display: none;
 }
-.ads-box__tegs-line{
+.card-box__tegs-line{
 	width: 100%;
 }
-.ads-box__tegs-element{
+.card-box__tegs-element{
 	font-size: 12px;
 }
 .general-subtitle{
@@ -337,20 +337,20 @@
 		padding: 1px 3px
 	}
 }
-.ads-box__title{
+.card-box__title{
 	font-size: 14px;
 	padding-bottom: 7px;
 }
-.ads-box__tegs-element{
+.card-box__tegs-element{
 	margin-bottom: 2px;
 	padding: 1px 1px;
 	margin-bottom: 2px;
 }
-.ads-box{
+.card-box{
 	position: relative;
 	margin-bottom: 20px;
 }
-.ads-box__prise{
+.card-box__prise{
 	position: absolute;
 	background: $activcolor;
 	color: #fff;
@@ -361,17 +361,17 @@
 	z-index: 20;
 	padding: 2px 3px;
 }
-.ads-box__date{
+.card-box__date{
 	display: none;
 }
-.ads-box__prise-line .ads-box__date{
+.card-box__prise-line .card-box__date{
 	display: block;
 	padding: 0;
 }
-.ads-box__prise-line{
+.card-box__prise-line{
 	padding-top: 7px;
 }
-.ads-box__add-icon{
+.card-box__add-icon{
 	width: 16px;
 
 	svg{
@@ -383,7 +383,7 @@
 	width: calc(100% + 10px);
 	margin-left: -5px;
 }
-.ads-box {
+.card-box {
     width: calc(50% - 10px);
     margin: 0 5px;
     margin-bottom: 10px;
