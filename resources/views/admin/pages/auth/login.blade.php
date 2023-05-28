@@ -20,10 +20,10 @@
                                 <form class="mt-4" action="{{ route('admin.login') }}" method="post">
                                     @csrf
                                     <div class="mb-3">
-                                        <label class="form-label" for="username">@lang('Kullanıcı adı')</label>
+                                        <label class="form-label" for="username">@lang('İsifacəçi adı')</label>
                                         <input type="text" value="{{ old('username') }}"
                                                class="form-control @error('username') is-invalid @enderror"
-                                               id="username" name="username" placeholder="@lang('Kullanıcı adı girin')">
+                                               id="username" name="username" placeholder="@lang('İsifacəçi adı')">
                                         @error('username')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -31,9 +31,9 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label" for="password">@lang('Şifre')</label>
+                                        <label class="form-label" for="password">@lang('Şifrə')</label>
                                         <input name="password" type="password" class="form-control" id="password"
-                                               placeholder="@lang('Şifrenizi girin')">
+                                               placeholder="@lang('Şifrənizi girin')">
                                     </div>
                                     <div class="mb-3 row">
                                         <div class="col-sm-6">
@@ -41,7 +41,7 @@
                                                 <input type="checkbox" class="form-check-input" name="remember"
                                                        {{ old('remember') ? 'checked' : '' }} id="remember">
                                                 <label class="form-check-label"
-                                                       for="remember">@lang('Beni hatırla')</label>
+                                                       for="remember">@lang('Məni xatırla')</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 text-end">
@@ -56,7 +56,7 @@
                     <div class="mt-5 text-center">
                         <p class="mb-0">©
                             <script>document.write(new Date().getFullYear())</script>
-                            Sms gönderim sistemi #system
+                            Baza.az #system
                         </p>
                     </div>
                 </div>
