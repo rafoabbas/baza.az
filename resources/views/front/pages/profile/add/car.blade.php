@@ -9,12 +9,10 @@
                 <a href="">/  Личный кабинет</a>
                 <p>/ Добавить авто</p>
             </div>
-
             <div class="cart-main-info__conteiner">
                 <div class="cart-main-info__body-info">
-
-                    <div class="acordeon-conteiner__box" data-add-staps="main-parametrs">
-                        <div class="acordeon-conteiner__box-title">
+                    <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
+                        <div class="acordeon-conteiner__box-title acordeon-element__title">
                             <h4 class="cart-main-info__title">Основные параметры</h4>
                             <span class="acordeon-conteiner__box__nam-element">/01</span>
                             <div class="acordeon-conteiner__open-icon">
@@ -22,11 +20,9 @@
                                 <span class="ac-icV2"></span>
                             </div>
                         </div>
-
-                        <div class="acordeon-conteiner__claster">
+                        <div class="acordeon-conteiner__claster acordeon-element__claster">
                             <div class="acordeon-conteiner__claster-wrapper acordeon-conteiner__claster-wrapper_flex-start">
                                 <div class="acordeon-conteiner__separateV3">
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Регион:</h5>
                                         <div class="filtr-element__select">
@@ -38,7 +34,6 @@
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Тип транспорта:</h5>
                                         <div class="filtr-element__select">
@@ -50,7 +45,6 @@
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Марка:</h5>
                                         <div class="filtr-element__select">
@@ -62,7 +56,6 @@
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Модель:</h5>
                                         <div class="filtr-element__select">
@@ -74,9 +67,7 @@
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element catalog__filtr__filtr-element_dobl-title">
-
                                         <div class="filtr-element__select">
                                             <h5>Год:</h5>
                                             <select name="" id="" class="range">
@@ -92,7 +83,6 @@
                                             <input type="text" placeholder="Пробег">
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Цена, $:</h5>
                                         <div class="filtr-element__select">
@@ -108,7 +98,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="acordeon-conteiner__separateV3">
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Тип кузова::</h5>
@@ -121,7 +110,6 @@
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Тип топлива:</h5>
                                         <div class="filtr-element__select">
@@ -133,7 +121,6 @@
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Коробка передач:</h5>
                                         <div class="filtr-element__select">
@@ -145,9 +132,7 @@
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element catalog__filtr__filtr-element_dobl-title">
-
                                         <div class="filtr-element__select">
                                             <h5>Привод:</h5>
                                             <select name="" id="" class="range">
@@ -163,7 +148,6 @@
                                             <input type="text" placeholder="Двигатель, л">
                                         </div>
                                     </div>
-
                                     <div class="acordeon__color">
                                         <div class="catalog__filtr__filtr-element">
                                             <h5>Цвет:</h5>
@@ -176,7 +160,6 @@
                                                 </select>
                                             </div>
                                         </div>
-
                                         <div class="acordeon__color-checkbox">
                                             <div class="checkbox">
                                                 <label class="custom-checkbox">
@@ -192,7 +175,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="dob-checbox-conteiner">
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
@@ -200,7 +182,6 @@
                                                 <span>Возможен обмен на недвижимость</span>
                                             </label>
                                         </div>
-
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="fuel" value="Гибрид">
@@ -208,7 +189,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="dob-checbox-conteiner">
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
@@ -217,16 +197,12 @@
                                             </label>
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="acordeon-conteiner__box" data-add-staps="photo-and-video">
-                        <div class="acordeon-conteiner__box-title">
+                    <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
+                        <div class="acordeon-conteiner__box-title acordeon-element__title">
                             <h4 class="cart-main-info__title">Фото и видео</h4>
                             <span class="acordeon-conteiner__box__nam-element">/02</span>
                             <div class="acordeon-conteiner__open-icon">
@@ -234,14 +210,11 @@
                                 <span class="ac-icV2"></span>
                             </div>
                         </div>
-
-                        <div class="acordeon-conteiner__claster">
+                        <div class="acordeon-conteiner__claster acordeon-element__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__photo-conteiner-add photo-conteiner-add">
-
                                     <div class="photo-conteiner-add__main-photo">
                                         <h4 class="cart-main-info__title-ul">Главное фото:</h4>
-
                                         <!-- при выборе фото в коде будет создаватся обьект с добавленым фото для пред просмотра -->
                                         <div class="photo-conteiner-add__main-image-conteiner add-new-image-main">
                                             <a class="ads-box-user__add-ads ">
@@ -262,11 +235,10 @@
                                                 <p>на главном фото автомобиль должен быть сфотографирован спереди под углом 45 °</p>
                                             </div>
                                             <div class="waring-image">
-                                                <img src="img/_src/war-car.jpg" alt="">
+                                                <img src="{{ asset('assets/front/img/_src/war-car.jpg') }}" alt="">
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="photo-conteiner-add__othe-photo">
                                         <h4 class="cart-main-info__title-ul">Другие фото (не более 20):</h4>
                                         <div class="photo-conteiner-add__other-photo-header other-photo-header">
@@ -279,23 +251,20 @@
                                             </div>
                                             <div class="other-photo-header__line">
                                                 <div class="other-photo-header__photo">
-															<span>
-																<img src="img/_src/war-car2.jpg" alt="">
-															</span>
+                                                    <span>
+                                                        <img src="{{ asset('assets/front/img/_src/war-car2.jpg') }}" alt="">
+                                                    </span>
                                                     <p>Вид спереди</p>
                                                 </div>
                                                 <div class="other-photo-header__photo">
-															<span>
-																<img src="img/_src/war-car3.jpg" alt="">
-															</span>
+                                                    <span>
+                                                        <img src="{{ asset('assets/front/img/_src/war-car3.jpg') }}" alt="">
+                                                    </span>
                                                     <p>Вид сзади</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="photo-conteiner-add__other-photo-conteiner">
-
-                                            <!-- при выборе фото в коде будет создаватся обьект с добавленым фото для пред просмотра -->
-
                                             <a  class="ads-box-user__add-ads ads-box-user__add-ads_filedonload" >
                                                 <label class="custom-file-upload">
                                                     <input type="file"  accept="image/heic, image/png, image/jpeg, image/webp" id="addotherimage" >
@@ -309,20 +278,18 @@
                                             </a>
                                         </div>
                                     </div>
-
                                     <div class="photo-conteiner-add__video-conteiner">
                                         <h4 class="cart-main-info__title-ul">Код видео с YouTube:</h4>
                                         <p>Нажмите на кнопку поделиться и скопиройте выделеные символы https://youtu.be/<b>TSkVVVBS9k8</b></p>
                                         <div class="photo-conteiner-add__video-input">
                                             <input type="text" class="input-form-conteiner__input add-video-input" placeholder="url">
                                         </div>
-
                                         <div class="photo-conteiner-add__video-player ">
                                             <h4 class="cart-main-info__title-ul">Видео:</h4>
                                             <div class="photo-conteiner-add__video-box">
                                                 <div class="video-element">
                                                     <div class="ads-box__play video-element__play" >
-                                                        <img src="img/_src/play.png" alt="">
+                                                        <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">
                                                     </div>
                                                     <img class="video-element__prewievs" src="http://img.youtube.com/vi/ysSxxIqKNN0/0.jpg" alt="">
                                                     <iframe  data-src="" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
@@ -334,10 +301,8 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="acordeon-conteiner__box" data-add-staps="description">
-                        <div class="acordeon-conteiner__box-title">
+                    <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
+                        <div class="acordeon-conteiner__box-title acordeon-element__title">
                             <h4 class="cart-main-info__title">Описание от Вас</h4>
                             <span class="acordeon-conteiner__box__nam-element">/03</span>
                             <div class="acordeon-conteiner__open-icon">
@@ -345,8 +310,7 @@
                                 <span class="ac-icV2"></span>
                             </div>
                         </div>
-
-                        <div class="acordeon-conteiner__claster">
+                        <div class="acordeon-conteiner__claster acordeon-element__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__description-conteiner">
                                     <textarea placeholder="Текст описание"></textarea>
@@ -354,10 +318,8 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="acordeon-conteiner__box" data-add-staps="condition">
-                        <div class="acordeon-conteiner__box-title">
+                    <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
+                        <div class="acordeon-conteiner__box-title acordeon-element__title">
                             <h4 class="cart-main-info__title">Другие технические характеристики и состояние</h4>
                             <span class="acordeon-conteiner__box__nam-element">/04</span>
                             <div class="acordeon-conteiner__open-icon">
@@ -366,8 +328,7 @@
                             </div>
                             <p class="acordeon-conteiner__subtitle">Чем больше заполнено информации об автомобиле — тем выше вероятность его продажи.</p>
                         </div>
-
-                        <div class="acordeon-conteiner__claster">
+                        <div class="acordeon-conteiner__claster acordeon-element__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__line-haraceristics-add-car line-haraceristics-add-car">
                                     <h5 class="line-haraceristics-add-car__title">Характеристика:</h5>
@@ -378,14 +339,12 @@
                                                 <input type="text" placeholder="Мощность, л.с">
                                             </div>
                                         </div>
-
                                         <div class="catalog__filtr__filtr-element">
                                             <h5>Расход, л:</h5>
                                             <div class="filtr-element__input">
                                                 <input type="text" placeholder="Расход, л">
                                             </div>
                                         </div>
-
                                         <div class="catalog__filtr__filtr-element">
                                             <h5>Разгон 0 — 100, с:</h5>
                                             <div class="filtr-element__input">
@@ -400,14 +359,12 @@
                                                 <input type="text" placeholder="Количество мест, шт">
                                             </div>
                                         </div>
-
                                         <div class="catalog__filtr__filtr-element">
                                             <h5>Клиренс, см:</h5>
                                             <div class="filtr-element__input">
                                                 <input type="text" placeholder="Клиренс, см:">
                                             </div>
                                         </div>
-
                                         <div class="catalog__filtr__filtr-element">
                                             <h5>Багажник, л:</h5>
                                             <div class="filtr-element__input">
@@ -440,9 +397,6 @@
                                                     </svg>
                                                     <input type="color" class="color-picker" style="display:block; opacity: 0; position: absolute;">
                                                 </label>
-
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -456,7 +410,6 @@
                                                 <span>Не была в ДТП</span>
                                             </label>
                                         </div>
-
                                         <div class="radio">
                                             <label class="custom-radio">
                                                 <input type="radio" name="dtp" value="Новый">
@@ -464,7 +417,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Растаможка:</h5>
                                         <div class="radio">
@@ -473,7 +425,6 @@
                                                 <span>Растаможен</span>
                                             </label>
                                         </div>
-
                                         <div class="radio">
                                             <label class="custom-radio">
                                                 <input type="radio" name="tamojna" value="Новый">
@@ -481,7 +432,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Автомобиль был битый?:</h5>
                                         <div class="radio">
@@ -490,16 +440,13 @@
                                                 <span>Нет</span>
                                             </label>
                                         </div>
-
                                         <div class="radio">
                                             <label class="custom-radio">
                                                 <input type="radio" name="crashes" value="Новый">
                                                 <span>Да</span>
                                             </label>
                                         </div>
-
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
                                         <h5>Автомобиль был крашен?:</h5>
                                         <div class="radio">
@@ -508,14 +455,12 @@
                                                 <span>Нет</span>
                                             </label>
                                         </div>
-
                                         <div class="radio">
                                             <label class="custom-radio">
                                                 <input type="radio" name="nevcolor" value="Новый">
                                                 <span>Да</span>
                                             </label>
                                         </div>
-
                                         <div class="radio">
                                             <label class="custom-radio">
                                                 <input type="radio" name="nevcolor" value="Новый">
@@ -525,7 +470,6 @@
                                     </div>
                                 </div>
                                 <div class="acordeon-conteiner__separateV2 acordeon-conteiner__separateV2_adaptiv-radio">
-
                                     <div class="dob-checbox-conteiner">
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
@@ -533,21 +477,18 @@
                                                 <span>Гаражное хранение</span>
                                             </label>
                                         </div>
-
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="fuel" value="Гибрид">
                                                 <span>Первая регистрация</span>
                                             </label>
                                         </div>
-
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="fuel" value="Гибрид">
                                                 <span>Сервисная книжка официального диллера</span>
                                             </label>
                                         </div>
-
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="fuel" value="Гибрид">
@@ -559,10 +500,8 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="acordeon-conteiner__box" data-add-staps="safety">
-                        <div class="acordeon-conteiner__box-title">
+                    <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
+                        <div class="acordeon-conteiner__box-title acordeon-element__title">
                             <h4 class="cart-main-info__title">Безопасность</h4>
                             <span class="acordeon-conteiner__box__nam-element">/05</span>
                             <div class="acordeon-conteiner__open-icon">
@@ -570,8 +509,7 @@
                                 <span class="ac-icV2"></span>
                             </div>
                         </div>
-
-                        <div class="acordeon-conteiner__claster">
+                        <div class="acordeon-conteiner__claster acordeon-element__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__security-conteiner">
                                     <div class="checkbox">
@@ -636,13 +574,10 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-
-                    <div class="acordeon-conteiner__box" data-add-staps="comfort">
-                        <div class="acordeon-conteiner__box-title">
+                    <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
+                        <div class="acordeon-conteiner__box-title acordeon-element__title">
                             <h4 class="cart-main-info__title">Комфорт</h4>
                             <span class="acordeon-conteiner__box__nam-element">/06</span>
                             <div class="acordeon-conteiner__open-icon">
@@ -650,8 +585,7 @@
                                 <span class="ac-icV2"></span>
                             </div>
                         </div>
-
-                        <div class="acordeon-conteiner__claster">
+                        <div class="acordeon-conteiner__claster acordeon-element__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__security-conteiner">
                                     <div class="checkbox">
@@ -662,12 +596,10 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-                    <div class="acordeon-conteiner__box" data-add-staps="multimedia">
-                        <div class="acordeon-conteiner__box-title">
+                    <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
+                        <div class="acordeon-conteiner__box-title acordeon-element__title">
                             <h4 class="cart-main-info__title">Мультимедиа</h4>
                             <span class="acordeon-conteiner__box__nam-element">/07</span>
                             <div class="acordeon-conteiner__open-icon">
@@ -675,8 +607,7 @@
                                 <span class="ac-icV2"></span>
                             </div>
                         </div>
-
-                        <div class="acordeon-conteiner__claster">
+                        <div class="acordeon-conteiner__claster acordeon-element__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__security-conteiner">
                                     <div class="checkbox">
@@ -687,12 +618,10 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-                    <div class="acordeon-conteiner__box" data-add-staps="other">
-                        <div class="acordeon-conteiner__box-title">
+                    <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
+                        <div class="acordeon-conteiner__box-title acordeon-element__title">
                             <h4 class="cart-main-info__title">Другое</h4>
                             <span class="acordeon-conteiner__box__nam-element">/08</span>
                             <div class="acordeon-conteiner__open-icon">
@@ -700,8 +629,7 @@
                                 <span class="ac-icV2"></span>
                             </div>
                         </div>
-
-                        <div class="acordeon-conteiner__claster">
+                        <div class="acordeon-conteiner__claster acordeon-element__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__security-conteiner">
                                     <div class="checkbox">
@@ -711,13 +639,11 @@
                                         </label>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
-                    <div class="acordeon-conteiner__box">
-                        <div class="acordeon-conteiner__box-title">
+                    <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
+                        <div class="acordeon-conteiner__box-title acordeon-element__title">
                             <h4 class="cart-main-info__title">Локация</h4>
                             <span class="acordeon-conteiner__box__nam-element">/09</span>
                             <div class="acordeon-conteiner__open-icon">
@@ -725,14 +651,12 @@
                                 <span class="ac-icV2"></span>
                             </div>
                         </div>
-
-                        <div class="acordeon-conteiner__claster">
+                        <div class="acordeon-conteiner__claster acordeon-element__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div id="map3"></div>
                             </div>
                         </div>
                     </div>
-
                     <div class="select-type-ads">
                         <h4 class="cart-main-info__title">Выберите тип объявления</h4>
                         <div class="select-type-ads__conteiner">
@@ -744,13 +668,11 @@
                                     <div class="baner-vip__btn-line">
                                         <a class="btn1">Разместить за 15 azn</a>
                                     </div>
-
                                 </div>
                                 <div class="baner-vip__icon">
-                                    <img src="img/_src/vip-ads.png" alt="">
+                                    <img src="{{ asset('assets/front/img/_src/vip-ads.png') }}" alt="">
                                 </div>
                             </div>
-
                             <div class="select-type-ads_box select-type-ads_box_style">
                                 <div class="baner-vip__text">
                                     <h3 class="baner-vip__title">Обычное объявление</h3>
@@ -759,12 +681,10 @@
                                     <div class="baner-vip__btn-line">
                                         <a class="btn1">Разместить бесплатно</a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="add-car-staps add-car-staps_static static-bottom-site-bar">
                         <h5 class="add-car-staps__title">Чем больше информации об авто Вы укажете — тем больше вероятность удачной продажи.</h5>
                         <div class="add-car-staps__staps-line staps-line-car-add">
@@ -810,72 +730,70 @@
                         </div>
                     </div>
                 </div>
-
                 <aside class="catalog__filtr ads-sitebar ads-sitebar_user-account">
                     <div class="catalog__filt-baner-conteiner">
                         <a href="" class="baner-box">
-                            <img src="img/_src/baner1.jpg" alt="">
+                            <img src="{{ asset('assets/front/img/_src/baner1.jpg') }}" alt="">
                         </a>
                         <a href="" class="baner-box">
-                            <img src="img/_src/baner2.jpg" alt="">
+                            <img src="{{ asset('assets/front/img/_src/baner2.jpg') }}" alt="">
                         </a>
                         <a href="" class="baner-box">
-                            <img src="img/_src/baner1.jpg" alt="">
+                            <img src="{{ asset('assets/front/img/_src/baner1.jpg') }}" alt="">
                         </a>
                     </div>
                 </aside>
             </div>
         </div>
     </section>
-
-    <section class="fixed-staps fixed-bottom-site-bar">
-        <div class="general-conteiner">
-            <div class="add-car-staps add-car-staps__fixed">
-                <h5 class="add-car-staps__title">Чем больше информации об авто Вы укажете — тем больше вероятность удачной продажи.</h5>
-                <div class="add-car-staps__staps-line staps-line-car-add">
-                    <div class="staps-line-car-add__wraper">
-                        <h5 class="staps-line-car-add__title">Качество объявления</h5>
-                        <div class="staps-line-car-add__line">
-                            <div class="staps-line-car-add__line-top">
-                                <div class="staps-line-car-add__staps-procent-line">
-                                    <p>0%</p>
-                                    <span class="activ-staps-procent">30%</span>
-                                    <p>100%</p>
-                                </div>
-                                <div class="staps-line-car-add__line-full">
-                                    <div class="staps-line-car-add__line-active"></div>
-                                </div>
-                            </div>
-                            <div class="staps-line-car-add__line-bottom">
-                                <div class="staps-line-car-add__staps-box " data-done-progres="main-done">
-                                    Основные параметры*
-                                </div>
-                                <div class="staps-line-car-add__staps-box" data-done-progres="photo-video">
-                                    Фото и видео
-                                </div>
-                                <div class="staps-line-car-add__staps-box" data-done-progres="description-condition" >
-                                    Описание и состояние
-                                </div>
-                                <div class="staps-line-car-add__staps-box" data-done-progres="safety-comfort">
-                                    Безопасность и комфорт
-                                </div>
-                                <div class="staps-line-car-add__staps-box" data-done-progres="multimedia">
-                                    Мультимедиа и локация
-                                </div>
-                                <div class="staps-line-car-add__staps-box" data-done-progres="other">
-                                    Другое
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="add-car-staps__btn-line">
-                    <button class="btn1">Опубликовать</button>
-                    <button class="btn1">Опубликовать как VIP</button>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="fixed-staps fixed-bottom-site-bar">--}}
+{{--        <div class="general-conteiner">--}}
+{{--            <div class="add-car-staps add-car-staps__fixed">--}}
+{{--                <h5 class="add-car-staps__title">Чем больше информации об авто Вы укажете — тем больше вероятность удачной продажи.</h5>--}}
+{{--                <div class="add-car-staps__staps-line staps-line-car-add">--}}
+{{--                    <div class="staps-line-car-add__wraper">--}}
+{{--                        <h5 class="staps-line-car-add__title">Качество объявления</h5>--}}
+{{--                        <div class="staps-line-car-add__line">--}}
+{{--                            <div class="staps-line-car-add__line-top">--}}
+{{--                                <div class="staps-line-car-add__staps-procent-line">--}}
+{{--                                    <p>0%</p>--}}
+{{--                                    <span class="activ-staps-procent">30%</span>--}}
+{{--                                    <p>100%</p>--}}
+{{--                                </div>--}}
+{{--                                <div class="staps-line-car-add__line-full">--}}
+{{--                                    <div class="staps-line-car-add__line-active"></div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="staps-line-car-add__line-bottom">--}}
+{{--                                <div class="staps-line-car-add__staps-box " data-done-progres="main-done">--}}
+{{--                                    Основные параметры*--}}
+{{--                                </div>--}}
+{{--                                <div class="staps-line-car-add__staps-box" data-done-progres="photo-video">--}}
+{{--                                    Фото и видео--}}
+{{--                                </div>--}}
+{{--                                <div class="staps-line-car-add__staps-box" data-done-progres="description-condition" >--}}
+{{--                                    Описание и состояние--}}
+{{--                                </div>--}}
+{{--                                <div class="staps-line-car-add__staps-box" data-done-progres="safety-comfort">--}}
+{{--                                    Безопасность и комфорт--}}
+{{--                                </div>--}}
+{{--                                <div class="staps-line-car-add__staps-box" data-done-progres="multimedia">--}}
+{{--                                    Мультимедиа и локация--}}
+{{--                                </div>--}}
+{{--                                <div class="staps-line-car-add__staps-box" data-done-progres="other">--}}
+{{--                                    Другое--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="add-car-staps__btn-line">--}}
+{{--                    <button class="btn1">Опубликовать</button>--}}
+{{--                    <button class="btn1">Опубликовать как VIP</button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 @endsection
 
 @push('scripts')
