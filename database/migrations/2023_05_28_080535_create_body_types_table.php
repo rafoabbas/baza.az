@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('name_ru', 64);
             $table->integer('order')->nullable()->default(0);
             $table->boolean('status')->default(Status::published());
+            $table->tinyInteger('type')->default(1);
             $table->timestamps();
         });
     }
