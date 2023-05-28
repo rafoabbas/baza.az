@@ -3,10 +3,13 @@
 namespace Database\Factories\Common\Auto;
 
 use App\Enums\Common\Status;
+use App\Traits\Factory\NameFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class GearFactory extends Factory
 {
+    use NameFactory;
+
     public function definition(): array
     {
         return [
@@ -15,13 +18,5 @@ class GearFactory extends Factory
             'order' => 0,
             'status' => Status::published(),
         ];
-    }
-
-    public function name(string $name): self
-    {
-        return $this->state([
-            'name_az' => $name,
-            'name_ru' => $name,
-        ]);
     }
 }

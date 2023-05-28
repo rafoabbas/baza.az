@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers;
+namespace App\Helpers\Classes;
 
 use Illuminate\Support\Str;
 
@@ -8,7 +8,7 @@ class Helper
 {
     public static function menuActive(...$patterns): string
     {
-        return request()->routeIs('admin.car-brand.*') ? 'mm-active' : '';
+        return request()->routeIs(...$patterns) ? 'mm-active' : '';
     }
 
     public static function toast(array $arguments = []): array

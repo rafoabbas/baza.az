@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Helpers\Helper;
+use App\Helpers\Classes\Helper;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;

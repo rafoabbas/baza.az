@@ -3,10 +3,13 @@
 namespace Database\Factories\Common\Auto;
 
 use App\Enums\Common\Status;
+use App\Traits\Factory\NameFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class BodyTypeFactory extends Factory
 {
+    use NameFactory;
+
     public function definition(): array
     {
         return [
@@ -16,13 +19,5 @@ class BodyTypeFactory extends Factory
             'status' => Status::published(),
             'type' => 1,
         ];
-    }
-
-    public function name(string $name): self
-    {
-        return $this->state([
-            'name_az' => $name,
-            'name_ru' => $name,
-        ]);
     }
 }

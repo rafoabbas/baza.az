@@ -3,9 +3,7 @@
 namespace App\Services\Eloquent\Common\Auto;
 
 use App\Enums\Common\Status;
-use App\Helpers\RuleHelper;
-use App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface;
-use App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface;
+use App\Helpers\Classes\RuleHelper;
 use App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface;
 use App\Services\Eloquent\Contracts\CrudService;
 use App\Traits\Request\ValidationRole;

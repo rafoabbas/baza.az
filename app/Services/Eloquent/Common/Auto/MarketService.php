@@ -3,7 +3,7 @@
 namespace App\Services\Eloquent\Common\Auto;
 
 use App\Enums\Common\Status;
-use App\Helpers\RuleHelper;
+use App\Helpers\Classes\RuleHelper;
 use App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface;
 use App\Services\Eloquent\Contracts\CrudService;
 use App\Traits\Request\ValidationRole;

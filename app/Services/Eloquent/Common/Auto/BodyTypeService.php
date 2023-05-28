@@ -3,7 +3,7 @@
 namespace App\Services\Eloquent\Common\Auto;
 
 use App\Enums\Common\Status;
-use App\Helpers\RuleHelper;
+use App\Helpers\Classes\RuleHelper;
 use App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface;
 use App\Services\Eloquent\Contracts\CrudService;
 use App\Traits\Request\ValidationRole;
@@ -22,8 +22,7 @@ class BodyTypeService extends CrudService
         return RuleHelper::make([
             '%name%' => 'required|string|max:64|unique:body_types,%name%',
             'status' => 'required|in:' . Status::toString(),
-            'order' => 'required|integer|min:0',
-            'type' => 'nullable'
+            'order' => 'required|integer|min:0'
         ]);
     }
 

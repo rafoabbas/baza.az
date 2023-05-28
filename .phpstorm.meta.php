@@ -11,6 +11,12 @@ namespace PHPSTORM_META {
     */
     override(new \Illuminate\Contracts\Container\Container, map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -212,6 +218,12 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Container\Container::makeWith(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -413,6 +425,12 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Contracts\Container\Container::get(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -614,6 +632,12 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -815,6 +839,12 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -1016,6 +1046,12 @@ namespace PHPSTORM_META {
         ]));
     override(\App::get(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -1217,6 +1253,12 @@ namespace PHPSTORM_META {
         ]));
     override(\App::make(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -1418,6 +1460,12 @@ namespace PHPSTORM_META {
         ]));
     override(\App::makeWith(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -1619,6 +1667,12 @@ namespace PHPSTORM_META {
         ]));
     override(\app(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -1820,6 +1874,12 @@ namespace PHPSTORM_META {
         ]));
     override(\resolve(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
@@ -2021,6 +2081,12 @@ namespace PHPSTORM_META {
         ]));
     override(\Psr\Container\ContainerInterface::get(0), map([
         '' => '@',
+            'App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\BodyTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\ColorRepository::class,
+            'App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\FuelTypeRepository::class,
+            'App\Repositories\Contracts\Common\Auto\GearRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\GearRepository::class,
+            'App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\MarketRepository::class,
+            'App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface' => \App\Repositories\Eloquent\Common\Auto\TransmissionRepository::class,
             'App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarBrandRepository::class,
             'App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface' => \App\Repositories\Eloquent\Common\Car\CarModelRepository::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,

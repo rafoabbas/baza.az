@@ -2,7 +2,7 @@
 
 namespace App\QueryFilters\Common;
 
-use App\Helpers\Helper;
+use App\Helpers\Classes\Helper;
 use Illuminate\Database\Eloquent\Builder;
 
 class NameLangFilter

@@ -16,7 +16,7 @@
             <span class="btn-inner--icon me-2">
                 <i class="fas fa-plus"></i>
             </span>
-            <span class="btn-inner--text">{{ __('Marka ekle') }}</span>
+            <span class="btn-inner--text">{{ __('Marka əlavə et') }}</span>
         </a>
     </div>
 @endpush
