@@ -8,18 +8,12 @@
                     <div class="main-search__select-conteiner">
                         <div class="main-search__radio-element">
                             <input type="radio" name="type" id="car_type1" checked>
-                            <label for="car_type1">Все</label>
+                            <label for="car_type1">@lang('front.Hamısı')</label>
                             <input type="radio" name="type" id="car_type2" >
-                            <label for="car_type2">Новые</label>
+                            <label for="car_type2">@lang('front.Yeni')</label>
                             <input type="radio" name="type" id="car_type3" >
-                            <label for="car_type3">легковые</label>
+                            <label for="car_type3">@lang('front.Sürülmüş')</label>
                         </div>
-{{--                        <div class="main-search__select-element">--}}
-{{--                            <select name="" id="" class="select-type1">--}}
-{{--                                <option value="">Тип авто - все</option>--}}
-{{--                                <option value="">Тип авто - легковые</option>--}}
-{{--                            </select>--}}
-{{--                        </div>--}}
                         <div class="main-search__select-element">
                             <select name="" id="" class="select-type1">
                                 <option value="">Город</option>
@@ -29,8 +23,8 @@
                         </div>
                         <div class="main-search__select-element">
                             <select name="" id="" class="select-type1">
-                                <option value="">Все авто</option>
-                                <option value="">Все авто</option>
+                                <option value="">Тип кузова</option>
+                                <option value="">Автобус</option>
                             </select>
                         </div>
                         <div class="main-search__select-element select-main">
@@ -115,7 +109,7 @@
     </section>
     @php($items = collect([0,1,2,3,4,5,6,7]))
     @includeWhen($items->count(), 'front.pages.partials.cars.section', [
-        'title' => 'VIP объявления',
+        'title' => trans('front.Vip avtomobillər'),
         'subtitle' => '',
         'items' => $items
     ])
