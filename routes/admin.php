@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\Common\Auto\MarketController;
 use App\Http\Controllers\Admin\Common\Auto\TransmissionController;
 use App\Http\Controllers\Admin\Common\Car\CarBrandController;
 use App\Http\Controllers\Admin\Common\Car\CarModelController;
+use App\Http\Controllers\Admin\Common\Location\NumberRegionController;
+use App\Http\Controllers\Admin\Common\Location\RegionController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
@@ -44,5 +46,9 @@ Route::group([
         Route::resource('body-type', BodyTypeController::class);
         Route::resource('car-brand', CarBrandController::class);
         Route::resource('car-brand.model', CarModelController::class);
+
+        // Location's routes
+        Route::resource('region', RegionController::class);
+        Route::resource('number-region', NumberRegionController::class);
     });
 });

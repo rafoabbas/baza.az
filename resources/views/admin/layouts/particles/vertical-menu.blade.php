@@ -31,6 +31,17 @@
                         <li class="{{ menuActive('admin.body-type.*') }}"><a href="{{ route('admin.body-type.index') }}">@lang('Ban Növləri')</a></li>
                     </ul>
                 </li>
+                <li class="{{ menuActive('admin.region*', 'admin.number-region.*') }}">
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ti-archive"></i>
+                        <span> Location </span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li class="{{ menuActive('admin.region.*') }}"><a href="{{ route('admin.region.index') }}">@lang('Regionlar')</a></li>
+                        <li class="{{ menuActive('admin.number-region.*') }}"><a href="{{ route('admin.number-region.index') }}">@lang('Nömrə Regionları')</a></li>
+                    </ul>
+                </li>
+
                 <li class="menu-title">@lang('Content')</li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
