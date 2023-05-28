@@ -2,6 +2,7 @@
 
 namespace App\Services\Front\Advertisement;
 
-class AdvertisementCommonService
+class AdvertisementService
 {
+
 }
