@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Facade;
 return [
 
     'assets' => [
-        'version' => '0.0.1' . time(),
+        'version' => '1.0.0' . time(),
     ],
 
     /*
