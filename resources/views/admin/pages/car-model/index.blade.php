@@ -22,7 +22,7 @@
             <span class="btn-inner--icon me-2">
                 <i class="fas fa-plus"></i>
             </span>
-            <span class="btn-inner--text">{{ __('Model ekle') }}</span>
+            <span class="btn-inner--text">{{ __('Model əlavə et') }}</span>
         </a>
     </div>
 @endpush

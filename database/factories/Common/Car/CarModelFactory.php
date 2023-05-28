@@ -4,10 +4,13 @@ namespace Database\Factories\Common\Car;
 
 use App\Enums\Common\Status;
 use App\Models\Common\Car\CarBrand;
+use App\Traits\Factory\NameFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CarModelFactory extends Factory
 {
+    use NameFactory;
+
     public function definition(): array
     {
         return [
@@ -23,14 +26,6 @@ class CarModelFactory extends Factory
     {
         return $this->state([
             'car_brand_id' => $cardBrandId,
-        ]);
-    }
-
-    public function setName(string $name): self
-    {
-        return $this->state([
-            'name_az' => $name,
-            'name_ru' => $name,
         ]);
     }
 }

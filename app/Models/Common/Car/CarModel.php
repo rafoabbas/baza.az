@@ -2,16 +2,20 @@
 
 namespace App\Models\Common\Car;
 
-use App\Helpers\Helper;
+use App\Helpers\Classes\Helper;
+use App\Traits\Eloquent\Attributes\NameAttribute;
 use App\Traits\Eloquent\Filterable;
 use Illuminate\Database\Eloquent\Casts\Attribute as AttributeCast;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
 class CarModel extends Model
 {
+    use Sortable;
     use HasFactory;
     use Filterable;
+    use NameAttribute;
 
     protected $fillable = [
         'car_brand_id',
@@ -21,10 +25,5 @@ class CarModel extends Model
         'status',
     ];
 
-    public function name(): AttributeCast
-    {
-        return AttributeCast::make(
-            get: fn () => $this->{Helper::column('name')},
-        );
-    }
+    protected $appends = ['name'];
 }

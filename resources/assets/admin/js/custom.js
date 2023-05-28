@@ -1,3 +1,8 @@
+import "./helpers";
+import "./preview";
+
+$('.color').spectrum();
+
 $('[data-toggle="select"]').select2();
 
 
@@ -56,5 +61,4 @@ $('[data-toggle="alert"]').on('click', function(){
             });
         }
     });
-
 });

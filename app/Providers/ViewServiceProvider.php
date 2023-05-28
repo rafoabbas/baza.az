@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Helpers\Helper;
+use App\Helpers\Classes\Helper;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;

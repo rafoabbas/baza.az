@@ -1,6 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Admin\Common\Auto\BodyTypeController;
+use App\Http\Controllers\Admin\Common\Auto\ColorController;
+use App\Http\Controllers\Admin\Common\Auto\FuelTypeController;
+use App\Http\Controllers\Admin\Common\Auto\GearController;
+use App\Http\Controllers\Admin\Common\Auto\MarketController;
+use App\Http\Controllers\Admin\Common\Auto\TransmissionController;
 use App\Http\Controllers\Admin\Common\Car\CarBrandController;
 use App\Http\Controllers\Admin\Common\Car\CarModelController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -30,6 +36,12 @@ Route::group([
     ], function () {
         Route::get('', DashboardController::class)->name('dashboard');
 
+        Route::resource('gear', GearController::class);
+        Route::resource('market', MarketController::class);
+        Route::resource('transmission', TransmissionController::class);
+        Route::resource('color', ColorController::class);
+        Route::resource('fuel-type', FuelTypeController::class);
+        Route::resource('body-type', BodyTypeController::class);
         Route::resource('car-brand', CarBrandController::class);
         Route::resource('car-brand.model', CarModelController::class);
     });

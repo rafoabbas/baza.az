@@ -1,15 +1,21 @@
 <?php
 
-namespace App\Models\Common;
+namespace App\Models\Common\Auto;
 
-use App\Helpers\Helper;
+use App\Helpers\Classes\Helper;
+use App\Traits\Eloquent\Attributes\NameAttribute;
+use App\Traits\Eloquent\Filterable;
 use Illuminate\Database\Eloquent\Casts\Attribute as AttributeCast;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
-class BodyType extends Model
+class Market extends Model
 {
     use HasFactory;
+    use Sortable;
+    use Filterable;
+    use NameAttribute;
 
     protected $fillable = [
         'name_az',
@@ -21,11 +27,4 @@ class BodyType extends Model
     protected $appends = [
         'name',
     ];
-
-    public function name(): AttributeCast
-    {
-        return AttributeCast::make(
-            get: fn () => $this->{Helper::column('name')},
-        );
-    }
 }
