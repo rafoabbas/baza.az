@@ -15,7 +15,8 @@ class BodyType extends Model
         'name_az',
         'name_ru',
         'order',
-        'status'
+        'status',
+        'type'
     ];
 
     protected $appends = [
