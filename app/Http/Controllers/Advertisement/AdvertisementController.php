@@ -3,9 +3,16 @@
 namespace App\Http\Controllers\Advertisement;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Services\Front\Advertisement\AdvertisementCommonService;
 
 class AdvertisementController extends Controller
 {
-    //
+    public function __construct(
+        public AdvertisementCommonService $advertisementCommonService
+    ) {
+    }
+
+    public function create()
+    {
+    }
 }
