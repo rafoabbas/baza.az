@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Advertisement\AdvertisementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,7 @@ Route::group([
     'name' => 'advertisement.',
     'prefix' => 'advertisement',
 ], function () {
-//    Route::get('create', '')
+    Route::get('create', [AdvertisementController::class, 'create'])->name('create');
 });
 
 Route::get('/', function () {
