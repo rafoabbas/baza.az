@@ -11,7 +11,7 @@ return new class extends Migration
     {
         Schema::create('number_regions', function (Blueprint $table) {
             $table->id();
-            $table->string('region', 2);
+            $table->string('region_code', 2);
             $table->string('name_az', 64);
             $table->string('name_ru', 64);
             $table->integer('order')->nullable()->default(0);
