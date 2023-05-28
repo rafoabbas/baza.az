@@ -7,6 +7,7 @@ use Database\Seeders\Common\Auto\ColorTypeTableSeeder;
 use Database\Seeders\Common\Auto\FuelTypeTableSeeder;
 use Database\Seeders\Common\Auto\GearTableSeeder;
 use Database\Seeders\Common\Auto\MarketTableSeeder;
+use Database\Seeders\Common\Auto\TransmissionTableSeeder;
 use Database\Seeders\Common\Car\CarBrandAndModelTableSeeder;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +23,7 @@ class CommonDatabaseSeeder extends Seeder
             FuelTypeTableSeeder::class,
             GearTableSeeder::class,
             MarketTableSeeder::class,
+            TransmissionTableSeeder::class
         ]);
     }
 }

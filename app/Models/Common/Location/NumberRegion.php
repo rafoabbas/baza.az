@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Common\Auto;
+namespace App\Models\Common\Location;
 
 use App\Traits\Eloquent\Attributes\NameAttribute;
 use App\Traits\Eloquent\Filterable;
@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Kyslik\ColumnSortable\Sortable;
 
-class Region extends Model
+class NumberRegion extends Model
 {
     use HasFactory;
     use Filterable;
@@ -16,7 +16,7 @@ class Region extends Model
     use NameAttribute;
 
     protected $fillable = [
-        'region',
+        'region_code',
         'name_az',
         'name_ru',
         'order',

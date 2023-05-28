@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Factories\Common\Auto;
+namespace Database\Factories\Common\Location;
 
 use App\Enums\Common\Status;
 use App\Traits\Factory\NameFactory;
@@ -13,7 +13,7 @@ class RegionFactory extends Factory
     public function definition(): array
     {
         return [
-            'code' => rand(1, 99),
+            'region_code' => rand(1, 99),
             'name_az' => $this->faker->word(),
             'name_ru' => $this->faker->word(),
             'order' => 0,

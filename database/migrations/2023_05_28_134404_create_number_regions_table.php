@@ -9,8 +9,9 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('regions', function (Blueprint $table) {
+        Schema::create('number_regions', function (Blueprint $table) {
             $table->id();
+            $table->string('region', 2);
             $table->string('name_az', 64);
             $table->string('name_ru', 64);
             $table->integer('order')->nullable()->default(0);
@@ -21,6 +22,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('regions');
+        Schema::dropIfExists('number_regions');
     }
 };
