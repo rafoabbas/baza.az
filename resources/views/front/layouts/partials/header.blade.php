@@ -77,7 +77,7 @@
                     @include('front.layouts.partials.navbar.navbar')
                 </ul>
             </nav>
-            <a href="{{ route('add.ads') }}" class="btn1">Подать объявление</a>
+            <a href="{{ route('advertisement.create') }}" class="btn1">Подать объявление</a>
         </div>
     </div>
 </header>
