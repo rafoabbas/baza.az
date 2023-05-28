@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group([
+    'name' => 'advertisement.',
+    'prefix' => 'advertisement',
+], function () {
+//    Route::get('create', '')
+});
+
 Route::get('/', function () {
     return view('front.pages.home.index');
 });
