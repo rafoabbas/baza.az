@@ -18,8 +18,12 @@ Route::get('/', function () {
 });
 
 Route::get('/create-ads', function () {
-    return view('front.pages.profile.add.car');
+    return view('front.pages.profile.add.select-ads');
 })->name('add.ads');
+
+Route::get('/create-car', function () {
+    return view('front.pages.profile.add.car');
+})->name('add.car');
 
 
 Route::get('/create-number', function () {

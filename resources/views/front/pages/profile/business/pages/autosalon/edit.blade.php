@@ -14,7 +14,6 @@
                 <div class="cart-main-info__body-info cart-main-info__body-info_account">
                     <div class="user-account-busines-claster">
                         <div class="user-account-busines-claster__rent-car-conteiner">
-
                             <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
                                 <div class="acordeon-conteiner__box-title acordeon-element__title">
                                     <h4 class="cart-main-info__title">Контактная информация автосалона</h4>
