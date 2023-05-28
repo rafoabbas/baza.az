@@ -9,7 +9,6 @@
                 <a href="">/  Личный кабинет</a>
                 <p>/ Добавить автономер</p>
             </div>
-
             <div class="cart-main-info__conteiner">
                 <div class="cart-main-info__body-info">
                     <div class="conteiner-add-number">
@@ -26,19 +25,15 @@
                                     </select>
                                 </div>
                             </div>
-
                             <div class="catalog__filtr__filtr-element">
                                 <h5>Серия:</h5>
-
                                 <input type="text" class="input-form-conteiner__input" placeholder="Серия">
                             </div>
-
                             <div class="catalog__filtr__filtr-element">
                                 <h5>Номер:</h5>
                                 <input type="text" class="input-form-conteiner__input" placeholder="Номер" >
                             </div>
                         </div>
-
                         <div class="conteiner-add-number__line">
                             <div class="catalog__filtr__filtr-element">
                                 <h5>Город:</h5>
@@ -51,7 +46,6 @@
                                     </select>
                                 </div>
                             </div>
-
                             <div class="catalog__filtr__filtr-element">
                                 <h5>Цена:</h5>
                                 <div class="filtr-element__select filtr-element__select_input">
@@ -64,43 +58,35 @@
                                     </select>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
-
-
-
                     <div class="select-num">
                         <h4 class="cart-main-info__title-ul">На каком авто показать номер:</h4>
-
                         <div class="select-num__conteiner">
                             <div class="select-num__box select-num__box_activ">
-                                <img src="img/_src/car-doc.png" alt="">
+                                <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
                             </div>
                             <div class="select-num__box">
-                                <img src="img/_src/car-doc2.png" alt="">
+                                <img src="{{ asset('assets/front/img/_src/car-doc2.png') }}" alt="">
                             </div>
                             <div class="select-num__box">
-                                <img src="img/_src/car-doc.png" alt="">
+                                <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
                             </div>
                             <div class="select-num__box">
-                                <img src="img/_src/car-doc.png" alt="">
+                                <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
                             </div>
                             <div class="select-num__box">
-                                <img src="img/_src/car-doc2.png" alt="">
+                                <img src="{{ asset('assets/front/img/_src/car-doc2.png') }}" alt="">
                             </div>
                             <div class="select-num__box">
-                                <img src="img/_src/car-doc.png" alt="">
+                                <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
                             </div>
                         </div>
                     </div>
-
                     <div class="acordeon-conteiner__description-conteiner">
                         <h4 class="cart-main-info__title-ul">Описание</h4>
                         <textarea placeholder="Текст описание"></textarea>
                     </div>
-
                     <div class="select-type-num">
                         <h4 class="cart-main-info__title-ul">Укажите тип номера:</h4>
                         <div class="select-type-num__conteiner">
@@ -111,7 +97,6 @@
                                     <p class="catalog-page__filtr-element-subtitle">Номера с зеркальным отображением цифр. <br>Пример: 3223, 8558, 1441</p>
                                 </label>
                             </div>
-
                             <div class="checkbox">
                                 <label class="custom-checkbox">
                                     <input type="checkbox" name="nambers" value="Зеркальные номера">
@@ -119,7 +104,6 @@
                                     <p class="catalog-page__filtr-element-subtitle">Номера с тремя цифрами подряд.<br>Пример: 0111, 7772, 2228</p>
                                 </label>
                             </div>
-
                             <div class="checkbox">
                                 <label class="custom-checkbox">
                                     <input type="checkbox" name="nambers" value="Зеркальные номера">
@@ -127,7 +111,6 @@
                                     <p class="catalog-page__filtr-element-subtitle">Номера с комбинацией трех нулей и одной цифрой.<br>Пример: 0001, 1000, 2000</p>
                                 </label>
                             </div>
-
                             <div class="checkbox">
                                 <label class="custom-checkbox">
                                     <input type="checkbox" name="nambers" value="Зеркальные номера">
@@ -143,13 +126,11 @@
                             <a href="" class="btn1">Опубликовать как VIP</a>
                         </div>
                     </div>
-
                 </div>
-
                 <aside class="catalog__filtr ads-sitebar ads-sitebar_user-account aside-old">
                     <div class="catalog__filt-baner-conteiner">
                         <a href="" class="baner-box">
-                            <img src="img/_src/baner1.jpg" alt="">
+                            <img src="{{ asset('assets/front/img/_src/baner1.jpg') }}" alt="">
                         </a>
                     </div>
                 </aside>
