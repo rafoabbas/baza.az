@@ -23,8 +23,8 @@
                         </div>
                         <div class="main-search__select-element">
                             <select name="" id="" class="select-type1">
-                                <option value="">Все авто</option>
-                                <option value="">Все авто</option>
+                                <option value="">Тип кузова</option>
+                                <option value="">Автобус</option>
                             </select>
                         </div>
                         <div class="main-search__select-element select-main">
@@ -109,7 +109,7 @@
     </section>
     @php($items = collect([0,1,2,3,4,5,6,7]))
     @includeWhen($items->count(), 'front.pages.partials.cars.section', [
-        'title' => 'VIP объявления',
+        'title' => trans('front.Vip avtomobillər'),
         'subtitle' => '',
         'items' => $items
     ])
