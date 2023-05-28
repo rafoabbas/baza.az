@@ -17,6 +17,15 @@ Route::get('/', function () {
     return view('front.pages.home.index');
 });
 
+Route::get('/create-ads', function () {
+    return view('front.pages.profile.add.car');
+})->name('add.ads');
+
+
+Route::get('/create-number', function () {
+    return view('front.pages.profile.add.number');
+})->name('add.number');
+
 Route::get('/profile', function () {
     return view('front.pages.profile.index');
 })->name('profile');

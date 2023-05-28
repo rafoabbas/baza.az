@@ -3428,3 +3428,56 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^=col-]:last-
 .navbar-brand-box {
   background: #333547;
 }
+
+.img-component .img-preview-div {
+  border-radius: 8px;
+  background: white;
+  padding: 10px;
+}
+.img-component .img-preview-div .img-preview {
+  background-color: var(--bs-body-bg);
+  cursor: pointer;
+  padding: 3px;
+  box-shadow: 0px 0px 13px 0px rgba(236, 236, 241, 0.44);
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-component .img-preview-div .img-preview .icon i {
+  font-size: 50px;
+}
+.img-component .img-preview-div .img-preview .icon .text {
+  font-size: 12px;
+}
+.img-component .img-preview-div .active {
+  background: rgba(152, 150, 143, 0.68);
+}
+.img-component .img-item {
+  position: relative;
+  border-radius: 8px;
+  border: 3px solid #ffffff;
+  padding: 10px;
+  display: flex;
+}
+.img-component .img-item img {
+  border-radius: 8px;
+  border: 1px solid rgba(194, 194, 194, 0.64);
+  width: 50px;
+  height: 50px;
+}
+.img-component .img-item .img-item-action {
+  right: 8px;
+  position: absolute;
+}
+.img-component .img-item .img-item-information .name {
+  max-width: 180px;
+  color: #000000;
+  word-wrap: break-word;
+}
+.img-component .img-item .img-item-information .size {
+  color: rgba(117, 117, 117, 0.8);
+}
