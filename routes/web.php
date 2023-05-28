@@ -15,10 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group([
-    'name' => 'advertisement.',
+    'as' => 'advertisement.',
     'prefix' => 'advertisement',
 ], function () {
-    Route::get('create', [AdvertisementController::class, 'create'])->name('create');
+    Route::get('', [AdvertisementController::class, 'create'])->name('create');
+    Route::post('store', [AdvertisementController::class, 'store'])->name('store');
+    Route::get('{otp:uuid}/otp', [AdvertisementController::class, 'otp'])->name('otp');
+    Route::post('{otp:uuid}/otp', [AdvertisementController::class, 'checkOtp'])->name('check.otp');
+    Route::get('{otp:uuid}/auto', [AdvertisementController::class, 'createAuto'])->name('create.auto');
+    Route::get('{otp:uuid}/number', [AdvertisementController::class, 'createNumber'])->name('create.number');
 });
 
 Route::get('/', function () {
@@ -26,16 +31,16 @@ Route::get('/', function () {
 });
 
 Route::get('/create-ads', function () {
-    return view('front.pages.profile.add.select-ads');
+    return view('front.pages.profile.advertisement.select-ads');
 })->name('add.ads');
 
 Route::get('/create-car', function () {
-    return view('front.pages.profile.add.car');
+    return view('front.pages.profile.advertisement.car');
 })->name('add.car');
 
 
 Route::get('/create-number', function () {
-    return view('front.pages.profile.add.number');
+    return view('front.pages.profile.advertisement.number');
 })->name('add.number');
 
 Route::get('/profile', function () {

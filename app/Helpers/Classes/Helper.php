@@ -2,10 +2,30 @@
 
 namespace App\Helpers\Classes;
 
+use Exception;
+use Propaganistas\LaravelPhone\PhoneNumber;
 use Illuminate\Support\Str;
 
 class Helper
 {
+    public static function phoneFormat(
+        $phone,
+        string $countryCode = 'AZ',
+        $plus = '+'
+    ) {
+        try {
+            if (PhoneNumber::make($phone, $countryCode)->isOfCountry($countryCode)) {
+                return Str::replaceFirst(
+                    $plus,
+                    '',
+                    PhoneNumber::make($phone, $countryCode)->formatE164()
+                );
+            }
+        } catch (Exception $exception) {
+            return $phone;
+        }
+    }
+
     public static function menuActive(...$patterns): string
     {
         return request()->routeIs(...$patterns) ? 'mm-active' : '';

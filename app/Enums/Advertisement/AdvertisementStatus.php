@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums\Common;
+namespace App\Enums\Advertisement;
 
 use App\Traits\Enum\EnumToArray;
 use App\Traits\Enum\EnumToString;

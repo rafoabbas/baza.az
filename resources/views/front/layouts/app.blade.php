@@ -23,6 +23,14 @@
     <!-- Font cdn -->
     @stack('style')
 {{--    <link rel="stylesheet" href="{{asset('assets/front/css/main.min.css?v=' . config('app.assets.version', 'v0.0.1'))}}">--}}
+    <style>
+        .is-invalid {
+            border-color: #dc3545 !important;
+        }
+        .text-danger{
+            color: #dc3545 !important;
+        }
+    </style>
     <link rel="stylesheet" href="{{asset('assets/front/css/main.css?v=' . config('app.assets.version', 'v0.0.1'))}}">
 </head>
 <body>

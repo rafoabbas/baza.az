@@ -1,6 +1,6 @@
 <?php
 
-use App\Enums\Common\AdvertisementStatus;
+use App\Enums\Advertisement\AdvertisementStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
