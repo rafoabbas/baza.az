@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models\Common;
+namespace App\Models\Common\Auto;
 
 use App\Helpers\Helper;
 use Illuminate\Database\Eloquent\Casts\Attribute as AttributeCast;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BodyType extends Model
+class Color extends Model
 {
     use HasFactory;
 
