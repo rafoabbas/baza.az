@@ -43,7 +43,7 @@
 	width: 480px;
 	height: 390px;
 	position: relative;
-	.ads-box-user__add-ads{
+	.card-box-user__add-ads{
 		min-height: auto;
 		position: relative;
 		width: 100%;
@@ -121,7 +121,7 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 
-	.ads-box-user__add-ads{
+	.card-box-user__add-ads{
 		width: calc(16.6666667% - 20px);
 		margin: 0 10px;
 		margin-bottom: 20px;
@@ -190,7 +190,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	.ads-box__play {
+	.card-box__play {
 		width: 100px;
 		right: auto;
 		top: auto;
@@ -432,7 +432,7 @@
 	    display: none;
 	}
 }
-.ads-box-user__add-ads-conteiner_big{
+.card-box-user__add-ads-conteiner_big{
 	width: 140px;
 	height: 140px;
 	display: flex;

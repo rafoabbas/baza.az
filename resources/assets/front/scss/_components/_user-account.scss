@@ -149,12 +149,12 @@
 .ads-body__conteiner{
 	padding-top: 0;
 }
-.ads-box-user__line-data{
+.card-box-user__line-data{
 	display: flex;
 	justify-content: space-between;
 	padding-top: 5px;
 	padding-bottom: 10px;
-	.ads-box__date{
+	.card-box__date{
 		padding: 0;
 		b{
 			font-weight: normal;
@@ -162,13 +162,13 @@
 		}
 	}
 }
-.ads-box-user__prise-line{
+.card-box-user__prise-line{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.ads-box-user__viev{
+.card-box-user__viev{
 	display: flex;
 	align-items: center;
 	padding-bottom: 4px;
@@ -184,7 +184,7 @@
 		color: $textcolor;
 	}
 }
-.ads-box-user__controls-conteiner{
+.card-box-user__controls-conteiner{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -217,7 +217,7 @@
 		color: $iconcolor;
 	}
 }
-.ads-box-user__add-ads{
+.card-box-user__add-ads{
 	background: url("/assets/front/img/_src/caradd.jpg")no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -227,7 +227,7 @@
 	justify-content: center;
 	align-items: center;
 }
-.ads-box-user__add-ads-conteiner{
+.card-box-user__add-ads-conteiner{
 	width: 140px;
 	text-align: center;
 
@@ -241,7 +241,7 @@
 		color: $iconcolor;
 	}
 }
-.ads-box-user{
+.card-box-user{
 	min-height: 400px;
 
 	.ads-namber-box__image-num{
@@ -264,7 +264,7 @@
 	width: 100%;
 	padding-right: 0;
 	.ads-body__conteiner{
-		.ads-box{
+		.card-box{
 			width: calc(25% - 20px);
 		}
 	}

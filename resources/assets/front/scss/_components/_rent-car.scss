@@ -32,15 +32,15 @@
 		height: 280px;
 	}
 
-	.ads-box__tegs-line{
+	.card-box__tegs-line{
 		width: 100%;
 		padding-top: 12px;
 	}
-	.ads-box__info{
+	.card-box__info{
 		padding: 10px 20px;
 	}
 }
-.ads-box__location{
+.card-box__location{
 	display: flex;
 	align-items: center;
 	padding-top: 5px;
@@ -192,7 +192,7 @@
 		width: 100%;
 	}
 }
-.ads-box__location p{
+.card-box__location p{
 	font-size: 14px;
 }
 }

@@ -119,12 +119,12 @@
 	justify-content: space-between;
 	width: 100%;
 
-	.ads-box__prise_other-money{
+	.card-box__prise_other-money{
 		display: block;
 		font-size: 16px;
 		color: $textcolor;
 	}
-	.ads-box__prise{
+	.card-box__prise{
 		font-weight: 500;
 		color: #1565C0
 	}
@@ -135,7 +135,7 @@
 			margin-bottom: 6px;
 		}
 	}
-	.ads-box__add-icon__conteiner{
+	.card-box__add-icon__conteiner{
 		width: 50%;
 	}
 }
@@ -334,7 +334,7 @@
 		object-fit: cover;
 		display: block;
 	}
-	.ads-box__play{
+	.card-box__play{
 		width: 70px;
 		right: calc(50% - 35px);
 		top: calc(50% - 35px);
@@ -361,7 +361,7 @@
 		display: flex;
 		object-fit: cover;
 	}
-	.ads-box__play{
+	.card-box__play{
 		width: 80px;
 		left: calc(50% - 40px);
 		top: calc(50% - 40px);
@@ -787,7 +787,7 @@
 	align-items: center;
 	position: relative;
 
-	.ads-box__play{
+	.card-box__play{
 		width: 100px;
 		right: auto;
 		top: auto;
@@ -962,7 +962,7 @@
 .cart-main-info__big-slider__element{
 	height: 280px;
 
-	.ads-box__play{
+	.card-box__play{
 		width: 44px;
 		left: auto;
 		right: 10px;
@@ -970,7 +970,7 @@
 	}
 }
 .cart-main-info__prise-conteiner{
-	.ads-box__add-icon__conteiner{
+	.card-box__add-icon__conteiner{
 		justify-content: flex-end;
 	}
 }
@@ -1021,7 +1021,7 @@
 	font-size: 22px;
 }
 .big-slider-conteiner__mobile-ads-info{
-	.ads-box__prise{
+	.card-box__prise{
 		position: relative;
 
 		&:before{
@@ -1271,7 +1271,7 @@
 }
 @media only screen and (max-width: 450px){
 .cart-main-info__prise-box{
-	.ads-box__prise {
+	.card-box__prise {
 	    position: relative;
 	    background: #fff;
 	    color: $activcolor;
@@ -1283,8 +1283,8 @@
 	    padding: 0;
     }
 }
-.ads-box__add-icon__conteiner{
-	.ads-box__add-icon{
+.card-box__add-icon__conteiner{
+	.card-box__add-icon{
 		width: 24px;
 	}
 }

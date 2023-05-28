@@ -11,7 +11,7 @@
             <div class="catalog-showroom__ads-wrapper">
                 <h2 class="general-titleV2">@lang('front.Verified avtosalonlar')</h2>
                 @foreach([0,1,2,3,4,5] as $item)
-                    <div class="catalog-showroom__ads-box showroom-box">
+                    <div class="catalog-showroom__card-box showroom-box">
                         <a href="{{ route('auto-salon.show') }}" class="overlay"></a>
                         <div class="showroom-box__image">
                             <img src="{{ asset('assets/front/img/_src/showroom.jpg') }}" alt="">
@@ -53,7 +53,7 @@
             <div class="catalog-showroom__ads-wrapper">
                 <h2 class="general-titleV2">@lang('front.Avtosalonlar')</h2>
                 @foreach([0,1,2,3,4,5] as $item)
-                    <div class="catalog-showroom__ads-box showroom-box">
+                    <div class="catalog-showroom__card-box showroom-box">
                         <a href="{{ route('auto-salon.show') }}" class="overlay"></a>
                         <div class="showroom-box__image">
                             <img src="{{ asset('assets/front/img/_src/showroom.jpg') }}" alt="">
