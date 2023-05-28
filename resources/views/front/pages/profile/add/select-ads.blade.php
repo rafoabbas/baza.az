@@ -4,7 +4,7 @@
     <section class="add-ads-no-regist-section">
         <div class="general-conteiner">
             <div class="add-ads-no-regist-section__row">
-                <div class="add-ads-no-regist-section__type-ads type-ads type-ads_activ">
+                <label for="car-type-input" class="add-ads-no-regist-section__type-ads type-ads type-ads_activ">
                     <div class="type-ads__icon">
                         <img src="{{ asset('assets/front/img/_src/no-reg1.svg') }}" alt="">
                     </div>
@@ -13,8 +13,8 @@
                         Легковые
                         <span></span>
                     </h4>
-                </div>
-                <div class="add-ads-no-regist-section__type-ads type-ads">
+                </label>
+                <label for="motorcycle-type-input" class="add-ads-no-regist-section__type-ads type-ads">
                     <div class="type-ads__icon">
                         <img src="{{ asset('assets/front/img/_src/no-reg2.svg') }}" alt="">
                     </div>
@@ -23,8 +23,8 @@
                         Мото
                         <span></span>
                     </h4>
-                </div>
-                <div class="add-ads-no-regist-section__type-ads type-ads">
+                </label>
+                <label for="number-type-input" class="add-ads-no-regist-section__type-ads type-ads">
                     <div class="type-ads__icon">
                         <img src="{{ asset('assets/front/img/_src/no-reg3.svg') }}" alt="">
                     </div>
@@ -33,8 +33,8 @@
                         Автономера
                         <span></span>
                     </h4>
-                </div>
-                <div class="add-ads-no-regist-section__type-ads type-ads">
+                </label>
+                <label for="truck-type-input" class="add-ads-no-regist-section__type-ads type-ads">
                     <div class="type-ads__icon">
                         <img src="{{ asset('assets/front/img/_src/no-reg4.svg') }}" alt="">
                     </div>
@@ -43,7 +43,7 @@
                         Спецтехника
                         <span></span>
                     </h4>
-                </div>
+                </label>
 {{--                <div class="add-ads-no-regist-section__type-ads type-ads">--}}
 {{--                    <div class="type-ads__icon">--}}
 {{--                        <img src="{{ asset('assets/front/img/_src/no-reg5.svg') }}" alt="">--}}
@@ -60,6 +60,10 @@
                     <h2 class="add-ads-no-regist-section__new-ads-title">Новое объявление</h2>
                     <p class="add-ads-no-regist-section__new-ads-subtitle">Уважаемый пользователь, на платформе baza.az Вы можете размещать 3 бесплатных объявления в течении 30 дней.</p>
                     <form action="" class="add-ads-no-regist-section__form">
+                        <input type="radio" name="ads_type" id="car-type-input" value="car" style="visibility: hidden">
+                        <input type="radio" name="ads_type" id="motorcycle-type-input" value="motorcycle" style="visibility: hidden">
+                        <input type="radio" name="ads_type" id="number-type-input" value="number" style="visibility: hidden">
+                        <input type="radio" name="ads_type" id="truck-type-input" value="truck" style="visibility: hidden">
                         <p class="add-ads-no-regist-section__form-title">Введите номер своего телефона для размещения объявления:
                         </p>
                         <div class="add-ads-no-regist-section__form-row">
