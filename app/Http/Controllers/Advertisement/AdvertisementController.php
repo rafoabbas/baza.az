@@ -14,5 +14,6 @@ class AdvertisementController extends Controller
 
     public function create()
     {
+        return view('front.pages.profile.add.select-ads');
     }
 }
