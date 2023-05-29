@@ -3,7 +3,7 @@
 namespace App\Services\Front\Advertisement;
 
 use App\Http\Requests\User\AdvertisementOtpRequest;
-use App\Models\User\AdvertisementOtp;
+use App\Models\User\Advertisement\AdvertisementOtp;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
