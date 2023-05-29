@@ -6,7 +6,7 @@ use App\Enums\Advertisement\OtpStatus;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\AdvertisementOtpCheckRequest;
 use App\Http\Requests\User\AdvertisementOtpRequest;
-use App\Models\User\AdvertisementOtp;
+use App\Models\User\Advertisement\AdvertisementOtp;
 use App\Services\Front\Advertisement\AdvertisementOtpService;
 use App\Services\Front\Advertisement\AdvertisementService;
 use Illuminate\Http\RedirectResponse;
