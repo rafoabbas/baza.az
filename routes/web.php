@@ -31,7 +31,7 @@ Route::get('/', function () {
 });
 
 Route::get('/create-ads', function () {
-    return view('front.pages.profile.advertisement.select-ads');
+    return view('front.pages.profile.advertisement.select');
 })->name('add.ads');
 
 Route::get('/create-car', function () {

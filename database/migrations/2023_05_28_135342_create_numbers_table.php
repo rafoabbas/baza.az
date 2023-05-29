@@ -9,24 +9,6 @@ return new class extends Migration
 {
     public function up(): void
     {
-        /*
-            'user_id',
-            'region_id',
-            'number_region_id',
-            'region_prefix',
-            'alphabet',
-            'number',
-            'full',
-            'status',
-            'is_mirror_numbers',
-            'is_three_numbers_in_a_row',
-            'is_five_numbers_in_a_row',
-            'is_two_zeros_and_a_number',
-            'is_vip',
-            'showing_type',
-            'expired_at',
-            'deleted_at'
-         */
         Schema::create('numbers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('users');
@@ -36,6 +18,9 @@ return new class extends Migration
             $table->string('alphabet', 2)->nullable();
             $table->string('number', 3)->nullable();
             $table->string('full', 7)->nullable();
+            $table->decimal('price_azn')->nullable();
+            $table->decimal('price_usd')->nullable();
+            $table->decimal('price_eur')->nullable();
             $table->tinyInteger('status')->default(AdvertisementStatus::pending());
             $table->boolean('is_mirror_numbers')->default(false);
             $table->boolean('is_three_numbers_in_a_row')->default(false);

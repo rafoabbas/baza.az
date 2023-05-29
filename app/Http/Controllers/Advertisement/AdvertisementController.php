@@ -9,7 +9,9 @@ use App\Http\Requests\User\AdvertisementOtpRequest;
 use App\Models\User\AdvertisementOtp;
 use App\Services\Front\Advertisement\AdvertisementOtpService;
 use App\Services\Front\Advertisement\AdvertisementService;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class AdvertisementController extends Controller
 {
@@ -19,19 +21,19 @@ class AdvertisementController extends Controller
     ) {
     }
 
-    public function create(Request $request)
+    public function create(Request $request): View
     {
         return view('front.pages.profile.advertisement.select');
     }
 
-    public function store(AdvertisementOtpRequest $request)
+    public function store(AdvertisementOtpRequest $request): RedirectResponse
     {
         return $this->otpService->redirect(
             $this->otpService->store($request)
         );
     }
 
-    public function otp(AdvertisementOtp $otp)
+    public function otp(AdvertisementOtp $otp): View|RedirectResponse
     {
         $this->otpService->checkOtpSession($otp);
 
@@ -43,7 +45,7 @@ class AdvertisementController extends Controller
         return view('front.pages.profile.advertisement.otp', compact('otp'));
     }
 
-    public function checkOtp(AdvertisementOtpCheckRequest $request, AdvertisementOtp $otp)
+    public function checkOtp(AdvertisementOtpCheckRequest $request, AdvertisementOtp $otp): RedirectResponse
     {
         $this->otpService->checkOtpSession($otp);
 
@@ -54,10 +56,10 @@ class AdvertisementController extends Controller
 
     public function createAuto(AdvertisementOtp $otp)
     {
-        dd($otp);
+        return view('front.pages.profile.advertisement.car', compact('otp'));
     }
 
-    public function createNumber(AdvertisementOtp $otp)
+    public function createNumber(AdvertisementOtp $otp): View
     {
         $this->otpService->checkOtpSession($otp);
 
