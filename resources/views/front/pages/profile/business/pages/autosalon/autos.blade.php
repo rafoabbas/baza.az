@@ -96,27 +96,27 @@
 
                                         </div>
 
-                                        <!-- <div class="rent-car__balans-ads balans-ads">
-                                            <h5 class="balans-ads__title">У вас на счету:</h5>
-                                            <ul class="balans-ads__list">
-                                                <li>
-                                                    <p>публикаций: <b>1</b></p>
-                                                </li>
-                                                <li>
-                                                    <p>VIP публикаций: <b>0</b></p>
-                                                </li>
-                                            </ul>
-                                            <div class="balans-ads__btn-box">
-                                                <a href="" class="btn1">Купить еще</a>
-                                                <a href="" class="btn1">Подать объявление</a>
-                                            </div>
-                                            <div class="controls-box-ads controls-box-ads_redact-user-profile">
-                                                <div class="controls-box-ads__icon">
-                                                    <img src="img/_src/c_redact.png" alt="">
-                                                </div>
-                                                <p>Редактировать профиль</p>
-                                            </div>
-                                        </div> -->
+{{--                                        <!-- <div class="rent-car__balans-ads balans-ads">--}}
+{{--                                            <h5 class="balans-ads__title">У вас на счету:</h5>--}}
+{{--                                            <ul class="balans-ads__list">--}}
+{{--                                                <li>--}}
+{{--                                                    <p>публикаций: <b>1</b></p>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <p>VIP публикаций: <b>0</b></p>--}}
+{{--                                                </li>--}}
+{{--                                            </ul>--}}
+{{--                                            <div class="balans-ads__btn-box">--}}
+{{--                                                <a href="" class="btn1">Купить еще</a>--}}
+{{--                                                <a href="" class="btn1">@lang('Elan yerləşdir')</a>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="controls-box-ads controls-box-ads_redact-user-profile">--}}
+{{--                                                <div class="controls-box-ads__icon">--}}
+{{--                                                    <img src="img/_src/c_redact.png" alt="">--}}
+{{--                                                </div>--}}
+{{--                                                <p>Редактировать профиль</p>--}}
+{{--                                            </div>--}}
+{{--                                        </div> -->--}}
                                     </div>
                                 </div>
                             </div>

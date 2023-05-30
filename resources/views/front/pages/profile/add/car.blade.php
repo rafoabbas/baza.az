@@ -38,7 +38,7 @@
                                         <h5>Тип транспорта:</h5>
                                         <div class="filtr-element__select">
                                             <select name="" id="" class="full-select">
-                                                <option value="">Тип авто:</option>
+                                                <option value="">Nəqliyyat vasitənin növü</option>
                                                 <option value="">Легковые</option>
                                                 <option value="">Легковые</option>
                                                 <option value="">Легковые</option>
@@ -662,7 +662,7 @@
                         <div class="select-type-ads__conteiner">
                             <div class="select-type-ads_box baner-vip">
                                 <div class="baner-vip__text">
-                                    <h3 class="baner-vip__title">VIP объявление</h3>
+                                    <h3 class="baner-vip__title">@lang('VIP elan')</h3>
                                     <p class="baner-vip__description">Отображается на самых популярных позициях сайта, привлекая максимальное число покупателей.</p>
                                     <h4 class="baner-vip__subtitle">В 10 раз больше просмотров</h4>
                                     <div class="baner-vip__btn-line">

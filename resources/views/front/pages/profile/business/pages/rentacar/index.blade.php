@@ -107,7 +107,7 @@
                                             </ul>
                                             <div class="balans-ads__btn-box">
                                                 <a href="" class="btn1">Купить еще</a>
-                                                <a href="" class="btn1">Подать объявление</a>
+                                                <a href="" class="btn1">@lang('Elan yerləşdir')</a>
                                             </div>
                                         </div>
                                     </div>
