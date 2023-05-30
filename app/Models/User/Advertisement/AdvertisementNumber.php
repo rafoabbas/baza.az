@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Kyslik\ColumnSortable\Sortable;
 
-class Number extends Model
+class AdvertisementNumber extends Model
 {
     use HasFactory;
     use Sortable;
@@ -18,8 +18,11 @@ class Number extends Model
         'region_id',
         'number_region_id',
         'region_prefix',
-        'alphabet',
-        'number',
+        'alphabet_first_character',
+        'alphabet_second_character',
+        'first_number',
+        'second_number',
+        'third_number',
         'full',
         'price_azn',
         'price_usd',

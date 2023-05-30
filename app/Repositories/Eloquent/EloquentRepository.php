@@ -183,6 +183,11 @@ abstract class EloquentRepository implements EloquentRepositoryInterface
         return $this->findTrashedById($modelId)->forceDelete();
     }
 
+    public function count($columns = '*'): int
+    {
+        return $this->createQuery()->count($columns);
+    }
+
     protected function reformatColumns(array $columns, ?string $tableName = null): array
     {
         $tableName = $tableName ?: $this->model->getTable();

@@ -9,14 +9,17 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('numbers', function (Blueprint $table) {
+        Schema::create('advertisement_numbers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('users');
             $table->foreignId('region_id')->nullable()->constrained('regions');
             $table->foreignId('number_region_id')->nullable()->constrained('number_regions');
             $table->string('region_prefix', 2)->nullable();
-            $table->string('alphabet', 2)->nullable();
-            $table->string('number', 3)->nullable();
+            $table->string('alphabet_first_character', 2)->nullable();
+            $table->string('alphabet_second_character', 2)->nullable();
+            $table->string('first_number', 3)->nullable();
+            $table->string('second_number', 1)->nullable();
+            $table->string('third_number', 1)->nullable();
             $table->string('full', 7)->nullable();
             $table->decimal('price_azn')->nullable();
             $table->decimal('price_usd')->nullable();
@@ -34,6 +37,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('numbers');
+        Schema::dropIfExists('advertisement_numbers');
     }
 };
