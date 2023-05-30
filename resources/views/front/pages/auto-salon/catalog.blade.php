@@ -3,13 +3,13 @@
 @section('content')
     <section class="catalog-sec-page catalog-showroom">
         <div class="general-conteiner">
-            <h2 class="general-title">@lang('front.Avtosalon kataloqu')</h2>
+            <h2 class="general-title">@lang('Avtosalon kataloqu')</h2>
             <div class="catalog_bread-crumbs">
                 <a href="">@lang('Ana səhifə')</a>
-                <p>/ @lang('front.Avtosalon kataloqu')</p>
+                <p>/ @lang('Avtosalon kataloqu')</p>
             </div>
             <div class="catalog-showroom__ads-wrapper">
-                <h2 class="general-titleV2">@lang('front.Verified avtosalonlar')</h2>
+                <h2 class="general-titleV2">@lang('Verified avtosalonlar')</h2>
                 @foreach([0,1,2,3,4,5] as $item)
                     <div class="catalog-showroom__card-box showroom-box">
                         <a href="{{ route('auto-salon.show') }}" class="overlay"></a>
@@ -44,14 +44,14 @@
                                 <a href="tel:+3800501234567" class="cart-main-info__phone-conteiner">+380 (050) 123 - 45
                                     - 67</a>
                                 <div
-                                    class="cart-main-info__time-work">@lang('front.number reklam', ['number' => 12 ])</div>
+                                    class="cart-main-info__time-work">@lang('number reklam', ['number' => 12 ])</div>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
             <div class="catalog-showroom__ads-wrapper">
-                <h2 class="general-titleV2">@lang('front.Avtosalonlar')</h2>
+                <h2 class="general-titleV2">@lang('Avtosalonlar')</h2>
                 @foreach([0,1,2,3,4,5] as $item)
                     <div class="catalog-showroom__card-box showroom-box">
                         <a href="{{ route('auto-salon.show') }}" class="overlay"></a>
@@ -70,7 +70,7 @@
                                 <a href="tel:+3800501234567" class="cart-main-info__phone-conteiner">+380 (050) 123 - 45
                                     - 67</a>
                                 <div
-                                    class="cart-main-info__time-work">@lang('front.number reklam', ['number' => 12 ])</div>
+                                    class="cart-main-info__time-work">@lang('number reklam', ['number' => 12 ])</div>
                             </div>
                         </div>
                     </div>

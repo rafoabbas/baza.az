@@ -16,7 +16,7 @@
 
                             </div>
                             <div class="add-ads-no-regist-section__form-bt-wrapper">
-                                <button type="submit" class="btn1">@lang('front.Davam et')</button>
+                                <button type="submit" class="btn1">@lang('Davam et')</button>
                             </div>
                         </div>
                         @error('phone')
