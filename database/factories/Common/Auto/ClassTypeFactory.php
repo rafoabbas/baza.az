@@ -2,22 +2,21 @@
 
 namespace Database\Factories\Common\Auto;
 
+use App\Enums\Common\Status;
+use App\Traits\Factory\NameFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Common\Auto\ClassType>
- */
 class ClassTypeFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    use NameFactory;
+
     public function definition(): array
     {
         return [
-            //
+            'name_az' => $this->faker->word(),
+            'name_ru' => $this->faker->word(),
+            'order' => 0,
+            'status' => Status::published(),
         ];
     }
 }

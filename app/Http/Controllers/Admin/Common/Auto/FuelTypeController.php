@@ -47,7 +47,7 @@ class FuelTypeController extends Controller
         return to_route('admin.fuel-type.index')->withToast();
     }
 
-    public function edit(CarBrand $fuelType)
+    public function edit(FuelType $fuelType)
     {
         return view('admin.pages.fuel-type.edit', [
             'title' => 'Yanacaq növü düzənlə',
