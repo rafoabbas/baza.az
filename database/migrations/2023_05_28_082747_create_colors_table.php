@@ -11,6 +11,7 @@ return new class extends Migration
     {
         Schema::create('colors', function (Blueprint $table) {
             $table->id();
+            $table->string('color')->nullable();
             $table->string('name_az', 64);
             $table->string('name_ru', 64);
             $table->integer('order')->nullable()->default(0);

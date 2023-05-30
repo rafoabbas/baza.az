@@ -28,6 +28,7 @@
                         <li class="{{ menuActive('admin.market.*') }}"><a href="{{ route('admin.market.index') }}">@lang('Bazarlər')</a></li>
                         <li class="{{ menuActive('admin.color.*') }}"><a href="{{ route('admin.color.index') }}">@lang('Rənglər')</a></li>
                         <li class="{{ menuActive('admin.fuel-type.*') }}"><a href="{{ route('admin.fuel-type.index') }}">@lang('Yanacaq Növləri')</a></li>
+                        <li class="{{ menuActive('admin.class-type.*') }}"><a href="{{ route('admin.class-type.index') }}">@lang('Klasmanlar')</a></li>
                         <li class="{{ menuActive('admin.body-type.*') }}"><a href="{{ route('admin.body-type.index') }}">@lang('Ban Növləri')</a></li>
                     </ul>
                 </li>

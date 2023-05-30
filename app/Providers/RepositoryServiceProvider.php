@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Repositories\Contracts\Common\Auto\BodyTypeRepositoryInterface;
+use App\Repositories\Contracts\Common\Auto\ClassTypeRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\GearRepositoryInterface;
@@ -14,6 +15,7 @@ use App\Repositories\Contracts\Common\Location\NumberRegionRepositoryInterface;
 use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
 use App\Repositories\Contracts\EloquentRepositoryInterface;
 use App\Repositories\Eloquent\Common\Auto\BodyTypeRepository;
+use App\Repositories\Eloquent\Common\Auto\ClassTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\ColorRepository;
 use App\Repositories\Eloquent\Common\Auto\FuelTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\GearRepository;
@@ -31,6 +33,7 @@ final class RepositoryServiceProvider extends ServiceProvider
     public array $bindings = [
         GearRepositoryInterface::class => GearRepository::class,
         ColorRepositoryInterface::class => ColorRepository::class,
+        ClassTypeRepositoryInterface::class => ClassTypeRepository::class,
         MarketRepositoryInterface::class => MarketRepository::class,
         FuelTypeRepositoryInterface::class => FuelTypeRepository::class,
         BodyTypeRepositoryInterface::class => BodyTypeRepository::class,

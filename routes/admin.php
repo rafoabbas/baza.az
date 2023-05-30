@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Common\Auto\BodyTypeController;
+use App\Http\Controllers\Admin\Common\Auto\ClassTypeController;
 use App\Http\Controllers\Admin\Common\Auto\ColorController;
 use App\Http\Controllers\Admin\Common\Auto\FuelTypeController;
 use App\Http\Controllers\Admin\Common\Auto\GearController;
@@ -42,6 +43,7 @@ Route::group([
         Route::resource('market', MarketController::class);
         Route::resource('transmission', TransmissionController::class);
         Route::resource('color', ColorController::class);
+        Route::resource('class-type', ClassTypeController::class);
         Route::resource('fuel-type', FuelTypeController::class);
         Route::resource('body-type', BodyTypeController::class);
         Route::resource('car-brand', CarBrandController::class);

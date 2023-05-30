@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@push('title', __('Rənglər'))
+@push('title', __('Klasmanlar'))
 
 @push('css')
 
@@ -16,27 +16,26 @@
 
 @push('page-right')
     <div class="d-flex justify-content-end mb-2">
-        <a href="{{ route('admin.car-brand.create') }}" class="btn btn-icon btn-success header-button-top float-right me-2">
+        <a href="{{ route('admin.class-type.create') }}" class="btn btn-icon btn-success header-button-top float-right me-2">
             <span class="btn-inner--icon me-2">
                 <i class="fas fa-plus"></i>
             </span>
-            <span class="btn-inner--text">{{ __('Rəng əlavə et') }}</span>
+            <span class="btn-inner--text">{{ __('Klasman əlavə et') }}</span>
         </a>
     </div>
 @endpush
 @section('content')
     <div class="card">
         <div class="card-header bg-white border-bottom">
-            <h5 class="card-title mb-0">@lang('Rənglər')</h5>
+            <h5 class="card-title mb-0">@lang('Klasmanlar')</h5>
         </div>
         <div class="table-responsive">
             <table class="table table-hover mb-0">
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>@sortablelink('name', 'Rəng')</th>
+                    <th>@sortablelink('name', 'Klasman')</th>
                     <th>@sortablelink('status','Status')</th>
-                    <th>@sortablelink('color','Color')</th>
                     <th>@sortablelink('order','Order')</th>
                     <th colspan="2">@sortablelink('status','Status')</th>
                 </tr>
@@ -50,17 +49,14 @@
                             @include('admin.common.table.status', ['status' => $item->getAttribute('status')])
                         </td>
                         <td>
-                            <span class="badge text-dark" style="background: {{ $item->getAttribute('color') }}">{{ $item->getAttribute('color') }}</span>
-                        </td>
-                        <td>
                             <span class="badge bg-secondary text-dark">{{ $item->getAttribute('order') }}</span>
                         </td>
                         <td>
                             {{ $item->getAttribute('created_at') }}
                         </td>
                         <td class="d-flex justify-content-center align-items-center">
-                            @include('admin.common.table.btn-link',['route' => route('admin.color.edit', $item->getAttribute('id'))])
-                            @include('admin.common.table.btn-alert', [ 'route' => route('admin.color.destroy', $item->getAttribute('id')) ])
+                            @include('admin.common.table.btn-link',['route' => route('admin.class-type.edit', $item->getAttribute('id'))])
+                            @include('admin.common.table.btn-alert', [ 'route' => route('admin.class-type.destroy', $item->getAttribute('id')) ])
                         </td>
                     </tr>
                 @endforeach

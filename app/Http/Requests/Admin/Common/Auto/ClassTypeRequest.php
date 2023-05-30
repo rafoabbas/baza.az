@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\Admin\Common\Auto;
 
-use App\Services\Eloquent\Common\Auto\FuelTypeService;
+use App\Services\Eloquent\Common\Auto\ClassTypeService;
 use Illuminate\Foundation\Http\FormRequest;
 
-class FuelTypeRequest extends FormRequest
+class ClassTypeRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -14,6 +14,6 @@ class FuelTypeRequest extends FormRequest
 
     public function rules(): array
     {
-        return FuelTypeService::rules();
+        return ClassTypeService::rules();
     }
 }

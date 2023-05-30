@@ -3,6 +3,7 @@
 namespace Database\Seeders\Common;
 
 use Database\Seeders\Common\Auto\BodyTypeTableSeeder;
+use Database\Seeders\Common\Auto\ClassTypeTableSeeder;
 use Database\Seeders\Common\Auto\ColorTypeTableSeeder;
 use Database\Seeders\Common\Auto\FuelTypeTableSeeder;
 use Database\Seeders\Common\Auto\GearTableSeeder;
@@ -27,7 +28,8 @@ class CommonDatabaseSeeder extends Seeder
             MarketTableSeeder::class,
             TransmissionTableSeeder::class,
             NumberRegionTableSeeder::class,
-            RegionTableSeeder::class
+            RegionTableSeeder::class,
+            ClassTypeTableSeeder::class
         ]);
     }
 }
