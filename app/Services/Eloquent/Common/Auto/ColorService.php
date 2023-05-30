@@ -21,6 +21,7 @@ class ColorService extends CrudService
     {
         return RuleHelper::make([
             '%name%' => 'required|string|max:64|unique:colors,%name%',
+            'color' => 'required|string|max:7',
             'status' => 'required|in:' . Status::toString(),
             'order' => 'required|integer|min:0',
         ]);

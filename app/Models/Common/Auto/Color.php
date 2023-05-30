@@ -18,6 +18,7 @@ class Color extends Model
     use NameAttribute;
 
     protected $fillable = [
+        'color',
         'name_az',
         'name_ru',
         'order',

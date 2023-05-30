@@ -13,6 +13,8 @@
     @stack('css')
     <!-- Css loader -->
     <link rel="stylesheet" href="{{ asset('assets/libs/css-loader/dist/loader-double.css') }}" type="text/css">
+    <!-- colorpicker -->
+    <link rel="stylesheet" href="{{ asset('assets/libs/spectrum-colorpicker2/spectrum.min.css') }}" rel="stylesheet" type="text/css">
     <!-- Select2 css -->
     <link rel="stylesheet" href="{{ asset('assets/libs/select2/css/select2.min.css') }}" type="text/css">
     <!-- Toastr Css -->
@@ -83,6 +85,8 @@
 <script src="{{ asset('assets/libs/jquery-toast-plugin/jquery.toast.min.js') }}"></script>
 <script src="{{ asset('assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('assets/libs/select2/js/select2.min.js') }}"></script>
+<script src="{{ asset('assets/libs/spectrum-colorpicker2/spectrum.min.js') }}"></script>
+
 @stack('js')
 <script src="{{ asset('assets/js/app.js') }}"></script>
 <script src="{{ asset('assets/js/custom.js?v=' . config('app.assets.version')) }}"></script>

@@ -36,6 +36,7 @@
                     <th>#</th>
                     <th>@sortablelink('name', 'Rəng')</th>
                     <th>@sortablelink('status','Status')</th>
+                    <th>@sortablelink('color','Color')</th>
                     <th>@sortablelink('order','Order')</th>
                     <th colspan="2">@sortablelink('status','Status')</th>
                 </tr>
@@ -47,6 +48,9 @@
                         <td>{{ $item->getAttribute('name') }}</td>
                         <td>
                             @include('admin.common.table.status', ['status' => $item->getAttribute('status')])
+                        </td>
+                        <td>
+                            <span class="badge text-dark" style="background: {{ $item->getAttribute('color') }}">{{ $item->getAttribute('color') }}</span>
                         </td>
                         <td>
                             <span class="badge bg-secondary text-dark">{{ $item->getAttribute('order') }}</span>

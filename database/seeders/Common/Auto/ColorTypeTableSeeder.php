@@ -14,32 +14,34 @@ class ColorTypeTableSeeder extends Seeder
             return;
         }
 
-        foreach ($this->data() as $datum)
+        foreach ($this->data() as $key => $datum)
         {
-            Color::factory()->name($datum)->create();
+            Color::factory()->name($key)
+                ->color($datum)
+                ->create();
         }
     }
 
     public function data(): array
     {
         return [
-            'Qara',
-            'Yaş Asfalt',
-            'Boz',
-            'Gümüşü',
-            'Ağ',
-            'Bej',
-            'Tünd qırmızı',
-            'Qırmızı',
-            'Çəhrayı',
-            'Narıncı',
-            'Qızılı',
-            'Sarı',
-            'Yaşıl',
-            'Mavi',
-            'Göy',
-            'Bənövşəyi',
-            'Qəhvəyi',
+            'Qara' => '#000000',
+            'Yaş Asfalt' => '#505050',
+            'Boz' => '#808080',
+            'Gümüşü' => '#c0c0c0',
+            'Ağ' => '#ffffff',
+            'Bej' => '#f5f5dc',
+            'Tünd qırmızı' => '#9b2d30',
+            'Qırmızı' => '#ff0000',
+            'Çəhrayı' => '#ffc0cb',
+            'Narıncı' => '#ffa500',
+            'Qızılı' => '#ffd700',
+            'Sarı' => '#ffff00',
+            'Yaşıl' => '#00ff00',
+            'Mavi' => '#42aaff',
+            'Göy' => '#0000ff',
+            'Bənövşəyi' => '#8b00ff',
+            'Qəhvəyi' => '#964b00',
         ];
     }
 }
