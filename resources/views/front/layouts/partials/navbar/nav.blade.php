@@ -9,7 +9,7 @@
                         <path d="M18 19.2929C18.2652 19.2929 18.5196 19.1961 18.7071 19.0238C18.8946 18.8516 19 18.6179 19 18.3742C19 16.6687 18.2625 15.0329 16.9497 13.8269C15.637 12.6209 13.8565 11.9434 12 11.9434C10.1435 11.9434 8.36301 12.6209 7.05025 13.8269C5.7375 15.0329 5 16.6687 5 18.3742C5 18.6179 5.10536 18.8516 5.29289 19.0238C5.48043 19.1961 5.73478 19.2929 6 19.2929H18Z" fill="#768A9E"/>
                         </svg>
                     </span>
-                    <p>Личный кабинет</p>
+                    <p>@lang('Şəxsi kabinet')</p>
                 </a>
                 <div class="mobile-nav__lang-conteiner">
                     <a href="" class="activ-lang-mob">Ru</a>
@@ -22,7 +22,7 @@
                 </ul>
             </nav>
             <div class="add-ads__mobile">
-                <a href="" class="btn1">Подать объявление</a>
+                <a href="" class="btn1">@lang('Elan yerləşdir')</a>
             </div>
         </div>
         <div class="footer__contacts header_contacts">

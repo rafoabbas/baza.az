@@ -8,11 +8,11 @@
                     <div class="main-search__select-conteiner">
                         <div class="main-search__radio-element">
                             <input type="radio" name="type" id="car_type1" checked>
-                            <label for="car_type1">@lang('front.Hamısı')</label>
+                            <label for="car_type1">@lang('Hamısı')</label>
                             <input type="radio" name="type" id="car_type2" >
-                            <label for="car_type2">@lang('front.Yeni')</label>
+                            <label for="car_type2">@lang('Yeni')</label>
                             <input type="radio" name="type" id="car_type3" >
-                            <label for="car_type3">@lang('front.Sürülmüş')</label>
+                            <label for="car_type3">@lang('Sürülmüş')</label>
                         </div>
                         <div class="main-search__select-element">
                             <select name="" id="" class="select-type1">

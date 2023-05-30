@@ -23,7 +23,7 @@
             </h2>
             <div class="catalog_bread-crumbs">
                 <a href="">@lang('Ana səhifə')</a>
-                <a href="">/ @lang('front.Büntün avtosalonlar')</a>
+                <a href="">/ @lang('Büntün avtosalonlar')</a>
                 <p>/ Автосалон Mercedes-Benz Baku</p>
             </div>
             <div class="single-sto__baner-slider">
@@ -112,7 +112,7 @@
                     {{--                    </div>--}}
                     <div class="cart-main-info__autor-info-mobile">
                         <div class="singl-sto-sitebar__header">
-                            <p>@lang('front.Avtosalon'): <b>Mercedes-Benz</b></p>
+                            <p>@lang('Avtosalon'): <b>Mercedes-Benz</b></p>
                         </div>
                         <ul class="cart-main-info__location-conteiner">
                             <li>г. Баку, Хатаинский р., пр. Бабека, (Автомобильный рынок)</li>
@@ -183,7 +183,7 @@
                         </div>
                     </div>
                     <div class="singl-auto-store__cataloc-ads-cars">
-                        <h2 class="general-titleV2">@lang('front.Avtosalonlar') <b>(15 шт)</b></h2>
+                        <h2 class="general-titleV2">@lang('Avtosalonlar') <b>(15 шт)</b></h2>
                         <div class="ads-body__conteiner">
                             @foreach([0,1,2,3,4,5] as $item)
                                 <div class="card-box">
@@ -336,7 +336,7 @@
                 <aside class="catalog__filtr ads-sitebar catalog__filtr-auto-store singl-sto-sitebar">
                     <div class="catalog__filtr-wrapper">
                         <div class="singl-sto-sitebar__header">
-                            <p>@lang('front.Avtosalon №')<b>2 543</b></p>
+                            <p>@lang('Avtosalon №')<b>2 543</b></p>
                         </div>
                         <ul class="cart-main-info__location-conteiner">
                             <li>г. Баку, Хатаинский р., пр. Бабека, (Автомобильный рынок)</li>
