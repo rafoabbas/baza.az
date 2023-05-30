@@ -19,19 +19,25 @@ trait NameFactory
         ], $slug));
     }
 
-    public function nameAz(string $name): static
+    public function nameAz(string $name, $isSlug = false): static
     {
-        return $this->state(fn (array $attributes) => [
-            'name_az' => $name,
-            'slug_az' => Str::slug($name)
-        ]);
+        $slug = $isSlug ? [
+            'slug_az' => Str::slug($name),
+        ] : [];
+
+        return $this->state(fn (array $attributes) => array_merge([
+            'name_az' => $name
+        ], $slug));
     }
 
-    public function nameRu(string $name): static
+    public function nameRu(string $name, $isSlug = false): static
     {
-        return $this->state(fn (array $attributes) => [
-            'name_ru' => $name,
-            'slug_ru' => Str::slug($name)
-        ]);
+        $slug = $isSlug ? [
+            'slug_ru' => Str::slug($name),
+        ] : [];
+
+        return $this->state(fn (array $attributes) => array_merge([
+            'name_ru' => $name
+        ], $slug));
     }
 }

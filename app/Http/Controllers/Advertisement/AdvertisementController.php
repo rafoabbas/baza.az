@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Advertisement;
 
 use App\Enums\Advertisement\OtpStatus;
+use App\Helpers\Classes\Helper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\AdvertisementOtpCheckRequest;
 use App\Http\Requests\User\AdvertisementOtpRequest;
 use App\Models\User\Advertisement\AdvertisementOtp;
+use App\Repositories\Contracts\Common\Location\NumberRegionRepositoryInterface;
+use App\Services\Eloquent\Common\Location\NumberRegionService;
 use App\Services\Front\Advertisement\AdvertisementOtpService;
 use App\Services\Front\Advertisement\AdvertisementService;
 use Illuminate\Http\RedirectResponse;
@@ -17,7 +20,8 @@ class AdvertisementController extends Controller
 {
     public function __construct(
         public AdvertisementService $service,
-        public AdvertisementOtpService $otpService
+        public AdvertisementOtpService $otpService,
+        public NumberRegionRepositoryInterface $numberRegionRepository,
     ) {
     }
 
@@ -62,6 +66,12 @@ class AdvertisementController extends Controller
     public function createNumber(AdvertisementOtp $otp): View
     {
         $this->otpService->checkOtpSession($otp);
+
+        $numberRegion = $this->numberRegionRepository->all(
+            Helper::select(['id', 'name%', 'region_code'])
+        );
+
+        dd($numberRegion);
 
         return view('front.pages.profile.advertisement.number', compact('otp'));
     }

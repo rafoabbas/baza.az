@@ -5,7 +5,7 @@ namespace Database\Factories\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User\Advertisement\Number>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User\Advertisement\AdvertisementNumber>
  */
 class NumberFactory extends Factory
 {

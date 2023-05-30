@@ -56,4 +56,6 @@ interface EloquentRepositoryInterface
     public function restoreById(int $modelId): bool;
 
     public function permanentlyDeleteById(int $modelId): bool;
+
+    public function count($columns = '*'): int;
 }
