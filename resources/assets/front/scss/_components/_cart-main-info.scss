@@ -178,7 +178,8 @@
 }
 
 .cart-main-info__body-info{
-	flex: 0 0 calc(100% - 305px);
+	//flex: 0 0 calc(100% - 305px);
+    width: calc(100% - 305px);
 	padding-right: 20px;
 }
 .cart-main-info__description-conteiner {
