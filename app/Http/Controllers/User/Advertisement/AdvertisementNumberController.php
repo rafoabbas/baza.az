@@ -44,7 +44,9 @@ class AdvertisementNumberController extends Controller
 
     public function store(AdvertisementNumberStoreRequest $request, AdvertisementOtp $otp)
     {
-        dd($request->all());
+        $this->numberService->store($request, $otp);
+
+        return redirect()->route('index')->withToast();
     }
 
     public function edit(string $id)
