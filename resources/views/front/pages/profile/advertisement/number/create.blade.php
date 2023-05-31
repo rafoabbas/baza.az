@@ -2,9 +2,18 @@
 @section('title', $title)
 @section('content')
     <section class="cart-main-info section-user-account ads-byu-main-sec">
-        <form action="{{ route('advertisement.number.store', $otp->getAttribute('uuid')) }}" class="general-conteiner">
+        <form action="{{ route('advertisement.number.store', $otp->getAttribute('uuid')) }}" method="post" class="general-conteiner">
             @csrf
             {!! $pageTitleHtml !!}
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="cart-main-info__conteiner">
                 <div class="cart-main-info__body-info">
                     <div class="conteiner-add-number">
@@ -38,7 +47,7 @@
                             </div>
                             <div class="catalog__filtr__filtr-element">
                                 <label>@lang('Nömrə'):</label>
-                                <input type="text" value="{{ old('number') }}" name="number" class="input-form-conteiner__input @error('number') is-invalid @enderror" placeholder="@lang('Nömrə')">
+                                <input type="number" value="{{ old('number') }}" max="100" name="number" class="input-form-conteiner__input @error('number') is-invalid @enderror" placeholder="@lang('Nömrə')">
                                 @error('number')
                                 <span class="validate-text">
                                     <smal class="text-danger">{{ $message }}</smal>
@@ -67,13 +76,18 @@
                             <div class="catalog__filtr__filtr-element">
                                 <label>@lang('Qiymət'):</label>
                                 <div class="filtr-element__select filtr-element__select_input @error('price') is-invalid @enderror">
-                                    <input type="text" name="price" class="@error('price') is-invalid @enderror" placeholder="1 200">
+                                    <input type="number" name="price" step="0.01" value="{{ old('price') }}" class="" placeholder="1 200">
                                     <select name="currency" id="currency" class="full-select">
                                         <option value="azn">@lang('AZN')</option>
                                         <option value="usd">@lang('USD')</option>
                                         <option value="eur">@lang('EUR')</option>
                                     </select>
                                 </div>
+                                @error('price')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
                         </div>
                     </div>
@@ -104,7 +118,7 @@
                     </div>
                     <div class="acordeon-conteiner__description-conteiner">
                         <h4 class="cart-main-info__title-ul">@lang('Təsvir')</h4>
-                        <textarea name="description" class="@error('description') is-invalid @enderror" placeholder="@lang('Текст описание')"></textarea>
+                        <textarea name="description" class="@error('description') is-invalid @enderror" placeholder="@lang('Текст описание')">{{ old('description') }}</textarea>
                         @error('description')
                         <span class="validate-text">
                             <smal class="text-danger">{{ $message }}</smal>
@@ -116,7 +130,7 @@
                         <div class="select-type-num__conteiner">
                             <div class="checkbox">
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" name="is_mirror_numbers" {{ old('is_mirror_numbers') ? 'checked' : '' }}  value="1">
+                                    <input type="checkbox" name="is_mirror_numbers" {{ old('is_mirror_numbers') ? 'checked' : '' }}>
                                     <span>@lang('Güzgü nömrələri')</span>
                                     <p class="catalog-page__filtr-element-subtitle">
                                         @lang('Güzgü rəqəmləri olan rəqəmlər'). <br>
@@ -126,7 +140,7 @@
                             </div>
                             <div class="checkbox">
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" name="is_three_numbers_in_a_row" {{ old('is_three_numbers_in_a_row') ? 'checked' : '' }} value="1">
+                                    <input type="checkbox" name="is_three_numbers_in_a_row" {{ old('is_three_numbers_in_a_row') ? 'checked' : '' }}>
                                     <span>@lang('Ardıcıl üç rəqəm')</span>
                                     <p class="catalog-page__filtr-element-subtitle">
                                         @lang('Ardıcıl üç rəqəmi olan nömrələr').<br>
@@ -136,7 +150,7 @@
                             </div>
                             <div class="checkbox">
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" name="is_two_zeros_and_a_number" {{ old('is_two_zeros_and_a_number') ? 'checked' : '' }} value="1">
+                                    <input type="checkbox" name="is_two_zeros_and_a_number" {{ old('is_two_zeros_and_a_number') ? 'checked' : '' }}>
                                     <span>@lang('Üç sıfır + rəqəm')</span>
                                     <p class="catalog-page__filtr-element-subtitle">@lang('Üç sıfır və bir rəqəmin birləşməsindən ibarət rəqəmlər').<br>
                                         @lang('Örnək'): 0001, 1000, 2000
@@ -145,7 +159,7 @@
                             </div>
                             <div class="checkbox">
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" name="is_five_numbers_in_a_row" {{ old('is_five_numbers_in_a_row') ? 'checked' : '' }} value="1">
+                                    <input type="checkbox" name="is_five_numbers_in_a_row" {{ old('is_five_numbers_in_a_row') ? 'checked' : '' }}>
                                     <span>@lang('Dörd eyni nömrə')</span>
                                     <p class="catalog-page__filtr-element-subtitle">
                                         @lang('Tam eyni rəqəmləri olan nömrələr').<br>

@@ -25,7 +25,7 @@
 {{--    <link rel="stylesheet" href="{{asset('assets/front/css/main.min.css?v=' . config('app.assets.version', 'v0.0.1'))}}">--}}
     <style>
         .is-invalid {
-            border-color: #dc3545 !important;
+            border: 1px solid red !important;
         }
         .text-danger{
             color: #dc3545 !important;
