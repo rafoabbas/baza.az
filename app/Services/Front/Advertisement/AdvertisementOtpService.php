@@ -2,7 +2,7 @@
 
 namespace App\Services\Front\Advertisement;
 
-use App\Http\Requests\User\AdvertisementOtpRequest;
+use App\Http\Requests\User\Advertisement\Otp\AdvertisementOtpRequest;
 use App\Models\User\Advertisement\AdvertisementOtp;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\RedirectResponse;
@@ -38,7 +38,7 @@ class AdvertisementOtpService
     public function redirectCreatePage(AdvertisementOtp $otp): RedirectResponse
     {
         return match ($otp->getAttribute('advertisement_type')) {
-            'number' => redirect()->route('advertisement.create.number', $otp),
+            'number' => redirect()->route('advertisement.number.create', $otp),
             default => redirect()->route('advertisement.create.auto', $otp),
         };
     }

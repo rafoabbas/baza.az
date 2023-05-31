@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\User\Advertisement\Otp;
 
-use App\Services\Front\Advertisement\AdvertisementOtpService;
 use Illuminate\Foundation\Http\FormRequest;
 
 class AdvertisementOtpCheckRequest extends FormRequest

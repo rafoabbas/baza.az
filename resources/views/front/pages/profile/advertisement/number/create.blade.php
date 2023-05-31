@@ -2,7 +2,7 @@
 @section('title', $title)
 @section('content')
     <section class="cart-main-info section-user-account ads-byu-main-sec">
-        <form class="general-conteiner">
+        <form action="{{ route('advertisement.number.store', $otp->getAttribute('uuid')) }}" class="general-conteiner">
             @csrf
             {!! $pageTitleHtml !!}
             <div class="cart-main-info__conteiner">
@@ -155,10 +155,10 @@
                             </div>
                         </div>
                         <div class="select-type-num__bt-line">
-                            <a href="" class="btn1">
+                            <button type="submit" class="btn1">
                                 @lang('Elan yerləşdirin')
-                            </a>
-                            <a href="" class="btn1">@lang('VIP olaraq dərc edin')</a>
+                            </button>
+                            <button type="submit" class="btn1">@lang('VIP olaraq dərc edin')</button>
                         </div>
                     </div>
                 </div>

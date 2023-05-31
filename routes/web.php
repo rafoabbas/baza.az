@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Advertisement\AdvertisementController;
+use App\Http\Controllers\User\Advertisement\AdvertisementController;
+use App\Http\Controllers\User\Advertisement\AdvertisementNumberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +24,12 @@ Route::group([
     Route::get('{otp:uuid}/otp', [AdvertisementController::class, 'otp'])->name('otp');
     Route::post('{otp:uuid}/otp', [AdvertisementController::class, 'checkOtp'])->name('check.otp');
     Route::get('{otp:uuid}/auto', [AdvertisementController::class, 'createAuto'])->name('create.auto');
-    Route::get('{otp:uuid}/number', [AdvertisementController::class, 'createNumber'])->name('create.number');
 });
+
+Route::resource('advertisement.number', AdvertisementNumberController::class)
+    ->parameter('advertisement', 'otp:uuid')
+    ->only(['create', 'store', 'edit', 'update', 'destroy']);
+
 
 Route::get('', function () {
     return view('front.pages.home.index');
