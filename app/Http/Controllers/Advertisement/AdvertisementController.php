@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\Advertisement;
 
 use App\Enums\Advertisement\OtpStatus;
+use App\Helpers\Classes\Breadcrumb;
 use App\Helpers\Classes\Helper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\AdvertisementOtpCheckRequest;
 use App\Http\Requests\User\AdvertisementOtpRequest;
+use App\Models\User\Advertisement\AdvertisementNumber;
 use App\Models\User\Advertisement\AdvertisementOtp;
 use App\Repositories\Contracts\Common\Location\NumberRegionRepositoryInterface;
 use App\Services\Eloquent\Common\Location\NumberRegionService;
+use App\Services\Front\Advertisement\AdvertisementNumberService;
 use App\Services\Front\Advertisement\AdvertisementOtpService;
 use App\Services\Front\Advertisement\AdvertisementService;
 use Illuminate\Http\RedirectResponse;
@@ -19,8 +22,8 @@ use Illuminate\View\View;
 class AdvertisementController extends Controller
 {
     public function __construct(
-        public AdvertisementService $service,
         public AdvertisementOtpService $otpService,
+        public AdvertisementNumberService $numberService,
         public NumberRegionRepositoryInterface $numberRegionRepository,
     ) {
     }
@@ -67,12 +70,15 @@ class AdvertisementController extends Controller
     {
         $this->otpService->checkOtpSession($otp);
 
-        $numberRegion = $this->numberRegionRepository->all(
+        $numberRegions = $this->numberRegionRepository->all(
             Helper::select(['id', 'name%', 'region_code'])
         );
 
-        dd($numberRegion);
-
-        return view('front.pages.profile.advertisement.number', compact('otp'));
+        return view('front.pages.profile.advertisement.number', [
+            'title' => trans('Satışa nömrə nişanı əlavə edin'),
+            'otp' => $otp,
+            'numberRegions' => $numberRegions,
+            'pageTitleHtml' => $this->numberService->pageTitleHtml()
+        ]);
     }
 }

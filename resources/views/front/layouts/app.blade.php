@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
     <meta name="msapplication-navbutton-color" content="#000">
-    <title>{{ setting('app_title', 'Baza') }} - @yield('title', 'baza.az')</title>
+    <title>{{ setting('app_title', 'Baza.az') }} - @yield('title', 'baza.az')</title>
     <link rel="canonical" href="https://baza.az"/>
     <link rel="shortcut icon" sizes="180x180" type="image/x-icon" href="{{ asset('assets/front/img/favicons/favicon.ico') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/front/img/favicons/favicon.ico') }}"/>
