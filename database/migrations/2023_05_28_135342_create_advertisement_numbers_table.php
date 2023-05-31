@@ -21,16 +21,19 @@ return new class extends Migration
             $table->string('second_number', 1)->nullable();
             $table->string('third_number', 1)->nullable();
             $table->string('full', 7)->nullable();
+            $table->text('description')->nullable();
             $table->decimal('price_azn')->nullable();
             $table->decimal('price_usd')->nullable();
             $table->decimal('price_eur')->nullable();
+            $table->string('witch_auto_type')->nullable('porsche');
             $table->tinyInteger('status')->default(AdvertisementStatus::pending());
             $table->boolean('is_mirror_numbers')->default(false);
             $table->boolean('is_three_numbers_in_a_row')->default(false);
             $table->boolean('is_five_numbers_in_a_row')->default(false);
             $table->boolean('is_two_zeros_and_a_number')->default(false);
             $table->boolean('is_vip')->default(false);
-            $table->bigInteger('views')->default(1);
+            $table->boolean('is_top')->default(false);
+            $table->bigInteger('views')->default(0)->nullable();
             $table->timestamps();
         });
     }

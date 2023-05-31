@@ -2,7 +2,8 @@
 @section('title', $title)
 @section('content')
     <section class="cart-main-info section-user-account ads-byu-main-sec">
-        <div class="general-conteiner">
+        <form class="general-conteiner">
+            @csrf
             {!! $pageTitleHtml !!}
             <div class="cart-main-info__conteiner">
                 <div class="cart-main-info__body-info">
@@ -65,13 +66,12 @@
                             </div>
                             <div class="catalog__filtr__filtr-element">
                                 <label>@lang('Qiymət'):</label>
-                                <div class="filtr-element__select filtr-element__select_input">
-                                    <input type="text" placeholder="1 200">
-                                    <select name="" id="" class="full-select">
-                                        <option value="">Usd</option>
-                                        <option value="">Vito2</option>
-                                        <option value="">Vito3</option>
-                                        <option value="">Vito4</option>
+                                <div class="filtr-element__select filtr-element__select_input @error('price') is-invalid @enderror">
+                                    <input type="text" name="price" class="@error('price') is-invalid @enderror" placeholder="1 200">
+                                    <select name="currency" id="currency" class="full-select">
+                                        <option value="azn">@lang('AZN')</option>
+                                        <option value="usd">@lang('USD')</option>
+                                        <option value="eur">@lang('EUR')</option>
                                     </select>
                                 </div>
                             </div>
@@ -80,71 +80,85 @@
                     <div class="select-num">
                         <h4 class="cart-main-info__title-ul">@lang('Nömrə hansı maşında göstərilsin'):</h4>
                         <div class="select-num__conteiner">
-                            <div class="select-num__box select-num__box_activ">
+                            <label class="select-num__box select-num__box_activ" for="witch_auto_type">
+                                <input type="radio" name="witch_auto_type" value="porsche">
                                 <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
-                            </div>
-                            <div class="select-num__box">
+                            </label>
+                            <label class="select-num__box">
+                                <input type="radio" name="witch_auto_type" value="bmw">
                                 <img src="{{ asset('assets/front/img/_src/car-doc2.png') }}" alt="">
-                            </div>
-                            <div class="select-num__box">
+                            </label>
+                            <label class="select-num__box">
                                 <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
-                            </div>
-                            <div class="select-num__box">
+                            </label>
+                            <label class="select-num__box">
                                 <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
-                            </div>
-                            <div class="select-num__box">
+                            </label>
+                            <label class="select-num__box">
                                 <img src="{{ asset('assets/front/img/_src/car-doc2.png') }}" alt="">
-                            </div>
-                            <div class="select-num__box">
+                            </label>
+                            <label class="select-num__box">
                                 <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
-                            </div>
+                            </label>
                         </div>
                     </div>
                     <div class="acordeon-conteiner__description-conteiner">
-                        <h4 class="cart-main-info__title-ul">Описание</h4>
-                        <textarea placeholder="Текст описание"></textarea>
+                        <h4 class="cart-main-info__title-ul">@lang('Təsvir')</h4>
+                        <textarea name="description" class="@error('description') is-invalid @enderror" placeholder="@lang('Текст описание')"></textarea>
+                        @error('description')
+                        <span class="validate-text">
+                            <smal class="text-danger">{{ $message }}</smal>
+                        </span>
+                        @enderror
                     </div>
-                    <div class="select-type-num">
-                        <h4 class="cart-main-info__title-ul">Укажите тип номера:</h4>
+                    <div class="select-type-num" style="margin-top: 10px">
+                        <h4 class="cart-main-info__title-ul">@lang('Nömrə növünü seçin'):</h4>
                         <div class="select-type-num__conteiner">
                             <div class="checkbox">
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" name="nambers" value="Зеркальные номера">
-                                    <span>Зеркальные номера</span>
-                                    <p class="catalog-page__filtr-element-subtitle">Номера с зеркальным отображением
-                                        цифр. <br>Пример: 3223, 8558, 1441</p>
+                                    <input type="checkbox" name="is_mirror_numbers" {{ old('is_mirror_numbers') ? 'checked' : '' }}  value="1">
+                                    <span>@lang('Güzgü nömrələri')</span>
+                                    <p class="catalog-page__filtr-element-subtitle">
+                                        @lang('Güzgü rəqəmləri olan rəqəmlər'). <br>
+                                        @lang('Örnək'): 3223, 8558, 1441
+                                    </p>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" name="nambers" value="Зеркальные номера">
-                                    <span>Три цифры подряд</span>
-                                    <p class="catalog-page__filtr-element-subtitle">Номера с тремя цифрами подряд.<br>Пример:
-                                        0111, 7772, 2228</p>
+                                    <input type="checkbox" name="is_three_numbers_in_a_row" {{ old('is_three_numbers_in_a_row') ? 'checked' : '' }} value="1">
+                                    <span>@lang('Ardıcıl üç rəqəm')</span>
+                                    <p class="catalog-page__filtr-element-subtitle">
+                                        @lang('Ardıcıl üç rəqəmi olan nömrələr').<br>
+                                        @lang('Örnək'): 0111, 7772, 2228
+                                    </p>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" name="nambers" value="Зеркальные номера">
-                                    <span>Три нуля + цифра</span>
-                                    <p class="catalog-page__filtr-element-subtitle">Номера с комбинацией трех нулей и
-                                        одной цифрой.<br>Пример: 0001, 1000, 2000</p>
+                                    <input type="checkbox" name="is_two_zeros_and_a_number" {{ old('is_two_zeros_and_a_number') ? 'checked' : '' }} value="1">
+                                    <span>@lang('Üç sıfır + rəqəm')</span>
+                                    <p class="catalog-page__filtr-element-subtitle">@lang('Üç sıfır və bir rəqəmin birləşməsindən ibarət rəqəmlər').<br>
+                                        @lang('Örnək'): 0001, 1000, 2000
+                                    </p>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" name="nambers" value="Зеркальные номера">
-                                    <span>Четыре одинаковые цифры</span>
-                                    <p class="catalog-page__filtr-element-subtitle">Номера с полностью одинаковыми
-                                        цифрами.<br>Пример: 0000, 1111, 2222</p>
+                                    <input type="checkbox" name="is_five_numbers_in_a_row" {{ old('is_five_numbers_in_a_row') ? 'checked' : '' }} value="1">
+                                    <span>@lang('Dörd eyni nömrə')</span>
+                                    <p class="catalog-page__filtr-element-subtitle">
+                                        @lang('Tam eyni rəqəmləri olan nömrələr').<br>
+                                        @lang('Örnək'): 0000, 1111, 2222
+                                    </p>
                                 </label>
                             </div>
                         </div>
                         <div class="select-type-num__bt-line">
                             <a href="" class="btn1">
-                                Опубликовать объявление
+                                @lang('Elan yerləşdirin')
                             </a>
-                            <a href="" class="btn1">Опубликовать как VIP</a>
+                            <a href="" class="btn1">@lang('VIP olaraq dərc edin')</a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +170,7 @@
                     </div>
                 </aside>
             </div>
-        </div>
+        </form>
     </section>
 @endsection
 
