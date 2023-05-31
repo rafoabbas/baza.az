@@ -33,7 +33,7 @@ return new class extends Migration
             $table->boolean('is_two_zeros_and_a_number')->default(false);
             $table->boolean('is_vip')->default(false);
             $table->boolean('is_top')->default(false);
-            $table->bigInteger('views')->default(1);
+            $table->bigInteger('views')->default(0)->nullable();
             $table->timestamps();
         });
     }
