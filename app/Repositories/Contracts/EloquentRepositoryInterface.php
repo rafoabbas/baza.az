@@ -11,6 +11,7 @@ interface EloquentRepositoryInterface
 {
     public function all(
         array $columns = ['*'],
+        array $conditions = [],
         array $relations = [],
         ?array $filters = []
     ): Collection;

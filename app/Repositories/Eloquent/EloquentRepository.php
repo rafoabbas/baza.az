@@ -29,10 +29,19 @@ abstract class EloquentRepository implements EloquentRepositoryInterface
 
     public function all(
         array $columns = ['*'],
+        array $conditions = [],
         array $relations = [],
         ?array $filters = []
     ): Collection {
-        return $this->createQuery()
+        $tableName = $this->model->getTable();
+
+        $query = $this->createQuery();
+        //add conditions
+        foreach ($conditions as $condition) {
+            $query->where($tableName . '.' . $condition[0], $condition[1], $condition[2]);
+        }
+
+        return $query
             ->filter($filters)
             ->with($relations)
             ->get($columns);
