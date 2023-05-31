@@ -37,8 +37,8 @@
                                 @enderror
                             </div>
                             <div class="catalog__filtr__filtr-element">
-                                <label>@lang('Serial'):</label>
-                                <input type="text" value="{{ old('series') }}" name="series" class="input-form-conteiner__input @error('series') is-invalid @enderror" placeholder="@lang('Serial')">
+                                <label for="serial-input">@lang('Serial'):</label>
+                                <input id="serial-input" type="text" value="{{ old('series') }}" name="series" class="input-form-conteiner__input @error('series') is-invalid @enderror" placeholder="@lang('Serial')">
                                 @error('series')
                                 <span class="validate-text">
                                     <smal class="text-danger">{{ $message }}</smal>
@@ -46,8 +46,8 @@
                                 @enderror
                             </div>
                             <div class="catalog__filtr__filtr-element">
-                                <label>@lang('Nömrə'):</label>
-                                <input type="number" value="{{ old('number') }}" max="100" name="number" class="input-form-conteiner__input @error('number') is-invalid @enderror" placeholder="@lang('Nömrə')">
+                                <label for="number-input">@lang('Nömrə'):</label>
+                                <input id="number-input" type="number" value="{{ old('number') }}" max="100" name="number" class="input-form-conteiner__input @error('number') is-invalid @enderror" placeholder="@lang('Nömrə')">
                                 @error('number')
                                 <span class="validate-text">
                                     <smal class="text-danger">{{ $message }}</smal>
@@ -74,9 +74,9 @@
                                 @enderror
                             </div>
                             <div class="catalog__filtr__filtr-element">
-                                <label>@lang('Qiymət'):</label>
+                                <label for="price-input">@lang('Qiymət'):</label>
                                 <div class="filtr-element__select filtr-element__select_input @error('price') is-invalid @enderror">
-                                    <input type="number" name="price" step="0.01" value="{{ old('price') }}" class="" placeholder="1 200">
+                                    <input id="price-input" type="number" name="price" step="0.01" value="{{ old('price') }}" class="" placeholder="1 200">
                                     <select name="currency" id="currency" class="full-select">
                                         <option value="azn">@lang('AZN')</option>
                                         <option value="usd">@lang('USD')</option>
@@ -94,25 +94,17 @@
                     <div class="select-num">
                         <h4 class="cart-main-info__title-ul">@lang('Nömrə hansı maşında göstərilsin'):</h4>
                         <div class="select-num__conteiner">
-                            <label class="select-num__box select-num__box_activ" for="witch_auto_type">
-                                <input type="radio" name="witch_auto_type" value="porsche">
+                            <label class="select-num__box select-num__box_activ" for="auto_type1">
+                                <input type="radio" id="auto_type1" name="witch_auto_type" value="porsche">
                                 <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
                             </label>
-                            <label class="select-num__box">
-                                <input type="radio" name="witch_auto_type" value="bmw">
+                            <label class="select-num__box" for="auto_type2">
+                                <input type="radio" id="auto_type2" name="witch_auto_type" value="bmw">
                                 <img src="{{ asset('assets/front/img/_src/car-doc2.png') }}" alt="">
                             </label>
-                            <label class="select-num__box">
-                                <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
-                            </label>
-                            <label class="select-num__box">
-                                <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
-                            </label>
-                            <label class="select-num__box">
-                                <img src="{{ asset('assets/front/img/_src/car-doc2.png') }}" alt="">
-                            </label>
-                            <label class="select-num__box">
-                                <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
+                            <label class="select-num__box" for="auto_type3">
+                                <input type="radio" id="auto_type3" name="witch_auto_type" value="mercedes">
+                                <img src="{{ asset('assets/front/img/_src/car-doc3.png') }}" alt="">
                             </label>
                         </div>
                     </div>
@@ -129,8 +121,8 @@
                         <h4 class="cart-main-info__title-ul">@lang('Nömrə növünü seçin'):</h4>
                         <div class="select-type-num__conteiner">
                             <div class="checkbox">
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="is_mirror_numbers" {{ old('is_mirror_numbers') ? 'checked' : '' }}>
+                                <label for="mirror-number" class="custom-checkbox">
+                                    <input id="mirror-number" type="checkbox" name="is_mirror_numbers" {{ old('is_mirror_numbers') ? 'checked' : '' }}>
                                     <span>@lang('Güzgü nömrələri')</span>
                                     <p class="catalog-page__filtr-element-subtitle">
                                         @lang('Güzgü rəqəmləri olan rəqəmlər'). <br>
@@ -139,8 +131,8 @@
                                 </label>
                             </div>
                             <div class="checkbox">
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="is_three_numbers_in_a_row" {{ old('is_three_numbers_in_a_row') ? 'checked' : '' }}>
+                                <label for="three-in-row-number" class="custom-checkbox">
+                                    <input id="three-in-row-number" type="checkbox" name="is_three_numbers_in_a_row" {{ old('is_three_numbers_in_a_row') ? 'checked' : '' }}>
                                     <span>@lang('Ardıcıl üç rəqəm')</span>
                                     <p class="catalog-page__filtr-element-subtitle">
                                         @lang('Ardıcıl üç rəqəmi olan nömrələr').<br>
@@ -149,8 +141,8 @@
                                 </label>
                             </div>
                             <div class="checkbox">
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="is_two_zeros_and_a_number" {{ old('is_two_zeros_and_a_number') ? 'checked' : '' }}>
+                                <label for="two-zero-number" class="custom-checkbox">
+                                    <input id="two-zero-number" type="checkbox" name="is_two_zeros_and_a_number" {{ old('is_two_zeros_and_a_number') ? 'checked' : '' }}>
                                     <span>@lang('Üç sıfır + rəqəm')</span>
                                     <p class="catalog-page__filtr-element-subtitle">@lang('Üç sıfır və bir rəqəmin birləşməsindən ibarət rəqəmlər').<br>
                                         @lang('Örnək'): 0001, 1000, 2000
@@ -158,8 +150,8 @@
                                 </label>
                             </div>
                             <div class="checkbox">
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="is_five_numbers_in_a_row" {{ old('is_five_numbers_in_a_row') ? 'checked' : '' }}>
+                                <label for="four-same-number" class="custom-checkbox">
+                                    <input id="four-same-number" type="checkbox" name="is_five_numbers_in_a_row" {{ old('is_five_numbers_in_a_row') ? 'checked' : '' }}>
                                     <span>@lang('Dörd eyni nömrə')</span>
                                     <p class="catalog-page__filtr-element-subtitle">
                                         @lang('Tam eyni rəqəmləri olan nömrələr').<br>
