@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="select-num">
-                        <h4 class="cart-main-info__title-ul">На каком авто показать номер:</h4>
+                        <h4 class="cart-main-info__title-ul">@lang('Nömrə hansı maşında göstərilsin'):</h4>
                         <div class="select-num__conteiner">
                             <div class="select-num__box select-num__box_activ">
                                 <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
