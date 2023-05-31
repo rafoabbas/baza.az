@@ -26,9 +26,9 @@ Route::group([
     Route::get('{otp:uuid}/number', [AdvertisementController::class, 'createNumber'])->name('create.number');
 });
 
-Route::get('/', function () {
+Route::get('', function () {
     return view('front.pages.home.index');
-});
+})->name('index');
 
 Route::get('/create-ads', function () {
     return view('front.pages.profile.advertisement.select');

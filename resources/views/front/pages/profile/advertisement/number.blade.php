@@ -1,27 +1,23 @@
 @extends('front.layouts.app')
-
+@section('title', $title)
 @section('content')
     <section class="cart-main-info section-user-account ads-byu-main-sec">
         <div class="general-conteiner">
-            <h2 class="cart-main-info__title">Добавить автономер в продажу </h2>
-            <div class="catalog_bread-crumbs">
-                <a href="">Главная</a>
-                <a href="">/  Личный кабинет</a>
-                <p>/ Добавить автономер</p>
-            </div>
+            {!! $pageTitleHtml !!}
             <div class="cart-main-info__conteiner">
                 <div class="cart-main-info__body-info">
                     <div class="conteiner-add-number">
-                        <p class="conteiner-add-number__title">Все поля обязательные для заполнения</p>
+                        <p class="conteiner-add-number__title">@lang('Bütün sahələr tələb olunur')</p>
                         <div class="conteiner-add-number__line">
                             <div class="catalog__filtr__filtr-element">
-                                <h5>Регион:</h5>
+                                <h5>@lang('Bölgə'):</h5>
                                 <div class="filtr-element__select">
-                                    <select name="" id="" class="full-select">
-                                        <option value="">Регион</option>
-                                        <option value="">Vito2</option>
-                                        <option value="">Vito3</option>
-                                        <option value="">Vito4</option>
+                                    <select name="number_region_id" id="number_region_id" class="full-select">
+                                        @foreach($numberRegions as $numberRegion)
+                                            <option value="{{ $numberRegion->getAttribute('id') }}">
+                                                {{ $numberRegion->getAttribute('region_code') . ' - ' . $numberRegion->getAttribute('name') }}
+                                            </option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -31,7 +27,7 @@
                             </div>
                             <div class="catalog__filtr__filtr-element">
                                 <h5>Номер:</h5>
-                                <input type="text" class="input-form-conteiner__input" placeholder="Номер" >
+                                <input type="text" class="input-form-conteiner__input" placeholder="Номер">
                             </div>
                         </div>
                         <div class="conteiner-add-number__line">
@@ -94,28 +90,32 @@
                                 <label class="custom-checkbox">
                                     <input type="checkbox" name="nambers" value="Зеркальные номера">
                                     <span>Зеркальные номера</span>
-                                    <p class="catalog-page__filtr-element-subtitle">Номера с зеркальным отображением цифр. <br>Пример: 3223, 8558, 1441</p>
+                                    <p class="catalog-page__filtr-element-subtitle">Номера с зеркальным отображением
+                                        цифр. <br>Пример: 3223, 8558, 1441</p>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label class="custom-checkbox">
                                     <input type="checkbox" name="nambers" value="Зеркальные номера">
                                     <span>Три цифры подряд</span>
-                                    <p class="catalog-page__filtr-element-subtitle">Номера с тремя цифрами подряд.<br>Пример: 0111, 7772, 2228</p>
+                                    <p class="catalog-page__filtr-element-subtitle">Номера с тремя цифрами подряд.<br>Пример:
+                                        0111, 7772, 2228</p>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label class="custom-checkbox">
                                     <input type="checkbox" name="nambers" value="Зеркальные номера">
                                     <span>Три нуля + цифра</span>
-                                    <p class="catalog-page__filtr-element-subtitle">Номера с комбинацией трех нулей и одной цифрой.<br>Пример: 0001, 1000, 2000</p>
+                                    <p class="catalog-page__filtr-element-subtitle">Номера с комбинацией трех нулей и
+                                        одной цифрой.<br>Пример: 0001, 1000, 2000</p>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label class="custom-checkbox">
                                     <input type="checkbox" name="nambers" value="Зеркальные номера">
                                     <span>Четыре одинаковые цифры</span>
-                                    <p class="catalog-page__filtr-element-subtitle">Номера с полностью одинаковыми цифрами.<br>Пример: 0000, 1111, 2222</p>
+                                    <p class="catalog-page__filtr-element-subtitle">Номера с полностью одинаковыми
+                                        цифрами.<br>Пример: 0000, 1111, 2222</p>
                                 </label>
                             </div>
                         </div>
