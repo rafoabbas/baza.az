@@ -10,9 +10,9 @@
                         <p class="conteiner-add-number__title">@lang('Bütün sahələr tələb olunur')</p>
                         <div class="conteiner-add-number__line">
                             <div class="catalog__filtr__filtr-element">
-                                <h5>@lang('Bölgə'):</h5>
+                                <label>@lang('Bölgə'):</label>
                                 <div class="filtr-element__select">
-                                    <select name="number_region_id" id="number_region_id" class="full-select">
+                                    <select name="number_region_id" id="number_region_id" class="full-select @error('number_region_id') is-invalid @enderror">
                                         @foreach($numberRegions as $numberRegion)
                                             <option value="{{ $numberRegion->getAttribute('id') }}">
                                                 {{ $numberRegion->getAttribute('region_code') . ' - ' . $numberRegion->getAttribute('name') }}
@@ -20,30 +20,51 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                @error('number_region_id')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
                             <div class="catalog__filtr__filtr-element">
-                                <h5>Серия:</h5>
-                                <input type="text" class="input-form-conteiner__input" placeholder="Серия">
+                                <label>@lang('Serial'):</label>
+                                <input type="text" value="{{ old('series') }}" name="series" class="input-form-conteiner__input @error('series') is-invalid @enderror" placeholder="@lang('Serial')">
+                                @error('series')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
                             <div class="catalog__filtr__filtr-element">
-                                <h5>Номер:</h5>
-                                <input type="text" class="input-form-conteiner__input" placeholder="Номер">
+                                <label>@lang('Nömrə'):</label>
+                                <input type="text" value="{{ old('number') }}" name="number" class="input-form-conteiner__input @error('number') is-invalid @enderror" placeholder="@lang('Nömrə')">
+                                @error('number')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="conteiner-add-number__line">
                             <div class="catalog__filtr__filtr-element">
-                                <h5>Город:</h5>
+                                <label>@lang('Şəhər'):</label>
                                 <div class="filtr-element__select">
-                                    <select name="" id="" class="full-select">
-                                        <option value="">Город</option>
-                                        <option value="">Vito2</option>
-                                        <option value="">Vito3</option>
-                                        <option value="">Vito4</option>
+                                    <select name="region_id" id="region_id" class="full-select @error('region_id') is-invalid @enderror">
+                                        @foreach($regions as $region)
+                                            <option value="{{ $region->getAttribute('id') }}">
+                                                {{ $region->getAttribute('name') }}
+                                            </option>
+                                        @endforeach
                                     </select>
                                 </div>
+                                @error('region_id')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
                             <div class="catalog__filtr__filtr-element">
-                                <h5>Цена:</h5>
+                                <label>@lang('Qiymət'):</label>
                                 <div class="filtr-element__select filtr-element__select_input">
                                     <input type="text" placeholder="1 200">
                                     <select name="" id="" class="full-select">
@@ -57,7 +78,7 @@
                         </div>
                     </div>
                     <div class="select-num">
-                        <h4 class="cart-main-info__title-ul">На каком авто показать номер:</h4>
+                        <h4 class="cart-main-info__title-ul">@lang('Nömrə hansı maşında göstərilsin'):</h4>
                         <div class="select-num__conteiner">
                             <div class="select-num__box select-num__box_activ">
                                 <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">

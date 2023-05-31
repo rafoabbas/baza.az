@@ -15,8 +15,8 @@ return new class extends Migration
             $table->foreignId('region_id')->nullable()->constrained('regions');
             $table->foreignId('number_region_id')->nullable()->constrained('number_regions');
             $table->string('region_prefix', 2)->nullable();
-            $table->string('alphabet_first_character', 2)->nullable();
-            $table->string('alphabet_second_character', 2)->nullable();
+            $table->string('series_first_character', 2)->nullable();
+            $table->string('series_second_character', 2)->nullable();
             $table->string('first_number', 3)->nullable();
             $table->string('second_number', 1)->nullable();
             $table->string('third_number', 1)->nullable();

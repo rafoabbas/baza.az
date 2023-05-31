@@ -30,6 +30,17 @@
         .text-danger{
             color: #dc3545 !important;
         }
+        .validate-text{
+            color: #dc3545 !important;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .catalog__filtr__filtr-element label{
+            font-size: 20px;
+            color: #324153;
+            font-weight: 500;
+            margin-bottom: 9px;
+        }
     </style>
     <link rel="stylesheet" href="{{asset('assets/front/css/main.css?v=' . config('app.assets.version', 'v0.0.1'))}}">
 </head>
