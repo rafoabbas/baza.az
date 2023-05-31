@@ -2,7 +2,8 @@
 @section('title', $title)
 @section('content')
     <section class="cart-main-info section-user-account ads-byu-main-sec">
-        <div class="general-conteiner">
+        <form class="general-conteiner">
+            @csrf
             {!! $pageTitleHtml !!}
             <div class="cart-main-info__conteiner">
                 <div class="cart-main-info__body-info">
@@ -169,7 +170,7 @@
                     </div>
                 </aside>
             </div>
-        </div>
+        </form>
     </section>
 @endsection
 

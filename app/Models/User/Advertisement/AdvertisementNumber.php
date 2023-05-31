@@ -35,6 +35,7 @@ class AdvertisementNumber extends Model
         'is_five_numbers_in_a_row',
         'is_two_zeros_and_a_number',
         'is_vip',
+        'is_top',
         'name',
         'email',
         'phone',

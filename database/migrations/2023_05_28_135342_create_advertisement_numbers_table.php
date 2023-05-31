@@ -32,6 +32,7 @@ return new class extends Migration
             $table->boolean('is_five_numbers_in_a_row')->default(false);
             $table->boolean('is_two_zeros_and_a_number')->default(false);
             $table->boolean('is_vip')->default(false);
+            $table->boolean('is_top')->default(false);
             $table->bigInteger('views')->default(1);
             $table->timestamps();
         });
