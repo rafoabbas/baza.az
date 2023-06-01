@@ -28,6 +28,7 @@ class AdvertisementNumber extends Model
         'price_azn',
         'price_usd',
         'price_eur',
+        'main_currency',
         'witch_auto_type',
         'status',
         'is_mirror_numbers',

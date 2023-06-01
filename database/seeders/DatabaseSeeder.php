@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Database\Seeders\Common\Car\CarBrandAndModelTableSeeder;
 use Database\Seeders\Common\CommonDatabaseSeeder;
 use Database\Seeders\Guard\AdminTableSeeder;
+use Database\Seeders\System\SystemDatabaseSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,7 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             AdminTableSeeder::class,
-            CommonDatabaseSeeder::class
+            CommonDatabaseSeeder::class,
+            SystemDatabaseSeeder::class
         ]);
     }
 }

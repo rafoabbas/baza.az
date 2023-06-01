@@ -21,10 +21,14 @@ return new class extends Migration
             $table->string('second_number', 1)->nullable();
             $table->string('third_number', 1)->nullable();
             $table->string('full', 7)->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('name')->nullable();
             $table->text('description')->nullable();
             $table->decimal('price_azn')->nullable();
             $table->decimal('price_usd')->nullable();
             $table->decimal('price_eur')->nullable();
+            $table->string('main_currency', 3)->default('AZN')->index();
             $table->string('witch_auto_type')->nullable('porsche');
             $table->tinyInteger('status')->default(AdvertisementStatus::pending());
             $table->boolean('is_mirror_numbers')->default(false);

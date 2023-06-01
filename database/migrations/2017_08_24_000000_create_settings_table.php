@@ -13,6 +13,7 @@ return new class extends Migration
             $table->string('locale')->nullable();
             $table->string(config('setting.database.key'))->index();
             $table->text(config('setting.database.value'));
+            $table->index(['locale', config('setting.database.key')]);
         });
     }
 

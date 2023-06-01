@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\Advertisement\AdvertisementAutoController;
 use App\Http\Controllers\User\Advertisement\AdvertisementController;
 use App\Http\Controllers\User\Advertisement\AdvertisementNumberController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,10 @@ Route::group([
 });
 
 Route::resource('advertisement.number', AdvertisementNumberController::class)
+    ->parameter('advertisement', 'otp:uuid')
+    ->only(['create', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('advertisement.auto', AdvertisementAutoController::class)
     ->parameter('advertisement', 'otp:uuid')
     ->only(['create', 'store', 'edit', 'update', 'destroy']);
 
