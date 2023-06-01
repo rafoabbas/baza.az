@@ -34,9 +34,7 @@ class AdvertisementNumberService
             $this->regionPrefix($numberRegion),
         );
 
-        $da = $this->repository->create($data);
-
-        dd($da);
+        $this->repository->create($data);
     }
 
     public function regionPrefix(NumberRegion $numberRegion): array
