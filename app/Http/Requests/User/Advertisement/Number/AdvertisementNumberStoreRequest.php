@@ -4,6 +4,7 @@ namespace App\Http\Requests\User\Advertisement\Number;
 
 use App\Services\Front\Advertisement\AdvertisementNumberService;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class AdvertisementNumberStoreRequest extends FormRequest
 {
@@ -20,6 +21,7 @@ class AdvertisementNumberStoreRequest extends FormRequest
     public function prepareForValidation()
     {
         return $this->merge([
+            'user_id' => Auth::id(),
             'is_mirror_numbers' => $this->request->has('is_mirror_numbers'),
             'is_three_numbers_in_a_row' => $this->request->has('is_three_numbers_in_a_row'),
             'is_five_numbers_in_a_row' => $this->request->has('is_five_numbers_in_a_row'),

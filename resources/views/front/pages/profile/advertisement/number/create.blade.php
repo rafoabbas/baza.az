@@ -47,8 +47,35 @@
                             </div>
                             <div class="catalog__filtr__filtr-element">
                                 <label for="number-input">@lang('Nömrə'):</label>
-                                <input id="number-input" type="number" value="{{ old('number') }}" max="100" name="number" class="input-form-conteiner__input @error('number') is-invalid @enderror" placeholder="@lang('Nömrə')">
+                                <input id="number-input" type="number" value="{{ old('number') }}" max="999" name="number" class="input-form-conteiner__input @error('number') is-invalid @enderror" placeholder="@lang('Nömrə')">
                                 @error('number')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="catalog__filtr__filtr-element">
+                                <label for="serial-input">@lang('Name'):</label>
+                                <input id="serial-input" type="text" value="{{ old('name') }}" name="name" class="input-form-conteiner__input @error('name') is-invalid @enderror" placeholder="@lang('name')">
+                                @error('name')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="catalog__filtr__filtr-element">
+                                <label for="serial-input">@lang('Email'):</label>
+                                <input id="serial-input" type="text" value="{{ old('email') }}" name="email" class="input-form-conteiner__input @error('email') is-invalid @enderror" placeholder="@lang('email')">
+                                @error('email')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="catalog__filtr__filtr-element">
+                                <label for="serial-input">@lang('Phone'):</label>
+                                <input id="serial-input" type="text" value="{{ old('phone') }}" name="phone" class="input-form-conteiner__input @error('phone') is-invalid @enderror" placeholder="@lang('phone')">
+                                @error('phone')
                                 <span class="validate-text">
                                     <smal class="text-danger">{{ $message }}</smal>
                                 </span>
@@ -77,10 +104,10 @@
                                 <label for="price-input">@lang('Qiymət'):</label>
                                 <div class="filtr-element__select filtr-element__select_input @error('price') is-invalid @enderror">
                                     <input id="price-input" type="number" name="price" step="0.01" value="{{ old('price') }}" class="" placeholder="1 200">
-                                    <select name="currency" id="currency" class="full-select">
-                                        <option value="azn">@lang('AZN')</option>
-                                        <option value="usd">@lang('USD')</option>
-                                        <option value="eur">@lang('EUR')</option>
+                                    <select name="main_currency" id="main_currency" class="full-select">
+                                        <option {{ old('main_currency', 'AZN') == 'AZN' ? 'selected' : '' }}  value="AZN">@lang('AZN')</option>
+                                        <option {{ old('main_currency') == 'USD' ? 'selected' : '' }} value="USD">@lang('USD')</option>
+                                        <option {{ old('main_currency') == 'EUR' ? 'selected' : '' }} value="EUR">@lang('EUR')</option>
                                     </select>
                                 </div>
                                 @error('price')
@@ -94,18 +121,12 @@
                     <div class="select-num">
                         <h4 class="cart-main-info__title-ul">@lang('Nömrə hansı maşında göstərilsin'):</h4>
                         <div class="select-num__conteiner">
-                            <label class="select-num__box select-num__box_activ" for="auto_type1">
-                                <input type="radio" id="auto_type1" name="witch_auto_type" value="porsche">
-                                <img src="{{ asset('assets/front/img/_src/car-doc.png') }}" alt="">
-                            </label>
-                            <label class="select-num__box" for="auto_type2">
-                                <input type="radio" id="auto_type2" name="witch_auto_type" value="bmw">
-                                <img src="{{ asset('assets/front/img/_src/car-doc2.png') }}" alt="">
-                            </label>
-                            <label class="select-num__box" for="auto_type3">
-                                <input type="radio" id="auto_type3" name="witch_auto_type" value="mercedes">
-                                <img src="{{ asset('assets/front/img/_src/car-doc3.png') }}" alt="">
-                            </label>
+                            @foreach(config('advertisement.number.witch_auto_types') as $typeKey => $typeImage)
+                                <label class="select-num__box {{ old('witch_auto_type', ($typeKey == 'porsche' ? 'porsche' : '')) == $typeKey ? 'select-num__box_activ' : '' }}" for="{{ 'auto_' . $typeKey }}">
+                                    <input type="radio" {{ old('witch_auto_type', ($typeKey == 'porsche' ? 'porsche' : '')) == $typeKey ? 'checked' : '' }} id="{{ 'auto_' . $typeKey }}" name="witch_auto_type" value="{{ $typeKey }}">
+                                    <img src="{{ asset($typeImage) }}" alt="">
+                                </label>
+                            @endforeach
                         </div>
                     </div>
                     <div class="acordeon-conteiner__description-conteiner">
@@ -117,7 +138,7 @@
                         </span>
                         @enderror
                     </div>
-                    <div class="select-type-num" style="margin-top: 10px">
+                    <div class="select-type-num mt-10px">
                         <h4 class="cart-main-info__title-ul">@lang('Nömrə növünü seçin'):</h4>
                         <div class="select-type-num__conteiner">
                             <div class="checkbox">

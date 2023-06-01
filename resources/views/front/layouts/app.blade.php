@@ -41,6 +41,9 @@
             font-weight: 500;
             margin-bottom: 9px;
         }
+        .mt-10px{
+            margin-top: 10px !important;
+        }
     </style>
     <link rel="stylesheet" href="{{asset('assets/front/css/main.css?v=' . config('app.assets.version', 'v0.0.1'))}}">
 </head>

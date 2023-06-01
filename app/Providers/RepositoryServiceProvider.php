@@ -14,6 +14,7 @@ use App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface;
 use App\Repositories\Contracts\Common\Location\NumberRegionRepositoryInterface;
 use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
 use App\Repositories\Contracts\EloquentRepositoryInterface;
+use App\Repositories\Contracts\User\Advertisement\AdvertisementNumberRepositoryInterface;
 use App\Repositories\Eloquent\Common\Auto\BodyTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\ClassTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\ColorRepository;
@@ -26,6 +27,7 @@ use App\Repositories\Eloquent\Common\Car\CarModelRepository;
 use App\Repositories\Eloquent\Common\Location\NumberRegionRepository;
 use App\Repositories\Eloquent\Common\Location\RegionRepository;
 use App\Repositories\Eloquent\EloquentRepository;
+use App\Repositories\Eloquent\User\Advertisement\AdvertisementNumberRepository;
 use Illuminate\Support\ServiceProvider;
 
 final class RepositoryServiceProvider extends ServiceProvider
@@ -43,5 +45,6 @@ final class RepositoryServiceProvider extends ServiceProvider
         TransmissionRepositoryInterface::class => TransmissionRepository::class,
         RegionRepositoryInterface::class => RegionRepository::class,
         NumberRegionRepositoryInterface::class => NumberRegionRepository::class,
+        AdvertisementNumberRepositoryInterface::class => AdvertisementNumberRepository::class
     ];
 }

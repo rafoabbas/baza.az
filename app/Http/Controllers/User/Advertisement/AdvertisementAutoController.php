@@ -13,11 +13,10 @@ use App\Services\Front\Advertisement\AdvertisementNumberService;
 use App\Services\Front\Advertisement\AdvertisementOtpService;
 use Illuminate\Http\Request;
 
-class AdvertisementNumberController extends Controller
+class AdvertisementAutoController extends Controller
 {
     public function __construct(
         public AdvertisementOtpService $otpService,
-        public AdvertisementNumberService $numberService,
         public RegionRepositoryInterface $regionRepository,
         public NumberRegionRepositoryInterface $numberRegionRepository,
     ) {
@@ -27,26 +26,24 @@ class AdvertisementNumberController extends Controller
     {
         $this->otpService->checkOtpSession($otp);
 
-        return view('front.pages.profile.advertisement.number.create', [
-            'title' => trans('Satışa nömrə nişanı əlavə edin'),
-            'otp' => $otp,
-            'numberRegions' => $this->numberRegionRepository->all(
-                columns: Helper::select(['id', 'name%', 'region_code']),
-                conditions: [['status', '=', Status::published()]]
-            ),
-            'regions' => $this->regionRepository->all(
-                columns: Helper::select(['id', 'name%']),
-                conditions: [['status', '=', Status::published()]]
-            ),
-            'pageTitleHtml' => $this->numberService->pageTitleHtml()
-        ]);
+//        return view('front.pages.profile.advertisement.number.create', [
+//            'title' => trans('Satışa nömrə nişanı əlavə edin'),
+//            'otp' => $otp,
+//            'numberRegions' => $this->numberRegionRepository->all(
+//                columns: Helper::select(['id', 'name%', 'region_code']),
+//                conditions: [['status', '=', Status::published()]]
+//            ),
+//            'regions' => $this->regionRepository->all(
+//                columns: Helper::select(['id', 'name%']),
+//                conditions: [['status', '=', Status::published()]]
+//            ),
+//            'pageTitleHtml' => $this->numberService->pageTitleHtml()
+//        ]);
     }
 
-    public function store(AdvertisementNumberStoreRequest $request, AdvertisementOtp $otp)
+    public function store(Request $request, AdvertisementOtp $otp)
     {
-        $this->numberService->store($request, $otp);
-
-        return redirect()->route('index')->withToast();
+        //
     }
 
     public function edit(string $id)
