@@ -13,6 +13,6 @@ class AdvertisementNumberTableSeeder extends Seeder
             return;
         }
 
-        AdvertisementNumber::factory()->count(1000)->create();
+        AdvertisementNumber::factory()->count(100)->create();
     }
 }
