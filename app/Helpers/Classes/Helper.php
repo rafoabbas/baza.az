@@ -14,17 +14,30 @@ class Helper
         return array_merge($array, (App::isLocal() or App::environment() == 'testing') ? $merge : []);
     }
 
+    public static function frontPhoneFormat(
+        $phone,
+        string $countryCode = 'AZ'
+    ): string {
+        try {
+            if ((new PhoneNumber($phone, $countryCode))->isOfCountry($countryCode)) {
+                return (new PhoneNumber($phone, $countryCode))->formatInternational();
+            }
+        } catch (Exception $exception) {
+            return $phone;
+        }
+    }
+
     public static function phoneFormat(
         $phone,
         string $countryCode = 'AZ',
         $plus = '+'
     ) {
         try {
-            if (PhoneNumber::make($phone, $countryCode)->isOfCountry($countryCode)) {
+            if ((new PhoneNumber($phone, $countryCode))->isOfCountry($countryCode)) {
                 return Str::replaceFirst(
                     $plus,
                     '',
-                    PhoneNumber::make($phone, $countryCode)->formatE164()
+                    (new PhoneNumber($phone, $countryCode))->formatE164()
                 );
             }
         } catch (Exception $exception) {

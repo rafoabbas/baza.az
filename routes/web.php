@@ -3,7 +3,12 @@
 use App\Http\Controllers\User\Advertisement\AdvertisementAutoController;
 use App\Http\Controllers\User\Advertisement\AdvertisementController;
 use App\Http\Controllers\User\Advertisement\AdvertisementNumberController;
-use App\Http\Controllers\User\Auth\PersonalAuthController;
+use App\Http\Controllers\User\Auth\Business\AuthenticatedSessionController;
+use App\Http\Controllers\User\Auth\Business\NewPasswordController;
+use App\Http\Controllers\User\Auth\Business\PasswordResetLinkController;
+use App\Http\Controllers\User\Auth\Business\RegisteredUserController;
+use App\Http\Controllers\User\Auth\Personal\PersonalAuthenticatedController;
+use App\Http\Controllers\User\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,7 +38,7 @@ Route::group([
     'as' => 'auth.',
     'middleware' => 'guest'
 ], function () {
-    Route::controller(PersonalAuthController::class)
+    Route::controller(PersonalAuthenticatedController::class)
         ->as('personal.')
         ->prefix('personal')
         ->group(function () {
@@ -42,6 +47,45 @@ Route::group([
             Route::get('code', 'code')->name('code');
             Route::post('code', 'check');
         });
+
+
+    Route::group([
+        'as' => 'business.',
+        'prefix' => 'business'
+    ], function () {
+        Route::get('register', [RegisteredUserController::class, 'create'])
+            ->name('register');
+
+        Route::post('register', [RegisteredUserController::class, 'store']);
+
+        Route::get('login', [AuthenticatedSessionController::class, 'create'])
+            ->name('login');
+
+        Route::post('login', [AuthenticatedSessionController::class, 'store']);
+
+        Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
+            ->name('password.request');
+
+        Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])
+            ->name('password.email');
+
+        Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])
+            ->name('password.reset');
+
+        Route::post('reset-password', [NewPasswordController::class, 'store'])
+            ->name('password.store');
+    });
+
+});
+
+
+Route::group([
+    'as' => 'profile.',
+    'prefix' => 'profile',
+    'middleware' => 'auth'
+], function () {
+    Route::get('', [ProfileController::class, 'index'])->name('index');
+    Route::post('logout', [ProfileController::class, 'logout'])->name('logout');
 });
 
 Route::resource('advertisement.number', AdvertisementNumberController::class)
@@ -94,9 +138,6 @@ Route::get('/create-number', function () {
     return view('front.pages.profile.advertisement.number');
 })->name('add.number');
 
-Route::get('/profile', function () {
-    return view('front.pages.profile.index');
-})->name('profile');
 
 Route::get('/profile-business', function () {
     return view('front.pages.profile.business.index');
