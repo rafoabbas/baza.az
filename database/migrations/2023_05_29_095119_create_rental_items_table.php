@@ -25,7 +25,7 @@ return new class extends Migration
             $table->boolean('metallic')->default(false)->nullable();
             $table->boolean('matte')->default(false)->nullable();
             $table->string('fuel_consumption')->nullable();
-            $table->decimal('engine_volume', 1)->nullable();
+            $table->decimal('engine_volume', 5,1)->nullable();
             $table->integer('year')->nullable();
             $table->integer('mileage')->nullable();
 
