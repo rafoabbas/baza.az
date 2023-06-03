@@ -3,11 +3,17 @@
 namespace App\Helpers\Classes;
 
 use Exception;
+use Illuminate\Support\Facades\App;
 use Propaganistas\LaravelPhone\PhoneNumber;
 use Illuminate\Support\Str;
 
 class Helper
 {
+    public static function envLocalMerge(array $array, array $merge): array
+    {
+        return array_merge($array, (App::isLocal() or App::environment() == 'testing') ? $merge : []);
+    }
+
     public static function phoneFormat(
         $phone,
         string $countryCode = 'AZ',

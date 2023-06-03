@@ -11,12 +11,18 @@ use App\Services\Front\Advertisement\AdvertisementNumberService;
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Telescope\TelescopeServiceProvider as BaseTelescopeServiceProvider;
+use App\Services\Notification\SmsChannel;
+use Illuminate\Support\Facades\Notification;
 
 class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
         $this->localEnvironmentRegister();
+
+        Notification::extend('sms', function ($app) {
+            return new SmsChannel();
+        });
     }
 
     public function boot(): void
