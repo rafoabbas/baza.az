@@ -8,6 +8,8 @@ use App\Http\Requests\User\Advertisement\Number\AdvertisementNumberStoreRequest;
 use App\Models\Common\Location\NumberRegion;
 use App\Models\Common\Location\Region;
 use App\Models\User\Advertisement\AdvertisementOtp;
+use App\Repositories\Contracts\Common\Location\NumberRegionRepositoryInterface;
+use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
 use App\Repositories\Contracts\User\Advertisement\AdvertisementNumberRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,7 +17,9 @@ class AdvertisementNumberService
 {
     public function __construct(
         public Currency $currency,
-        public AdvertisementNumberRepositoryInterface $repository
+        public AdvertisementNumberRepositoryInterface $repository,
+        public RegionRepositoryInterface $repositoryRegion,
+        public NumberRegionRepositoryInterface $repositoryNumberRegion,
     ) {
     }
 
@@ -27,6 +31,7 @@ class AdvertisementNumberService
 
         $data = array_merge(
             $data,
+            ['uuid' => $otp->getAttribute('uuid')],
             $this->price($data['price'], $data['main_currency']),
             $this->splitSeries($data['series']),
             $this->splitNumber($data['number']),
@@ -106,14 +111,24 @@ class AdvertisementNumberService
         ];
     }
 
-    public function region($id, array $columns = ['*']): null|Region|Model
+    public function region($id, array $columns = ['*']): null|NumberRegion|Model
     {
-        return Region::query()->select($columns)->where('id', $id)->first();
+        return $this->repositoryRegion->first(
+            columns: $columns,
+            conditions: [[
+                'id', '=', $id
+            ]],
+        );
     }
 
     public function numberRegion($id, array $columns = ['*']): null|NumberRegion|Model
     {
-        return NumberRegion::query()->select($columns)->where('id', $id)->first();
+        return $this->repositoryNumberRegion->first(
+            columns: $columns,
+            conditions: [[
+                'id', '=', $id
+            ]],
+        );
     }
 
     public function pageTitleHtml(): string

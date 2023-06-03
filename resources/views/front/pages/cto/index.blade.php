@@ -14,7 +14,7 @@
                         <div class="rent-car__search-select">
                             <select name="" id="" class="select-type1">
                                 <option value="">Услуга</option>
-                                <option value="">Легковые</option>
+                                <option value="">@lang('Minik')</option>
                             </select>
                         </div>
                         <div class="rent-car__search-select">

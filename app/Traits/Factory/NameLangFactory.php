@@ -4,7 +4,7 @@ namespace App\Traits\Factory;
 
 use Str;
 
-trait NameFactory
+trait NameLangFactory
 {
     public function name(string $name, $isSlug = false): static
     {

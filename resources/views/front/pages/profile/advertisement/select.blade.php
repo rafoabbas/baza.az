@@ -10,7 +10,7 @@
                     </div>
                     <h4 class="type-ads__title">
                         <span></span>
-                        Легковые
+                        @lang('Minik')
                         <span></span>
                     </h4>
                 </label>
@@ -20,7 +20,7 @@
                     </div>
                     <h4 class="type-ads__title">
                         <span></span>
-                        Мото
+                        @lang('Motosiklet')
                         <span></span>
                     </h4>
                 </label>
@@ -30,7 +30,7 @@
                     </div>
                     <h4 class="type-ads__title">
                         <span></span>
-                        Автономера
+                        @lang('Avtomobil Nömrəsi')
                         <span></span>
                     </h4>
                 </label>
@@ -40,7 +40,7 @@
                     </div>
                     <h4 class="type-ads__title">
                         <span></span>
-                        Спецтехника
+                        @lang('Xüsusi texnika')
                         <span></span>
                     </h4>
                 </label>
@@ -57,8 +57,8 @@
             </div>
             <div class="add-ads-no-regist-section__ads-info">
                 <div class="add-ads-no-regist-section__ads-wrapper">
-                    <h2 class="add-ads-no-regist-section__new-ads-title">Новое объявление</h2>
-                    <p class="add-ads-no-regist-section__new-ads-subtitle">Уважаемый пользователь, на платформе baza.az Вы можете размещать 3 бесплатных объявления в течении 30 дней.</p>
+                    <h2 class="add-ads-no-regist-section__new-ads-title">@lang('Yeni elan')</h2>
+                    <p class="add-ads-no-regist-section__new-ads-subtitle">@lang('Hörmətli istifadəçi, baza.az platformasında 30 gün ərzində 3 pulsuz elan yerləşdirə bilərsiniz.')</p>
                     <form action="{{ route('advertisement.store') }}" class="add-ads-no-regist-section__form" method="post">
                         @csrf
                         <input type="hidden" name="uuid" value="{{ Str::uuid() }}">
@@ -66,7 +66,7 @@
                         <input type="radio" name="advertisement_type" id="motorcycle-type-input" {{ old('advertisement_type') == 'motorcycle' ? 'checked' : '' }} value="motorcycle" style="visibility: hidden">
                         <input type="radio" name="advertisement_type" id="number-type-input" {{ old('advertisement_type') == 'car' ? 'number' : '' }} value="number" style="visibility: hidden">
                         <input type="radio" name="advertisement_type" id="truck-type-input" {{ old('advertisement_type') == 'car' ? 'truck' : '' }} value="truck" style="visibility: hidden">
-                        <p class="add-ads-no-regist-section__form-title">Введите номер своего телефона для размещения объявления:
+                        <p class="add-ads-no-regist-section__form-title">@lang('Elan yerləşdirmək üçün telefon nömrənizi daxil edin'):
                         </p>
                         <div class="add-ads-no-regist-section__form-row">
                             <div class="input-main__prise-inp">

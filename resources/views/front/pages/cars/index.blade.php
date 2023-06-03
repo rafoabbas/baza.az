@@ -115,7 +115,7 @@
                 </aside>
                 <div class="catalog__ads-body">
                     <div class="ads-body__header">
-                        <h2 class="general-title">Легковые автомобили</h2>
+                        <h2 class="general-title">@lang('Minik Avtomobilleri')</h2>
                         <div class="ads-body__sorting-conteiner">
                             <div class="sorting-conteiner__element sorting-conteiner_nam-ads">
                                 <select name="" id="">

@@ -3,12 +3,12 @@
 namespace Database\Factories\Common\Auto;
 
 use App\Enums\Common\Status;
-use App\Traits\Factory\NameFactory;
+use App\Traits\Factory\NameLangFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ClassTypeFactory extends Factory
 {
-    use NameFactory;
+    use NameLangFactory;
 
     public function definition(): array
     {

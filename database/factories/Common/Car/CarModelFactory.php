@@ -4,12 +4,12 @@ namespace Database\Factories\Common\Car;
 
 use App\Enums\Common\Status;
 use App\Models\Common\Car\CarBrand;
-use App\Traits\Factory\NameFactory;
+use App\Traits\Factory\NameLangFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CarModelFactory extends Factory
 {
-    use NameFactory;
+    use NameLangFactory;
 
     public function definition(): array
     {

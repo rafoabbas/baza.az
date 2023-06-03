@@ -10,7 +10,7 @@
                     </div>
                     <h4 class="type-ads__title">
                         <span></span>
-                        Легковые
+                        @lang('Minik')
                         <span></span>
                     </h4>
                 </div>
@@ -62,10 +62,10 @@
 
             <div class="add-ads-no-regist-section__ads-info">
                 <div class="add-ads-no-regist-section__ads-wrapper">
-                    <h2 class="add-ads-no-regist-section__new-ads-title">Новое объявление</h2>
-                    <p class="add-ads-no-regist-section__new-ads-subtitle">Уважаемый пользователь, на платформе baza.az Вы можете размещать 3 бесплатных объявления в течении 30 дней.</p>
+                    <h2 class="add-ads-no-regist-section__new-ads-title">@lang('Новое объявление')</h2>
+                    <p class="add-ads-no-regist-section__new-ads-subtitle">@lang('Hörmətli istifadəçi, baza.az platformasında 30 gün ərzində 3 pulsuz elan yerləşdirə bilərsiniz.')</p>
                     <form action="" class="add-ads-no-regist-section__form">
-                        <p class="add-ads-no-regist-section__form-title">Введите номер своего телефона для размещения объявления:
+                        <p class="add-ads-no-regist-section__form-title">@lang('Elan yerləşdirmək üçün telefon nömrənizi daxil edin'):
                         </p>
                         <div class="add-ads-no-regist-section__form-row">
                             <div class="input-main__prise-inp">
