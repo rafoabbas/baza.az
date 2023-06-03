@@ -12,7 +12,6 @@
                     <form action="{{ route('auth.personal.login') }}" method="post" class="advantages-popap__form">
                         @csrf
                         @dump($errors->all())
-
                         <div class="advantages-popap__input-conteiner input-form-conteiner">
                             <h5 class="input-form-conteiner__title">Ваш номер:</h5>
                             <div class="input-form-conteiner__claster input-form-conteiner__claster_flex input-form-conteiner__claster_select">
@@ -26,6 +25,7 @@
                         </div>
                         <div class="advantages-popap__btn-conteiner">
                             <button class="btn1">Отправить</button>
+                            <a href="{{ route('auth.business.login') }}" class="btn1">@lang('Biznes Hesabı')</a>
                         </div>
                     </form>
                 </div>

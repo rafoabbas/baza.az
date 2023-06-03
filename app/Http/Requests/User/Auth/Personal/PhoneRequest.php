@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Requests\User\Auth;
+namespace App\Http\Requests\User\Auth\Personal;
 
 use App\Helpers\Classes\Helper;
 use App\Models\Guard\User;
 use App\Notifications\User\UserLoginNotification;
+use App\Rules\User\Auth\PersonalPhoneRule;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -17,7 +18,7 @@ class PhoneRequest extends FormRequest
     public function rules(): array
     {
         return Helper::envLocalMerge([
-            'phone' => [ 'required', 'phone:AZ' ]
+            'phone' => [ 'required', 'phone:AZ', new PersonalPhoneRule() ]
         ], [
             'code'  => [ 'required', 'numeric', 'min:1000', 'max:9999' ]
         ]);
@@ -59,7 +60,8 @@ class PhoneRequest extends FormRequest
     public function firstOrCreate(string $phone): User|Model
     {
         return User::query()->firstOrCreate([
-            'phone' => $phone
+            'phone' => Helper::phoneFormat($phone),
+            'is_business' => false
         ]);
     }
 }

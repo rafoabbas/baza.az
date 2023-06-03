@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\User\Auth;
+namespace App\Http\Controllers\User\Auth\Personal;
 
-use App\Helpers\Classes\Helper;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\User\Auth\CodeRequest;
-use App\Http\Requests\User\Auth\PhoneRequest;
+use App\Http\Requests\User\Auth\Personal\CodeRequest;
+use App\Http\Requests\User\Auth\Personal\PhoneRequest;
 
-class PersonalAuthController extends Controller
+class PersonalAuthenticatedController extends Controller
 {
     public function login()
     {

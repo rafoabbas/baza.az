@@ -47,6 +47,6 @@ class ProfileController extends Controller
     {
         Auth::logout();
 
-        return Redirect::route('home');
+        return Redirect::route('auth.personal.login');
     }
 }
