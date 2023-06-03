@@ -39,6 +39,30 @@ Route::resource('advertisement.auto', AdvertisementAutoController::class)
 Route::get('', function () {
     return view('front.pages.home.index');
 })->name('index');
+Route::get('personal-login', function () {
+    return view('front.pages.auth.personal-login');
+})->name('personal-login');
+Route::get('business-login', function () {
+    return view('front.pages.auth.business-login');
+})->name('business-login');
+Route::get('personal-register', function () {
+    return view('front.pages.auth.personal-register');
+})->name('personal-register');
+Route::get('business-register', function () {
+    return view('front.pages.auth.business-register');
+})->name('business-register');
+Route::get('change-password', function () {
+    return view('front.pages.auth.change-password');
+})->name('change-password');
+Route::get('forgot-password', function () {
+    return view('front.pages.auth.forgot-password');
+})->name('forgot-password');
+Route::get('reset-password', function () {
+    return view('front.pages.auth.reset-password');
+})->name('reset-password');
+Route::get('otp', function () {
+    return view('front.pages.auth.otp');
+})->name('otp');
 
 Route::get('/create-ads', function () {
     return view('front.pages.profile.advertisement.select');
