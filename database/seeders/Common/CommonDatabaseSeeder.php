@@ -8,6 +8,9 @@ use Database\Seeders\Common\Auto\ColorTypeTableSeeder;
 use Database\Seeders\Common\Auto\FuelTypeTableSeeder;
 use Database\Seeders\Common\Auto\GearTableSeeder;
 use Database\Seeders\Common\Auto\MarketTableSeeder;
+use Database\Seeders\Common\Auto\ServiceGroupTableSeeder;
+use Database\Seeders\Common\Auto\SpecificationTableSeeder;
+use Database\Seeders\Common\Auto\StoreTypeTableSeeder;
 use Database\Seeders\Common\Auto\TransmissionTableSeeder;
 use Database\Seeders\Common\Car\CarBrandAndModelTableSeeder;
 use Database\Seeders\Common\Location\NumberRegionTableSeeder;
@@ -29,7 +32,10 @@ class CommonDatabaseSeeder extends Seeder
             TransmissionTableSeeder::class,
             NumberRegionTableSeeder::class,
             RegionTableSeeder::class,
-            ClassTypeTableSeeder::class
+            ClassTypeTableSeeder::class,
+            StoreTypeTableSeeder::class,
+            SpecificationTableSeeder::class,
+            ServiceGroupTableSeeder::class
         ]);
     }
 }

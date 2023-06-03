@@ -25,6 +25,6 @@ class SingletonServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-
+        //
     }
 }
