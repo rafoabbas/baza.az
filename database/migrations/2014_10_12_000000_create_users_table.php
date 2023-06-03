@@ -23,7 +23,18 @@ return new class extends Migration
             $table->decimal('balance')->default(0)->nullable();
             $table->integer('advertisement_credit')->default(0)->nullable();
             $table->string('avatar')->nullable();
+            $table->ipAddress('connection_ip')->nullable();
+            $table->timestamp('last_login_at')->nullable();
             $table->rememberToken();
+            $table->timestamps();
+        });
+
+        Schema::create('user_logins', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->integer('code');
+            $table->ipAddress('connection_ip');
+            $table->timestamp('expired_at');
             $table->timestamps();
         });
     }
@@ -31,5 +42,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('user_logins');
     }
 };

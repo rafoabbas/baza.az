@@ -3,6 +3,7 @@
 use App\Http\Controllers\User\Advertisement\AdvertisementAutoController;
 use App\Http\Controllers\User\Advertisement\AdvertisementController;
 use App\Http\Controllers\User\Advertisement\AdvertisementNumberController;
+use App\Http\Controllers\User\Auth\PersonalAuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,22 @@ Route::group([
     Route::get('{otp:uuid}/otp', [AdvertisementController::class, 'otp'])->name('otp');
     Route::post('{otp:uuid}/otp', [AdvertisementController::class, 'checkOtp'])->name('check.otp');
     Route::get('{otp:uuid}/auto', [AdvertisementController::class, 'createAuto'])->name('create.auto');
+});
+
+
+Route::group([
+    'as' => 'auth.',
+    'middleware' => 'guest'
+], function () {
+    Route::controller(PersonalAuthController::class)
+        ->as('personal.')
+        ->prefix('personal')
+        ->group(function () {
+            Route::get('login', 'login')->name('login');
+            Route::post('login', 'phone');
+            Route::get('code', 'code')->name('code');
+            Route::post('code', 'check');
+        });
 });
 
 Route::resource('advertisement.number', AdvertisementNumberController::class)
