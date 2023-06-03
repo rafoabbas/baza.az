@@ -13,11 +13,11 @@ class Currency
         $amount = $this->getAmount();
 
         if ($this->getCurrency() === 'EUR') {
-            $amount = $amount / setting('EUR_RATE');
+            $amount = $amount / setting('EUR_RATE', 0.98);
         }
 
         if ($this->getCurrency() === 'AZN') {
-            $amount = $amount / setting('AZN_RATE');
+            $amount = $amount / setting('AZN_RATE', 1.7);
         }
 
         if ($currency === 'USD') {

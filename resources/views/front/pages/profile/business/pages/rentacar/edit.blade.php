@@ -36,9 +36,6 @@
                                                 <div class="filtr-element__select">
                                                     <select name="" id="" class="full-select">
                                                         <option value="">Регион</option>
-                                                        <option value="">Легковые</option>
-                                                        <option value="">Легковые</option>
-                                                        <option value="">Легковые</option>
                                                     </select>
                                                 </div>
                                             </div>

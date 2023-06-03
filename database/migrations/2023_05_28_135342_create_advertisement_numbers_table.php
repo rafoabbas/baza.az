@@ -11,6 +11,7 @@ return new class extends Migration
     {
         Schema::create('advertisement_numbers', function (Blueprint $table) {
             $table->id();
+            $table->uuid()->index();
             $table->foreignId('user_id')->nullable()->constrained('users');
             $table->foreignId('region_id')->nullable()->constrained('regions');
             $table->foreignId('number_region_id')->nullable()->constrained('number_regions');
@@ -38,7 +39,9 @@ return new class extends Migration
             $table->boolean('is_vip')->default(false);
             $table->boolean('is_top')->default(false);
             $table->bigInteger('views')->default(0)->nullable();
+            $table->timestamp('expired_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

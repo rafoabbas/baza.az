@@ -7,7 +7,7 @@
                 <div class="rent-car__search-select">
                     <select name="" id="" class="select-type1">
                         <option value="">Класс автомобиля</option>
-                        <option value="">Легковые</option>
+                        <option value="">@lang('Minik')</option>
                     </select>
                 </div>
                 <div class="rent-car__search-select">

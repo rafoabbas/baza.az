@@ -9,6 +9,13 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 interface EloquentRepositoryInterface
 {
+    public function first(
+        array $columns = ['*'],
+        array $conditions = [],
+        array $relations = [],
+        ?array $filters = []
+    ): Model|null;
+
     public function all(
         array $columns = ['*'],
         array $conditions = [],

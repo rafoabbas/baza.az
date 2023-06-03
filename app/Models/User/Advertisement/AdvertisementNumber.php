@@ -14,6 +14,7 @@ class AdvertisementNumber extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'uuid',
         'user_id',
         'region_id',
         'number_region_id',

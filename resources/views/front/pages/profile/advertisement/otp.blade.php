@@ -8,7 +8,7 @@
                     <h2 class="add-ads-no-regist-section__new-ads-title">Otp code</h2>
                     <form action="{{ route('advertisement.check.otp', $otp) }}" class="add-ads-no-regist-section__form" method="post">
                         @csrf
-                        <p class="add-ads-no-regist-section__form-title">Введите номер своего телефона для размещения объявления:
+                        <p class="add-ads-no-regist-section__form-title">@lang('Elan yerləşdirmək üçün telefon nömrənizi daxil edin'):
                         </p>
                         <div class="add-ads-no-regist-section__form-row">
                             <div class="input-main__prise-inp">

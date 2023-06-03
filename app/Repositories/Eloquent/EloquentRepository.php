@@ -27,6 +27,26 @@ abstract class EloquentRepository implements EloquentRepositoryInterface
         return $this->model->newQuery();
     }
 
+    public function first(
+        array $columns = ['*'],
+        array $conditions = [],
+        array $relations = [],
+        ?array $filters = []
+    ): Model|null {
+        $tableName = $this->model->getTable();
+
+        $query = $this->createQuery();
+        //add conditions
+        foreach ($conditions as $condition) {
+            $query->where($tableName . '.' . $condition[0], $condition[1], $condition[2]);
+        }
+
+        return $query
+            ->select($columns)
+            ->filter($filters)
+            ->with($relations)
+            ->first();
+    }
     public function all(
         array $columns = ['*'],
         array $conditions = [],
