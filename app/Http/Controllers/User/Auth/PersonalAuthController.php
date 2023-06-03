@@ -11,7 +11,7 @@ class PersonalAuthController extends Controller
 {
     public function login()
     {
-        //
+        return view('front.pages.auth.phone.login');
     }
 
     public function phone(PhoneRequest $request)
@@ -24,7 +24,7 @@ class PersonalAuthController extends Controller
 
     public function code()
     {
-        return view('user.auth.code');
+        return view('front.pages.auth.phone.code');
     }
 
     public function check(CodeRequest $request)
@@ -34,6 +34,7 @@ class PersonalAuthController extends Controller
             'last_login_at' => now()
         ]);
 
-//        return redirect()->route('user.dashboard')->withToast();
+
+        return redirect()->route('profile.index')->withToast();
     }
 }

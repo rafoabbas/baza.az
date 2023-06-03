@@ -4,6 +4,7 @@ use App\Http\Controllers\User\Advertisement\AdvertisementAutoController;
 use App\Http\Controllers\User\Advertisement\AdvertisementController;
 use App\Http\Controllers\User\Advertisement\AdvertisementNumberController;
 use App\Http\Controllers\User\Auth\PersonalAuthController;
+use App\Http\Controllers\User\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +43,16 @@ Route::group([
             Route::get('code', 'code')->name('code');
             Route::post('code', 'check');
         });
+});
+
+
+Route::group([
+    'as' => 'profile.',
+    'prefix' => 'profile',
+    'middleware' => 'auth'
+], function () {
+    Route::get('', [ProfileController::class, 'index'])->name('index');
+    Route::post('logout', [ProfileController::class, 'logout'])->name('logout');
 });
 
 Route::resource('advertisement.number', AdvertisementNumberController::class)
@@ -94,9 +105,6 @@ Route::get('/create-number', function () {
     return view('front.pages.profile.advertisement.number');
 })->name('add.number');
 
-Route::get('/profile', function () {
-    return view('front.pages.profile.index');
-})->name('profile');
 
 Route::get('/profile-business', function () {
     return view('front.pages.profile.business.index');

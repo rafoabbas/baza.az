@@ -70,7 +70,7 @@ class Breadcrumb
 
     public function link(string $name, ?string $url = null, bool $active = false, $key = 0): string
     {
-        $slash = $key ? '/' : '';
+        $slash = $key ? ' /' : '';
         return $active ? "$slash<p>$name</p>" : "<a href='$url'>" . $slash . $name . "</a>";
     }
 }

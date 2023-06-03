@@ -49,10 +49,11 @@ class PhoneRequest extends FormRequest
 
         $user->notify(new UserLoginNotification($code, $phone));
 
-        $this->session()->put('auth', [
-            'phone' => $phone,
+        $this->session()->put('auth', Helper::envLocalMerge([
+            'phone' => $phone
+        ], [
             'code'  => $code
-        ]);
+        ]));
     }
 
     public function firstOrCreate(string $phone): User|Model
