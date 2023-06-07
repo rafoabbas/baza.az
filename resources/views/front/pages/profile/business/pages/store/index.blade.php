@@ -3,12 +3,7 @@
 @section('content')
     <section class="cart-main-info">
         <div class="general-conteiner">
-            <h2 class="cart-main-info__title">Мой автомагазин</h2>
-            <div class="catalog_bread-crumbs">
-                <a href="">Главная</a>
-                <a href="">/ Личный кабинет</a>
-                <p>Мой автомагазин</p>
-            </div>
+            {!! $pageTitleHtml !!}
             <div class="cart-main-info__conteiner">
                 @include('front.pages.profile.business.layout.partials.navbar')
                 <div class="cart-main-info__body-info cart-main-info__body-info_account">
@@ -16,7 +11,7 @@
                         <div class="user-account-busines-claster__rent-car-conteiner">
                             <div class="acordeon-conteiner__box  acordeon-element">
                                 <div class="acordeon-conteiner__box-title acordeon-element__title">
-                                    <h4 class="cart-main-info__title">Контактная информация CTO</h4>
+                                    <h4 class="cart-main-info__title">@lang("Mağaza əlaqə məlumatları")</h4>
                                     <span class="acordeon-conteiner__box__nam-element">/01</span>
                                     <div class="acordeon-conteiner__open-icon">
                                         <span class="ac-icV1"></span>
@@ -28,29 +23,29 @@
                                         <div class="information-about-company__info-claster">
                                             <div class="information-about-company__info-line information-about-company__info-line-V1">
                                                 <div class="information-about-company__info-box">
-                                                    <span>Название компании:</span>
+                                                    <span>@lang('Şirkət adı'):</span>
                                                     <p>Автосалон Mercedes-Benz Baku</p>
                                                 </div>
                                             </div>
                                             <div class="information-about-company__info-line information-about-company__info-line-V2">
                                                 <div class="information-about-company__info-box">
-                                                    <span>Город:</span>
+                                                    <span>@lang('Şəhər'):</span>
                                                     <p>Бейлаган</p>
                                                 </div>
                                                 <div class="information-about-company__info-box">
-                                                    <span>Номер салона:</span>
+                                                    <span>@lang('Servis nömrəsi'):</span>
                                                     <p>25 55</p>
                                                 </div>
                                             </div>
                                             <div class="information-about-company__info-line information-about-company__info-line-V1">
                                                 <div class="information-about-company__info-box">
-                                                    <span>Адрес салона:</span>
+                                                    <span>@lang('Servis ünvanı'):</span>
                                                     <p>Хатаинский р., пр. Бабека, (Автомобильный рынок)</p>
                                                 </div>
                                             </div>
                                             <div class="information-about-company__info-line information-about-company__info-line-V2">
                                                 <div class="information-about-company__info-box">
-                                                    <span>Номер телефона:</span>
+                                                    <span>@lang('Telefon nömrəsi'):</span>
                                                     <ul>
                                                         <li>
                                                             <a href="tel:+994123602040">+ 994 12 360 20 40</a>
@@ -64,7 +59,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="information-about-company__info-box">
-                                                    <span>Время работы:</span>
+                                                    <span>@lang('İş saatları'):</span>
                                                     <ul>
                                                         <li>
                                                             Пн-Пт: 08:00 — 20:00
@@ -80,11 +75,11 @@
                                             </div>
                                             <div class="information-about-company__info-line information-about-company__info-line-V2">
                                                 <div class="information-about-company__info-box">
-                                                    <span>Почта:</span>
+                                                    <span>@lang('E poçta'):</span>
                                                     <a href="mailto:info@avto.com" class="qurient-link">info@avto.com</a>
                                                 </div>
                                                 <div class="information-about-company__info-box">
-                                                    <span>Ссылка на сайт:</span>
+                                                    <span>@lang('Link'):</span>
                                                     <a href="bazasale.com" class="qurient-link">bazasale.com</a>
                                                 </div>
                                             </div>
@@ -94,7 +89,7 @@
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
                                 <div class="acordeon-conteiner__box-title acordeon-element__title">
-                                    <h4 class="cart-main-info__title">Фотографии</h4>
+                                    <h4 class="cart-main-info__title">@lang('Şəkillər')</h4>
                                     <span class="acordeon-conteiner__box__nam-element">/02</span>
                                     <div class="acordeon-conteiner__open-icon">
                                         <span class="ac-icV1"></span>
@@ -105,7 +100,7 @@
                                     <div class="acordeon-conteiner__claster-wrapper">
                                         <div class="acordeon-conteiner__photo-claster">
                                             <div class="acordeon-conteiner__main-photo-claster">
-                                                <h4 class="cart-main-info__title-ul">Главное фото:</h4>
+                                                <h4 class="cart-main-info__title-ul">@lang('Əsas şəkil'):</h4>
                                                 <div class="photo-conteiner-add__main-image-conteiner add-new-image-main">
                                                     <div class="file-image-add">
                                                         <div class="file-image-add__element">
@@ -115,7 +110,7 @@
                                                 </div>
                                             </div>
                                             <div class="acordeon-conteiner__other-photo-conteiner">
-                                                <h4 class="cart-main-info__title-ul">Другие фото:</h4>
+                                                <h4 class="cart-main-info__title-ul">@lang('Digər fotoşəkillər'):</h4>
                                                 <div class="photo-conteiner-add__other-photo-conteiner">
                                                     <div class="other-box hoto-conteiner-add__other-box">
                                                         <div class="other-box__image">
@@ -156,7 +151,7 @@
                                             </div>
                                         </div>
                                         <div class="acordeon-conteiner__baner-claster">
-                                            <h4 class="cart-main-info__title-ul">Ваши баннера размером 1280 х 400:</h4>
+                                            <h4 class="cart-main-info__title-ul">@lang('Banner ölçüləriniz') 1280 х 400:</h4>
                                             <div class="rent-car__baners">
                                                 <img src="{{ asset('assets/front/img/_src/baner-sto.jpg') }}" alt="">
                                             </div>
@@ -169,7 +164,7 @@
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
                                 <div class="acordeon-conteiner__box-title acordeon-element__title">
-                                    <h4 class="cart-main-info__title">Описание</h4>
+                                    <h4 class="cart-main-info__title">@lang('Təsvir')</h4>
                                     <span class="acordeon-conteiner__box__nam-element">/03</span>
                                     <div class="acordeon-conteiner__open-icon">
                                         <span class="ac-icV1"></span>
@@ -187,7 +182,7 @@
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
                                 <div class="acordeon-conteiner__box-title acordeon-element__title">
-                                    <h4 class="cart-main-info__title">Направление автомагазина</h4>
+                                    <h4 class="cart-main-info__title">@lang('Avtomobil mağazası istiqaməti')</h4>
                                     <span class="acordeon-conteiner__box__nam-element">/04</span>
                                     <div class="acordeon-conteiner__open-icon">
                                         <span class="ac-icV1"></span>
@@ -203,7 +198,7 @@
                                                         <div class="direction__ic-header">
                                                             <img src="{{ asset('assets/front/img/_src/stor-ic1.png') }}" alt="">
                                                         </div>
-                                                        <h5 class="direction__header-title">Автозапчасти</h5>
+                                                        <h5 class="direction__header-title">@lang('Avtomobil hissələri')</h5>
                                                     </div>
                                                     <div class="direction__body-text">
                                                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</p>
@@ -214,7 +209,7 @@
                                                         <div class="direction__ic-header">
                                                             <img src="{{ asset('assets/front/img/_src/stor-ic2.png') }}" alt="">
                                                         </div>
-                                                        <h5 class="direction__header-title">Шины</h5>
+                                                        <h5 class="direction__header-title">@lang('Təkərlər')</h5>
                                                     </div>
                                                     <div class="direction__body-text">
                                                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</p>
@@ -227,7 +222,7 @@
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
                                 <div class="acordeon-conteiner__box-title acordeon-element__title">
-                                    <h4 class="cart-main-info__title">Товары в магазине для следующих брендов</h4>
+                                    <h4 class="cart-main-info__title">@lang('Avto mağaza markaları')</h4>
                                     <span class="acordeon-conteiner__box__nam-element">/05</span>
                                     <div class="acordeon-conteiner__open-icon">
                                         <span class="ac-icV1"></span>
@@ -327,7 +322,7 @@
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
                                 <div class="acordeon-conteiner__box-title acordeon-element__title">
-                                    <h4 class="cart-main-info__title">Автомагазин на карте</h4>
+                                    <h4 class="cart-main-info__title">@lang('Xəritədə Avtomağaza')</h4>
                                     <span class="acordeon-conteiner__box__nam-element">/06</span>
                                     <div class="acordeon-conteiner__open-icon">
                                         <span class="ac-icV1"></span>
