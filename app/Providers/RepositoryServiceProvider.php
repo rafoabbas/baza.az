@@ -8,6 +8,9 @@ use App\Repositories\Contracts\Common\Auto\ColorRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\FuelTypeRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\GearRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface;
+use App\Repositories\Contracts\Common\Auto\ServiceGroupItemRepositoryInterface;
+use App\Repositories\Contracts\Common\Auto\ServiceGroupRepositoryInterface;
+use App\Repositories\Contracts\Common\Auto\StoreTypeRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface;
 use App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface;
 use App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface;
@@ -21,6 +24,9 @@ use App\Repositories\Eloquent\Common\Auto\ColorRepository;
 use App\Repositories\Eloquent\Common\Auto\FuelTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\GearRepository;
 use App\Repositories\Eloquent\Common\Auto\MarketRepository;
+use App\Repositories\Eloquent\Common\Auto\ServiceGroupItemRepository;
+use App\Repositories\Eloquent\Common\Auto\ServiceGroupRepository;
+use App\Repositories\Eloquent\Common\Auto\StoreTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\TransmissionRepository;
 use App\Repositories\Eloquent\Common\Car\CarBrandRepository;
 use App\Repositories\Eloquent\Common\Car\CarModelRepository;
@@ -33,18 +39,21 @@ use Illuminate\Support\ServiceProvider;
 final class RepositoryServiceProvider extends ServiceProvider
 {
     public array $bindings = [
-        GearRepositoryInterface::class => GearRepository::class,
-        ColorRepositoryInterface::class => ColorRepository::class,
-        ClassTypeRepositoryInterface::class => ClassTypeRepository::class,
-        MarketRepositoryInterface::class => MarketRepository::class,
-        FuelTypeRepositoryInterface::class => FuelTypeRepository::class,
         BodyTypeRepositoryInterface::class => BodyTypeRepository::class,
-        CarModelRepositoryInterface::class => CarModelRepository::class,
-        CarBrandRepositoryInterface::class => CarBrandRepository::class,
-        EloquentRepositoryInterface::class => EloquentRepository::class,
+        ClassTypeRepositoryInterface::class => ClassTypeRepository::class,
+        ColorRepositoryInterface::class => ColorRepository::class,
+        FuelTypeRepositoryInterface::class => FuelTypeRepository::class,
+        GearRepositoryInterface::class => GearRepository::class,
+        MarketRepositoryInterface::class => MarketRepository::class,
+        ServiceGroupItemRepositoryInterface::class => ServiceGroupItemRepository::class,
+        ServiceGroupRepositoryInterface::class => ServiceGroupRepository::class,
+        StoreTypeRepositoryInterface::class => StoreTypeRepository::class,
         TransmissionRepositoryInterface::class => TransmissionRepository::class,
-        RegionRepositoryInterface::class => RegionRepository::class,
+        CarBrandRepositoryInterface::class => CarBrandRepository::class,
+        CarModelRepositoryInterface::class => CarModelRepository::class,
         NumberRegionRepositoryInterface::class => NumberRegionRepository::class,
-        AdvertisementNumberRepositoryInterface::class => AdvertisementNumberRepository::class
+        RegionRepositoryInterface::class => RegionRepository::class,
+        AdvertisementNumberRepositoryInterface::class => AdvertisementNumberRepository::class,
+        EloquentRepositoryInterface::class => EloquentRepository::class,
     ];
 }
