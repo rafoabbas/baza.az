@@ -30,6 +30,7 @@
                         <li class="{{ menuActive('admin.fuel-type.*') }}"><a href="{{ route('admin.fuel-type.index') }}">@lang('Yanacaq Növləri')</a></li>
                         <li class="{{ menuActive('admin.class-type.*') }}"><a href="{{ route('admin.class-type.index') }}">@lang('Klasmanlar')</a></li>
                         <li class="{{ menuActive('admin.body-type.*') }}"><a href="{{ route('admin.body-type.index') }}">@lang('Ban Növləri')</a></li>
+                        <li class="{{ menuActive('admin.store-type.*') }}"><a href="{{ route('admin.store-type.index') }}">@lang('Mağaza Tipləri')</a></li>
                     </ul>
                 </li>
                 <li class="{{ menuActive('admin.region*', 'admin.number-region.*') }}">
