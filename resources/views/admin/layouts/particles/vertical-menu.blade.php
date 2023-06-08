@@ -31,6 +31,8 @@
                         <li class="{{ menuActive('admin.class-type.*') }}"><a href="{{ route('admin.class-type.index') }}">@lang('Klasmanlar')</a></li>
                         <li class="{{ menuActive('admin.body-type.*') }}"><a href="{{ route('admin.body-type.index') }}">@lang('Ban Növləri')</a></li>
                         <li class="{{ menuActive('admin.store-type.*') }}"><a href="{{ route('admin.store-type.index') }}">@lang('Mağaza Tipləri')</a></li>
+                        <li class="{{ menuActive('admin.service-group.*') }}"><a href="{{ route('admin.service-group.index') }}">@lang('Servis grupları')</a></li>
+                        <li class="{{ menuActive('admin.specification.*') }}"><a href="{{ route('admin.specification.index') }}">@lang('Özəlliklər')</a></li>
                     </ul>
                 </li>
                 <li class="{{ menuActive('admin.region*', 'admin.number-region.*') }}">

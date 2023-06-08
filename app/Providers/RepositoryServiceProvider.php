@@ -10,6 +10,7 @@ use App\Repositories\Contracts\Common\Auto\GearRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\MarketRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\ServiceGroupItemRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\ServiceGroupRepositoryInterface;
+use App\Repositories\Contracts\Common\Auto\SpecificationRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\StoreTypeRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\TransmissionRepositoryInterface;
 use App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface;
@@ -26,6 +27,7 @@ use App\Repositories\Eloquent\Common\Auto\GearRepository;
 use App\Repositories\Eloquent\Common\Auto\MarketRepository;
 use App\Repositories\Eloquent\Common\Auto\ServiceGroupItemRepository;
 use App\Repositories\Eloquent\Common\Auto\ServiceGroupRepository;
+use App\Repositories\Eloquent\Common\Auto\SpecificationRepository;
 use App\Repositories\Eloquent\Common\Auto\StoreTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\TransmissionRepository;
 use App\Repositories\Eloquent\Common\Car\CarBrandRepository;
@@ -47,6 +49,7 @@ final class RepositoryServiceProvider extends ServiceProvider
         MarketRepositoryInterface::class => MarketRepository::class,
         ServiceGroupItemRepositoryInterface::class => ServiceGroupItemRepository::class,
         ServiceGroupRepositoryInterface::class => ServiceGroupRepository::class,
+        SpecificationRepositoryInterface::class => SpecificationRepository::class,
         StoreTypeRepositoryInterface::class => StoreTypeRepository::class,
         TransmissionRepositoryInterface::class => TransmissionRepository::class,
         CarBrandRepositoryInterface::class => CarBrandRepository::class,

@@ -16,6 +16,7 @@ class ServiceGroupItem extends Model
     use NameAttribute;
 
     protected $fillable = [
+        'service_group_id',
         'name_az',
         'name_ru',
         'order',
