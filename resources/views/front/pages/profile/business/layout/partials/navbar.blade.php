@@ -2,37 +2,37 @@
     <nav class="user-account-nav">
         <ul class="user-account-nav__list">
             <li>
-                <a href="{{ route('profile.business.index') }}">Личная информация</a>
+                <a href="{{ route('profile.business.index') }}">@lang('Şəxsi məlumat')</a>
             </li>
             <li class="user-account-nav__activ">
-                <a href="{{ route('profile.business.autosalon.index') }}">Мой автосалон</a>
+                <a href="{{ route('profile.business.salon.index') }}">@lang('Mənim avtosalonum')</a>
                 <ul class="user-account-nav__sub-meny">
-                    <li><a href="{{ route('profile.business.autosalon.edit') }}">Редактировать информацию</a></li>
-                    <li><a href="{{ route('profile.business.autosalon.autos') }}">Мои авто</a></li>
-                    <li><a href="{{ route('profile.business.autosalon.add-auto') }}">Добавить авто</a></li>
+                    <li><a href="{{ route('profile.business.salon.edit', '1') }}">@lang('Məlumatı Redaktə et')</a></li>
+                    <li><a href="{{ route('profile.business.salon.autos') }}">@lang('Mənim avtomobillərim')</a></li>
+                    <li><a href="{{ route('profile.business.salon.add-auto') }}">@lang('Avtomobil əlavə edin')</a></li>
                 </ul>
             </li>
             <li class="user-account-nav__activ">
-                <a href="{{ route('profile.business.autoservice.index') }}">Мое СТО</a>
+                <a href="{{ route('profile.business.service.index') }}">@lang('Mənim servisim')</a>
                 <ul class="user-account-nav__sub-meny">
-                    <li><a href="{{ route('profile.business.autoservice.edit') }}">Редактировать информацию</a></li>
+                    <li><a href="{{ route('profile.business.service.edit', '1') }}">@lang('Məlumatı Redaktə et')</a></li>
                 </ul>
             </li>
             <li class="user-account-nav__activ">
-                <a href="{{ route('profile.business.autostore.index') }}">Мой автомагазин</a>
+                <a href="{{ route('profile.business.store.index') }}">@lang('Mənim avtomağazam')</a>
                 <ul class="user-account-nav__sub-meny">
-                    <li><a href="{{ route('profile.business.autostore.edit') }}">Редактировать информацию</a></li>
+                    <li><a href="{{ route('profile.business.store.edit', '1') }}">@lang('Məlumatı Redaktə et')</a></li>
                 </ul>
             </li>
             <li class="user-account-nav__activ">
-                <a href="{{ route('profile.business.rentacar.index') }}">Аренда авто</a>
+                <a href="{{ route('profile.business.rentacar.index') }}">@lang('Arenda avtomobil')</a>
                 <ul class="user-account-nav__sub-meny">
-                    <li><a href="{{ route('profile.business.rentacar.edit') }}">Редактировать информацию</a></li>
-                    <li><a href="{{ route('profile.business.rentacar.add-auto') }}">Добавить авто</a></li>
+                    <li><a href="{{ route('profile.business.rentacar.edit') }}">@lang('Məlumatı Redaktə et')</a></li>
+                    <li><a href="{{ route('profile.business.rentacar.add-auto') }}">@lang('Avtomobil əlavə edin')</a></li>
                 </ul>
             </li>
             <li>
-                <a href="">Выход</a>
+                <a href="">@lang('Hesabdan çıx')</a>
             </li>
         </ul>
     </nav>

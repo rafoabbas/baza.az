@@ -31,6 +31,15 @@ class Breadcrumb
         ]);
     }
 
+    public function whenMerge($condition, callable $callback): static
+    {
+        if ($condition) {
+            $callback($this);
+        }
+
+        return $this;
+    }
+
     public function setItem(array $item): static
     {
         $this->items[] = $item;

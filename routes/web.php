@@ -8,6 +8,9 @@ use App\Http\Controllers\User\Auth\Business\NewPasswordController;
 use App\Http\Controllers\User\Auth\Business\PasswordResetLinkController;
 use App\Http\Controllers\User\Auth\Business\RegisteredUserController;
 use App\Http\Controllers\User\Auth\Personal\PersonalAuthenticatedController;
+use App\Http\Controllers\User\Auto\SalonController;
+use App\Http\Controllers\User\Auto\ServiceController;
+use App\Http\Controllers\User\Auto\StoreController;
 use App\Http\Controllers\User\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,7 +35,6 @@ Route::group([
     Route::post('{otp:uuid}/otp', [AdvertisementController::class, 'checkOtp'])->name('check.otp');
     Route::get('{otp:uuid}/auto', [AdvertisementController::class, 'createAuto'])->name('create.auto');
 });
-
 
 Route::group([
     'as' => 'auth.',
@@ -75,7 +77,6 @@ Route::group([
         Route::post('reset-password', [NewPasswordController::class, 'store'])
             ->name('password.store');
     });
-
 });
 
 
@@ -95,6 +96,39 @@ Route::resource('advertisement.number', AdvertisementNumberController::class)
 Route::resource('advertisement.auto', AdvertisementAutoController::class)
     ->parameter('advertisement', 'otp:uuid')
     ->only(['create', 'store', 'edit', 'update', 'destroy']);
+
+Route::controller(ServiceController::class)
+    ->as('profile.business.service.')
+    ->prefix('profile/service')
+    ->group(function () {
+        Route::get('', 'index')->name('index');
+        Route::get('edit/{service}', 'edit')->name('edit');
+        Route::post('update/{service}', 'update')->name('update');
+        Route::delete('destroy/{service}', 'destroy')->name('destroy');
+    });
+
+Route::controller(StoreController::class)
+    ->as('profile.business.store.')
+    ->prefix('profile/store')
+    ->group(function () {
+        Route::get('', 'index')->name('index');
+        Route::get('edit/{store}', 'edit')->name('edit');
+        Route::post('update/{store}', 'update')->name('update');
+        Route::delete('destroy/{store}', 'destroy')->name('destroy');
+    });
+
+Route::controller(SalonController::class)
+    ->as('profile.business.salon.')
+    ->prefix('profile/salon')
+    ->group(function () {
+        Route::get('', 'index')->name('index');
+        Route::get('edit/{salon}', 'edit')->name('edit');
+        Route::post('update/{salon}', 'update')->name('update');
+        Route::delete('destroy/{salon}', 'destroy')->name('destroy');
+        Route::get('autos', 'autos')->name('autos');
+        Route::post('add-auto', 'addAuto')->name('add-auto');
+    });
+
 
 
 Route::get('', function () {
@@ -148,36 +182,21 @@ Route::group(['prefix' => 'profile-business', 'as' => 'profile.business.'], func
         return view('front.pages.profile.business.index');
     })->name('index');
 
-    Route::group(['prefix' => 'autosalon', 'as' => 'autosalon.'], function () {
-        Route::get('/', function () {
-            return view('front.pages.profile.business.pages.autosalon.index');
-        })->name('index');
-        Route::get('/redakte', function () {
-            return view('front.pages.profile.business.pages.autosalon.edit');
-        })->name('edit');
-        Route::get('/autos', function () {
-            return view('front.pages.profile.business.pages.autosalon.autos');
-        })->name('autos');
-        Route::get('/add-auto', function () {
-            return view('front.pages.profile.business.pages.autosalon.add-auto');
-        })->name('add-auto');
-    });
-    Route::group(['prefix' => 'autoservice', 'as' => 'autoservice.'], function () {
-        Route::get('/', function () {
-            return view('front.pages.profile.business.pages.autoservice.index');
-        })->name('index');
-        Route::get('/redakte', function () {
-            return view('front.pages.profile.business.pages.autoservice.edit');
-        })->name('edit');
-    });
-    Route::group(['prefix' => 'autostore', 'as' => 'autostore.'], function () {
-        Route::get('/', function () {
-            return view('front.pages.profile.business.pages.autostore.index');
-        })->name('index');
-        Route::get('/redakte', function () {
-            return view('front.pages.profile.business.pages.autostore.edit');
-        })->name('edit');
-    });
+//    Route::group(['prefix' => 'autosalon', 'as' => 'autosalon.'], function () {
+//        Route::get('/', function () {
+//            return view('front.pages.profile.business.pages.autosalon.index');
+//        })->name('index');
+//        Route::get('/redakte', function () {
+//            return view('front.pages.profile.business.pages.autosalon.edit');
+//        })->name('edit');
+//        Route::get('/autos', function () {
+//            return view('front.pages.profile.business.pages.autosalon.autos');
+//        })->name('autos');
+//        Route::get('/add-auto', function () {
+//            return view('front.pages.profile.business.pages.autosalon.add-auto');
+//        })->name('add-auto');
+//    });
+
     Route::group(['prefix' => 'rentacar', 'as' => 'rentacar.'], function () {
         Route::get('/', function () {
             return view('front.pages.profile.business.pages.rentacar.index');
