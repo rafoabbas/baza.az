@@ -7,6 +7,9 @@ use App\Http\Controllers\Admin\Common\Auto\ColorController;
 use App\Http\Controllers\Admin\Common\Auto\FuelTypeController;
 use App\Http\Controllers\Admin\Common\Auto\GearController;
 use App\Http\Controllers\Admin\Common\Auto\MarketController;
+use App\Http\Controllers\Admin\Common\Auto\ServiceGroupController;
+use App\Http\Controllers\Admin\Common\Auto\ServiceGroupItemController;
+use App\Http\Controllers\Admin\Common\Auto\SpecificationController;
 use App\Http\Controllers\Admin\Common\Auto\StoreTypeController;
 use App\Http\Controllers\Admin\Common\Auto\TransmissionController;
 use App\Http\Controllers\Admin\Common\Car\CarBrandController;
@@ -48,8 +51,11 @@ Route::group([
         Route::resource('fuel-type', FuelTypeController::class);
         Route::resource('body-type', BodyTypeController::class);
         Route::resource('store-type', StoreTypeController::class);
+        Route::resource('specification', SpecificationController::class);
         Route::resource('car-brand', CarBrandController::class);
         Route::resource('car-brand.model', CarModelController::class);
+        Route::resource('service-group', ServiceGroupController::class);
+        Route::resource('service-group.item', ServiceGroupItemController::class);
 
         // Location's routes
         Route::resource('region', RegionController::class);

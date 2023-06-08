@@ -1,6 +1,12 @@
 @extends('admin.layouts.app')
 
-@push('title', __('Rənglər'))
+@push('title', $title)
+
+@push('breadcrumb')
+    <li class="breadcrumb-item">
+        <a href="{{ route('admin.service-group.item.index', $serviceGroup->getAttribute('id')) }}">{{ $serviceGroup->getAttribute('name') }}</a>
+    </li>
+@endpush
 
 @push('css')
 
@@ -10,33 +16,28 @@
 
 @endpush
 
-@push('breadcrumb')
-    <li class="breadcrumb-item active" aria-current="page">@lang('Avto')</li>
-@endpush
-
 @push('page-right')
     <div class="d-flex justify-content-end mb-2">
-        <a href="{{ route('admin.color.create') }}" class="btn btn-icon btn-success header-button-top float-right me-2">
+        <a href="{{ route('admin.service-group.item.create', $serviceGroup->getAttribute('id')) }}" class="btn btn-icon btn-success header-button-top float-right me-2">
             <span class="btn-inner--icon me-2">
                 <i class="fas fa-plus"></i>
             </span>
-            <span class="btn-inner--text">{{ __('Rəng əlavə et') }}</span>
+            <span class="btn-inner--text">{{ __('İtem əlavə et') }}</span>
         </a>
     </div>
 @endpush
 @section('content')
     <div class="card">
         <div class="card-header bg-white border-bottom">
-            <h5 class="card-title mb-0">@lang('Rənglər')</h5>
+            <h5 class="card-title mb-0">{{ $title }}</h5>
         </div>
         <div class="table-responsive">
             <table class="table table-hover mb-0">
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>@sortablelink('name', 'Rəng')</th>
+                    <th>@sortablelink('name', 'Item')</th>
                     <th>@sortablelink('status','Status')</th>
-                    <th>@sortablelink('color','Color')</th>
                     <th>@sortablelink('order','Order')</th>
                     <th colspan="2">@sortablelink('status','Status')</th>
                 </tr>
@@ -50,17 +51,14 @@
                             @include('admin.common.table.status', ['status' => $item->getAttribute('status')])
                         </td>
                         <td>
-                            <span class="badge text-dark" style="background: {{ $item->getAttribute('color') }}">{{ $item->getAttribute('color') }}</span>
-                        </td>
-                        <td>
                             <span class="badge bg-secondary text-dark">{{ $item->getAttribute('order') }}</span>
                         </td>
                         <td>
                             {{ $item->getAttribute('created_at') }}
                         </td>
                         <td class="d-flex justify-content-center align-items-center">
-                            @include('admin.common.table.btn-link',['route' => route('admin.color.edit', $item->getAttribute('id'))])
-                            @include('admin.common.table.btn-alert', [ 'route' => route('admin.color.destroy', $item->getAttribute('id')) ])
+                            @include('admin.common.table.btn-link',['route' => route('admin.service-group.item.edit', [$item->getAttribute('service_group_id'), $item->getAttribute('id')])])
+                            @include('admin.common.table.btn-alert', [ 'route' => route('admin.service-group.item.destroy',  [$item->getAttribute('service_group_id'), $item->getAttribute('id')]) ])
                         </td>
                     </tr>
                 @endforeach
