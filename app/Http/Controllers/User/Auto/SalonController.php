@@ -26,6 +26,14 @@ class SalonController extends Controller
             'pageTitleHtml' => $this->service->pageTitleHtml()
         ]);
     }
+    public function autos(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('front.pages.profile.business.pages.salon.autos', [
+            'pageTitleHtml' => $this->service->pageTitleHtml([
+                'name' => 'Avtomobillər'
+            ])
+        ]);
+    }
     public function edit(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('front.pages.profile.business.pages.salon.edit', [
@@ -43,5 +51,14 @@ class SalonController extends Controller
     public function destroy(Salon $salon): void
     {
         //
+    }
+
+    public function addAutoView(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('front.pages.profile.business.pages.salon.add-car', [
+            'pageTitleHtml' => $this->service->pageTitleHtml([
+                'name' => 'Avtomobil əlavə et'
+            ])
+        ]);
     }
 }
