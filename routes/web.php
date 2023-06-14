@@ -126,6 +126,7 @@ Route::controller(SalonController::class)
         Route::post('update/{salon}', 'update')->name('update');
         Route::delete('destroy/{salon}', 'destroy')->name('destroy');
         Route::get('autos', 'autos')->name('autos');
+        Route::get('add-auto', 'addAutoView')->name('add-auto');
         Route::post('add-auto', 'addAuto')->name('add-auto');
     });
 
