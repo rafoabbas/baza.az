@@ -2,6 +2,8 @@
 
 namespace App\Models\User\Auto;
 
+use App\Casts\PhonesCast;
+use App\Helpers\Classes\Helper;
 use App\Models\Common\Auto\ServiceGroupItem;
 use App\Models\Common\Auto\Specification;
 use App\Models\Common\Car\CarBrand;
@@ -14,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Kyslik\ColumnSortable\Sortable;
+use Illuminate\Database\Eloquent\Casts\Attribute as AttributeCast;
 
 class Service extends Model
 {
@@ -47,8 +50,9 @@ class Service extends Model
         'images' => 'json',
         'banners' => 'json',
         'addresses' => 'json',
-        'phones' => 'json'
+        'phones' => PhonesCast::class
     ];
+
 
     public function user(): BelongsTo
     {

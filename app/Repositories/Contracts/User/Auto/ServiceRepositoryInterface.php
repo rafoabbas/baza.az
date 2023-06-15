@@ -6,4 +6,5 @@ use App\Repositories\Contracts\EloquentRepositoryInterface;
 
 interface ServiceRepositoryInterface extends EloquentRepositoryInterface
 {
+    public function firstByUserId(int $userId);
 }
