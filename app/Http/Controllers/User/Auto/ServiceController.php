@@ -9,6 +9,7 @@ use App\Models\User\Auto\Service;
 use App\Repositories\Contracts\Common\Auto\ServiceGroupRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\SpecificationRepositoryInterface;
 use App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface;
+use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
 use App\Repositories\Contracts\User\Auto\ServiceRepositoryInterface;
 use App\Repositories\Eloquent\Common\Auto\ServiceGroupRepository;
 use App\Repositories\Eloquent\Common\Car\CarBrandRepository;
@@ -26,7 +27,8 @@ class ServiceController extends Controller
         public ServiceRepositoryInterface $serviceRepository,
         public ServiceGroupRepositoryInterface $serviceGroupRepository,
         public CarBrandRepositoryInterface $carBrandRepository,
-        public SpecificationRepositoryInterface $specificationRepository
+        public SpecificationRepositoryInterface $specificationRepository,
+        public RegionRepositoryInterface $regionRepository
     ) {
     }
     public function show(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
@@ -51,6 +53,11 @@ class ServiceController extends Controller
                 ]
             ),
             'specifications' => $this->specificationRepository->all(
+                conditions: [
+                    ['status', '=', Status::published()]
+                ]
+            ),
+            'regions' => $this->regionRepository->all(
                 conditions: [
                     ['status', '=', Status::published()]
                 ]
