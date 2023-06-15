@@ -31,7 +31,7 @@ class ServiceController extends Controller
         public RegionRepositoryInterface $regionRepository
     ) {
     }
-    public function show(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    public function show(): View
     {
         return view('front.pages.profile.business.pages.service.index', [
             'service' => $this->serviceRepository->first(
@@ -43,9 +43,8 @@ class ServiceController extends Controller
             'pageTitleHtml' => $this->service->pageTitleHtml()
         ]);
     }
-    public function edit(Request $request): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    public function edit(Request $request): View
     {
-
         return view('front.pages.profile.business.pages.service.edit', [
             'service' => $this->serviceRepository->first(
                 conditions: [
