@@ -18,16 +18,6 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-
-//        $data = AdvertisementNumber::factory()->make();
-
-//        dd($data);
-//        $service = app(AdvertisementNumberService::class);
-//
-//        dd([
-//            'a' => 'aaa',
-//            ... $service->splitSeries('AC')
-//        ]);
         $this->call([
             AdminTableSeeder::class,
             UserTableSeeder::class,
