@@ -2,6 +2,8 @@
 
 namespace App\Repositories\Eloquent\Common\Auto;
 
+use App\Enums\Common\Status;
+use App\Helpers\Classes\Helper;
 use App\Models\Common\Auto\ServiceGroup;
 use App\Repositories\Contracts\Common\Auto\ServiceGroupRepositoryInterface;
 use App\Repositories\Eloquent\EloquentRepository;
@@ -16,6 +18,14 @@ class ServiceGroupRepository extends EloquentRepository implements ServiceGroupR
 
     public function groups(): Collection|array
     {
-        return $this->model->with('items')->get();
+        return $this->model->with(
+            [
+                'items' => function ($query) {
+                    $query
+                        ->select('id', 'service_group_id', Helper::column('name'))
+                        ->where('status', '=', Status::published());
+                }
+            ]
+        )->get();
     }
 }

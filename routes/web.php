@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Common\UploadController;
 use App\Http\Controllers\User\Advertisement\AdvertisementAutoController;
 use App\Http\Controllers\User\Advertisement\AdvertisementController;
 use App\Http\Controllers\User\Advertisement\AdvertisementNumberController;
@@ -24,6 +25,17 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+
+#upload files
+Route::controller(UploadController::class)
+    ->as('common.upload.')
+    ->prefix('common/upload')
+    ->group(function () {
+        Route::post('image', 'image')->name('image');
+        Route::post('images', 'getImage')->name('get.images');
+    });
 
 Route::group([
     'as' => 'advertisement.',
@@ -87,6 +99,8 @@ Route::group([
 ], function () {
     Route::get('', [ProfileController::class, 'index'])->name('index');
     Route::post('logout', [ProfileController::class, 'logout'])->name('logout');
+
+    Route::singleton('service', ServiceController::class);
 });
 
 Route::resource('advertisement.number', AdvertisementNumberController::class)
@@ -96,16 +110,6 @@ Route::resource('advertisement.number', AdvertisementNumberController::class)
 Route::resource('advertisement.auto', AdvertisementAutoController::class)
     ->parameter('advertisement', 'otp:uuid')
     ->only(['create', 'store', 'edit', 'update', 'destroy']);
-
-Route::controller(ServiceController::class)
-    ->as('profile.business.service.')
-    ->prefix('profile/service')
-    ->group(function () {
-        Route::get('', 'index')->name('index');
-        Route::get('edit/{service}', 'edit')->name('edit');
-        Route::post('update/{service}', 'update')->name('update');
-        Route::delete('destroy/{service}', 'destroy')->name('destroy');
-    });
 
 Route::controller(StoreController::class)
     ->as('profile.business.store.')

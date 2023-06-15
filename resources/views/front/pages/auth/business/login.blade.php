@@ -18,11 +18,11 @@
                         <div class="advantages-popap__input-conteiner input-form-conteiner">
                             <h5 class="input-form-conteiner__title">Ваш номер:</h5>
                             <div class="input-form-conteiner__claster ">
-                                <input type="text" name="email"
-                                       class="input-form-conteiner__input @error('email') is-invalid @enderror"
-                                       value="{{ old('email') }}" placeholder="">
+                                <input type="text" name="phone"
+                                       class="input-form-conteiner__input @error('phone') is-invalid @enderror"
+                                       value="{{ old('phone') }}" placeholder="">
                             </div>
-                            @error('email')
+                            @error('phone')
                             <span class="validate-text">
                                     <smal class="text-danger">{{ $message }}</smal>
                                 </span>

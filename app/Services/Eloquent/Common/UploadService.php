@@ -4,12 +4,18 @@ namespace App\Services\Eloquent\Common;
 
 use App\Models\Common\Upload;
 use App\Traits\Request\MimeTypes;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
 class UploadService
 {
     use MimeTypes;
+
+    public function getImages($images): Collection|array
+    {
+        return Upload::query()->whereIn('id', $images)->get();
+    }
 
     public function image(UploadedFile $file): Upload
     {

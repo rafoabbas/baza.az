@@ -213,6 +213,7 @@ return [
         App\Providers\ViewServiceProvider::class,
         App\Providers\RepositoryServiceProvider::class,
         App\Providers\SingletonServiceProvider::class,
+        App\Providers\FakerServiceProvider::class,
     ],
 
     /*

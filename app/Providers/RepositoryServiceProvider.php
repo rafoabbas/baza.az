@@ -19,6 +19,7 @@ use App\Repositories\Contracts\Common\Location\NumberRegionRepositoryInterface;
 use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
 use App\Repositories\Contracts\EloquentRepositoryInterface;
 use App\Repositories\Contracts\User\Advertisement\AdvertisementNumberRepositoryInterface;
+use App\Repositories\Contracts\User\Auto\ServiceRepositoryInterface;
 use App\Repositories\Eloquent\Common\Auto\BodyTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\ClassTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\ColorRepository;
@@ -36,11 +37,13 @@ use App\Repositories\Eloquent\Common\Location\NumberRegionRepository;
 use App\Repositories\Eloquent\Common\Location\RegionRepository;
 use App\Repositories\Eloquent\EloquentRepository;
 use App\Repositories\Eloquent\User\Advertisement\AdvertisementNumberRepository;
+use App\Repositories\Eloquent\User\Auto\ServiceRepository;
 use Illuminate\Support\ServiceProvider;
 
 final class RepositoryServiceProvider extends ServiceProvider
 {
     public array $bindings = [
+        ServiceRepositoryInterface::class => ServiceRepository::class,
         BodyTypeRepositoryInterface::class => BodyTypeRepository::class,
         ClassTypeRepositoryInterface::class => ClassTypeRepository::class,
         ColorRepositoryInterface::class => ColorRepository::class,
