@@ -42,7 +42,12 @@ class Service extends Model
         'published_at',
     ];
 
-    protected $appends = [
+    protected $casts = [
+        'working_hours' => 'json',
+        'images' => 'json',
+        'banners' => 'json',
+        'addresses' => 'json',
+        'phones' => 'json'
     ];
 
     public function user(): BelongsTo
@@ -57,16 +62,16 @@ class Service extends Model
 
     public function items(): BelongsToMany
     {
-        return $this->belongsToMany(ServiceGroupItem::class);
+        return $this->belongsToMany(ServiceGroupItem::class, 'service_service_group_item');
     }
 
     public function specifications(): BelongsToMany
     {
-        return $this->belongsToMany(Specification::class);
+        return $this->belongsToMany(Specification::class, 'service_specification');
     }
 
     public function brands(): BelongsToMany
     {
-        return $this->belongsToMany(CarBrand::class);
+        return $this->belongsToMany(CarBrand::class, 'service_car_brand', 'service_id', 'car_brand_id');
     }
 }

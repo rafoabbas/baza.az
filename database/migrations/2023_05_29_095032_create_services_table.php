@@ -38,7 +38,7 @@ return new class extends Migration
 
         Schema::create('service_car_brand', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('service_id')->nullable()->constrained('stores')->nullOnDelete();
+            $table->foreignId('service_id')->nullable()->constrained('services')->nullOnDelete();
             $table->foreignId('car_brand_id')->nullable()->constrained('car_brands')->nullOnDelete();
         });
 

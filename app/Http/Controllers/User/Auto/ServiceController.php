@@ -32,6 +32,12 @@ class ServiceController extends Controller
     public function show(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('front.pages.profile.business.pages.service.index', [
+            'service' => $this->serviceRepository->first(
+                conditions: [
+                    ['user_id', '=', Auth::id()]
+                ],
+                relations: ['items', 'brands', 'specifications']
+            ),
             'pageTitleHtml' => $this->service->pageTitleHtml()
         ]);
     }
@@ -42,7 +48,8 @@ class ServiceController extends Controller
             'service' => $this->serviceRepository->first(
                 conditions: [
                     ['user_id', '=', Auth::id()]
-                ]
+                ],
+                relations: ['items', 'brands', 'specifications']
             ),
             'groups' => $this->serviceGroupRepository->groups(),
             'brands' => $this->carBrandRepository->all(
