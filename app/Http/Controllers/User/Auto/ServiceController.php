@@ -3,20 +3,15 @@
 namespace App\Http\Controllers\User\Auto;
 
 use App\Enums\Common\Status;
-use App\Helpers\Classes\Helper;
 use App\Http\Controllers\Controller;
-use App\Models\User\Auto\Service;
+use App\Http\Requests\User\Auto\ServiceRequest;
 use App\Repositories\Contracts\Common\Auto\ServiceGroupRepositoryInterface;
 use App\Repositories\Contracts\Common\Auto\SpecificationRepositoryInterface;
 use App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface;
 use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
 use App\Repositories\Contracts\User\Auto\ServiceRepositoryInterface;
-use App\Repositories\Eloquent\Common\Auto\ServiceGroupRepository;
-use App\Repositories\Eloquent\Common\Car\CarBrandRepository;
 use App\Services\Front\User\Auto\ServiceService;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,6 +26,7 @@ class ServiceController extends Controller
         public RegionRepositoryInterface $regionRepository
     ) {
     }
+
     public function show(): View
     {
         return view('front.pages.profile.business.pages.service.index', [
@@ -43,6 +39,7 @@ class ServiceController extends Controller
             'pageTitleHtml' => $this->service->pageTitleHtml()
         ]);
     }
+
     public function edit(Request $request): View
     {
         return view('front.pages.profile.business.pages.service.edit', [
@@ -73,8 +70,29 @@ class ServiceController extends Controller
             ])
         ]);
     }
-    public function update(Request $request, Service $service): void
+
+    public function update(ServiceRequest $request): void
     {
-        //
+        $this->service->setServiceByUserId();
+
+        $service = $this->service->getService();
+
+        $this->service->update(
+            $this->service->data($request->validated())
+        );
+
+        $this->service->syncBrands($request->input('brands'));
+        $this->service->syncSpecifications($request->input('specifications'));
+        $this->service->syncItems($request->input('items'));
+
+        $service->updateUploadWherePath($request->input('image'), $service->getAttribute('image'));
+
+        foreach ($request->input('images') as $image) {
+            $service->updateUploadWherePath($image);
+        }
+
+        foreach ($request->input('banners') as $banner) {
+            $service->updateUploadWherePath($banner);
+        }
     }
 }
