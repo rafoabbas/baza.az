@@ -7,10 +7,10 @@ use App\Models\Guard\User;
 
 class ServiceService
 {
-//    public function __construct(ServiceRegp $repository)
-//    {
-//        parent::__construct($repository);
-//    }
+    public function __construct(ServiceRegp $repository)
+    {
+        parent::__construct($repository);
+    }
 
     public static function postRules(): array
     {
