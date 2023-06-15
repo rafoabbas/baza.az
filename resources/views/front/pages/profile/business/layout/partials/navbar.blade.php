@@ -13,9 +13,9 @@
                 </ul>
             </li>
             <li class="user-account-nav__activ">
-                <a href="{{ route('profile.business.service.index') }}">@lang('Mənim servisim')</a>
+                <a href="{{ route('profile.service.show') }}">@lang('Mənim servisim')</a>
                 <ul class="user-account-nav__sub-meny">
-                    <li><a href="{{ route('profile.business.service.edit', '1') }}">@lang('Məlumatı Redaktə et')</a></li>
+                    <li><a href="{{ route('profile.service.edit') }}">@lang('Məlumatı Redaktə et')</a></li>
                 </ul>
             </li>
             <li class="user-account-nav__activ">

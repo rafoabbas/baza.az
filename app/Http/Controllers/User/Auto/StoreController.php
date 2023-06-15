@@ -20,13 +20,16 @@ class StoreController extends Controller
         public CarBrandRepository $carBrandRepository
     ) {
     }
-    public function index(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+
+
+    public function index(): View
     {
         return view('front.pages.profile.business.pages.store.index', [
             'pageTitleHtml' => $this->service->pageTitleHtml()
         ]);
     }
-    public function edit(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+
+    public function edit(): View
     {
         return view('front.pages.profile.business.pages.store.edit', [
             'storeTypes' => $this->storeTypeRepository->all(),
@@ -36,6 +39,7 @@ class StoreController extends Controller
             ])
         ]);
     }
+
     public function update(Request $request, Store $store): void
     {
         //

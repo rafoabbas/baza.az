@@ -28,8 +28,9 @@ class ProfileController extends Controller
 
     public function business(): View
     {
-        return view('front.pages.profile.personal');
+        return view('front.pages.profile.business.index');
     }
+
     public function personal(): View
     {
         return view('front.pages.profile.personal.index', [
