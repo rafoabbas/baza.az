@@ -26,82 +26,63 @@
                                                 <div class="user-main-info__inp-info input-form-conteiner">
                                                     <h5 class="input-form-conteiner__title">@lang('"Şirkət adı"'):</h5>
                                                     <div class="input-form-conteiner__claster">
-                                                        <input type="text" class="input-form-conteiner__input" placeholder="Автосалон Mercedes-Benz Baku" value="Автосалон Mercedes-Benz Baku">
+                                                        <input type="text" class="input-form-conteiner__input" name="name" placeholder="@lang('"Şirkət adı"')" value="{{ $service->getAttribute('name') }}">
                                                     </div>
                                                 </div>
                                                 <div class="user-main-info__inp-info input-form-conteiner">
                                                     <h5 class="input-form-conteiner__title">@lang('Servis ünvanı'):</h5>
                                                     <div class="input-form-conteiner__claster">
-                                                        <input type="text" class="input-form-conteiner__input" placeholder="Адрес салона" value="Хатаинский р., пр. Бабека, (Автомобильный рынок)">
+                                                        <input type="text" class="input-form-conteiner__input" name="address" placeholder="@lang('Servis ünvanı')" value="{{ $service->getAttribute('address') }}">
                                                     </div>
                                                 </div>
                                                 <div class="main-info-redact__flex-line-V1">
                                                     <div class="user-main-info__inp-info input-form-conteiner">
                                                         <h5 class="input-form-conteiner__title">@lang('E poçta'):</h5>
                                                         <div class="input-form-conteiner__claster">
-                                                            <input type="text" class="input-form-conteiner__input" placeholder="info@avto.com" value="info@avto.com">
+                                                            <input type="text" class="input-form-conteiner__input" name="email" placeholder="info@example.com" value="{{ $service->getAttribute('email') }}">
                                                         </div>
                                                     </div>
                                                     <div class="user-main-info__inp-info input-form-conteiner">
                                                         <h5 class="input-form-conteiner__title">@lang('Link'):</h5>
                                                         <div class="input-form-conteiner__claster">
-                                                            <input type="text" class="input-form-conteiner__input" placeholder="avto.com" value="avto.com">
+                                                            <input type="text" class="input-form-conteiner__input" name="web_site" placeholder="avto.com" value="{{ $service->getAttribute('web_site') }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="main-info-redact__flex-line-V2">
                                                     <h5 class="main-info-redact__title-flex-line">@lang('İş saatları'):</h5>
                                                     <div class="input-form-conteiner">
-                                                        <h5 class="input-form-conteiner__title">Пн. — Пт.:</h5>
+                                                        <h5 class="input-form-conteiner__title">@lang('Həftəiçi'):</h5>
                                                         <div class="input-form-conteiner__claster">
-                                                            <input type="text" class="input-form-conteiner__input" placeholder="08:00 — 20:00" value="08:00 — 20:00">
+                                                            <input type="text" class="input-form-conteiner__input" name="working_hours[weekdays]" placeholder="08:00 — 20:00" value="{{ $service->getAttribute('working_hours.weekdays') }}">
                                                         </div>
                                                     </div>
                                                     <div class="input-form-conteiner">
-                                                        <h5 class="input-form-conteiner__title">Сб.:</h5>
+                                                        <h5 class="input-form-conteiner__title">@lang('Şənbə'):</h5>
                                                         <div class="input-form-conteiner__claster">
-                                                            <input type="text" class="input-form-conteiner__input" placeholder="08:00 — 20:00" value="08:00 — 20:00">
+                                                            <input type="text" class="input-form-conteiner__input" name="working_hours[saturday]" placeholder="08:00 — 20:00" value="{{ $service->getAttribute('working_hours.saturday') }}">
                                                         </div>
                                                     </div>
                                                     <div class="input-form-conteiner">
-                                                        <h5 class="input-form-conteiner__title">Вс.:</h5>
+                                                        <h5 class="input-form-conteiner__title">@lang('Bazar'):</h5>
                                                         <div class="input-form-conteiner__claster">
-                                                            <input type="text" class="input-form-conteiner__input" placeholder="08:00 — 20:00" value="08:00 — 20:00">
+                                                            <input type="text" class="input-form-conteiner__input" name="working_hours[sunday]" placeholder="08:00 — 20:00" value="{{ $service->getAttribute('working_hours.sunday') }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="information-about-company__dop-info-redact">
-                                                <div class="select-form-conteiner">
-                                                    <h5 class="select-form-conteiner__title">@lang('Şəhər')</h5>
-                                                    <select name="" id="">
-                                                        <option value="">@lang('Şəhər')</option>
-                                                        <option value="">Баку</option>
-                                                        <option value="">Баку 2</option>
-                                                    </select>
-                                                </div>
+                                                @include('front.pages.profile.business.particles.common.select-regions', ['selected' => $service->getAttribute('region_id')])
                                                 <div class="information-about-company__phone-conteiner">
                                                     <div class="user-main-info__inp-info input-form-conteiner phone-company-conteiner defoult-phone-namber">
                                                         <h5 class="input-form-conteiner__title">@lang('Telefon nömrəsi'):</h5>
                                                         <div class="input-form-conteiner__claster">
-                                                            <input type="text" class="input-form-conteiner__input" placeholder="+ 994 12 360 20 40" value="+ 994 12 360 20 40">
+                                                            <input type="text" class="input-form-conteiner__input" name="phones[]" placeholder="+994123602040" value="{{ $service->getAttribute('phones') }}">
                                                         </div>
                                                         <div class="input-form-conteiner__check-box-row">
                                                             <div class="checkbox">
                                                                 <label class="custom-checkbox">
-                                                                    <input type="checkbox" name="carbody" value="Viber">
-                                                                    <span>Viber</span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="checkbox">
-                                                                <label class="custom-checkbox">
-                                                                    <input type="checkbox" name="carbody" value="Telegram">
-                                                                    <span>Telegram</span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="checkbox">
-                                                                <label class="custom-checkbox">
-                                                                    <input type="checkbox" name="carbody" value="WhatsApp">
+                                                                    <input type="checkbox" name="phones[][has_whatsapp]" value="WhatsApp">
                                                                     <span>WhatsApp</span>
                                                                 </label>
                                                             </div>
