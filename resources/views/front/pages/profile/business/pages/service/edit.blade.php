@@ -6,7 +6,9 @@
             {!! $pageTitleHtml !!}
             <div class="cart-main-info__conteiner">
                 @include('front.pages.profile.business.layout.partials.navbar')
-                <div class="cart-main-info__body-info cart-main-info__body-info_account">
+                <form class="cart-main-info__body-info cart-main-info__body-info_account" action="{{ route('profile.service.update') }}" method="post">
+                    @method('put')
+                    @csrf
                     <div class="user-account-busines-claster">
                         <div class="user-account-busines-claster__rent-car-conteiner">
                             <div class="acordeon-conteiner__box acordeon-element">
@@ -73,35 +75,7 @@
                                             </div>
                                             <div class="information-about-company__dop-info-redact">
                                                 @include('front.pages.profile.business.particles.common.select-regions', ['selected' => $service->getAttribute('region_id')])
-                                                <div class="information-about-company__phone-conteiner">
-                                                    <div class="user-main-info__inp-info input-form-conteiner phone-company-conteiner defoult-phone-namber">
-                                                        <h5 class="input-form-conteiner__title">@lang('Telefon nömrəsi'):</h5>
-                                                        <div class="input-form-conteiner__claster">
-                                                            <input type="text" class="input-form-conteiner__input" name="phones[]" placeholder="+994123602040" value="{{ $service->getAttribute('phones')[0] }}">
-                                                        </div>
-                                                        <div class="input-form-conteiner__check-box-row">
-                                                            <div class="checkbox">
-                                                                <label class="custom-checkbox">
-                                                                    <input type="checkbox" name="phones[][has_whatsapp]" value="WhatsApp">
-                                                                    <span>WhatsApp</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="btn-add-del del-phone">
-                                                            <div class="btn-add-del__icon">
-                                                                <img src="{{ asset('assets/front/img/_src/del-ic.png') }}" alt="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="information-about-company__add-more-phone-conteiner">
-                                                        <div class="btn-add-del add-phone-btn">
-                                                            <div class="btn-add-del__icon">
-                                                                <img src="{{ asset('assets/front/img/_src/add-ic.png') }}" alt="">
-                                                            </div>
-                                                            <span>@lang('Telefon əlavə edin')</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @include('front.pages.profile.business.particles.common.phones', ['phones' => $service->getAttribute('phones')])
                                             </div>
                                         </div>
                                     </div>
@@ -323,11 +297,11 @@
                                 </div>
                             </div>
                             <div class="save-btn-line">
-                                <button class="btn1">@lang('Yadda saxla')</button>
+                                <button type="submit" class="btn1">@lang('Yadda saxla')</button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>

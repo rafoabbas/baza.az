@@ -31,9 +31,18 @@ class ServiceFactory extends Factory
                 'sunday' => '08:00 — 20:00',
             ],
             'phones' => [
-                $this->faker->phoneNumber,
-                $this->faker->phoneNumber,
-                $this->faker->phoneNumber
+                [
+                    'phone' => $this->faker->phoneNumber,
+                    'whatsapp' => $this->faker->boolean
+                ],
+                [
+                    'phone' => $this->faker->phoneNumber,
+                    'whatsapp' => $this->faker->boolean
+                ],
+                [
+                    'phone' => $this->faker->phoneNumber,
+                    'whatsapp' => $this->faker->boolean
+                ],
             ],
             'image' => $this->faker->pictureSaveDatabase('uploads/' . date('y/m')),
             'images' => [
