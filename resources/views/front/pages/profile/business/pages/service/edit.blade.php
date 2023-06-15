@@ -77,7 +77,7 @@
                                                     <div class="user-main-info__inp-info input-form-conteiner phone-company-conteiner defoult-phone-namber">
                                                         <h5 class="input-form-conteiner__title">@lang('Telefon nömrəsi'):</h5>
                                                         <div class="input-form-conteiner__claster">
-                                                            <input type="text" class="input-form-conteiner__input" name="phones[]" placeholder="+994123602040" value="{{ $service->getAttribute('phones') }}">
+                                                            <input type="text" class="input-form-conteiner__input" name="phones[]" placeholder="+994123602040" value="{{ $service->getAttribute('phones')[0] }}">
                                                         </div>
                                                         <div class="input-form-conteiner__check-box-row">
                                                             <div class="checkbox">
