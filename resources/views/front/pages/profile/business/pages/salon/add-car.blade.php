@@ -8,17 +8,17 @@
                 <div class="cart-main-info__body-info">
                     <div class="acordeon-conteiner__box" data-add-staps="main-parametrs">
                         <div class="acordeon-conteiner__box-title">
-                            <h4 class="cart-main-info__title">Основные параметры</h4>
+                            <h4 class="cart-main-info__title">@lang('Əsas parametrlər')</h4>
                             <span class="acordeon-conteiner__box__nam-element">/01</span>
                         </div>
                         <div class="acordeon-conteiner__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="aside-search__col add-car-filtr-col">
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Марка авто*:</h6>
+                                        <h6 class="title-filtr">@lang('Avtomobil markası')*:</h6>
                                         <div class="main-search__list-car-search list-car-search">
                                             <div class="list-car-search__search-line">
-                                                <input type="text" placeholder="Марка авто">
+                                                <input type="text" placeholder="@lang('Avtomobil markası')">
                                                 <span class="list-car-search__icon"></span>
                                             </div>
                                             <div class="list-car-search__decision">
@@ -40,14 +40,12 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Модель*:</h6>
+                                        <h6 class="title-filtr">@lang('Model')*:</h6>
                                         <div class="main-search__list-car-search list-car-search">
                                             <div class="list-car-search__search-line">
-                                                <input type="text" placeholder="Модель авто">
-                                                <span class="list-car-search__icon">
-															</span>
+                                                <input type="text" placeholder="@lang('Model')">
+                                                <span class="list-car-search__icon"></span>
                                             </div>
                                             <div class="list-car-search__decision">
                                                 <ul class="list-car-search__decision-list">
@@ -68,72 +66,62 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Тип кузова*:</h6>
+                                        <h6 class="title-filtr">@lang('Ban növü')*:</h6>
                                         <select name="" id="" class="select-type1">
                                             <option value="">Трак</option>
                                             <option value="">Лифтбэк</option>
                                         </select>
                                     </div>
-
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Год выпуска*:</h6>
+                                        <h6 class="title-filtr">@lang('Buraxılış ili')*:</h6>
                                         <select name="" id="" class="select-type1">
                                             <option value="">2011</option>
                                             <option value="">2011</option>
                                             <option value="">2011</option>
                                         </select>
                                     </div>
-
                                 </div>
-
-
                                 <div class="aside-search__col add-car-filtr-col">
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Коробка передач*:</h6>
+                                        <h6 class="title-filtr">@lang('Sürətlər qutusu')*:</h6>
                                         <select name="" id="" class="select-type1">
                                             <option value="">Автомат</option>
                                             <option value="">Автомат</option>
                                         </select>
                                     </div>
-
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Тип топлива*:</h6>
+                                        <h6 class="title-filtr">@lang('Yanacaq növü')*:</h6>
                                         <select name="" id="" class="select-type1">
                                             <option value="">Газ</option>
                                             <option value="">Дизель</option>
                                         </select>
                                     </div>
-
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Пробег,км*:</h6>
+                                        <h6 class="title-filtr">@lang('Yürüş'),км*:</h6>
                                         <div class="main-search__input-conteiner">
                                             <input type="text" class="input-only-namber" placeholder="100 000">
                                         </div>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element filtr-element__two-segment">
                                         <div class="filtr-element__segment">
-                                            <h6 class="title-filtr">Двигатель, л:</h6>
+                                            <h6 class="title-filtr">@lang('Mühərrik'), л:</h6>
                                             <div class="main-search__input-conteiner">
                                                 <input type="text" class="input-only-namber" placeholder="100 000">
                                             </div>
                                         </div>
                                         <div class="filtr-element__segment">
-                                            <h6 class="title-filtr">Мощность:</h6>
+                                            <h6 class="title-filtr">@lang('Güc'):</h6>
                                             <div class="main-search__input-conteiner">
                                                 <input type="text" class="input-only-namber" placeholder="100 000">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="aside-search__col add-car-filtr-col">
-
                                     <div class="acordeon__color">
                                         <div class="catalog__filtr__filtr-element">
-                                            <h6 class="title-filtr">Цвет:</h6>
+                                            <h6 class="title-filtr">@lang('Rəng'):</h6>
                                             <div class="filtr-element__select">
                                                 <select name="" id="" class="full-select">
                                                     <option value="">Цвет</option>
@@ -143,41 +131,39 @@
                                                 </select>
                                             </div>
                                         </div>
-
                                         <div class="acordeon__color-checkbox">
                                             <div class="checkbox">
                                                 <label class="custom-checkbox">
                                                     <input type="checkbox" name="fuel" value="Гибрид">
-                                                    <span>Металик</span>
+                                                    <span>@lang('Metalik')</span>
                                                 </label>
                                             </div>
                                             <div class="checkbox">
                                                 <label class="custom-checkbox">
                                                     <input type="checkbox" name="fuel" value="Гибрид">
-                                                    <span>Матовый</span>
+                                                    <span>@lang('Mat')</span>
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Привод:</h6>
+                                        <h6 class="title-filtr">@lang('Ötürücü'):</h6>
                                         <select name="" id="" class="select-type1">
                                             <option value="">Полный</option>
                                             <option value="">Полный</option>
                                         </select>
                                     </div>
-
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Город:</h6>
+                                        <h6 class="title-filtr">@lang('Texniki vəziyyət'): </h6>
                                         <select name="" id="" class="select-type1">
-                                            <option value="">Баку</option>
-                                            <option value="">Баку</option>
+                                            <option value="">Полностью неповрежденное</option>
+                                            <option value=""> Профессионально отремонтированные повреждения</option>
+                                            <option value=""> Неотремонтированные повреждения</option>
+                                            <option value=""> Не на ходу / На запчасти</option>
                                         </select>
                                     </div>
-
                                     <div class="catalog__filtr__filtr-element">
-                                        <h5>Цена, $:</h5>
+                                        <h5>@lang('Qiymət'), $:</h5>
                                         <div class="filtr-element__select">
                                             <div class="filtr-element__select filtr-element__select_input">
                                                 <input type="text" placeholder="1 200">
@@ -191,93 +177,96 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="aside-search__col add-car-filtr-col">
                                     <div class="main-search__select-element">
-                                        <h6 class="title-filtr">Состояние автомобиля*:</h6>
+                                        <h6 class="title-filtr">@lang('Avtomobilin vəziyyəti')*:</h6>
                                         <select name="" id="" class="select-type1">
                                             <option value="">В хлам</option>
                                             <option value="">40 владельцев</option>
+                                        </select>
+                                    </div>
+                                    <div class="main-search__select-element">
+                                        <h6 class="title-filtr">@lang('Hansi bazar')*:</h6>
+                                        <select name="" id="" class="select-type1">
+                                            <option value="">Avropa</option>
+                                            <option value="">Amerika</option>
+                                            <option value="">Asia</option>
                                         </select>
                                     </div>
                                     <div class="main-search__check-wrapper-add-car">
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="transmision" value="Автомат">
-                                                <span>Авто в кредит</span>
+                                                <span>@lang('Kreditlə')</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="transmision" value="Автомат">
-                                                <span>Возможен обмен на недвижимость</span>
+                                                <span>@lang('Daşınmaz əmlakın mübadiləsi imkanı')</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="transmision" value="Автомат">
-                                                <span>Возможен обмен на авто</span>
+                                                <span>@lang('Avtomobil mübadiləsi imkanı')</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="transmision" value="Автомат">
+                                                <span>@lang('Servis kitabcasi')</span>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-
-
+                            </div>
+                            <div class="photo-conteiner-add__video-conteiner">
+                                <h4 class="cart-main-info__title-ul">@lang('Təsdiqlənmiş VIN-i olan avtomobillər daha sürətli satılır')</h4>
+                                <p>@lang('Biz avtomobili Daxili İşlər Nazirliyinin reyestrlərinə, açıq məlumat portalına və diler bazalarına uyğun olaraq pulsuz yoxlayacağıq və siz axtarışda ən yüksək yerləri əldə edəcəksiniz.')</p>
+                                <div class="photo-conteiner-add__video-input">
+                                    <label class="input-form-conteiner__label">@lang('Vin kod')</label>
+                                    <input type="text" class="input-form-conteiner__input" placeholder="VIN-код">
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
                     <div class="acordeon-conteiner__box" data-add-staps="photo-and-video">
                         <div class="acordeon-conteiner__box-title">
-                            <h4 class="cart-main-info__title">Фото, видео, описание</h4>
+                            <h4 class="cart-main-info__title">@lang('Şəkil'), @lang('Video'), @lang('Təsvir')</h4>
                             <span class="acordeon-conteiner__box__nam-element">/02</span>
                         </div>
-
                         <div class="acordeon-conteiner__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__photo-conteiner-add photo-conteiner-add">
-
                                     <div class="photo-conteiner-add__main-photo">
-
-
-                                        <!-- при выборе фото в коде будет создаватся обьект с добавленым фото для пред просмотра -->
                                         <div class="photo-conteiner-add__main-image-conteiner add-new-image-main">
-                                            <h4 class="cart-main-info__title-ul">Главное фото:</h4>
-                                            <a class="ads-box-user__add-ads ">
+                                            <h4 class="cart-main-info__title-ul">@lang('Əsas şəkil'):</h4>
+                                            <a class="card-box-user__add-ads ">
                                                 <label class="custom-file-upload">
                                                     <input type="file"  accept="image/heic, image/png, image/jpeg, image/webp" id="main-car-photo-donload" >
-                                                    <div class="ads-box-user__add-ads-conteiner ads-box-user__add-ads-conteiner_big">
+                                                    <div class="card-box-user__add-ads-conteiner card-box-user__add-ads-conteiner_big">
                                                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M31.6665 18.3332H21.6665V8.33317C21.6665 7.89114 21.4909 7.46722 21.1783 7.15466C20.8658 6.8421 20.4419 6.6665 19.9998 6.6665C19.5578 6.6665 19.1339 6.8421 18.8213 7.15466C18.5088 7.46722 18.3332 7.89114 18.3332 8.33317V18.3332H8.33317C7.89114 18.3332 7.46722 18.5088 7.15466 18.8213C6.8421 19.1339 6.6665 19.5578 6.6665 19.9998C6.6665 20.4419 6.8421 20.8658 7.15466 21.1783C7.46722 21.4909 7.89114 21.6665 8.33317 21.6665H18.3332V31.6665C18.3332 32.1085 18.5088 32.5325 18.8213 32.845C19.1339 33.1576 19.5578 33.3332 19.9998 33.3332C20.4419 33.3332 20.8658 33.1576 21.1783 32.845C21.4909 32.5325 21.6665 32.1085 21.6665 31.6665V21.6665H31.6665C32.1085 21.6665 32.5325 21.4909 32.845 21.1783C33.1576 20.8658 33.3332 20.4419 33.3332 19.9998C33.3332 19.5578 33.1576 19.1339 32.845 18.8213C32.5325 18.5088 32.1085 18.3332 31.6665 18.3332Z" fill="#768A9E"></path>
                                                         </svg>
-                                                        <p>Добавить основное фото</p>
+                                                        <p>@lang('Əsas şəkil əlavə edin')</p>
                                                     </div>
-
-
                                                 </label>
                                                 <div class="photo-conteiner-add__main-image-info">
                                                     <div class="waring-text">
-                                                        <span>Важно:</span>
+                                                        <span>@lang('Əhəmiyyətli'):</span>
                                                         <p>на главном фото автомобиль должен быть сфотографирован спереди под углом 45 °</p>
                                                     </div>
                                                     <div class="waring-image">
-                                                        <img src="img/_src/war-car.jpg" alt="">
+                                                        <img src="{{ asset('assets/front/img/_src/war-car.jpg') }}" alt="">
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
-
-                                        <div class="acordeon-conteiner__description-conteiner">
-                                            <h4 class="cart-main-info__title-ul">Описание</h4>
-                                            <textarea placeholder="Текст описание"></textarea>
-                                        </div>
-
                                     </div>
-
                                     <div class="photo-conteiner-add__othe-photo">
-                                        <h4 class="cart-main-info__title-ul">Другие фото (не более 20):</h4>
-                                        <!-- <div class="photo-conteiner-add__other-photo-header other-photo-header">
+                                        <h4 class="cart-main-info__title-ul">@lang('Digər fotoşəkillər') (не более 20):</h4>
+                                        <div class="photo-conteiner-add__other-photo-header other-photo-header">
                                             <div class="box-redactor-text">
                                                 <ul>
                                                     <li>Минимум — 2 фото (вид спереди, вид сзади).</li>
@@ -288,49 +277,48 @@
                                             <div class="other-photo-header__line">
                                                 <div class="other-photo-header__photo">
                                                     <span>
-                                                        <img src="img/_src/war-car2.jpg" alt="">
+                                                        <img src="{{ asset('assets/front/img/_src/war-car2.jpg') }}" alt="">
                                                     </span>
                                                     <p>Вид спереди</p>
                                                 </div>
                                                 <div class="other-photo-header__photo">
                                                     <span>
-                                                        <img src="img/_src/war-car3.jpg" alt="">
+                                                        <img src="{{ asset('assets/front/img/_src/war-car3.jpg') }}" alt="">
                                                     </span>
                                                     <p>Вид сзади</p>
                                                 </div>
                                             </div>
-                                        </div> -->
+                                        </div>
                                         <div class="photo-conteiner-add__other-photo-conteiner">
-
-                                            <!-- при выборе фото в коде будет создаватся обьект с добавленым фото для пред просмотра -->
-
-                                            <a  class="ads-box-user__add-ads ads-box-user__add-ads_filedonload" >
+                                            <a  class="card-box-user__add-ads card-box-user__add-ads_filedonload" >
                                                 <label class="custom-file-upload">
                                                     <input type="file"  accept="image/heic, image/png, image/jpeg, image/webp" id="addotherimage" >
-                                                    <div class="ads-box-user__add-ads-conteiner">
+                                                    <div class="card-box-user__add-ads-conteiner">
                                                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M31.6665 18.3332H21.6665V8.33317C21.6665 7.89114 21.4909 7.46722 21.1783 7.15466C20.8658 6.8421 20.4419 6.6665 19.9998 6.6665C19.5578 6.6665 19.1339 6.8421 18.8213 7.15466C18.5088 7.46722 18.3332 7.89114 18.3332 8.33317V18.3332H8.33317C7.89114 18.3332 7.46722 18.5088 7.15466 18.8213C6.8421 19.1339 6.6665 19.5578 6.6665 19.9998C6.6665 20.4419 6.8421 20.8658 7.15466 21.1783C7.46722 21.4909 7.89114 21.6665 8.33317 21.6665H18.3332V31.6665C18.3332 32.1085 18.5088 32.5325 18.8213 32.845C19.1339 33.1576 19.5578 33.3332 19.9998 33.3332C20.4419 33.3332 20.8658 33.1576 21.1783 32.845C21.4909 32.5325 21.6665 32.1085 21.6665 31.6665V21.6665H31.6665C32.1085 21.6665 32.5325 21.4909 32.845 21.1783C33.1576 20.8658 33.3332 20.4419 33.3332 19.9998C33.3332 19.5578 33.1576 19.1339 32.845 18.8213C32.5325 18.5088 32.1085 18.3332 31.6665 18.3332Z" fill="#768A9E"></path>
                                                         </svg>
-                                                        <p>Добавить фото</p>
+                                                        <p>@lang('Şəkil əlavə et')</p>
                                                     </div>
                                                 </label>
                                             </a>
                                         </div>
                                     </div>
-
+                                    <div class="acordeon-conteiner__description-conteiner">
+                                        <h4 class="cart-main-info__title-ul">@lang('Təsvir')</h4>
+                                        <textarea placeholder="Текст описание"></textarea>
+                                    </div>
                                     <div class="photo-conteiner-add__video-conteiner">
                                         <h4 class="cart-main-info__title-ul">Код видео с YouTube:</h4>
                                         <p>Нажмите на кнопку поделиться и скопиройте выделеные символы https://youtu.be/<b>TSkVVVBS9k8</b></p>
                                         <div class="photo-conteiner-add__video-input">
                                             <input type="text" class="input-form-conteiner__input add-video-input" placeholder="url">
                                         </div>
-
                                         <div class="photo-conteiner-add__video-player ">
                                             <h4 class="cart-main-info__title-ul">Видео:</h4>
                                             <div class="photo-conteiner-add__video-box">
                                                 <div class="video-element">
-                                                    <div class="ads-box__play video-element__play" >
-                                                        <img src="img/_src/play.png" alt="">
+                                                    <div class="card-box__play video-element__play" >
+                                                        <img src="{{ asset('assets/front/img/_src/play.png') }}" alt="">
                                                     </div>
                                                     <img class="video-element__prewievs" src="http://img.youtube.com/vi/ysSxxIqKNN0/0.jpg" alt="">
                                                     <iframe  data-src="" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
@@ -342,19 +330,15 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="acordeon-conteiner__box" data-add-staps="condition">
                         <div class="acordeon-conteiner__box-title">
                             <h4 class="cart-main-info__title">Другие технические характеристики и состояние</h4>
                             <span class="acordeon-conteiner__box__nam-element">/03</span>
                             <p class="acordeon-conteiner__subtitle">Чем больше заполнено информации об автомобиле — тем выше вероятность его продажи.</p>
                         </div>
-
                         <div class="acordeon-conteiner__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__line-haraceristics-add-car line-haraceristics-add-car">
-
                                     <div class="line-haraceristics-add-car__row">
                                         <div class="main-search__select-element main-search__select-element_characteristicks-width">
                                             <h6 class="title-filtr">Количество мест, шт:</h6>
@@ -387,7 +371,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="line-haraceristics-add-car__col">
                                         <div class="catalog__filtr__filtr-element">
                                             <h5>Цвет (выбрать тон):</h5>
@@ -413,9 +396,6 @@
                                                     </svg>
                                                     <input type="color" class="color-picker" style="display:block; opacity: 0; position: absolute;">
                                                 </label>
-
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -423,14 +403,11 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="acordeon-conteiner__box">
                         <div class="acordeon-conteiner__box-title">
                             <h4 class="cart-main-info__title">Безопасность</h4>
                             <span class="acordeon-conteiner__box__nam-element">/04</span>
                         </div>
-
                         <div class="acordeon-conteiner__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__check-conteiner">
@@ -438,13 +415,13 @@
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Подушка  безопасности</span>
+                                                <span>Бронированный</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Серворуль</span>
+                                                <span>Подушки безопастности</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
@@ -456,207 +433,360 @@
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Замок на КПП</span>
+                                                <span>Датчик проникновения в салон (датчик объема)</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Центральный замок</span>
+                                                <span>Антипробуксовочная система (ASR)</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>ABD</span>
+                                                <span>Антиблокировочная система (ABS)</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Система стабилизации (ESP)</span>
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="acordeon-conteiner__col">
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Подушка  безопасности</span>
+                                                <span>Система ночного видения</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Серворуль</span>
+                                                <span>Система контроля слепых зон</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Сигнализация</span>
+                                                <span>Система контроля за полосой движения</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Замок на КПП</span>
+                                                <span>Система предупреждения об усталости водителя</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Центральный замок</span>
+                                                <span>Система предотвращения столкновения (Система помощи при торможении (BAS, EBD)</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>ABD</span>
+                                                <span>Система крепление детского кресла ISOFIX</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Система распознавания дорожных знаков</span>
                                             </label>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-
                     <div class="acordeon-conteiner__box">
                         <div class="acordeon-conteiner__box-title">
                             <h4 class="cart-main-info__title">Комфорт</h4>
                             <span class="acordeon-conteiner__box__nam-element">/05</span>
                         </div>
-
                         <div class="acordeon-conteiner__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
+                                <div class="main-search__select-element">
+                                    <h6 class="title-filtr">Климат-контроль или Кондиционер:</h6>
+                                    <select name="" id="" class="select-type1">
+                                        <option value="">Трак</option>
+                                        <option value="">Лифтбэк</option>
+                                    </select>
+                                </div>
+                                <div class="main-search__select-element">
+                                    <h6 class="title-filtr">Люк или Панорамная крыша-люк: </h6>
+                                    <select name="" id="" class="select-type1">
+                                        <option value="">Трак</option>
+                                        <option value="">Лифтбэк</option>
+                                    </select>
+                                </div>
+                                <div class="main-search__select-element">
+                                    <h6 class="title-filtr">Лазерные фары или Ксеноновые/Биксеноновые фары:</h6>
+                                    <select name="" id="" class="select-type1">
+                                        <option value="">Трак</option>
+                                        <option value="">Лифтбэк</option>
+                                    </select>
+                                </div>
                                 <div class="acordeon-conteiner__check-conteiner">
                                     <div class="acordeon-conteiner__col">
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Подушка  безопасности</span>
+                                                <span>Автопилот</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Серворуль</span>
+                                                <span>Круиз контроль</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Сигнализация</span>
+                                                <span>Бортовой компьютер</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Замок на КПП</span>
+                                                <span>Мультируль</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Центральный замок</span>
+                                                <span>Электро обогрев руля</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>ABD</span>
+                                                <span>Подрулевые лепестки переключения передач</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Адаптивное освещение фар(поворотные фары)</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Омыватель фар</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Камера 360°</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Камера заднего вида</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Система индикации на лобовом стекле(проекция)</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Кожаный салон</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Бесключевой доступ</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Система «Старт-Стоп»</span>
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="acordeon-conteiner__col">
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Подушка  безопасности</span>
+                                                <span>Режим «ECO MODE»</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Серворуль</span>
+                                                <span>Доводчик дверей</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Сигнализация</span>
+                                                <span>Солнцезащитные шторки на задних дверях</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Замок на КПП</span>
+                                                <span>Память передних сидений</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Центральный замок</span>
+                                                <span>Сиденья с массажем</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>ABD</span>
+                                                <span>Вентилируемые сиденья</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Подогрев сидений</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Третий ряд сидений</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Парктроник</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Система автоматической парковки</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Система выбора режима движения</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Электроскладывание боковых зеркал</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Электроподогрев боковых зеркал</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Электроподогрев лобового стекла</span>
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="acordeon-conteiner__col">
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Подушка  безопасности</span>
+                                                <span>Холодильник</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Серворуль</span>
+                                                <span>Датчик дождя</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Сигнализация</span>
+                                                <span>Датчик света</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Замок на КПП</span>
+                                                <span>Датчик давления в шинах</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Центральный замок</span>
+                                                <span>Подогрев двигателя(Webasto)</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>ABD</span>
+                                                <span>Дистанционный запуск двигателя</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Электропривод багажника</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Открытие багажника без рук</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Беспроводная зарядка для смартфона</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Быстрая зарядка CHAdeMo(устройства для быстрой зарядки аккумуляторных электромобилей)</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Розетка 12V</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Розетка 22OV</span>
                                             </label>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                     <div class="acordeon-conteiner__box">
                         <div class="acordeon-conteiner__box-title">
                             <h4 class="cart-main-info__title">Мультимедиа</h4>
                             <span class="acordeon-conteiner__box__nam-element">/06</span>
                         </div>
-
                         <div class="acordeon-conteiner__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__check-conteiner">
@@ -664,92 +794,87 @@
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Подушка  безопасности</span>
+                                                <span>Премиальная аудиосистема</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Серворуль</span>
+                                                <span>Сенсорный дисплей</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Сигнализация</span>
+                                                <span>Мультимедиа для задних пассажиров</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Замок на КПП</span>
+                                                <span>USB</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Центральный замок</span>
+                                                <span>AUX</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>ABD</span>
+                                                <span>Bluetooth</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Android Auto</span>
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="acordeon-conteiner__col">
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Подушка  безопасности</span>
+                                                <span>Apple CarPlay</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Серворуль</span>
+                                                <span>Навигационная система</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Сигнализация</span>
+                                                <span>Голосовое управление</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Замок на КПП</span>
+                                                <span>Розетка 12V</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Центральный замок</span>
-                                            </label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label class="custom-checkbox">
-                                                <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>ABD</span>
+                                                <span>Розетка 220V</span>
                                             </label>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                     <div class="acordeon-conteiner__box">
                         <div class="acordeon-conteiner__box-title">
                             <h4 class="cart-main-info__title">Другое</h4>
                             <span class="acordeon-conteiner__box__nam-element">/07</span>
                         </div>
-
                         <div class="acordeon-conteiner__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="acordeon-conteiner__check-conteiner">
@@ -757,58 +882,105 @@
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Подушка  безопасности</span>
+                                                <span>Сервисная книжка</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Серворуль</span>
+                                                <span>Спорт пакет</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Сигнализация</span>
+                                                <span>Пневмоподвеска</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Замок на КПП</span>
+                                                <span>Ретро автомобиль</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>Центральный замок</span>
+                                                <span>Первый владелец</span>
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" name="carbody" value="Кроссовер">
-                                                <span>ABD</span>
+                                                <span>Гаражное хранение</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Прицепное устройство(Фаркоп)</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Багажник на крыше</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="carbody" value="Кроссовер">
+                                                <span>Тонированные стекла</span>
                                             </label>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                     <div class="acordeon-conteiner__box">
                         <div class="acordeon-conteiner__box-title">
-                            <h4 class="cart-main-info__title">Локация</h4>
+                            <h4 class="cart-main-info__title">@lang('Məkan')</h4>
                             <span class="acordeon-conteiner__box__nam-element">/08</span>
                         </div>
-
                         <div class="acordeon-conteiner__claster">
                             <div class="acordeon-conteiner__claster-wrapper">
                                 <div class="map-wrapper">
                                     <div class="main-search__select-element main-search__select-element_map-width">
-                                        <h6 class="title-filtr">Адрес:</h6>
+                                        <h6 class="title-filtr">@lang('Ad'):</h6>
+                                        <div class="main-search__input-conteiner">
+                                            <input type="text" class="input-only-namber" placeholder="Name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="map-wrapper">
+                                    <div class="main-search__select-element main-search__select-element_map-width">
+                                        <h6 class="title-filtr">@lang('Şəhər'):</h6>
+                                        <select name="" id="" class="select-type1">
+                                            <option value="">Баку</option>
+                                            <option value="">Баку</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="map-wrapper">
+                                    <div class="main-search__select-element main-search__select-element_map-width">
+                                        <h6 class="title-filtr">@lang('E-poçt'):</h6>
+                                        <div class="main-search__input-conteiner">
+                                            <input type="text" class="input-only-namber" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="map-wrapper">
+                                    <div class="main-search__select-element main-search__select-element_map-width">
+                                        <h6 class="title-filtr">@lang('Telefon'):</h6>
+                                        <div class="main-search__input-conteiner">
+                                            <input type="text" class="input-only-namber" placeholder="Телефон">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="map-wrapper">
+                                    <div class="main-search__select-element main-search__select-element_map-width">
+                                        <h6 class="title-filtr">@lang('Ünvan'):</h6>
                                         <div class="main-search__input-conteiner">
                                             <input type="text" class="input-only-namber" placeholder="Бакиханова">
                                         </div>
@@ -816,16 +988,12 @@
                                     <div id="map3"></div>
                                 </div>
                             </div>
-
                             <div class="acordeon-conteiner__btn-row">
                                 <a href="" class="btn1">Опубликовать</a>
                                 <a href="" class="btn1">Опубликовать как VIP</a>
                             </div>
                         </div>
                     </div>
-
-
-
                     <!-- <div class="select-type-ads">
                         <h4 class="cart-main-info__title">Выберите тип объявления</h4>
                         <div class="select-type-ads__conteiner">
