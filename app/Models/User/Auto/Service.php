@@ -78,4 +78,14 @@ class Service extends Model
     {
         return $this->belongsToMany(CarBrand::class, 'service_car_brand', 'service_id', 'car_brand_id');
     }
+
+    public function getBrandIdsAttribute(): array
+    {
+        return $this->brands->pluck('id')->toArray();
+    }
+
+    public function getSpecificationIdsAttribute(): array
+    {
+        return $this->specifications->pluck('id')->toArray();
+    }
 }

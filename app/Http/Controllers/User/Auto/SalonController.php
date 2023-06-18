@@ -2,27 +2,36 @@
 
 namespace App\Http\Controllers\User\Auto;
 
+use App\Enums\Common\Status;
 use App\Http\Controllers\Controller;
-use App\Models\User\Auto\Salon;
-use App\Repositories\Eloquent\Common\Auto\ServiceGroupRepository;
-use App\Repositories\Eloquent\Common\Car\CarBrandRepository;
+use App\Http\Requests\User\Auto\SalonRequest;
+use App\Repositories\Contracts\Common\Auto\SpecificationRepositoryInterface;
+use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
+use App\Repositories\Contracts\User\Auto\SalonRepositoryInterface;
 use App\Services\Front\User\Auto\SalonService;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SalonController extends Controller
 {
     public function __construct(
         public SalonService $service,
-        public ServiceGroupRepository $serviceGroupRepository,
-        public CarBrandRepository $carBrandRepository
+        public SalonRepositoryInterface $salonRepository,
+        public SpecificationRepositoryInterface $specificationRepository,
+        public RegionRepositoryInterface $regionRepository
     ) {
     }
-    public function index(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    public function show(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('front.pages.profile.business.pages.salon.index', [
+            'salon' => $this->salonRepository->first(
+                conditions: [
+                    ['user_id', '=', Auth::id()]
+                ],
+                relations: ['specifications']
+            ),
             'pageTitleHtml' => $this->service->pageTitleHtml()
         ]);
     }
@@ -37,20 +46,48 @@ class SalonController extends Controller
     public function edit(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('front.pages.profile.business.pages.salon.edit', [
-            'serviceGroups' => $this->serviceGroupRepository->groups(),
-            'carBrands' => $this->carBrandRepository->all(),
+            'salon' => $this->salonRepository->first(
+                conditions: [
+                    ['user_id', '=', Auth::id()]
+                ],
+                relations: ['specifications']
+            ),
+            'specifications' => $this->specificationRepository->all(
+                conditions: [
+                    ['status', '=', Status::published()]
+                ]
+            ),
+            'regions' => $this->regionRepository->all(
+                conditions: [
+                    ['status', '=', Status::published()]
+                ]
+            ),
             'pageTitleHtml' => $this->service->pageTitleHtml([
                 'name' => 'Redaktə et'
             ])
         ]);
     }
-    public function update(Request $request, Salon $salon): void
+    public function update(SalonRequest $request): void
     {
-        //
-    }
-    public function destroy(Salon $salon): void
-    {
-        //
+        $this->service->setSalonByUserId();
+
+        $salon = $this->service->getSalon();
+
+        $this->service->update(
+            $this->service->data($request->validated())
+        );
+
+        $this->service->syncSpecifications($request->input('specifications'));
+
+        $salon->updateUploadWherePath($request->input('image'), $salon->getAttribute('image'));
+
+        foreach ($request->input('images') as $image) {
+            $salon->updateUploadWherePath($image);
+        }
+
+        foreach ($request->input('banners') as $banner) {
+            $salon->updateUploadWherePath($banner);
+        }
     }
 
     public function addAutoView(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application

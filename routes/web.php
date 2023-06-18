@@ -13,6 +13,7 @@ use App\Http\Controllers\User\Auto\SalonController;
 use App\Http\Controllers\User\Auto\ServiceController;
 use App\Http\Controllers\User\Auto\StoreController;
 use App\Http\Controllers\User\ProfileController;
+use App\Http\Controllers\User\Rental\RentalOfficeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -101,6 +102,24 @@ Route::group([
     Route::post('logout', [ProfileController::class, 'logout'])->name('logout');
 
     Route::singleton('service', ServiceController::class);
+    Route::singleton('store', StoreController::class);
+    Route::singleton('salon', SalonController::class);
+    Route::singleton('rental', RentalOfficeController::class);
+
+    Route::controller(SalonController::class)
+        ->as('salon.')
+        ->prefix('salon')
+        ->group(function () {
+            Route::get('autos', 'autos')->name('autos');
+            Route::get('add-auto', 'addAutoView')->name('add-auto');
+        });
+    Route::controller(RentalOfficeController::class)
+        ->as('rental.')
+        ->prefix('rental')
+        ->group(function () {
+            Route::get('autos', 'autos')->name('autos');
+            Route::get('add-auto', 'addAutoView')->name('add-auto');
+        });
 });
 
 Route::resource('advertisement.number', AdvertisementNumberController::class)
@@ -111,28 +130,28 @@ Route::resource('advertisement.auto', AdvertisementAutoController::class)
     ->parameter('advertisement', 'otp:uuid')
     ->only(['create', 'store', 'edit', 'update', 'destroy']);
 
-Route::controller(StoreController::class)
-    ->as('profile.business.store.')
-    ->prefix('profile/store')
-    ->group(function () {
-        Route::get('', 'index')->name('index');
-        Route::get('edit/{store}', 'edit')->name('edit');
-        Route::post('update/{store}', 'update')->name('update');
-        Route::delete('destroy/{store}', 'destroy')->name('destroy');
-    });
-
-Route::controller(SalonController::class)
-    ->as('profile.business.salon.')
-    ->prefix('profile/salon')
-    ->group(function () {
-        Route::get('', 'index')->name('index');
-        Route::get('edit/{salon}', 'edit')->name('edit');
-        Route::post('update/{salon}', 'update')->name('update');
-        Route::delete('destroy/{salon}', 'destroy')->name('destroy');
-        Route::get('autos', 'autos')->name('autos');
-        Route::get('add-auto', 'addAutoView')->name('add-auto');
-        Route::post('add-auto', 'addAuto')->name('add-auto');
-    });
+//Route::controller(StoreController::class)
+//    ->as('profile.business.store.')
+//    ->prefix('profile/store')
+//    ->group(function () {
+//        Route::get('', 'index')->name('index');
+//        Route::get('edit/{store}', 'edit')->name('edit');
+//        Route::post('update/{store}', 'update')->name('update');
+//        Route::delete('destroy/{store}', 'destroy')->name('destroy');
+//    });
+//
+//Route::controller(SalonController::class)
+//    ->as('profile.business.salon.')
+//    ->prefix('profile/salon')
+//    ->group(function () {
+//        Route::get('', 'index')->name('index');
+//        Route::get('edit/{salon}', 'edit')->name('edit');
+//        Route::post('update/{salon}', 'update')->name('update');
+//        Route::delete('destroy/{salon}', 'destroy')->name('destroy');
+//        Route::get('autos', 'autos')->name('autos');
+//        Route::get('add-auto', 'addAutoView')->name('add-auto');
+//        Route::post('add-auto', 'addAuto')->name('add-auto');
+//    });
 
 
 

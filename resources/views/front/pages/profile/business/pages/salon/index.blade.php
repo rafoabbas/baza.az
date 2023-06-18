@@ -24,63 +24,55 @@
                                             <div class="information-about-company__info-line information-about-company__info-line-V1">
                                                 <div class="information-about-company__info-box">
                                                     <span>@lang('Şirkət adı'):</span>
-                                                    <p>Автосалон Mercedes-Benz Baku</p>
+                                                    <p>{{ $salon->getAttribute('name') }}</p>
                                                 </div>
                                             </div>
                                             <div class="information-about-company__info-line information-about-company__info-line-V2">
                                                 <div class="information-about-company__info-box">
                                                     <span>@lang('Şəhər'):</span>
-                                                    <p>Бейлаган</p>
+                                                    <p>{{ $salon->getAttribute('region_name') }}</p>
                                                 </div>
                                                 <div class="information-about-company__info-box">
                                                     <span>@lang('Salon nömrəsi'):</span>
-                                                    <p>25 55</p>
+                                                    <p>{{ $salon->getAttribute('phone') }}</p>
                                                 </div>
                                             </div>
                                             <div class="information-about-company__info-line information-about-company__info-line-V1">
                                                 <div class="information-about-company__info-box">
                                                     <span>@lang('Salon ünvanı'):</span>
-                                                    <p>Хатаинский р., пр. Бабека, (Автомобильный рынок)</p>
+                                                    <p>{{ $salon->getAttribute('address') }}</p>
                                                 </div>
                                             </div>
                                             <div class="information-about-company__info-line information-about-company__info-line-V2">
                                                 <div class="information-about-company__info-box">
                                                     <span>@lang('Salon nömrəsi'):</span>
                                                     <ul>
-                                                        <li>
-                                                            <a href="tel:+994123602040">+ 994 12 360 20 40</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="tel:+994123602040">+ 994 12 360 20 40</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="tel:+994123602040">+ 994 12 360 20 40</a>
-                                                        </li>
+                                                        @foreach($salon->getAttribute('phones') as $phone)
+                                                            <li>
+                                                                <a href="tel:{{ data_get($phone, 'phone') }}">{{ data_get($phone, 'phone') }}</a>
+                                                            </li>
+                                                        @endforeach
                                                     </ul>
                                                 </div>
                                                 <div class="information-about-company__info-box">
                                                     <span>@lang('İş saatları'):</span>
                                                     <ul>
-                                                        <li>
-                                                            Пн-Пт: 08:00 — 20:00
-                                                        </li>
-                                                        <li>
-                                                            Пн-Пт: 08:00 — 20:00
-                                                        </li>
-                                                        <li>
-                                                            Пн-Пт: 08:00 — 20:00
-                                                        </li>
+                                                        @foreach($salon->getAttribute('working_hours') as $key => $hour)
+                                                            <li>
+                                                                {{ __($key) . ' : ' . $hour }}
+                                                            </li>
+                                                        @endforeach
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="information-about-company__info-line information-about-company__info-line-V2">
                                                 <div class="information-about-company__info-box">
                                                     <span>@lang('E poçta'):</span>
-                                                    <a href="mailto:info@avto.com" class="qurient-link">info@avto.com</a>
+                                                    <a href="mailto:{{ $salon->getAttribute('email') }}" class="qurient-link">{{ $salon->getAttribute('email') }}</a>
                                                 </div>
                                                 <div class="information-about-company__info-box">
                                                     <span>@lang('Link'):</span>
-                                                    <a href="bazasale.com" class="qurient-link">bazasale.com</a>
+                                                    <a href="{{ $salon->getAttribute('web_site') }}" class="qurient-link">{{ $salon->getAttribute('web_site') }}</a>
                                                 </div>
                                             </div>
                                         </div>

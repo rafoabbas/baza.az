@@ -2,11 +2,13 @@
 
 namespace App\Models\User\Auto;
 
+use App\Casts\PhonesCast;
 use App\Models\Common\Auto\StoreType;
 use App\Models\Common\Car\CarBrand;
 use App\Models\Common\Location\Region;
 use App\Models\Guard\User;
 use App\Traits\Eloquent\Filterable;
+use App\Traits\Eloquent\Uploadable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -17,6 +19,7 @@ class Store extends Model
     use HasFactory;
     use Sortable;
     use Filterable;
+    use Uploadable;
 
     protected $fillable = [
         'user_id',
@@ -38,7 +41,12 @@ class Store extends Model
         'published_at',
     ];
 
-    protected $appends = [
+    protected $casts = [
+        'working_hours' => 'json',
+        'images' => 'json',
+        'banners' => 'json',
+        'addresses' => 'json',
+        'phones' => PhonesCast::class
     ];
 
     public function user(): BelongsTo
@@ -59,6 +67,16 @@ class Store extends Model
 
     public function brands(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
-        return $this->belongsToMany(CarBrand::class);
+        return $this->belongsToMany(CarBrand::class, 'store_car_brand');
+    }
+
+    public function getBrandIdsAttribute(): array
+    {
+        return $this->brands->pluck('id')->toArray();
+    }
+
+    public function getTypeIdsAttribute(): array
+    {
+        return $this->types()->pluck('store_type_id')->toArray();
     }
 }
