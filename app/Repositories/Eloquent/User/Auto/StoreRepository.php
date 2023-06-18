@@ -12,4 +12,9 @@ class StoreRepository extends EloquentRepository implements StoreRepositoryInter
     {
         parent::__construct($model);
     }
+
+    public function firstByUserId(int $userId)
+    {
+        return $this->model->where('user_id', $userId)->first();
+    }
 }

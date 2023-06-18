@@ -101,6 +101,7 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     @stack('scripts')
     <script src="{{ asset('assets/front/js/scripts.min.js?v=' . config('app.assets.version', 'v0.0.1')) }}{{uniqid()}}"></script>
     @stack('script')

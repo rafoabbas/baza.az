@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('web_site')->nullable();
             $table->json('working_hours')->nullable();
             $table->json('phones')->nullable();
+            $table->string('logo')->nullable();
             $table->string('image')->nullable();
             $table->string('images')->nullable();
             $table->text('description')->nullable();

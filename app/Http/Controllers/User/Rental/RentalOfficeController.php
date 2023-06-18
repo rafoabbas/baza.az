@@ -2,64 +2,94 @@
 
 namespace App\Http\Controllers\User\Rental;
 
+use App\Enums\Common\Status;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\User\Rental\RentalOfficeRequest;
+use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
+use App\Repositories\Contracts\User\Rental\RentalOfficeRepositoryInterface;
+use App\Services\Front\User\Rental\RentalOfficeService;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RentalOfficeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
+    public function __construct(
+        public RentalOfficeService $service,
+        public RentalOfficeRepositoryInterface $rentalOfficeRepository,
+        public RegionRepositoryInterface $regionRepository
+    ) {
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function show(): View
     {
-        //
+        return view('front.pages.profile.business.pages.rental.index', [
+            'office' => $this->rentalOfficeRepository->first(
+                conditions: [
+                    ['user_id', '=', Auth::id()]
+                ],
+                relations: ['items']
+            ),
+            'pageTitleHtml' => $this->service->pageTitleHtml()
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function edit(Request $request): View
     {
-        //
+        return view('front.pages.profile.business.pages.rental.edit', [
+            'office' => $this->rentalOfficeRepository->first(
+                conditions: [
+                    ['user_id', '=', Auth::id()]
+                ],
+                relations: ['items']
+            ),
+            'regions' => $this->regionRepository->all(
+                conditions: [
+                    ['status', '=', Status::published()]
+                ]
+            ),
+            'pageTitleHtml' => $this->service->pageTitleHtml([
+                'name' => 'Redaktə et'
+            ])
+        ]);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function update(RentalOfficeRequest $request): void
     {
-        //
+        $this->service->setOfficeByUserId();
+
+        $office = $this->service->getOffice();
+
+        $this->service->update(
+            $this->service->data($request->validated())
+        );
+
+        foreach ($request->input('banners') as $banner) {
+            $office->updateUploadWherePath($banner);
+        }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function addAutoView(Request $request): View
     {
-        //
+        return view('front.pages.profile.business.pages.rental.add-car', [
+            'office' => $this->rentalOfficeRepository->first(
+                conditions: [
+                    ['user_id', '=', Auth::id()]
+                ],
+                relations: ['items']
+            ),
+            'pageTitleHtml' => $this->service->pageTitleHtml([
+                'name' => 'Avtomobil əlavə et'
+            ])
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function addAuto(Request $request): void
     {
-        //
-    }
+        $this->service->setOfficeByUserId();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $office = $this->service->getOffice();
+
+        $office->items()->create($request->validated());
     }
 }

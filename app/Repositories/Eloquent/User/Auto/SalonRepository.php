@@ -12,4 +12,9 @@ class SalonRepository extends EloquentRepository implements SalonRepositoryInter
     {
         parent::__construct($model);
     }
+
+    public function firstByUserId(int $userId)
+    {
+        return $this->model->where('user_id', $userId)->first();
+    }
 }

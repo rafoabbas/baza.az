@@ -2,10 +2,12 @@
 
 namespace App\Models\User\Auto;
 
+use App\Casts\PhonesCast;
 use App\Models\Common\Auto\Specification;
 use App\Models\Common\Location\Region;
 use App\Models\Guard\User;
 use App\Traits\Eloquent\Filterable;
+use App\Traits\Eloquent\Uploadable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -17,6 +19,7 @@ class Salon extends Model
     use HasFactory;
     use Sortable;
     use Filterable;
+    use Uploadable;
 
     protected $fillable = [
         'user_id',
@@ -28,6 +31,7 @@ class Salon extends Model
         'web_site',
         'working_hours',
         'phones',
+        'logo',
         'image',
         'images',
         'description',
@@ -37,6 +41,14 @@ class Salon extends Model
         'order',
         'verified_at',
         'published_at',
+    ];
+
+    protected $casts = [
+        'working_hours' => 'json',
+        'images' => 'json',
+        'banners' => 'json',
+        'addresses' => 'json',
+        'phones' => PhonesCast::class
     ];
 
     protected $appends = [
@@ -54,6 +66,16 @@ class Salon extends Model
 
     public function specifications(): BelongsToMany
     {
-        return $this->belongsToMany(Specification::class);
+        return $this->belongsToMany(Specification::class, 'salon_specification');
+    }
+
+    public function getSpecificationIdsAttribute(): array
+    {
+        return $this->specifications->pluck('id')->toArray();
+    }
+
+    public function getRegionNameAttribute(): string
+    {
+        return $this->region?->getAttribute('name');
     }
 }

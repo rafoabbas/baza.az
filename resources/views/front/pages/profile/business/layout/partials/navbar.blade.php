@@ -5,11 +5,11 @@
                 <a href="{{ route('profile.business.index') }}">@lang('Şəxsi məlumat')</a>
             </li>
             <li class="user-account-nav__activ">
-                <a href="{{ route('profile.business.salon.index') }}">@lang('Mənim avtosalonum')</a>
+                <a href="{{ route('profile.salon.show') }}">@lang('Mənim avtosalonum')</a>
                 <ul class="user-account-nav__sub-meny">
-                    <li><a href="{{ route('profile.business.salon.edit', '1') }}">@lang('Məlumatı Redaktə et')</a></li>
-                    <li><a href="{{ route('profile.business.salon.autos') }}">@lang('Mənim avtomobillərim')</a></li>
-                    <li><a href="{{ route('profile.business.salon.add-auto') }}">@lang('Avtomobil əlavə edin')</a></li>
+                    <li><a href="{{ route('profile.salon.edit') }}">@lang('Məlumatı Redaktə et')</a></li>
+                    <li><a href="{{ route('profile.salon.autos') }}">@lang('Mənim avtomobillərim')</a></li>
+                    <li><a href="{{ route('profile.salon.add-auto') }}">@lang('Avtomobil əlavə edin')</a></li>
                 </ul>
             </li>
             <li class="user-account-nav__activ">
@@ -19,16 +19,16 @@
                 </ul>
             </li>
             <li class="user-account-nav__activ">
-                <a href="{{ route('profile.business.store.index') }}">@lang('Mənim avtomağazam')</a>
+                <a href="{{ route('profile.store.show') }}">@lang('Mənim avtomağazam')</a>
                 <ul class="user-account-nav__sub-meny">
-                    <li><a href="{{ route('profile.business.store.edit', '1') }}">@lang('Məlumatı Redaktə et')</a></li>
+                    <li><a href="{{ route('profile.store.edit') }}">@lang('Məlumatı Redaktə et')</a></li>
                 </ul>
             </li>
             <li class="user-account-nav__activ">
-                <a href="{{ route('profile.business.rentacar.index') }}">@lang('Arenda avtomobil')</a>
+                <a href="{{ route('profile.rental.show') }}">@lang('Arenda avtomobil')</a>
                 <ul class="user-account-nav__sub-meny">
-                    <li><a href="{{ route('profile.business.rentacar.edit') }}">@lang('Məlumatı Redaktə et')</a></li>
-                    <li><a href="{{ route('profile.business.rentacar.add-auto') }}">@lang('Avtomobil əlavə edin')</a></li>
+                    <li><a href="{{ route('profile.rental.edit') }}">@lang('Məlumatı Redaktə et')</a></li>
+                    <li><a href="{{ route('profile.rental.add-auto') }}">@lang('Avtomobil əlavə edin')</a></li>
                 </ul>
             </li>
             <li>
