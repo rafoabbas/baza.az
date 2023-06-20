@@ -56,10 +56,17 @@ class ServiceService
 
     public function data(array $data): array
     {
-        return array_merge([
+        $this->setData(array_merge([
             'user_id' => Auth::id(),
             'slug'    => \Str::slug($data['name']),
-        ], $data);
+        ], $data));
+
+        return $this->data;
+    }
+
+    public function setData(array $data): void
+    {
+        $this->data = $data;
     }
 
     public function syncBrands(?array $brands = null): void
@@ -89,6 +96,22 @@ class ServiceService
         //TODO: sync items and group_id
     }
 
+    public function attachImages(string $key): void
+    {
+        $images = data_get($this->data, $key);
+
+        if (!is_array($images)) {
+            return;
+        }
+
+        $images = array_filter($images);
+
+        foreach ($images as $image) {
+            $this->service->updateUploadWherePath($image);
+        }
+    }
+
+
     public static function rules(): array
     {
         return [
@@ -113,7 +136,7 @@ class ServiceService
             'images.*'              => 'required|string|max:255',
             'description'           => 'required|string',
             'banners'               => 'nullable|array',
-            'banners.*'             => 'required|string|max:255',
+            'banners.*'             => 'nullable|string|max:255',
             // relation validations
             'brands'                => 'nullable|array',
             'brands.*'              => 'required|integer|exists:car_brands,id',

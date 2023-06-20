@@ -33,7 +33,7 @@ class StoreController extends Controller
                 conditions: [
                     ['user_id', '=', Auth::id()]
                 ],
-                relations: ['items', 'brands', 'specifications']
+                relations: ['brands']
             ),
             'pageTitleHtml' => $this->service->pageTitleHtml()
         ]);

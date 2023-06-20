@@ -72,13 +72,13 @@
                 processData: false,
                 contentType: false,
                 success: function (data) {
-                    let { url } = data.data;
+                    let { path, url } = data.data;
                     let newImageElement = imageElementHtml.replace('$src', url);
                     $(target).closest('.add-new-image-main').append(newImageElement);
                     $(target).closest('.card-box-user__add-ads').css({
                         'display':'none'
                     });
-                    $('#input-' + name).val(url);
+                    $('#input-' + name).val(path);
 
                     $(target).closest('.add-new-image-main').find('.file-image-add__remove-image').on('click',function(){
                         $(target).closest('.add-new-image-main').find('.file-image-add').remove();

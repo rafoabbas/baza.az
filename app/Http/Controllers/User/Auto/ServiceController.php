@@ -87,12 +87,7 @@ class ServiceController extends Controller
 
         $service->updateUploadWherePath($request->input('image'), $service->getAttribute('image'));
 
-        foreach ($request->input('images') as $image) {
-            $service->updateUploadWherePath($image);
-        }
-
-        foreach ($request->input('banners') as $banner) {
-            $service->updateUploadWherePath($banner);
-        }
+        $this->service->attachImages('images');
+        $this->service->attachImages('banners');
     }
 }

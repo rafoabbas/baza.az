@@ -13,6 +13,7 @@ use App\Http\Controllers\User\Auto\SalonController;
 use App\Http\Controllers\User\Auto\ServiceController;
 use App\Http\Controllers\User\Auto\StoreController;
 use App\Http\Controllers\User\ProfileController;
+use App\Http\Controllers\User\Rental\RentalItemController;
 use App\Http\Controllers\User\Rental\RentalOfficeController;
 use Illuminate\Support\Facades\Route;
 
@@ -106,6 +107,9 @@ Route::group([
     Route::singleton('salon', SalonController::class);
     Route::singleton('rental', RentalOfficeController::class);
 
+    Route::resource('rental-item', RentalItemController::class)
+        ->only(['create', 'store']);
+
     Route::controller(SalonController::class)
         ->as('salon.')
         ->prefix('salon')
@@ -113,13 +117,13 @@ Route::group([
             Route::get('autos', 'autos')->name('autos');
             Route::get('add-auto', 'addAutoView')->name('add-auto');
         });
-    Route::controller(RentalOfficeController::class)
-        ->as('rental.')
-        ->prefix('rental')
-        ->group(function () {
-            Route::get('autos', 'autos')->name('autos');
-            Route::get('add-auto', 'addAutoView')->name('add-auto');
-        });
+//    Route::controller(RentalOfficeController::class)
+//        ->as('rental.')
+//        ->prefix('rental')
+//        ->group(function () {
+//            Route::get('autos', 'autos')->name('autos');
+//            Route::get('add-auto', 'addAutoView')->name('add-auto');
+//        });
 });
 
 Route::resource('advertisement.number', AdvertisementNumberController::class)

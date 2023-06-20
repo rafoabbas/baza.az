@@ -6,7 +6,8 @@
             {!! $pageTitleHtml !!}
             <div class="cart-main-info__conteiner">
                 @include('front.pages.profile.business.layout.partials.navbar')
-                <form class="cart-main-info__body-info cart-main-info__body-info_account" action="{{ route('profile.salon.update') }}" method="post">
+                <form class="cart-main-info__body-info cart-main-info__body-info_account"
+                      action="{{ route('profile.salon.update') }}" method="post">
                     @method('put')
                     @csrf
                     <div class="user-account-busines-claster">
@@ -21,7 +22,7 @@
                                     </div>
                                 </div>
                                 <div class="acordeon-conteiner__claster acordeon-element__claster">
-                                    @include('front.pages.profile.business.particles.section.contact', ['item' => $salon])
+                                    @include('front.pages.profile.business.particles.section.form.contact', ['item' => $salon])
                                 </div>
                             </div>
                             <div class="acordeon-conteiner__box acordeon-element activ-acordeon">
@@ -46,9 +47,10 @@
                                         </div>
                                         @include('front.pages.profile.business.particles.common.logo-image', ['name' => 'logo', 'value' => $salon->getAttribute('logo')])
                                         <div class="acordeon-conteiner__baner-claster">
-                                            <h4 class="cart-main-info__title-ul">@lang('Banner ölçüləriniz') 740 х 260:</h4>
+                                            <h4 class="cart-main-info__title-ul">@lang('Banner ölçüləriniz') 740 х
+                                                260:</h4>
                                         </div>
-                                        <input type="file" multiple name="banners[]" >
+                                        <input type="file" multiple name="banners[]">
                                     </div>
                                 </div>
                             </div>

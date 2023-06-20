@@ -28,7 +28,7 @@
                 <a href="{{ route('profile.rental.show') }}">@lang('Arenda avtomobil')</a>
                 <ul class="user-account-nav__sub-meny">
                     <li><a href="{{ route('profile.rental.edit') }}">@lang('Məlumatı Redaktə et')</a></li>
-                    <li><a href="{{ route('profile.rental.add-auto') }}">@lang('Avtomobil əlavə edin')</a></li>
+                    <li><a href="{{ route('profile.rental-item.create') }}">@lang('Avtomobil əlavə edin')</a></li>
                 </ul>
             </li>
             <li>
