@@ -4,6 +4,7 @@ namespace App\Models\User\Auto;
 
 use App\Casts\PhonesCast;
 use App\Helpers\Classes\Helper;
+use App\Models\Common\Auto\ServiceGroup;
 use App\Models\Common\Auto\ServiceGroupItem;
 use App\Models\Common\Auto\Specification;
 use App\Models\Common\Car\CarBrand;
@@ -67,6 +68,12 @@ class Service extends Model
     public function items(): BelongsToMany
     {
         return $this->belongsToMany(ServiceGroupItem::class, 'service_service_group_item');
+    }
+
+    public function groups(): BelongsToMany
+    {
+        return $this->belongsToMany(ServiceGroup::class, 'service_service_group_item')
+            ->with('groupItems');
     }
 
     public function specifications(): BelongsToMany

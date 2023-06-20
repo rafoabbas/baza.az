@@ -19,72 +19,7 @@
                                     </div>
                                 </div>
                                 <div class="acordeon-conteiner__claster acordeon-element__claster">
-                                    <div class="acordeon-conteiner__claster-wrapper information-about-company">
-                                        <div class="information-about-company__info-claster">
-                                            <div class="information-about-company__info-line information-about-company__info-line-V1">
-                                                <div class="information-about-company__info-box">
-                                                    <span>@lang('Şirkət adı'):</span>
-                                                    <p>Автосалон Mercedes-Benz Baku</p>
-                                                </div>
-                                            </div>
-                                            <div class="information-about-company__info-line information-about-company__info-line-V2">
-                                                <div class="information-about-company__info-box">
-                                                    <span>@lang('Şəhər'):</span>
-                                                    <p>Бейлаган</p>
-                                                </div>
-                                                <div class="information-about-company__info-box">
-                                                    <span>@lang('Servis nömrəsi'):</span>
-                                                    <p>25 55</p>
-                                                </div>
-                                            </div>
-                                            <div class="information-about-company__info-line information-about-company__info-line-V1">
-                                                <div class="information-about-company__info-box">
-                                                    <span>@lang('Servis ünvanı'):</span>
-                                                    <p>Хатаинский р., пр. Бабека, (Автомобильный рынок)</p>
-                                                </div>
-                                            </div>
-                                            <div class="information-about-company__info-line information-about-company__info-line-V2">
-                                                <div class="information-about-company__info-box">
-                                                    <span>@lang('Telefon nömrəsi'):</span>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="tel:+994123602040">+ 994 12 360 20 40</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="tel:+994123602040">+ 994 12 360 20 40</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="tel:+994123602040">+ 994 12 360 20 40</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="information-about-company__info-box">
-                                                    <span>@lang('İş saatları'):</span>
-                                                    <ul>
-                                                        <li>
-                                                            Пн-Пт: 08:00 — 20:00
-                                                        </li>
-                                                        <li>
-                                                            Пн-Пт: 08:00 — 20:00
-                                                        </li>
-                                                        <li>
-                                                            Пн-Пт: 08:00 — 20:00
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="information-about-company__info-line information-about-company__info-line-V2">
-                                                <div class="information-about-company__info-box">
-                                                    <span>@lang('E poçta'):</span>
-                                                    <a href="mailto:info@avto.com" class="qurient-link">info@avto.com</a>
-                                                </div>
-                                                <div class="information-about-company__info-box">
-                                                    <span>@lang('Link'):</span>
-                                                    <a href="bazasale.com" class="qurient-link">bazasale.com</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include('front.pages.profile.business.particles.section.view.contact', ['item' => $store])
                                 </div>
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
@@ -97,69 +32,7 @@
                                     </div>
                                 </div>
                                 <div class="acordeon-conteiner__claster acordeon-element__claster">
-                                    <div class="acordeon-conteiner__claster-wrapper">
-                                        <div class="acordeon-conteiner__photo-claster">
-                                            <div class="acordeon-conteiner__main-photo-claster">
-                                                <h4 class="cart-main-info__title-ul">@lang('Əsas şəkil'):</h4>
-                                                <div class="photo-conteiner-add__main-image-conteiner add-new-image-main">
-                                                    <div class="file-image-add">
-                                                        <div class="file-image-add__element">
-                                                            <img src="{{ asset('assets/front/img/_src/sto1.jpg') }}" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="acordeon-conteiner__other-photo-conteiner">
-                                                <h4 class="cart-main-info__title-ul">@lang('Digər fotoşəkillər'):</h4>
-                                                <div class="photo-conteiner-add__other-photo-conteiner">
-                                                    <div class="other-box hoto-conteiner-add__other-box">
-                                                        <div class="other-box__image">
-                                                            <img src="{{ asset('assets/front/img/_src/det1.jpg') }}" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="other-box hoto-conteiner-add__other-box">
-                                                        <div class="other-box__image">
-                                                            <img src="{{ asset('assets/front/img/_src/det2.jpg') }}" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="other-box hoto-conteiner-add__other-box">
-                                                        <div class="other-box__image">
-                                                            <img src="{{ asset('assets/front/img/_src/det3.jpg') }}" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="other-box hoto-conteiner-add__other-box">
-                                                        <div class="other-box__image">
-                                                            <img src="{{ asset('assets/front/img/_src/det4.jpg') }}" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="other-box hoto-conteiner-add__other-box">
-                                                        <div class="other-box__image">
-                                                            <img src="{{ asset('assets/front/img/_src/det5.jpg') }}" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="other-box hoto-conteiner-add__other-box">
-                                                        <div class="other-box__image">
-                                                            <img src="{{ asset('assets/front/img/_src/det1.jpg') }}" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="other-box hoto-conteiner-add__other-box">
-                                                        <div class="other-box__image">
-                                                            <img src="{{ asset('assets/front/img/_src/det2.jpg') }}" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="acordeon-conteiner__baner-claster">
-                                            <h4 class="cart-main-info__title-ul">@lang('Banner ölçüləriniz') 1280 х 400:</h4>
-                                            <div class="rent-car__baners">
-                                                <img src="{{ asset('assets/front/img/_src/baner-sto.jpg') }}" alt="">
-                                            </div>
-                                            <div class="rent-car__baners">
-                                                <img src="{{ asset('assets/front/img/_src/baner-sto.jpg') }}" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include('front.pages.profile.business.particles.section.view.photos', ['item' => $store])
                                 </div>
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
@@ -172,12 +45,7 @@
                                     </div>
                                 </div>
                                 <div class="acordeon-conteiner__claster acordeon-element__claster">
-                                    <div class="acordeon-conteiner__claster-wrapper">
-                                        <div class="box-redactor-text">
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                                        </div>
-                                    </div>
+                                    @include('front.pages.profile.business.particles.section.view.description', ['item' => $store])
                                 </div>
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
@@ -190,34 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="acordeon-conteiner__claster acordeon-element__claster">
-                                    <div class="acordeon-conteiner__claster-wrapper">
-                                        <div class="acordeon-conteiner__services-container">
-                                            <div class="direction__claster">
-                                                <div class="direction__box">
-                                                    <div class="direction__header">
-                                                        <div class="direction__ic-header">
-                                                            <img src="{{ asset('assets/front/img/_src/stor-ic1.png') }}" alt="">
-                                                        </div>
-                                                        <h5 class="direction__header-title">@lang('Avtomobil hissələri')</h5>
-                                                    </div>
-                                                    <div class="direction__body-text">
-                                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</p>
-                                                    </div>
-                                                </div>
-                                                <div class="direction__box">
-                                                    <div class="direction__header">
-                                                        <div class="direction__ic-header">
-                                                            <img src="{{ asset('assets/front/img/_src/stor-ic2.png') }}" alt="">
-                                                        </div>
-                                                        <h5 class="direction__header-title">@lang('Təkərlər')</h5>
-                                                    </div>
-                                                    <div class="direction__body-text">
-                                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include('front.pages.profile.business.particles.section.view.store-category', ['item' => $store])
                                 </div>
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
@@ -230,94 +71,7 @@
                                     </div>
                                 </div>
                                 <div class="acordeon-conteiner__claster acordeon-element__claster">
-                                    <div class="acordeon-conteiner__claster-wrapper">
-                                        <div class="brend-conteiner__claster acordeon-conteiner__brends">
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark1.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Audi</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark2.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Infiniti</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark3.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Mercedes</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark4.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Lexus</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark5.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Acura</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark1.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Audi</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark2.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Infiniti</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark3.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Mercedes</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark4.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Lexus</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark5.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Acura</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark1.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Audi</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark2.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Infiniti</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark3.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Mercedes</h5>
-                                            </div>
-                                            <div class="brend-conteiner__box">
-                                                <div class="brend-conteiner__icon">
-                                                    <img src="{{ asset('assets/front/img/_src/mark4.svg') }}" alt="">
-                                                </div>
-                                                <h5 class="brend-conteiner__title">Lexus</h5>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include('front.pages.profile.business.particles.section.view.brands', ['item' => $store])
                                 </div>
                             </div>
                             <div class="acordeon-conteiner__box  acordeon-element">
@@ -330,9 +84,7 @@
                                     </div>
                                 </div>
                                 <div class="acordeon-conteiner__claster acordeon-element__claster">
-                                    <div class="acordeon-conteiner__claster-wrapper">
-                                        <div id="map3"></div>
-                                    </div>
+                                    @include('front.pages.profile.business.particles.section.view.map', ['item' => $store])
                                 </div>
                             </div>
                         </div>
