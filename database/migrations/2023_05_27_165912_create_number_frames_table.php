@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('frame');
+            $table->integer('order')->nullable()->default(0);
             $table->timestamps();
         });
     }

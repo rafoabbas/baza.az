@@ -93,6 +93,7 @@ class AdvertisementNumberService
     {
         return [
             'user_id' => ['nullable', 'integer'],
+            'number_frame_id' => ['required'],
             'region_id' => ['required', 'integer'],
             'number_region_id' => ['required', 'integer'],
             'series' => ['required', 'string', 'max:2', 'regex:/^[A-Z]+$/'],
@@ -103,7 +104,6 @@ class AdvertisementNumberService
             'email' => ['required', 'email'],
             'phone' => ['required', 'string', 'max:50', 'phone:AZ'],
             'name'  => ['required', 'string', 'max:50'],
-            'witch_auto_type' => ['required', 'in:porsche,bmw,mercedes'],
             'is_mirror_numbers' => ['required', 'boolean'],
             'is_three_numbers_in_a_row' => ['required', 'boolean'],
             'is_five_numbers_in_a_row' => ['required', 'boolean'],

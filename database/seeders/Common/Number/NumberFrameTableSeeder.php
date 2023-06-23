@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
 
-class NumberFrameSeeder extends Seeder
+class NumberFrameTableSeeder extends Seeder
 {
     public function __construct(
         public  NumberFrameRepositoryInterface $repository

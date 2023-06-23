@@ -12,6 +12,7 @@ use App\Traits\Eloquent\Uploadable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Kyslik\ColumnSortable\Sortable;
 
 class Store extends Model
@@ -59,22 +60,24 @@ class Store extends Model
         return $this->belongsTo(Region::class);
     }
 
-    public function types(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    public function types(): BelongsToMany
     {
         return $this->belongsToMany(StoreType::class)
             ->withPivot('description');
     }
 
-    public function brands(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    public function brands(): BelongsToMany
     {
         return $this->belongsToMany(CarBrand::class, 'store_car_brand');
     }
 
+    //TODO: yeni method Illuminate\Database\Eloquent\Casts\Attribute
     public function getBrandIdsAttribute(): array
     {
         return $this->brands->pluck('id')->toArray();
     }
 
+    //TODO: yeni method Illuminate\Database\Eloquent\Casts\Attribute
     public function getTypeIdsAttribute(): array
     {
         return $this->types()->pluck('store_type_id')->toArray();

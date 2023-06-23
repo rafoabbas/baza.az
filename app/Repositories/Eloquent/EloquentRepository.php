@@ -51,7 +51,8 @@ abstract class EloquentRepository implements EloquentRepositoryInterface
         array $columns = ['*'],
         array $conditions = [],
         array $relations = [],
-        ?array $filters = []
+        ?array $filters = [],
+        ?string $sorting = null
     ): Collection {
         $tableName = $this->model->getTable();
 
@@ -59,6 +60,13 @@ abstract class EloquentRepository implements EloquentRepositoryInterface
         //add conditions
         foreach ($conditions as $condition) {
             $query->where($tableName . '.' . $condition[0], $condition[1], $condition[2]);
+        }
+        if ($sorting) {  //add sorting
+            $attr = ltrim($sorting, '-');
+
+            $direction = $sorting == $attr ? 'ASC' : 'DESC';
+
+            $query->orderBy($tableName . '.' . $attr, $direction);
         }
 
         return $query

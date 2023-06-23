@@ -2,8 +2,10 @@
 
 namespace App\Models\User\Advertisement;
 
+use App\Models\Common\Number\NumberFrame;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Kyslik\ColumnSortable\Sortable;
 
@@ -44,4 +46,9 @@ class AdvertisementNumber extends Model
         'expired_at',
         'deleted_at'
     ];
+
+    public function frame(): BelongsTo
+    {
+        return $this->belongsTo(NumberFrame::class, 'number_frame_id', 'id');
+    }
 }
