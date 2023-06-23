@@ -16,6 +16,7 @@ class AdvertisementNumber extends Model
     protected $fillable = [
         'uuid',
         'user_id',
+        'number_frame_id',
         'region_id',
         'number_region_id',
         'region_prefix',
@@ -30,7 +31,6 @@ class AdvertisementNumber extends Model
         'price_usd',
         'price_eur',
         'main_currency',
-        'witch_auto_type',
         'status',
         'is_mirror_numbers',
         'is_three_numbers_in_a_row',

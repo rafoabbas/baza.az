@@ -8,6 +8,7 @@ use App\Models\User\Advertisement\AdvertisementNumber;
 use App\Services\Front\Advertisement\AdvertisementNumberService;
 use Database\Seeders\Common\Car\CarBrandAndModelTableSeeder;
 use Database\Seeders\Common\CommonDatabaseSeeder;
+use Database\Seeders\Common\Number\NumberFrameSeeder;
 use Database\Seeders\Guard\AdminTableSeeder;
 use Database\Seeders\Guard\UserTableSeeder;
 use Database\Seeders\System\SystemDatabaseSeeder;
@@ -19,11 +20,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            AdminTableSeeder::class,
-            UserTableSeeder::class,
-            CommonDatabaseSeeder::class,
-            SystemDatabaseSeeder::class,
-            AdvertisementDatabaseSeeder::class,
+            NumberFrameSeeder::class
+//            AdminTableSeeder::class,
+//            UserTableSeeder::class,
+//            CommonDatabaseSeeder::class,
+//            SystemDatabaseSeeder::class,
+//            AdvertisementDatabaseSeeder::class,
         ]);
     }
 }

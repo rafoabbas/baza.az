@@ -17,6 +17,7 @@ use App\Repositories\Contracts\Common\Car\CarBrandRepositoryInterface;
 use App\Repositories\Contracts\Common\Car\CarModelRepositoryInterface;
 use App\Repositories\Contracts\Common\Location\NumberRegionRepositoryInterface;
 use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
+use App\Repositories\Contracts\Common\Number\NumberFrameRepositoryInterface;
 use App\Repositories\Contracts\EloquentRepositoryInterface;
 use App\Repositories\Contracts\User\Advertisement\AdvertisementNumberRepositoryInterface;
 use App\Repositories\Contracts\User\Auto\SalonRepositoryInterface;
@@ -39,6 +40,7 @@ use App\Repositories\Eloquent\Common\Car\CarBrandRepository;
 use App\Repositories\Eloquent\Common\Car\CarModelRepository;
 use App\Repositories\Eloquent\Common\Location\NumberRegionRepository;
 use App\Repositories\Eloquent\Common\Location\RegionRepository;
+use App\Repositories\Eloquent\Common\Number\NumberFrameRepository;
 use App\Repositories\Eloquent\EloquentRepository;
 use App\Repositories\Eloquent\User\Advertisement\AdvertisementNumberRepository;
 use App\Repositories\Eloquent\User\Auto\SalonRepository;
@@ -73,5 +75,6 @@ final class RepositoryServiceProvider extends ServiceProvider
         RegionRepositoryInterface::class => RegionRepository::class,
         AdvertisementNumberRepositoryInterface::class => AdvertisementNumberRepository::class,
         EloquentRepositoryInterface::class => EloquentRepository::class,
+        NumberFrameRepositoryInterface::class => NumberFrameRepository::class,
     ];
 }
