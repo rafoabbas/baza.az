@@ -20,7 +20,8 @@ interface EloquentRepositoryInterface
         array $columns = ['*'],
         array $conditions = [],
         array $relations = [],
-        ?array $filters = []
+        ?array $filters = [],
+        ?string $sorting = null,
     ): Collection;
 
     public function model(): Model;

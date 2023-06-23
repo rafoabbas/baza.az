@@ -13,6 +13,7 @@ return new class extends Migration
             $table->id();
             $table->uuid()->index();
             $table->foreignId('user_id')->nullable()->constrained('users');
+            $table->foreignId('number_frame_id')->nullable()->constrained('number_frames');
             $table->foreignId('region_id')->nullable()->constrained('regions');
             $table->foreignId('number_region_id')->nullable()->constrained('number_regions');
             $table->string('region_prefix', 2)->nullable();
@@ -30,7 +31,6 @@ return new class extends Migration
             $table->decimal('price_usd')->nullable();
             $table->decimal('price_eur')->nullable();
             $table->string('main_currency', 3)->default('AZN')->index();
-            $table->string('witch_auto_type')->nullable('porsche');
             $table->tinyInteger('status')->default(AdvertisementStatus::pending());
             $table->boolean('is_mirror_numbers')->default(false);
             $table->boolean('is_three_numbers_in_a_row')->default(false);

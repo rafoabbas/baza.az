@@ -5,6 +5,7 @@ namespace Database\Factories\User\Advertisement;
 use App\Enums\Advertisement\AdvertisementStatus;
 use App\Models\Common\Location\NumberRegion;
 use App\Models\Common\Location\Region;
+use App\Models\Common\Number\NumberFrame;
 use App\Models\User\Advertisement\AdvertisementNumber;
 use App\Models\User\Advertisement\AdvertisementOtp;
 use App\Services\Front\Advertisement\AdvertisementNumberService;
@@ -30,6 +31,7 @@ class AdvertisementNumberFactory extends Factory
             'uuid' => AdvertisementOtp::factory()
                 ->phone($phone)
                 ->create()->getAttribute('uuid'),
+            'number_frame_id' => NumberFrame::query()->inRandomOrder()->first()->getAttribute('id'),
             'user_id' => null,
             'region_id' => $region->getAttribute('id'),
             'number_region_id' => $numberRegion->getAttribute('id'),
@@ -40,7 +42,7 @@ class AdvertisementNumberFactory extends Factory
             'description' => $this->faker->text(100),
             ... $service->price(rand(100, 1000), $mainCurrency = $this->faker->randomElement(['AZN', 'USD', 'EUR'])),
             'main_currency' => $mainCurrency,
-            'witch_auto_type' => 'porsche',
+
             'status' => $this->faker->randomElement(array_keys(AdvertisementStatus::toArray())),
             'is_mirror_numbers' => $this->faker->boolean(),
             'is_three_numbers_in_a_row' => $this->faker->boolean(),

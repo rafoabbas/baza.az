@@ -86,11 +86,13 @@ class Service extends Model
         return $this->belongsToMany(CarBrand::class, 'service_car_brand', 'service_id', 'car_brand_id');
     }
 
+    //TODO: yeni method Illuminate\Database\Eloquent\Casts\Attribute
     public function getBrandIdsAttribute(): array
     {
         return $this->brands->pluck('id')->toArray();
     }
 
+    //TODO: yeni method Illuminate\Database\Eloquent\Casts\Attribute
     public function getSpecificationIdsAttribute(): array
     {
         return $this->specifications->pluck('id')->toArray();

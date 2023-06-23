@@ -8,6 +8,7 @@ use App\Models\Common\Location\Region;
 use App\Models\Guard\User;
 use App\Traits\Eloquent\Filterable;
 use App\Traits\Eloquent\Uploadable;
+use Illuminate\Database\Eloquent\Casts\Attribute as AttributeCast;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -69,10 +70,18 @@ class Salon extends Model
         return $this->belongsToMany(Specification::class, 'salon_specification');
     }
 
-    public function getSpecificationIdsAttribute(): array
+    //TODO: totu ornek yaziram yeni casting methodu istifade et, hamisin bele istifade et
+    public function specificationIds(): AttributeCast
     {
-        return $this->specifications->pluck('id')->toArray();
+        return AttributeCast::make(
+            get: fn () => $this->specifications->pluck('id')->toArray()
+        );
     }
+
+//    public function getSpecificationIdsAttribute(): array
+//    {
+//        return $this->specifications->pluck('id')->toArray();
+//    }
 
     public function getRegionNameAttribute(): string
     {

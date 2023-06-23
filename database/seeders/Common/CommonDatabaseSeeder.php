@@ -15,6 +15,7 @@ use Database\Seeders\Common\Auto\TransmissionTableSeeder;
 use Database\Seeders\Common\Car\CarBrandAndModelTableSeeder;
 use Database\Seeders\Common\Location\NumberRegionTableSeeder;
 use Database\Seeders\Common\Location\RegionTableSeeder;
+use Database\Seeders\Common\Number\NumberFrameTableSeeder;
 use Illuminate\Database\Seeder;
 
 class CommonDatabaseSeeder extends Seeder
@@ -35,7 +36,8 @@ class CommonDatabaseSeeder extends Seeder
             ClassTypeTableSeeder::class,
             StoreTypeTableSeeder::class,
             SpecificationTableSeeder::class,
-            ServiceGroupTableSeeder::class
+            ServiceGroupTableSeeder::class,
+            NumberFrameTableSeeder::class
         ]);
     }
 }

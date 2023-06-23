@@ -121,10 +121,10 @@
                     <div class="select-num">
                         <h4 class="cart-main-info__title-ul">@lang('Nömrə hansı maşında göstərilsin'):</h4>
                         <div class="select-num__conteiner">
-                            @foreach(config('advertisement.number.witch_auto_types') as $typeKey => $typeImage)
-                                <label class="select-num__box {{ old('witch_auto_type', ($typeKey == 'porsche' ? 'porsche' : '')) == $typeKey ? 'select-num__box_activ' : '' }}" for="{{ 'auto_' . $typeKey }}">
-                                    <input type="radio" {{ old('witch_auto_type', ($typeKey == 'porsche' ? 'porsche' : '')) == $typeKey ? 'checked' : '' }} id="{{ 'auto_' . $typeKey }}" name="witch_auto_type" value="{{ $typeKey }}">
-                                    <img src="{{ asset($typeImage) }}" alt="">
+                            @foreach($frames as $frame)
+                                <label class="select-num__box {{ old('number_frame_id', ($frame->getAttribute('id') == 1 ? 1 : '')) == $frame->getAttribute('id') ? 'select-num__box_activ' : '' }}" for="{{ 'frame_' . $frame->getAttribute('id') }}">
+                                    <input type="radio" {{ old('number_frame_id', ($frame->getAttribute('id') == 1 ? 1 : '')) == $frame->getAttribute('id') ? 'checked' : '' }} id="{{ 'frame_' . $frame->getAttribute('id') }}" name="number_frame_id" value="{{ $frame->getAttribute('id') }}">
+                                    <img src="{{ asset('storage/' . $frame->getAttribute('frame')) }}" alt="{{ $frame->getAttribute('name') }}">
                                 </label>
                             @endforeach
                         </div>

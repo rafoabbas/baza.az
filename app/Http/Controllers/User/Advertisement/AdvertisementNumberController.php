@@ -9,6 +9,7 @@ use App\Http\Requests\User\Advertisement\Number\AdvertisementNumberStoreRequest;
 use App\Models\User\Advertisement\AdvertisementOtp;
 use App\Repositories\Contracts\Common\Location\NumberRegionRepositoryInterface;
 use App\Repositories\Contracts\Common\Location\RegionRepositoryInterface;
+use App\Repositories\Contracts\Common\Number\NumberFrameRepositoryInterface;
 use App\Services\Front\Advertisement\AdvertisementNumberService;
 use App\Services\Front\Advertisement\AdvertisementOtpService;
 use Illuminate\Http\Request;
@@ -20,6 +21,7 @@ class AdvertisementNumberController extends Controller
         public AdvertisementNumberService $numberService,
         public RegionRepositoryInterface $regionRepository,
         public NumberRegionRepositoryInterface $numberRegionRepository,
+        public NumberFrameRepositoryInterface $frameRepository
     ) {
     }
 
@@ -37,6 +39,9 @@ class AdvertisementNumberController extends Controller
             'regions' => $this->regionRepository->all(
                 columns: Helper::select(['id', 'name%']),
                 conditions: [['status', '=', Status::published()]]
+            ),
+            'frames' => $this->frameRepository->all(
+                sorting: 'order',
             ),
             'pageTitleHtml' => $this->numberService->pageTitleHtml()
         ]);
