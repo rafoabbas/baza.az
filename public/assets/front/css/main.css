@@ -10003,6 +10003,109 @@ main {
   width: 187px;
 }
 
+.all-toast-main-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: -500px;
+  transition: 1s;
+  top: 20px;
+  height: 1000px;
+}
+
+.toast-container-toggle {
+  right: 20px;
+}
+
+.wt-toast-container {
+  transition: 0.5s;
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  background: #F7F9FA;
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  right: 0;
+  transform: translateX(calc(100% + 8px));
+  margin-bottom: 16px;
+}
+.wt-toast-container.show {
+  transition: 0.5s;
+  transform: translateX(0);
+}
+.wt-toast-container .success-color {
+  color: #8DC63F;
+}
+.wt-toast-container .success-color-left-border {
+  background-color: #8DC63F;
+}
+.wt-toast-container .failed-color {
+  color: #ED1C24;
+}
+.wt-toast-container .failed-color-left-border {
+  background-color: #ED1C24;
+}
+.wt-toast-container .warning-color {
+  color: #E7C92C;
+}
+.wt-toast-container .warning-color-left-border {
+  background-color: #E7C92C;
+}
+.wt-toast-container .info-color {
+  color: #407BFF;
+}
+.wt-toast-container .info-color-left-border {
+  background-color: #407BFF;
+}
+.wt-toast-container .toast-border-left {
+  width: 8px;
+  min-height: 56px;
+  border-top-left-radius: 6%;
+  border-bottom-left-radius: 6%;
+}
+.wt-toast-container .toast-content-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 4%;
+  align-items: center;
+}
+.wt-toast-container .toast-content-container .toast-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.wt-toast-container .toast-content-container .toast-content .toast-status-text {
+  display: inline-block;
+  margin-left: 5%;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.wt-toast-container .toast-content-container .toast-close-btn-container {
+  color: #DADADA;
+  border: none;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  margin-right: 2%;
+}
+.wt-toast-container .toast-content-container .toast-close-btn-container .toast-close-btn {
+  display: inline-block;
+  padding: 85%;
+  border: none;
+  background: none;
+}
+.wt-toast-container .toast-content-container .toast-close-btn-container .toast-close-btn i {
+  font-size: 22px;
+  color: #DADADA;
+}
+.wt-toast-container .toast-toggle {
+  right: 0px;
+}
+
 .footer__top {
   background: #F6F9FE;
   padding: 30px 0;

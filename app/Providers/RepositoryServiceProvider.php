@@ -25,6 +25,7 @@ use App\Repositories\Contracts\User\Auto\ServiceRepositoryInterface;
 use App\Repositories\Contracts\User\Auto\StoreRepositoryInterface;
 use App\Repositories\Contracts\User\Rental\RentalItemRepositoryInterface;
 use App\Repositories\Contracts\User\Rental\RentalOfficeRepositoryInterface;
+use App\Repositories\Contracts\User\UserRepositoryInterface;
 use App\Repositories\Eloquent\Common\Auto\BodyTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\ClassTypeRepository;
 use App\Repositories\Eloquent\Common\Auto\ColorRepository;
@@ -48,6 +49,7 @@ use App\Repositories\Eloquent\User\Auto\ServiceRepository;
 use App\Repositories\Eloquent\User\Auto\StoreRepository;
 use App\Repositories\Eloquent\User\Rental\RentalItemRepository;
 use App\Repositories\Eloquent\User\Rental\RentalOfficeRepository;
+use App\Repositories\Eloquent\UserRepository;
 use Illuminate\Support\ServiceProvider;
 
 final class RepositoryServiceProvider extends ServiceProvider
@@ -76,5 +78,6 @@ final class RepositoryServiceProvider extends ServiceProvider
         AdvertisementNumberRepositoryInterface::class => AdvertisementNumberRepository::class,
         EloquentRepositoryInterface::class => EloquentRepository::class,
         NumberFrameRepositoryInterface::class => NumberFrameRepository::class,
+        UserRepositoryInterface::class => UserRepository::class,
     ];
 }

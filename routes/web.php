@@ -101,6 +101,7 @@ Route::group([
 ], function () {
     Route::get('', [ProfileController::class, 'index'])->name('index');
     Route::post('logout', [ProfileController::class, 'logout'])->name('logout');
+    Route::any('update', [ProfileController::class, 'update'])->name('update');
 
     Route::singleton('service', ServiceController::class);
     Route::singleton('store', StoreController::class);
@@ -246,7 +247,7 @@ Route::get('/cars', function () {
     return view('front.pages.cars.index');
 })->name('cars');
 Route::get('/cto', function () {
-    return view('front.pages.cto.index');
+    return view('front.pages.cto.catalog');
 })->name('cto');
 Route::get('/renta-car', function () {
     return view('front.pages.renta-car.catalog');
@@ -275,7 +276,7 @@ Route::get('/cto-detail', function () {
 })->name('cto.show');
 
 Route::get('/cto-catalog', function () {
-    return view('front.pages.cto.catalog');
+    return view('front.pages.cto.index');
 })->name('cto.catalog');
 
 Route::get('/renta-car-show', function () {

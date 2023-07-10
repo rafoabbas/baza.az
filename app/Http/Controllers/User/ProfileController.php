@@ -28,7 +28,10 @@ class ProfileController extends Controller
 
     public function business(): View
     {
-        return view('front.pages.profile.business.index');
+        return view('front.pages.profile.business.index', [
+            'user' => Auth::user(),
+            'pageTitleHtml' => $this->service->pageTitleHtml()
+        ]);
     }
 
     public function personal(): View
@@ -41,7 +44,11 @@ class ProfileController extends Controller
 
     public function update(ProfileRequest $request)
     {
-        //
+        $this->service->update($request);
+
+        return redirect()->back()->withToast([
+            'message' => __('Şəxsi məlumatlarınız başarıyla güncəlləndi.')
+        ]);
     }
 
     public function logout(): RedirectResponse

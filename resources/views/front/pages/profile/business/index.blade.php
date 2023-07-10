@@ -3,49 +3,62 @@
 @section('content')
     <section class="cart-main-info">
         <div class="general-conteiner">
-            <h2 class="cart-main-info__title">Личный кабинет</h2>
-            <div class="catalog_bread-crumbs">
-                <a href="">Главная</a>
-                <p>/ Личный кабинет</p>
-            </div>
+            {!! $pageTitleHtml !!}
             <div class="cart-main-info__conteiner">
                 @include('front.pages.profile.business.layout.partials.navbar')
                 <div class="cart-main-info__body-info cart-main-info__body-info_account">
-                    <div class="user-account-busines-claster">
+                    <form action="{{ route('profile.update') }}" method="post" class="user-account-busines-claster">
+                        @csrf
+                        @method('put')
                         <div class="user-main-info__info-conteiner">
                             <div class="user-main-info__input-user-box input-user-box">
                                 <p>ID:</p>
-                                <input type="text" value="3358" readonly>
+                                <input type="text" value="{{ $user->getAttribute('id') }}" readonly>
                             </div>
                             <div class="user-main-info__inp-info input-form-conteiner">
                                 <h5 class="input-form-conteiner__title">Телефон администратора:</h5>
                                 <div class="user-main-info__input-user-box input-user-box">
-                                    <input type="text" value="+ 994 12 360 20 40" readonly>
+                                    <input type="text" name="phone" value="{{ frontPhoneFormat($user->getAttribute('phone')) }}" readonly>
                                 </div>
                             </div>
                             <div class="user-main-info__inp-info input-form-conteiner">
-                                <h5 class="input-form-conteiner__title">Почта:</h5>
+                                <h5 class="input-form-conteiner__title">@lang('E poçta'):</h5>
                                 <div class="user-main-info__input-user-box input-user-box">
-                                    <input type="text" value="geydar.suleyman@gmail.com" readonly>
+                                    <input type="text" name="email" value="{{ $user->getAttribute('email') }}" readonly>
                                 </div>
                             </div>
                             <div class="user-main-info__inp-info input-form-conteiner">
-                                <h5 class="input-form-conteiner__title">ФИО:</h5>
+                                <h5 class="input-form-conteiner__title">@lang('Soyad, Ad'):</h5>
                                 <div class="input-form-conteiner__claster">
-                                    <input type="text" class="input-form-conteiner__input" placeholder="Гейдар Сулейман оглы" value="Гейдар Сулейман оглы">
+                                    <input name="name" type="text" class="input-form-conteiner__input @error('name') is-invalid @enderror" placeholder="Гейдар Сулейман оглы" value="{{ old('name', $user->getAttribute('name'))  }}">
                                 </div>
+                                @error('name')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
                             <div class="user-main-info__inp-info input-form-conteiner">
-                                <h5 class="input-form-conteiner__title">Название компании:</h5>
+                                <h5 class="input-form-conteiner__title">@lang('Şirkətin adı:')</h5>
                                 <div class="input-form-conteiner__claster">
-                                    <input type="text" class="input-form-conteiner__input" placeholder="ООО «Легис»" value="ООО «Легис»">
+                                    <input name="company_name" type="text" class="input-form-conteiner__input @error('company_name') is-invalid @enderror" placeholder="ООО «Легис»" value="{{ old('company_name', $user->getAttribute('company_name'))  }}">
                                 </div>
+                                @error('company_name')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
                             <div class="user-main-info__inp-info input-form-conteiner">
-                                <h5 class="input-form-conteiner__title">ИПГ:</h5>
+                                <h5 class="input-form-conteiner__title">@lang('TIN'):</h5>
                                 <div class="input-form-conteiner__claster">
-                                    <input type="text" class="input-form-conteiner__input" placeholder="322 826 9282 52" value="322 826 9282 52">
+                                    <input name="tin" type="text" class="input-form-conteiner__input @error('tin') is-invalid @enderror" placeholder="322 826 9282 52" value="{{ old('tin', $user->getAttribute('tin'))  }}">
                                 </div>
+                                @error('tin')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
                             <div class="user-main-info__control-bt-conteiner control-bt-conteiner control-bt-conteiner_flex">
                                 <div class="control-bt-conteiner__box">
@@ -55,23 +68,28 @@
                                             <path d="M23 12V11.5C23 9.57032 21.4297 8 19.5 8C17.5703 8 16 9.57032 16 11.5V12C15.4487 12 15 12.4488 15 13V18.0001C15 18.5513 15.4487 19 16 19H23C23.5512 19 24 18.5513 24 18.0001V13C24 12.4488 23.5513 12 23 12ZM20 15.8463V16.5C20 16.7764 19.7764 17.0001 19.5 17.0001C19.2236 17.0001 19 16.7764 19 16.5V15.8463C18.7066 15.6717 18.5 15.3652 18.5 15C18.5 14.4488 18.9487 14.0001 19.5 14.0001C20.0512 14.0001 20.4999 14.4488 20.4999 15C20.5 15.3653 20.2933 15.6717 20 15.8463ZM21 12H18V11.5C18 10.6729 18.6728 10 19.5 10C20.3272 10 21 10.6729 21 11.5V12Z" fill="#768A9E"/>
                                         </svg>
                                     </div>
-                                    <p class="control-bt-conteiner__title">Изменить пароль</p>
+                                    <p class="control-bt-conteiner__title">@lang('Parolu dəyişdirin')</p>
                                 </div>
-                                <div class="control-bt-conteiner__box">
+                                <a href="{{ route('profile.logout') }}"
+                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();"
+                                   class="control-bt-conteiner__box" style="display: flex; gap: 5px">
                                     <div class="control-bt-conteiner__icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M14.5 12.8333C14.0392 12.8333 13.6667 13.2067 13.6667 13.6667V17C13.6667 17.4592 13.2933 17.8333 12.8333 17.8333H10.3333V5.33333C10.3333 4.62167 9.88 3.98583 9.19833 3.74917L8.95167 3.66667H12.8333C13.2933 3.66667 13.6667 4.04083 13.6667 4.5V7C13.6667 7.46 14.0392 7.83333 14.5 7.83333C14.9608 7.83333 15.3333 7.46 15.3333 7V4.5C15.3333 3.12167 14.2117 2 12.8333 2H3.875C3.84333 2 3.81667 2.01417 3.78583 2.01833C3.74583 2.015 3.7075 2 3.66667 2C2.7475 2 2 2.7475 2 3.66667V18.6667C2 19.3783 2.45333 20.0142 3.135 20.2508L8.15 21.9225C8.32 21.975 8.48917 22 8.66667 22C9.58583 22 10.3333 21.2525 10.3333 20.3333V19.5H12.8333C14.2117 19.5 15.3333 18.3783 15.3333 17V13.6667C15.3333 13.2067 14.9608 12.8333 14.5 12.8333Z" fill="#768A9E"/>
                                             <path d="M21.755 9.74319L18.4217 6.40985C18.1834 6.17152 17.825 6.09985 17.5134 6.22902C17.2025 6.35819 16.9992 6.66235 16.9992 6.99902V9.49902H13.6659C13.2059 9.49902 12.8325 9.87235 12.8325 10.3324C12.8325 10.7924 13.2059 11.1657 13.6659 11.1657H16.9992V13.6657C16.9992 14.0024 17.2025 14.3065 17.5134 14.4357C17.825 14.5649 18.1834 14.4932 18.4217 14.2549L21.755 10.9215C22.0809 10.5957 22.0809 10.069 21.755 9.74319Z" fill="#768A9E"/>
                                         </svg>
                                     </div>
-                                    <p class="control-bt-conteiner__title">Выход</p>
-                                </div>
+                                    <p class="control-bt-conteiner__title">@lang('Çıkış')</p>
+                                </a>
                             </div>
                         </div>
                         <div class="user-account__reload-btn-conteiner">
-                            <button class="btn1">Обновить</button>
+                            <button type="submit" class="btn1">@lang('Yadda saxla')</button>
                         </div>
-                    </div>
+                    </form>
+                    <form id="logout-form" action="{{ route('profile.logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </div>
             </div>
         </div>
