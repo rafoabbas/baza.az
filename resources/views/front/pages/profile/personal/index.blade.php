@@ -6,7 +6,9 @@
            {!! $pageTitleHtml !!}
             <div class="cart-main-info__conteiner">
                 <div class="cart-main-info__body-info user-account-content">
-                    <div class="user-main-info">
+                    <form action="{{ route('profile.update') }}" method="post" class="user-main-info">
+                        @csrf
+                        @method('put')
                         <div class="user-main-info__info-conteiner">
                             <div class="user-main-info__input-user-box input-user-box">
                                 <p>ID:</p>
@@ -15,8 +17,13 @@
                             <div class="user-main-info__inp-info input-form-conteiner">
                                 <h5 class="input-form-conteiner__title">@lang('E poçta'):</h5>
                                 <div class="input-form-conteiner__claster">
-                                    <input type="email" name="email" class="input-form-conteiner__input" placeholder="example@gmail.com" value="{{ old('email', $user->getAttribute('email'))  }}">
+                                    <input type="email" name="email" class="input-form-conteiner__input @error('email') is-invalid @enderror" placeholder="example@gmail.com" value="{{ old('email', $user->getAttribute('email'))  }}">
                                 </div>
+                                @error('email')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="user-main-info__info-conteiner">
@@ -27,8 +34,13 @@
                             <div class="user-main-info__inp-info input-form-conteiner">
                                 <h5 class="input-form-conteiner__title">@lang('Soyad, Ad'):</h5>
                                 <div class="input-form-conteiner__claster">
-                                    <input name="name" type="text" class="input-form-conteiner__input" placeholder="Гейдар Сулейман оглы" value="{{ old('name', $user->getAttribute('name'))  }}">
+                                    <input name="name" type="text" class="input-form-conteiner__input @error('name') is-invalid @enderror" placeholder="Гейдар Сулейман оглы" value="{{ old('name', $user->getAttribute('name'))  }}">
                                 </div>
+                                @error('name')
+                                <span class="validate-text">
+                                    <smal class="text-danger">{{ $message }}</smal>
+                                </span>
+                                @enderror
                             </div>
 {{--                            <div class="catalog__filtr__filtr-element user-main-info__checbox-conteiner">--}}
 {{--                                <div class="checkbox">--}}
@@ -68,7 +80,7 @@
 {{--                            </div>--}}
                         </div>
                         <div class="save-info" style="display: flex; gap: 24px; align-items: center">
-                            <button class="btn1">@lang('Yadda saxla')</button>
+                            <button type="submit" class="btn1">@lang('Yadda saxla')</button>
                             <a href="{{ route('profile.logout') }}"
                                onclick="event.preventDefault();document.getElementById('logout-form').submit();"
                                class="control-bt-conteiner__box" style="display: flex; gap: 5px">
@@ -81,14 +93,14 @@
                                 <p class="control-bt-conteiner__title">@lang('Çıkış')</p>
                             </a>
                         </div>
-                        <form id="logout-form" action="{{ route('profile.logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
+                    </form>
+                    <form id="logout-form" action="{{ route('profile.logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                     <div class="user-account-ads">
-                        <h4 class="user-account-ads__title">Ваши объявления</h4>
+                        <h4 class="user-account-ads__title">@lang('sizin elanlariniz')</h4>
                         <div class="user-account-ads__conteiner">
-                            <h4 class="cart-main-info__title-ul">Продажа авто:</h4>
+                            <h4 class="cart-main-info__title-ul">@lang('Avtomobil satışı'):</h4>
                             <div class="user-account-ads__ads-line ads-body__conteiner">
                                 @foreach([0,1,2] as $item)
                                 <div class="card-box card-box-user">
@@ -158,11 +170,11 @@
                                 </a>
                             </div>
                             <div class="load-more-ads">
-                                <button class="btn1">Показать еще</button>
+                                <button class="btn1">@lang('Daha çox göstər')</button>
                             </div>
                         </div>
                         <div class="user-account-ads__conteiner">
-                            <h4 class="cart-main-info__title-ul">Продажа автономера:</h4>
+                            <h4 class="cart-main-info__title-ul">@lang('Avtonömrə satışı'):</h4>
                             <div class="user-account-ads__ads-line ads-body__conteiner">
                                 @foreach([0,1,2] as $item)
                                 <div class="card-box card-box-user">
@@ -218,7 +230,7 @@
                                                 <div class="controls-box-ads__icon">
                                                     <img src="{{ asset('assets/front/img/_src/c_remove.png') }}" alt="">
                                                 </div>
-                                                <p>Удалить</p>
+                                                <p>@lang('Sil')</p>
                                             </div>
                                         </div>
                                     </div>
@@ -229,12 +241,12 @@
                                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M31.6665 18.3332H21.6665V8.33317C21.6665 7.89114 21.4909 7.46722 21.1783 7.15466C20.8658 6.8421 20.4419 6.6665 19.9998 6.6665C19.5578 6.6665 19.1339 6.8421 18.8213 7.15466C18.5088 7.46722 18.3332 7.89114 18.3332 8.33317V18.3332H8.33317C7.89114 18.3332 7.46722 18.5088 7.15466 18.8213C6.8421 19.1339 6.6665 19.5578 6.6665 19.9998C6.6665 20.4419 6.8421 20.8658 7.15466 21.1783C7.46722 21.4909 7.89114 21.6665 8.33317 21.6665H18.3332V31.6665C18.3332 32.1085 18.5088 32.5325 18.8213 32.845C19.1339 33.1576 19.5578 33.3332 19.9998 33.3332C20.4419 33.3332 20.8658 33.1576 21.1783 32.845C21.4909 32.5325 21.6665 32.1085 21.6665 31.6665V21.6665H31.6665C32.1085 21.6665 32.5325 21.4909 32.845 21.1783C33.1576 20.8658 33.3332 20.4419 33.3332 19.9998C33.3332 19.5578 33.1576 19.1339 32.845 18.8213C32.5325 18.5088 32.1085 18.3332 31.6665 18.3332Z" fill="#768A9E"/>
                                         </svg>
-                                        <p>Добавить объявление по продаже</p>
+                                        <p>@lang('elan əlavə edin')</p>
                                     </div>
                                 </a>
                             </div>
                             <div class="load-more-ads">
-                                <button class="btn1">Показать еще</button>
+                                <button class="btn1">@lang('Daha çox göstər')</button>
                             </div>
                         </div>
                     </div>

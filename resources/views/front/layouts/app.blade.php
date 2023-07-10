@@ -299,6 +299,26 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvt_XnVi4vJyFx1LhfRK_tm-5F3IPhOj0&callback=initMap"
             async defer></script>
+    <script src="{{ asset('assets/front/libs/jquery-toaster/jquery.toaster.js') }}"></script>
+
+    <script>
+
+        @if(session('message'))
+        $.toaster({
+            message: '{{ session('message') }}',
+            priority: '{{ session('icon') }}',
+        })
+        @endif
+
+        @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        $.toaster({
+            message: '{{ $error }}',
+            priority: 'warning',
+        })
+        @endforeach
+        @endif
+    </script>
 </body>
 </html>
 

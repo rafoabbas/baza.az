@@ -20,6 +20,7 @@
                             </div>
                             <div class="select-namber-conteiner__select-box">
                                 <select name="" id="">
+                                    <option value="">**</option>
                                     <option value="">00</option>
                                     <option value="">11</option>
                                     <option value="">22</option>
@@ -173,6 +174,7 @@
 {{--                                </div>--}}
                                 <div class="select-namber-conteiner__select-box">
                                     <select name="" id="">
+                                        <option value=""></option>
                                         <option value="">00</option>
                                         <option value="">11</option>
                                         <option value="">22</option>
