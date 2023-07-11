@@ -11,6 +11,7 @@ let imageList = dropWrapper.parent('.img-preview-div').siblings('.img-list');
 
 
 $(".img-preview-file").on("change", function() {
+    console.log('sdasdsaa')
     dropWrapper = $(this).parent('.img-preview')
     validLength = dropWrapper.data('length');
     icon = dropWrapper.find('.icon');
@@ -21,6 +22,10 @@ $(".img-preview-file").on("change", function() {
     imageList = dropWrapper.parent('.img-preview-div').siblings('.img-list');
     icon.addClass('d-none');
     spinner.removeClass('d-none');
+
+    console.log({
+        a: "Hello world",
+    })
     uploadFile(this.files[0], validLength, name);
     spinner.addClass('d-none');
     icon.removeClass('d-none');
@@ -89,20 +94,20 @@ function uploadFile(file, validLength, name)
 function imageItem(data, validLength, name)
 {
     let fileName = validLength == 1 ? name : name + '['+data.id+']';
-    return `<div class="img-item  mt-2">
-            <div class="img-item-preview">
-                <img class="img-fluid" src="${data.url}">
-            </div>
-            <div class="img-item-information ps-2 d-flex flex-column align-center">
-                <span class="name">${data.name.substring(0,20)}</span>
-                <span class="size">${data.extension}</span>
-            </div>
-            <div class="img-item-action">
-                <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(data.id)"><i class="fas fa-trash"></i></button>
-            </div>
-            <input type="hidden" name="${fileName}" id="" value="${data.path}" >
-            <input type="hidden" name="preview-${fileName}" id="" value="${data.id}" >
-        </div>`;
+    return `<div class="img-item  mt-2" data-preview-id="${data.id}">
+                <div class="img-item-preview">
+                    <img class="img-fluid" src="${data.url}">
+                </div>
+                <div class="img-item-information ps-2 d-flex flex-column align-center">
+                    <span class="name">${data.name.substring(0,20)}</span>
+                    <span class="size">${data.extension}</span>
+                </div>
+                <div class="img-item-action">
+                    <button data-toggle="remove-preview" type="button" class="btn btn-danger btn-sm" onclick="removeImage('${data.id}')"><i class="fas fa-trash"></i></button>
+                </div>
+                <input type="hidden" name="${fileName}" id="" value="${data.path}" >
+                <input type="hidden" name="preview-${fileName}" id="" value="${data.id}" >
+            </div>`;
 }
 
 function getImages(route, images, validLength, name, imageListId) {
@@ -122,7 +127,11 @@ function getImages(route, images, validLength, name, imageListId) {
     });
 }
 
-function removeImage(id)
+window.removeImage = (id) =>
 {
-
+    if (validLength == 1){
+        imageList.html('');
+    }else {
+        imageList.find("[data-preview-id='" + id + "']").remove();
+    }
 }

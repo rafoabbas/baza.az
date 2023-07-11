@@ -7,8 +7,8 @@
 
 <div class="img-component">
     <div class="img-preview-div">
-            class="img-preview @error($name) border-danger border-1 @enderror"
-            data-route="{{ route('admin.common.upload.image') }}"
+        <label class="img-preview @error($name) border-danger border-1 @enderror"
+            data-route="{{ route('common.upload.image') }}"
             data-length="{{ $length }}"
             data-name="{{ $name }}"
             data-id="{{ $id }}"
@@ -40,9 +40,9 @@
     @push('script')
         <script>
             @if(is_array(old('preview-' . $name)))
-                getImages('{{ route('admin.common.upload.get.images') }}', '@json(old('preview-' . $name, $value))', '{{ $length }}', '{{ $name }}', '{{ '#image-list-' . $id }}');
+                getImages('{{ route('common.upload.get.images') }}', '@json(old('preview-' . $name, $value))', '{{ $length }}', '{{ $name }}', '{{ '#image-list-' . $id }}');
             @elseif(is_numeric(old('preview-' . $name, $value)))
-                getImages('{{ route('admin.common.upload.get.images') }}', '@json([old('preview-' . $name, $value)])', '{{ $length }}', '{{ $name }}', '{{ '#image-list-' . $id }}');
+                getImages('{{ route('common.upload.get.images') }}', '@json([old('preview-' . $name, $value)])', '{{ $length }}', '{{ $name }}', '{{ '#image-list-' . $id }}');
             @endif
         </script>
     @endpush
