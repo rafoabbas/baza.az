@@ -39,12 +39,13 @@ header{
 
 	li{
 		font-weight: 500;
-		margin: 0 22px;
+		margin: 0 16px;
 
 		a{
 			color: $titlecolor;
 			transition: all ease 0.3s;
-
+            white-space: nowrap;
+            font-size: 14px;
 			&:hover{
 				color: $activcolor;
 				transition: all ease 0.3s;

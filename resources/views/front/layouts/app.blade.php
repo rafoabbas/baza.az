@@ -48,13 +48,13 @@
     <link rel="stylesheet" href="{{asset('assets/front/css/main.css?v=' . config('app.assets.version', 'v0.0.1'))}}">
 </head>
 <body>
-    <div class="loader-container" id="loader">
-        <div class="loader-content">
-            <div class="loader-content-block">
-                <img src="{{ asset('img/logo-main.svg') }}" alt="w-t.az">
-            </div>
-        </div>
-    </div>
+{{--    <div class="loader-container" id="loader">--}}
+{{--        <div class="loader-content">--}}
+{{--            <div class="loader-content-block">--}}
+{{--                <img src="{{ asset('img/logo-main.svg') }}" alt="w-t.az">--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     @php
         $showHeader = $showHeader ?? true;
         $showFooter = $showFooter ?? true;
@@ -63,8 +63,16 @@
         @if($showHeader)
             @include('front.layouts.partials.header')
         @endif
-        <div>
-            @yield('content')
+        <div class="content-wrap">
+            <div class="advertisement-content left">
+                <p>Sizin reklaminiz</p>
+            </div>
+            <div class="content-wrapper">
+                @yield('content')
+            </div>
+            <div class="advertisement-content right">
+                <p>Sizin reklaminiz</p>
+            </div>
         </div>
     </main>
     @if($showFooter)
