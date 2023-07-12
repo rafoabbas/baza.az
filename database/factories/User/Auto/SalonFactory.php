@@ -70,7 +70,8 @@ class SalonFactory extends Factory
             ],
             'published' => AdvertisementStatus::published(),
             'order' => rand(1, 100),
-            'published_at' => $this->faker->dateTimeBetween('-1 years', 'now')
+            'published_at' => $this->faker->dateTimeBetween('-1 years', 'now'),
+            'verified_at' => rand(1, 100) % 2 ? $this->faker->dateTimeBetween('-1 years', 'now') : null
         ];
     }
 }

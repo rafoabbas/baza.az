@@ -20,7 +20,7 @@ class SalonTableSeeder extends Seeder
             return;
         }
 
-        $salon = Salon::factory()
+        $salons = Salon::factory(20)
             ->userId(
                 User::query()
                     ->where('is_business', 1)
@@ -28,7 +28,9 @@ class SalonTableSeeder extends Seeder
             )
             ->create();
 
-        $this->specifications($salon);
+        foreach ($salons as $salon) {
+            $this->specifications($salon);
+        }
 
     }
 

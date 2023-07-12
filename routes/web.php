@@ -127,6 +127,19 @@ Route::group([
 //        });
 });
 
+Route::group([
+    'as' => 'common.',
+], static function () {
+    Route::controller(\App\Http\Controllers\Common\Auto\SalonController::class)
+        ->as('salon.')
+        ->prefix('salon')
+        ->group(function () {
+            Route::get('', 'index')->name('index');
+            Route::get('show/{salon}', 'show')->name('show');
+        });
+});
+
+
 Route::resource('advertisement.number', AdvertisementNumberController::class)
     ->parameter('advertisement', 'otp:uuid')
     ->only(['create', 'store', 'edit', 'update', 'destroy']);

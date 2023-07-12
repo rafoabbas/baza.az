@@ -19,12 +19,12 @@
                         </g>
                     </svg>
                 </div>
-                Автосалон Mercedes-Benz Baku
+                {{ $item->getAttribute('name') }}
             </h2>
             <div class="catalog_bread-crumbs">
                 <a href="">@lang('Ana səhifə')</a>
                 <a href="">/ @lang('Büntün avtosalonlar')</a>
-                <p>/ Автосалон Mercedes-Benz Baku</p>
+                <p>/ {{ $item->getAttribute('name') }} </p>
             </div>
             <div class="single-sto__baner-slider">
                 <div class="single-sto__baner-slider-element">
